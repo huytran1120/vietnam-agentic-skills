@@ -1,150 +1,248 @@
 ---
 name: design-system
-description: "Mechanical implementation invariants for frontend design: token architecture, typography hierarchy, loading order, FOUT prevention, chrome stability, motion timing, color semantics. Use with design when building components, pages, or design systems."
-risk: critical
-source: https://github.com/connerkward/ckw-design-skill/tree/main/design-system
-source_repo: connerkward/ckw-design-skill
-source_type: community
-date_added: 2026-07-01
+description: Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
+argument-hint: "[component or token]"
 license: MIT
-license_source: https://github.com/connerkward/ckw-design-skill/blob/main/LICENSE
-author: Conner K Ward
+metadata:
+  author: claudekit
+  version: "1.0.0"
 ---
 
-# Design system
+# Design System
+
+Token architecture, component specifications, systematic design, slide generation.
+
 ## When to Use
 
-Use this skill when you need mechanical implementation invariants for frontend design: token architecture, typography hierarchy, loading order, FOUT prevention, chrome stability, motion timing, color semantics. Use with design when building components, pages, or design systems. Aesthetic direction is separate from these implementation guidelines.
+- Design token creation
+- Component state definitions
+- CSS variable systems
+- Spacing/typography scales
+- Design-to-code handoff
+- Tailwind theme configuration
+- **Slide/presentation generation**
 
+## Token Architecture
 
-Apply with **design** when implementing UI: components, pages, or design systems. Every color, type, and motion choice should trace back to these rules.
+Load: `references/token-architecture.md`
 
-## Token architecture
+### Three-Layer Structure
 
-All colors map to a small set of primitives. No random hex values.
+```
+Primitive (raw values)
+       ↓
+Semantic (purpose aliases)
+       ↓
+Component (component-specific)
+```
 
-- **Foreground**: Text hierarchy (primary, secondary, muted).
-- **Background**: Surface elevation (base, raised, overlay).
-- **Border**: Separation hierarchy (subtle, default, emphasis).
-- **Brand**: Identity and primary accent.
-- **Semantic**: Destructive, warning, success (and optional info).
+**Example:**
+```css
+/* Primitive */
+--color-blue-600: #2563EB;
 
-Use tokens in code (CSS variables, theme objects); never hardcode hex for UI.
+/* Semantic */
+--color-primary: var(--color-blue-600);
 
-## Typography
+/* Component */
+--button-bg: var(--color-primary);
+```
 
-- **Hierarchy**: Headlines — heavier weight, tighter letter-spacing for presence. Body — comfortable weight for readability. Labels/UI — medium weight, works at smaller sizes. Data — monospace, `tabular-nums` for alignment.
-- Combine size, weight, and letter-spacing so hierarchy is clear at a glance. If you squint and can't tell headline from body, hierarchy is too weak.
-- **Fonts**: pair a display font with a body font; keep hierarchy legible at a glance. *Which* fonts is direction, not mechanics — pick from the domain and push off your first/default instinct (the mean); see design-spatial §2.
-- **Data (functional only)**: real aligned numbers, IDs, timestamps in monospace with `tabular-nums` — mono earns its place when values line up in a column. Do NOT sprinkle mono on decorative eyebrow/metadata microtext ("35MM · DEVELOP · SCAN", fake spec captions) for a "technical" look — that's the current trend-slop, not data. See design-spatial §2.
+## Script Paths
 
-## Loading order — first seen, first loaded
+Script paths in this skill and its `references/` are relative to the directory that contains this SKILL.md, not to the project: `scripts/<file>` is this skill's own `scripts/` folder, and `../<skill>/scripts/<file>` is a sibling sub-skill installed alongside it. Build the full path from that directory (Claude Code reports it as the skill's base directory when the skill loads) and keep the working directory at the project root — the scripts read and write project files such as `docs/brand-guidelines.md`, `assets/design-tokens.json` or `src/` relative to it.
 
-The first viewport must paint complete and correct, fast. Order every resource by whether the user sees it first; the rest waits.
+## Quick Start
 
-- **Prioritize only the above-the-fold set** (hero text, hero image/video, brand mark). Preloading everything is the same as preloading nothing — the true criticals lose the bandwidth race. Pick the few things in the first screenful and prioritize *those*.
-- **Fonts: self-host WOFF2.** Convert OTF/TTF → WOFF2 (Brotli; ~half the bytes, identical glyphs) and `<link rel="preload" as="font" type="font/woff2" crossorigin>` the weights used in the first viewport. Never a render-blocking third-party font stylesheet — a Google Fonts `<link>` adds a CSS round-trip plus extra DNS/TLS before the font even starts downloading; self-host instead.
-- **LCP image/video:** `fetchpriority="high"` on the hero image (or the video poster); `<link rel="preload" as="image">` it when it's CSS-referenced (the parser can't see CSS `url()`s early). The hero box must never be empty — ship a poster/low-res placeholder so there's no blank frame.
-- **Below the fold:** `loading="lazy" decoding="async"` on images; `preload="none"` (or `"metadata"`) on video; `defer` non-critical JS. Always reserve space (`aspect-ratio`, or `width`+`height`) so deferred media can't shift layout (CLS).
-- Keep the render-blocking head minimal: inline critical CSS, defer the rest.
+**Generate tokens:**
+```bash
+node scripts/generate-tokens.cjs --config tokens.json -o tokens.css
+```
 
-## Font loading — readable content and stable metrics
+**Validate usage:**
+```bash
+node scripts/validate-tokens.cjs --dir src/
+```
 
-`font-display: swap` **is** the pop — it paints a fallback face, then swaps to the webfont and reflows. Do not use it for any text the user watches load (titles, wordmarks, hero copy). Balance visual stability with immediate readability; do not hide essential headings or controls while awaiting a font.
+## References
 
-- **For nonessential decorative display text only, optionally gate visibility on the real font.** Synchronously in `<head>`, add a `fonts-pending` class to `<html>` that holds the display-font text at `opacity: 0`. On `document.fonts.ready` — kick it with `document.fonts.load('<weight> 1em "Family"')` for each critical face — swap to `fonts-ready` and fade the text in (~0.5s). Always include a safety timeout (~2.5s) that reveals regardless, so a font failure can never leave text permanently hidden.
-- Pair this with preload + WOFF2 (above) so the hidden window is a few hundred ms, not seconds — the fade reads as intentional, not as a stall.
-- For body text where a sub-perceptual swap is tolerable, at minimum kill the reflow: define a fallback `@font-face` (or `font-family` fallback) tuned with `size-adjust` / `ascent-override` / `descent-override` so the fallback occupies the same metrics as the webfont and the swap shifts nothing.
+| Topic | File |
+|-------|------|
+| Token Architecture | `references/token-architecture.md` |
+| Primitive Tokens | `references/primitive-tokens.md` |
+| Semantic Tokens | `references/semantic-tokens.md` |
+| Component Tokens | `references/component-tokens.md` |
+| Component Specs | `references/component-specs.md` |
+| States & Variants | `references/states-and-variants.md` |
+| Tailwind Integration | `references/tailwind-integration.md` |
 
-Worked example — an AR product-research page: a head script toggles `fonts-pending → fonts-ready` (titles fade in on `fonts.ready`, 2.5s fallback), preloads the four above-the-fold WOFF2 weights, and self-hosts the brand face so there's no Google round-trip.
+## Component Spec Pattern
 
-## Slow-loading content — never show the ugly intermediate state
+| Property | Default | Hover | Active | Disabled |
+|----------|---------|-------|--------|----------|
+| Background | primary | primary-dark | primary-darker | muted |
+| Text | white | white | white | muted-fg |
+| Border | none | none | none | muted-border |
+| Shadow | sm | md | none | none |
 
-Anything that *could* take a noticeable moment to be ready — fonts (above), large images, video, `<canvas>` scenes, Three.js / WebGL, lazy-loaded React islands, anything that fetches over the network or runs heavy main-thread setup — must either **arrive fast** or **load gracefully**. The default browser behavior (blank box → partial paint → reflow → final state) is the ugly intermediate state. Catch it.
+## Scripts
 
-Two levers; use both:
+| Script | Purpose |
+|--------|---------|
+| `generate-tokens.cjs` | Generate CSS from JSON token config |
+| `validate-tokens.cjs` | Check for hardcoded values in code |
+| `search-slides.py` | BM25 search + contextual recommendations |
+| `slide-token-validator.py` | Validate slide HTML for token compliance |
+| `fetch-background.py` | Fetch images from Pexels/Unsplash |
 
-- **Arrive faster.** Compress (WOFF2 for fonts, Draco for glTF, WebP/AVIF for images, h264/h265 for video with `preload="metadata"`). Preload the *few* assets the first viewport actually needs (`<link rel="preload">`). Lazy-load below-the-fold so the LCP set isn't competing. Reserve the box (`aspect-ratio`, `width`+`height`) so deferred content can't trigger CLS.
-- **Load gracefully.** Hide the in-flight state behind a styled placeholder, then fade the real thing in. Skeleton boxes, low-res blurred posters, a single ASCII glyph, even just the container's bg color — anything coherent with the design beats the default partial-paint.
+## Templates
 
-What "ugly" looks like, concretely, and the fix:
+| Template | Purpose |
+|----------|---------|
+| `design-tokens-starter.json` | Starter JSON with three-layer structure |
 
-| Symptom | Fix |
-|---|---|
-| Annotation labels stack at `translate(0,0)` (top-left of container) until JS positions them | Start labels at `opacity: 0` with a `transition: opacity ~0.35s`; first projection sets inline opacity → CSS fades them up. |
-| Canvas/WebGL paints empty/black for a frame on first render | Show a placeholder (CSS art, low-res poster image, or paper/skeleton fill) in the same box; remove it once the first real frame has rendered. |
-| Lazy image fetches and snaps in with a layout-jump | `aspect-ratio` + `<link rel="preload">` (above-the-fold) or `loading="lazy" decoding="async"` (below); fade from `opacity:0` on the `load` event for the first paint. |
-| Video poster pops to first frame on play | `poster` matches a still you control; once `playing` event fires, you've already had a clean handoff. |
-| 3D model "appears" mid-screen with no transition | Keep the canvas visible but at `opacity: 0`; toggle a `.viewer-ready` class (or set inline opacity) inside the GLTFLoader success callback, after the first `tick()`. |
-| Lazy React island flashes a fallback that looks worse than no UI | Replace `Suspense` fallback with a skeleton that traces the final layout, not a spinner. |
+## Integration
 
-Rule of thumb: if a user could screenshot the page mid-load and you'd be embarrassed, you owe it a graceful state. The placeholder doesn't have to be fancy — it has to be *intentional*, sized correctly, and in the design language of what's coming.
+**With brand:** Extract primitives from brand colors/typography
+**With ui-styling:** Component tokens → Tailwind config
 
-## Chrome stays still — status text never resizes layout
+**Skill Dependencies:** brand, ui-styling
+**Primary Agents:** ui-ux-designer, frontend-developer
 
-Persistent chrome (headers, nav, toolbars, search bars, status regions) must hold a **constant height** no matter what text lands in it. Transient status / loading / explanatory copy — "loading model…", "N matching · M indexed", empty-state hints — must not wrap to a second line and shove adjacent controls down. A status region that grows and shrinks as its message changes is a layout-jank bug, not dynamic content.
+## Slide System
 
-- **For optional status summaries only, constrain to one line:** `white-space: nowrap; overflow: hidden; text-overflow: ellipsis` so the longest message truncates instead of wrapping.
-- **Reserve the space up front:** give the container a fixed `height` (or `min-height`) sized for the message, so the shortest and longest states — and the empty state — occupy the same footprint.
+Brand-compliant presentations using design tokens + Chart.js + contextual decision system.
 
-Only the content area should move while chrome stays fixed; layout shift from transient text reads as broken polish. (Concrete failure this prevents: in a search app, a model-loading message wrapping to two lines and pushing the search bar downward.)
+### Source of Truth
 
-## Motion
+| File | Purpose |
+|------|---------|
+| `docs/brand-guidelines.md` | Brand identity, voice, colors |
+| `assets/design-tokens.json` | Token definitions (primitive→semantic→component) |
+| `assets/design-tokens.css` | CSS variables (import in slides) |
+| `assets/css/slide-animations.css` | CSS animation library |
 
-- Keep timing consistent and purposeful; one well-orchestrated moment (staggered page load with `animation-delay`) beats scattered micro-interactions. Prefer CSS-only for HTML; Motion library for React. (Honor `prefers-reduced-motion` for public/multi-user projects.)
-- **Defaults for restrained/professional UIs** (a starting point, not law): micro-interactions ~150ms, larger transitions 200–250ms, ease-out. A playful/toy-like tone (design-thinking) may want spring/bounce and longer beats — match motion feel to the chosen direction rather than defaulting to these numbers.
-- **Choreography** — for anything beyond a single micro-interaction (route/page transitions, list reorder, reveals, shared elements), load [references/motion-choreography.md](references/motion-choreography.md): when a transition earns its keep (it must *communicate* something or get cut), which kinds to implement and in what order, **style by navigation type** (directional slide only for hierarchical/ordered — a slide between peers lies about depth; laterals fade), a duration table, and craft (compositor-only props, motion-blur on morphs, never raster-scale text, persistent-chrome isolation). Framework-agnostic.
+### Slide Search (BM25)
 
-### Scroll-driven narrative (scrollytelling)
+```bash
+# Basic search (auto-detect domain)
+python scripts/search-slides.py "investor pitch"
 
-For **explanatory / editorial / data-walkthrough** content, prefer **scroll-driven graphics over click-interactive widgets**. A reader scrolls by default; making them hunt for and click a toggle to advance an explanation adds friction and gets skipped. Use the NYT/Pudding pattern: pin one graphic (`position: sticky`) while short text "steps" scroll past it, and let each step drive the graphic's state.
+# Domain-specific search
+python scripts/search-slides.py "problem agitation" -d copy
+python scripts/search-slides.py "revenue growth" -d chart
 
-- **Mechanics:** one `IntersectionObserver` with `rootMargin: '-48% 0px -48% 0px'` (threshold 0) so a step goes "active" exactly as it crosses the viewport mid-line; the active index re-renders the pinned graphic. ~30 lines — this *is* scrollama minus the dependency; don't add a scroll library.
-- **Layout:** two columns — steps scroll in one, the graphic `sticky top-0 h-screen` in the other; stack on mobile with the graphic sticky on top. Give each step ~85vh so exactly one is centered at a time; dim the inactive step cards (`opacity:.3`) so the live one reads.
-- **Graphic is a pure function of the active step** (`graphic(active)`), holding no click state of its own — so it also screenshots/exports deterministically and degrades to a static figure. Animate *between* states (color / width / opacity, 300–700ms) so scrolling feels continuous, not steppy.
-- **When NOT to:** dashboards, tools, forms — anything the user *operates* rather than *reads* — stay interactive. Scrollytelling is for **narration**, where you own the order. (Public/multi-user builds: honor `prefers-reduced-motion` per the Motion note above; keep the state changes but drop the tweens.)
+# Contextual search (Premium System)
+python scripts/search-slides.py "problem slide" --context --position 2 --total 9
+python scripts/search-slides.py "cta" --context --position 9 --prev-emotion frustration
+```
 
-## Spatial composition & layout
+### Decision System CSVs
 
-Grid systems, the 8-point spacing scale, visual-weight balance, alignment, and the render-then-critique loop live in **design-spatial** ([../design-spatial/SKILL.md](../design-spatial/SKILL.md)) — the mechanical counterpart to this file's tokens/type/color. Load it whenever composing pages, dashboards, or components. (Direction nugget that belongs here: match composition ambition to the vision — maximalist earns elaborate/layered code; minimal/refined demands restraint and precise spacing.)
+| File | Purpose |
+|------|---------|
+| `data/slide-strategies.csv` | 15 deck structures + emotion arcs + sparkline beats |
+| `data/slide-layouts.csv` | 25 layouts + component variants + animations |
+| `data/slide-layout-logic.csv` | Goal → Layout + break_pattern flag |
+| `data/slide-typography.csv` | Content type → Typography scale |
+| `data/slide-color-logic.csv` | Emotion → Color treatment |
+| `data/slide-backgrounds.csv` | Slide type → Image category (Pexels/Unsplash) |
+| `data/slide-copy.csv` | 25 copywriting formulas (PAS, AIDA, FAB) |
+| `data/slide-charts.csv` | 25 chart types with Chart.js config |
 
-## Nested radii (only when one rounded element sits inside another)
+### Contextual Decision Flow
 
-Not a push to round things — this governs the case where a rounded element is nested in
-another (a button in a card, an inset panel in a container). When nested:
+```
+1. Parse goal/context
+        ↓
+2. Search slide-strategies.csv → Get strategy + emotion beats
+        ↓
+3. For each slide:
+   a. Query slide-layout-logic.csv → layout + break_pattern
+   b. Query slide-typography.csv → type scale
+   c. Query slide-color-logic.csv → color treatment
+   d. Query slide-backgrounds.csv → image if needed
+   e. Apply animation class from slide-animations.css
+        ↓
+4. Generate HTML with design tokens
+        ↓
+5. Validate with slide-token-validator.py
+```
 
-- **Child radius ≤ parent radius**, never larger (a child corner rounder than its parent looks
-  like it's bulging out).
-- **Concentric** is the ideal: `child_radius = max(0, parent_radius − gap)` (the padding between them),
-  so the two curves run parallel and the inner corner echoes the outer. Flat/unrounded children
-  in a rounded parent are fine; what reads as broken is mismatched, non-concentric curves.
+### Pattern Breaking (Duarte Sparkline)
 
-## Color
+Premium decks alternate between emotions for engagement:
+```
+"What Is" (frustration) ↔ "What Could Be" (hope)
+```
 
-- **Palette from domain**: colors should feel like they came *from* the product's world, not applied on top.
-- **Beyond temperature**: quiet vs loud, dense vs spacious, serious vs playful, geometric vs organic — not just warm/cool.
-- **Color carries meaning**: gray builds structure; color communicates status, action, emphasis, identity. Unmotivated color is noise. (Restraint — one accent, not five — is a direction principle; see design-thinking → *reserve impact for punctuation*.)
-- **Contrast — APCA for decisions, WCAG for the gate.** For *perceptual* contrast judgments (is this text comfortably readable on this surface?) prefer **APCA** ([apcacontrast.com](https://apcacontrast.com/)) — it models lightness perception far better than the WCAG 2 ratio, which mis-rates light-on-dark and mid-tones. Keep **WCAG 2 (4.5 / 3:1) as the compliance floor** — it's what `design-spatial`'s `layout-audit.js` gates on and what accessibility standards require. APCA can inform design, but WCAG conformance requires all applicable criteria, not contrast ratios alone.
-- **Interactive states gain contrast.** `:hover`, `:active`, `:focus` must read as *more* prominent than rest — more contrast, not less. A hover that lowers contrast (e.g. lightens text toward the bg) reads as disabled.
+System calculates pattern breaks at 1/3 and 2/3 positions.
 
-Avoiding the generic/trend look (Inter, purple-on-white, the same dark-glass card) and varying across generations is **design-spatial §2** — not restated here.
+### Slide Requirements
 
-## Backgrounds & detail
+**ALL slides MUST:**
+1. Import `assets/design-tokens.css` - single source of truth
+2. Use CSS variables: `var(--color-primary)`, `var(--slide-bg)`, etc.
+3. Use Chart.js for charts (NOT CSS-only bars)
+4. Include navigation (keyboard arrows, click, progress bar)
+5. Center align content
+6. Focus on persuasion/conversion
 
-Atmosphere over flat fills — but matched to the chosen aesthetic, not a default. The reflexive gradient-mesh / noise / grain "premium" treatment is itself the designer-trend mean (design-spatial §2); reach for it only when the direction genuinely calls for it, never as decoration for its own sake.
+### Chart.js Integration
 
-## Example
+```html
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
-**User request:**
+<canvas id="revenueChart"></canvas>
+<script>
+new Chart(document.getElementById('revenueChart'), {
+    type: 'line',
+    data: {
+        labels: ['Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+            data: [5, 12, 28, 45],
+            borderColor: '#FF6B6B',  // Use brand coral
+            backgroundColor: 'rgba(255, 107, 107, 0.1)',
+            fill: true,
+            tension: 0.4
+        }]
+    }
+});
+</script>
+```
 
-> Review this interface with @design-system, identify the highest-impact design problems, and propose an implementation-ready improvement.
+### Token Compliance
 
-## Limitations
+```css
+/* CORRECT - uses token */
+background: var(--slide-bg);
+color: var(--color-primary);
+font-family: var(--typography-font-heading);
 
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+/* WRONG - hardcoded */
+background: #0D0D0D;
+color: #FF6B6B;
+font-family: 'Space Grotesk';
+```
 
-## Accessibility and fallback requirements
+### Reference Implementation
 
-Keep essential text visible with a readable fallback and failure/no-JavaScript path; font loading must not delay task access or leave focusable invisible controls. Font conversion/self-hosting requires license permission and does not guarantee fixed byte savings or identical rendering. Preserve full status/error text through accessible expansion or equivalent visible detail; do not clip critical messages at zoom, narrow widths or localization. Respect reduced-motion preferences for all users, avoid hiding information during transitions, and provide a static, keyboard-accessible narrative alternative to sticky scrollytelling. A contrast-only audit cannot certify WCAG: test keyboard/focus, semantics, reflow, text alternatives and applicable criteria. External design siblings and layout-audit helpers are not bundled in this tree; verify availability before invoking.
+Working example with all features:
+```
+assets/designs/slides/claudekit-pitch-251223.html
+```
+
+### Command
+
+```bash
+/slides:create "10-slide investor pitch for ClaudeKit Marketing"
+```
+
+## Best Practices
+
+1. Never use raw hex in components - always reference tokens
+2. Semantic layer enables theme switching (light/dark)
+3. Component tokens enable per-component customization
+4. Use HSL format for opacity control
+5. Document every token's purpose
+6. **Slides must import design-tokens.css and use var() exclusively**

@@ -4201,6 +4201,15 @@
     "risk": "critical"
   },
   {
+    "id": "banner-design",
+    "name": "banner-design",
+    "path": "skills/banner-design",
+    "description": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or supplied visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "basecamp-automation",
     "name": "basecamp-automation",
     "path": "skills/basecamp-automation",
@@ -4586,6 +4595,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "brand",
+    "name": "brand",
+    "path": "skills/brand",
+    "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "brand-growth-system-builder",
@@ -8351,6 +8369,15 @@
     "risk": "critical"
   },
   {
+    "id": "design",
+    "name": "design",
+    "path": "skills/design",
+    "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "design-it",
     "name": "design-it",
     "path": "skills/design-it",
@@ -8412,10 +8439,10 @@
     "id": "design-system",
     "name": "design-system",
     "path": "skills/design-system",
-    "description": "Mechanical implementation invariants for frontend design: token architecture, typography hierarchy, loading order, FOUT prevention, chrome stability, motion timing, color semantics. Use with design when building components, pages, or design systems.",
+    "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
     "category": "general",
     "tags": [],
-    "risk": "critical"
+    "risk": "safe"
   },
   {
     "id": "design-taste-frontend",
@@ -23814,6 +23841,15 @@
     "risk": "critical"
   },
   {
+    "id": "slides",
+    "name": "slides",
+    "path": "skills/slides",
+    "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "slo-implementation",
     "name": "slo-implementation",
     "path": "skills/slo-implementation",
@@ -26411,6 +26447,15 @@
     "risk": "safe"
   },
   {
+    "id": "ui-styling",
+    "name": "ui-styling",
+    "path": "skills/ui-styling",
+    "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "ui-tokens",
     "name": "ui-tokens",
     "path": "skills/ui-tokens",
@@ -26441,10 +26486,10 @@
     "id": "ui-ux-pro-max",
     "name": "ui-ux-pro-max",
     "path": "skills/ui-ux-pro-max",
-    "description": "Comprehensive design guide for web and mobile applications. Use when designing new UI components or pages, choosing color palettes and typography, or reviewing code for UX issues.",
+    "description": "UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces, including pages, components, design systems, accessibility, interaction, responsive layout, typography, color, charts, and stack-specific UI implementation. Searchable local data: 79 searchable styles (50 active), 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, and 22 stacks.",
     "category": "general",
     "tags": [],
-    "risk": "critical"
+    "risk": "safe"
   },
   {
     "id": "ui-visual-validator",
