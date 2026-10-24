@@ -1,9 +1,6 @@
 ---
 name: doc-coauthoring
-description: "This skill provides a structured workflow for guiding users through collaborative document creation. Act as an active guide, walking users through three stages: Context Gathering, Refinement & Structure, and Reader Testing."
-risk: critical
-source: community
-date_added: "2026-02-27"
+description: Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.
 ---
 
 # Doc Co-Authoring Workflow
@@ -376,17 +373,3 @@ Announce document completion. Provide a few final tips:
 - Don't rush through stages
 - Each iteration should make meaningful improvements
 - The goal is a document that actually works for readers
-
-## When to Use
-Use when drafting a substantial proposal, specification, RFC or decision document from supplied sources through iterative author feedback.
-
-## Example
-
-**User request:**
-
-> Turn these rough notes into a structured document through an iterative coauthoring workflow.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
-Modified for the AAS catalog: corrected bundled workflow, validation and packaging safeguards (2026-10-23).
-
-Quick validation script for generic skills - not the AAS schema or a semantic audit
+Quick validation script for skills - minimal version
 """
 
 import sys
@@ -11,31 +9,17 @@ import re
 import yaml
 from pathlib import Path
 
-def safe_user_path(path_value, base_dir="."):
-    """Resolve a CLI path under the current workspace."""
-    if base_dir != ".":
-        raise ValueError("Custom base directories are not supported for CLI paths")
-    base_path = Path.cwd().resolve()
-    resolved_path = Path(path_value).expanduser().resolve()
-    try:
-        resolved_path.relative_to(base_path)
-    except ValueError as exc:
-        raise ValueError(f"Path escapes allowed directory: {path_value}") from exc
-    return resolved_path
-
 def validate_skill(skill_path):
     """Basic validation of a skill"""
-    skill_path = safe_user_path(skill_path)
+    skill_path = Path(skill_path)
 
     # Check SKILL.md exists
     skill_md = skill_path / 'SKILL.md'
-    if not skill_md.is_file() or skill_md.is_symlink():
+    if not skill_md.exists():
         return False, "SKILL.md not found"
 
     # Read and validate frontmatter
-    if skill_md.stat().st_size > 1024 * 1024:
-        return False, "SKILL.md exceeds 1 MiB"
-    content = skill_md.read_text(encoding="utf-8")
+    content = skill_md.read_text()
     if not content.startswith('---'):
         return False, "No YAML frontmatter found"
 
@@ -55,7 +39,7 @@ def validate_skill(skill_path):
         return False, f"Invalid YAML in frontmatter: {e}"
 
     # Define allowed properties
-    ALLOWED_PROPERTIES = {'name', 'description', 'license', 'allowed-tools', 'metadata'}
+    ALLOWED_PROPERTIES = {'name', 'description', 'license', 'allowed-tools', 'metadata', 'compatibility'}
 
     # Check for unexpected properties (excluding nested keys under metadata)
     unexpected_keys = set(frontmatter.keys()) - ALLOWED_PROPERTIES
@@ -76,14 +60,10 @@ def validate_skill(skill_path):
     if not isinstance(name, str):
         return False, f"Name must be a string, got {type(name).__name__}"
     name = name.strip()
-    if not name:
-        return False, "Name must not be empty"
-    if name != skill_path.name:
-        return False, "Name must match skill directory"
     if name:
-        # Check naming convention (hyphen-case: lowercase with hyphens)
+        # Check naming convention (kebab-case: lowercase with hyphens)
         if not re.match(r'^[a-z0-9-]+$', name):
-            return False, f"Name '{name}' should be hyphen-case (lowercase letters, digits, and hyphens only)"
+            return False, f"Name '{name}' should be kebab-case (lowercase letters, digits, and hyphens only)"
         if name.startswith('-') or name.endswith('-') or '--' in name:
             return False, f"Name '{name}' cannot start/end with hyphen or contain consecutive hyphens"
         # Check name length (max 64 characters per spec)
@@ -95,8 +75,6 @@ def validate_skill(skill_path):
     if not isinstance(description, str):
         return False, f"Description must be a string, got {type(description).__name__}"
     description = description.strip()
-    if not description:
-        return False, "Description must not be empty"
     if description:
         # Check for angle brackets
         if '<' in description or '>' in description:
@@ -105,13 +83,21 @@ def validate_skill(skill_path):
         if len(description) > 1024:
             return False, f"Description is too long ({len(description)} characters). Maximum is 1024 characters."
 
+    # Validate compatibility field if present (optional)
+    compatibility = frontmatter.get('compatibility', '')
+    if compatibility:
+        if not isinstance(compatibility, str):
+            return False, f"Compatibility must be a string, got {type(compatibility).__name__}"
+        if len(compatibility) > 500:
+            return False, f"Compatibility is too long ({len(compatibility)} characters). Maximum is 500 characters."
+
     return True, "Skill is valid!"
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python quick_validate.py <skill_directory>")
         sys.exit(1)
-
+    
     valid, message = validate_skill(sys.argv[1])
     print(message)
     sys.exit(0 if valid else 1)

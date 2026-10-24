@@ -3,8 +3,7 @@
 Easing Functions - Timing functions for smooth animations.
 
 Provides various easing functions for natural motion and timing.
-Functions take progress t (0.0 to 1.0); elastic/back functions may overshoot.
-Catalog modification: corrected the documented output range.
+All functions take a value t (0.0 to 1.0) and return eased value (0.0 to 1.0).
 """
 
 import math
