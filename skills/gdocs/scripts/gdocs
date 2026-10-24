@@ -1,0 +1,66 @@
+#!/bin/sh
+# Launcher: installs the pinned CLI build for this machine on first use, then runs it.
+TOOL=gdocs
+PLUGIN_VERSION=0.0.7
+CLI_VERSION=986250228
+BASE_URL=https://storage.googleapis.com/antigravity-public/plugin/cli/$CLI_VERSION
+# --- shared launcher logic; keep identical across plugins ---
+set -eu
+
+IS_FALLBACK=0
+if [ -z "${ANTIGRAVITY_APP_DATA_DIR:-}" ]; then
+  ANTIGRAVITY_APP_DATA_DIR="$HOME/.gemini/antigravity"
+  IS_FALLBACK=1
+fi
+
+# Resolve the real script path, following symlinks if invoked via a shim.
+TARGET_FILE=$0
+while [ -L "$TARGET_FILE" ]; do
+  TARGET_DIR=$(CDPATH= cd -- "$(dirname -- "$TARGET_FILE")" && pwd)
+  TARGET_FILE=$(readlink "$TARGET_FILE")
+  case "$TARGET_FILE" in
+    /*) ;;
+    *) TARGET_FILE="$TARGET_DIR/$TARGET_FILE" ;;
+  esac
+done
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$TARGET_FILE")" && pwd)
+REAL_SCRIPT="$SCRIPT_DIR/$TOOL"
+PLUGIN_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/../../.." && pwd)
+PLUGIN_DIR_NAME=$(basename -- "$PLUGIN_DIR")
+BIN_DIR="$ANTIGRAVITY_APP_DATA_DIR/plugin_data/$PLUGIN_DIR_NAME/bin"
+TARGET="$BIN_DIR/$TOOL-$CLI_VERSION"
+
+# Self-register into Antigravity's bin directory (already in PATH for agent)
+SHIM="$ANTIGRAVITY_APP_DATA_DIR/bin/$TOOL"
+
+if [ ! -e "$SHIM" ]; then
+  mkdir -p "$ANTIGRAVITY_APP_DATA_DIR/bin"
+  if ln -sf "$REAL_SCRIPT" "$SHIM" 2>/dev/null && [ "$IS_FALLBACK" = "0" ]; then
+    echo "Registered '$TOOL' into PATH ($SHIM). It can now be run directly." >&2
+  fi
+fi
+
+if [ ! -x "$TARGET" ]; then
+  case "$(uname -s)" in
+    Linux) OS=linux ;;
+    Darwin) OS=darwin ;;
+    *) echo "error: unsupported OS: $(uname -s)" >&2; exit 1 ;;
+  esac
+  case "$(uname -m)" in
+    x86_64 | amd64) ARCH=x86_64 ;;
+    arm64 | aarch64) ARCH=arm64 ;;
+    *) echo "error: unsupported architecture: $(uname -m)" >&2; exit 1 ;;
+  esac
+  mkdir -p "$BIN_DIR"
+  rm -f "$BIN_DIR/$TOOL"-*
+  TMP="$BIN_DIR/.$TOOL.tmp.$$"
+  if ! curl -fsSL "$BASE_URL/${OS}_${ARCH}/$TOOL" -o "$TMP"; then
+    rm -f "$TMP"
+    echo "error: failed to download $BASE_URL/${OS}_${ARCH}/$TOOL" >&2
+    exit 1
+  fi
+  chmod +x "$TMP"
+  mv -f "$TMP" "$TARGET"
+fi
+
+exec "$TARGET" "$@"

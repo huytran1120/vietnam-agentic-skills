@@ -1,6 +1,6 @@
 # 🇻🇳 Vietnam Agentic Skills (VAS)
 
-> **Kho lưu trữ 2,713+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
+> **Kho lưu trữ 2,812+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
 > **Tương thích toàn diện: Google Antigravity, Claude Code, Cursor, Windsurf (Codeium), OpenAI Codex / OpenCode, Cline / Roo Code & GitHub Copilot CLI.**  
 > **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ phản hồi sub-second với Python 3 chuẩn.**
 
@@ -46,7 +46,7 @@
 
 **Vietnam Agentic Skills (VAS)** là dự án thư viện kỹ năng agentic mã nguồn mở được khởi xướng và phát triển bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)). 
 
-Dự án đóng gói **hơn 2,670 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
+Dự án đóng gói **hơn 2,812 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
 
 Với VAS, các AI Coding Agent không còn là những lập trình viên trả lời chung chung, mà trở thành những cộng sự kỹ thuật cấp Senior thực thụ, có quy trình chuẩn đoán, checklist bảo mật, công thức tối ưu và kịch bản thực thi chính xác.
 
@@ -286,7 +286,7 @@ description: >-
 
 ## 8. Danh Mục Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **2,713+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **2,812+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
 
 ### 🔥 Top 10 Siêu Kỹ Năng Thiết Kế, 3D & Video Mới Nhất Đã Tích Hợp:
 

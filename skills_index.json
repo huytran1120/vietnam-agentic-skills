@@ -72,6 +72,15 @@
     "risk": "critical"
   },
   {
+    "id": "a11y-debugging",
+    "name": "a11y-debugging",
+    "path": "skills/a11y-debugging",
+    "description": "Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and color contrast.",
+    "category": "devtools",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "a4a",
     "name": "a4a",
     "path": "skills/a4a",
@@ -217,6 +226,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "accidental-data-loss-prevention",
+    "name": "accidental-data-loss-prevention",
+    "path": "skills/accidental-data-loss-prevention",
+    "description": "**STOP AND VERIFY**: Before running any command or tool that results in irreversible data loss, you MUST obtain explicit user consent. When in doubt, ask. It is better to wait for confirmation than to accidentally delete production data or critical project assets. Use this for: - SQL: DROP TABLE/VIEW/SCHEMA/DATABASE, TRUNCATE, or broad DELETE (missing WHERE or using 1=1). - Cloud Storage: gsutil rm or gcloud storage rm targeting production data or critical buckets. - Infrastructure: gcloud projects delete, deleting Spanner/BigQuery/Dataproc resources, deleting secrets, or KMS key destruction.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "accint-commitments",
@@ -787,6 +805,15 @@
     "risk": "critical"
   },
   {
+    "id": "agy-customizations",
+    "name": "agy-customizations",
+    "path": "skills/agy-customizations",
+    "description": "Comprehensive guide and reference for the Antigravity Customization System. Use to explain how customizations work, their loading priority, discovery mechanisms, and to guide the creation of skills, rules, plugins, hooks, and MCP servers.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "agy-delegate",
     "name": "agy-delegate",
     "path": "skills/agy-delegate",
@@ -1319,6 +1346,42 @@
     "risk": "critical"
   },
   {
+    "id": "alphafold-database-fetch-and-analyze",
+    "name": "alphafold-database-fetch-and-analyze",
+    "path": "skills/alphafold-database-fetch-and-analyze",
+    "description": "Retrieve and analyze AlphaFold predicted structures for a protein. Use when the user provides a specific UniProt Accession ID and wants structural confidence metrics (pLDDT), domain boundary analysis, or disorder assessment. Do not use if the user only has a protein name, gene name, or amino acid sequence — ask for a UniProt ID first.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "alphagenome-atlas-website-links",
+    "name": "alphagenome-atlas-website-links",
+    "path": "skills/alphagenome-atlas-website-links",
+    "description": "Constructs deep-links and URLs for the AlphaGenome Atlas website. Supports generating single-variant exploration links (1-based VCF-style coordinates), genomic locus views (1-based closed chr:start-end), candidate summary tables, and AlphaGenome reference vs. alternate predictions. Use when visualizing, exploring, charting, or linking genetic variants and genomic loci on the AlphaGenome Atlas, or when asked to inspect, view, or link predictions for a genomic variant. Don't use for computing raw AlphaGenome variant predictions directly without Atlas URLs (use alphagenome-single-variant-analysis or alphagenome-variant-impact-score).",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "alphagenome-single-variant-analysis",
+    "name": "alphagenome-single-variant-analysis",
+    "path": "skills/alphagenome-single-variant-analysis",
+    "description": "Analyzes genetic variant effects on gene expression (RNA-seq), chromatin accessibility (DNASE), histone marks (ChIP), and transcription factors using the AlphaGenome API. Use when the user asks about non-coding variant effects, pathogenicity, clinical significance, disease associations, functional effects, gene expression changes, splicing disruption, or regulatory effects in promoters and enhancers. Also use for resolving biological terms to tissue/cell-type ontologies (UBERON/CL) or analyzing variants in chr:pos:ref>alt format.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "alphagenome-variant-impact-score",
+    "name": "alphagenome-variant-impact-score",
+    "path": "skills/alphagenome-variant-impact-score",
+    "description": "Score, annotate, and analyze the functional impact of genetic variants using AlphaGenome Variant Impact (AVI) scores. Query variants in chr:pos:ref>alt format, annotate VCF/tabular callsets, perform saturation mutagenesis window scans (1-based closed chr:start-end), and extract GENCODE v46 GTF gene/exon/junction coordinates all via the AlphaGenome Atlas API.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "alternatives-pages",
     "name": "alternatives-pages",
     "path": "skills/alternatives-pages",
@@ -1656,6 +1719,15 @@
     "path": "skills/antigravity-design-expert",
     "description": "Core UI/UX engineering skill for building highly interactive, spatial, weightless, and glassmorphism-based web interfaces using GSAP and 3D CSS.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "antigravity-guide",
+    "name": "antigravity-guide",
+    "path": "skills/antigravity-guide",
+    "description": "Provides a comprehensive guide, quick reference, and sitemap for Google Antigravity (AGY), including the Antigravity CLI (agy), Antigravity 2.0, Antigravity IDE, Python SDK, slash commands, keybindings, and customizations (skills, rules, MCP, sidecars). Activate this skill when the user asks questions about how to use, configure, or customize Antigravity, AGY, the agy CLI, the Antigravity IDE, or Antigravity 2.0.",
+    "category": "antigravity",
     "tags": [],
     "risk": "safe"
   },
@@ -2677,6 +2749,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "automation",
+    "name": "automation",
+    "path": "skills/automation",
+    "description": "Interactive guide to design and create a scheduled background automation. Use this skill when the user wants to create an automated or recurring scheduled task (e.g. \"summarize my emails every morning\", \"every Monday send me a to-do list\"). Also triggered by the /automation slash command.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "autonomous-agent-patterns",
@@ -4409,6 +4490,24 @@
     "risk": "safe"
   },
   {
+    "id": "bigquery-data-transfer-service",
+    "name": "bigquery-data-transfer-service",
+    "path": "skills/bigquery-data-transfer-service",
+    "description": "Discovers and inspects BigQuery Data Transfer Service (DTS) configurations.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "bigquery-sql",
+    "name": "bigquery-sql",
+    "path": "skills/bigquery-sql",
+    "description": "Provides BigQuery SQL query optimization techniques, execution best practices,",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "bilig-workpaper",
     "name": "bilig-workpaper",
     "path": "skills/bilig-workpaper",
@@ -4456,6 +4555,15 @@
     "path": "skills/binary-diff",
     "description": "Cross-version binary symbol migration: diff updated binaries, recover function names without PDBs, and propagate annotations after software updates using BinDiff-style tooling.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "biomolecular-structure-viewer",
+    "name": "biomolecular-structure-viewer",
+    "path": "skills/biomolecular-structure-viewer",
+    "description": "Interactive 3D biomolecular structure viewer via Mol*. Renders 3D molecular structures from local workspace files (.cif, .mmcif, .pdb) or conversation artifacts, and manages user 3D annotations and highlighted residues. Use when the user asks to visualise a protein or nucleic acid, display a 3D structure, or asks about 3D biomolecular structure annotations and highlighted residues.",
+    "category": "science",
     "tags": [],
     "risk": "safe"
   },
@@ -5055,6 +5163,15 @@
     "risk": "safe"
   },
   {
+    "id": "building-data-apps",
+    "name": "building-data-apps",
+    "path": "skills/building-data-apps",
+    "description": "Build modern data apps, dashboards, and interactive reports using either React + Vite or Streamlit. Includes optional Gemini Data Analytics chat integration for an AI powered \"chat with your data\" experience. Relevant when any of the following conditions are true: 1. User explicitly requests to build a data dashboard, data application, or visualization UI, and the UI pulls data from a GCP database (defaulting to BigQuery unless otherwise specified). 2. You need to generate a frontend web application to interact with, query, and visualize data from GCP data sources. 3. User wants to build a \"chat with your data\" experience or integrate the Gemini Data Analytics chat API into a web interface. Do NOT use when any of the following conditions are true: 1. The request is for building backend-only services. 2. The request is for simple CLI scripts or command-line applications. 3. The web application is not data-centric or does not involve visualizing/querying data from GCP sources.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "building-native-ui",
     "name": "building-native-ui",
     "path": "skills/building-native-ui",
@@ -5603,6 +5720,15 @@
     "risk": "critical"
   },
   {
+    "id": "chembl-database",
+    "name": "chembl-database",
+    "path": "skills/chembl-database",
+    "description": "Query the ChEMBL database for bioactive molecules, drug targets, bioactivity data, approved drugs, and chemical structures. Use when the user asks about compounds, targets, IC50/Ki values, drug mechanisms, or structure searches.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "chord-onchain-trading",
     "name": "chord-onchain-trading",
     "path": "skills/chord-onchain-trading",
@@ -5619,11 +5745,29 @@
     "risk": "critical"
   },
   {
+    "id": "chrome-devtools",
+    "name": "chrome-devtools",
+    "path": "skills/chrome-devtools",
+    "description": "Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting network requests. This skill does not apply to `--slim` mode (MCP configuration).",
+    "category": "devtools",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "chrome-extension-developer",
     "name": "chrome-extension-developer",
     "path": "skills/chrome-extension-developer",
     "description": "Expert in building Chrome Extensions using Manifest V3. Covers background scripts, service workers, content scripts, and cross-context communication.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "chrome-extensions",
+    "name": "chrome-extensions",
+    "path": "skills/chrome-extensions",
+    "description": "Build and publish Chrome Extensions using Manifest V3 best practices. Use this skill whenever the user asks to create, modify, debug, or understand Chrome browser extensions, add-ons, or anything involving the Chrome Extensions API. Trigger on mentions of: 'Chrome extension', 'browser extension', 'manifest.json', 'content script', 'service worker' (in browser context), 'popup' (in browser extension context), 'side panel', 'chrome.* API', 'declarativeNetRequest', 'omnibox', 'context menu' (in extension context), 'userScripts', 'user script', 'script manager', or any request to build functionality that integrates with the Chrome browser UI. Also trigger for publishing to the Chrome Web Store: 'publish extension', preparing an extension for publishing, responding to a review rejection, writing permission justifications, or drafting a privacy policy.",
+    "category": "frontend",
     "tags": [],
     "risk": "safe"
   },
@@ -5951,6 +6095,24 @@
       "automation"
     ],
     "risk": "critical"
+  },
+  {
+    "id": "clinical-trials-database",
+    "name": "clinical-trials-database",
+    "path": "skills/clinical-trials-database",
+    "description": "Query ClinicalTrials.gov via APIv2. Use when you want to search for trials by condition, drug, location, status, or phase; retrieve trial details by NCT ID; check eligibility/inclusion criteria; count trials across conditions or time periods; identify a sponsor's trial portfolio; find recruiting trials for patient matching.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "clinvar-database",
+    "name": "clinvar-database",
+    "path": "skills/clinvar-database",
+    "description": "Use when needing clinical significance, pathogenicity classifications (e.g., Pathogenic, Benign, VUS), clinical evidence rationales, or finding \"hard positive\" benchmark controls for human genomic variants.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "close-automation",
@@ -7065,6 +7227,15 @@
     "risk": "critical"
   },
   {
+    "id": "cookie-debugging",
+    "name": "cookie-debugging",
+    "path": "skills/cookie-debugging",
+    "description": "Uses Chrome DevTools MCP for inspecting, debugging, and testing cookies, session state, authentication issues, and cookie consent compliance. Use when diagnosing 401/403 errors, authentication redirects, session expiration, Cookie/Set-Cookie header issues, cookie banner consent conformance, or third-party cookie/SameSite/Partitioned cookie warnings.",
+    "category": "devtools",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "cooper-email",
     "name": "cooper-email",
     "path": "skills/cooper-email",
@@ -7237,6 +7408,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "credentials",
+    "name": "credentials",
+    "path": "skills/credentials",
+    "description": "Instructions for handling API keys and credentials safely, verifying their presence, and prompting the user to add them if missing using a safe protocol.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "credit-cycle-analysis",
@@ -7713,6 +7893,15 @@
     "risk": "critical"
   },
   {
+    "id": "dak-setup",
+    "name": "dak-setup",
+    "path": "skills/dak-setup",
+    "description": "Configures (or reconfigures) the Google Cloud Data Agent Kit (DAK) plugin by checking gcloud and ADC credentials, collecting the GCP project ID, region, and services, and running its bundled `dak-setup` script. Use this proactively and without waiting to be asked whenever a SessionStart hook or any other system/context message reports that the Data Agent Kit plugin is not configured, is missing configuration, or needs to be reconfigured. Also use it whenever the user mentions setting up, configuring, reconfiguring, or changing the project, region, or service integrations for the Data Agent Kit or DAK plugin — even if they phrase it casually, like \"dak isn't working\" or \"I want to enable more GCP service integrations\".",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "dali-short-address-commissioner",
     "name": "dali-short-address-commissioner",
     "path": "skills/dali-short-address-commissioner",
@@ -7751,6 +7940,15 @@
     "category": "security",
     "tags": [],
     "risk": "offensive"
+  },
+  {
+    "id": "data-autocleaning",
+    "name": "data-autocleaning",
+    "path": "skills/data-autocleaning",
+    "description": "Automated data quality and transformation capabilities for Dataform/dbt/BigQuery",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "data-engineer",
@@ -7984,6 +8182,15 @@
     "risk": "critical"
   },
   {
+    "id": "dataform-bigquery",
+    "name": "dataform-bigquery",
+    "path": "skills/dataform-bigquery",
+    "description": "Expertise in generating clean, correct, and efficient Dataform pipeline",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "datawebot",
     "name": "datawebot",
     "path": "skills/datawebot",
@@ -8047,6 +8254,24 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "dbsnp-database",
+    "name": "dbsnp-database",
+    "path": "skills/dbsnp-database",
+    "description": "Use when you want to look up, map, and search for short genetic variants (SNPs, indels) in NCBI's dbSNP database. Resolves between rsIDs, genomic coordinates in VCF format, and HGVS strings. For an rsID, returns variant type, gene associations, clinical significance, allele frequencies, and genomic coordinates (GRCh38).",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "dbt-bigquery",
+    "name": "dbt-bigquery",
+    "path": "skills/dbt-bigquery",
+    "description": "Expert guidance for creating, modifying, and optimizing dbt pipelines",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "dbt-transformation-patterns",
@@ -8119,6 +8344,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "debug-optimize-lcp",
+    "name": "debug-optimize-lcp",
+    "path": "skills/debug-optimize-lcp",
+    "description": "Guides debugging and optimizing Largest Contentful Paint (LCP) using Chrome DevTools MCP tools. Use this skill whenever the user asks about LCP performance, slow page loads, Core Web Vitals optimization, or wants to understand why their page's main content takes too long to appear. Also use when the user mentions \"largest contentful paint\", \"page load speed\", \"CWV\", or wants to improve how fast their hero image or main content renders.",
+    "category": "devtools",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "debugger",
@@ -8876,6 +9110,15 @@
     "risk": "critical"
   },
   {
+    "id": "discovering-gcp-data-assets",
+    "name": "discovering-gcp-data-assets",
+    "path": "skills/discovering-gcp-data-assets",
+    "description": "Finds and inspects data assets within Google Cloud. Relevant when any of the following conditions are true: 1. The user request involves finding, exploring, or inspecting data assets in Google Cloud, such as: - BigQuery datasets, tables, or views - BigLake catalog or tables - Spanner instances, databases or tables - etc. 2. You need to retrieve the schema, metadata, or governance policies for a GCP data asset. 3. You have a keyword or topic (e.g., \"sales data\") but lack the specific table or resource ID. 4. You are attempting to find data using `bq ls`, as this skill offers a superior approach. Don't use when: - Assets are outside Google Cloud",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "dispatch",
     "name": "dispatch",
     "path": "skills/dispatch",
@@ -9611,6 +9854,15 @@
     "risk": "critical"
   },
   {
+    "id": "embl-ebi-ols",
+    "name": "embl-ebi-ols",
+    "path": "skills/embl-ebi-ols",
+    "description": "Query and search the EMBL-EBI Ontology Lookup Service (OLS) for biomedical ontology terms, definitions, and hierarchies across 250+ ontologies (e.g., GO, DOID, HP). Use when the user asks to search for terms, retrieve details, navigate hierarchies (parents, children, ancestors), look up properties and individuals, get autocomplete suggestions, or access ontology metadata and statistics.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "emblemai-crypto-wallet",
     "name": "emblemai-crypto-wallet",
     "path": "skills/emblemai-crypto-wallet",
@@ -9680,11 +9932,29 @@
     "risk": "critical"
   },
   {
+    "id": "encode-ccres-database",
+    "name": "encode-ccres-database",
+    "path": "skills/encode-ccres-database",
+    "description": "Query the ENCODE Registry of cis-Regulatory Elements (cCREs) via the SCREEN GraphQL API, or make custom queries to the ENCODE Portal REST API for experiments and files (ChIP-seq peaks, etc.). Use when you want to query regulatory annotations or raw experimental data across human cell types.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "energy-procurement",
     "name": "energy-procurement",
     "path": "skills/energy-procurement",
     "description": "Codified expertise for electricity and gas procurement, tariff optimisation, demand charge management, renewable PPA evaluation, and multi-facility energy cost management.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "enforcing-resource-attribution",
+    "name": "enforcing-resource-attribution",
+    "path": "skills/enforcing-resource-attribution",
+    "description": "Enforces resource attribution for CLI commands. Use this skill whenever",
+    "category": "cloud",
     "tags": [],
     "risk": "safe"
   },
@@ -9696,6 +9966,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "ensembl-database",
+    "name": "ensembl-database",
+    "path": "skills/ensembl-database",
+    "description": "Query the Ensembl database to resolve gene, transcript, and protein IDs, fetch genomic or protein sequences, retrieve gene structures (exons), and get variant consequence and effect predictions (VEP). Use this skill as a primary ID translator, genomic sequence database and variant effect prediction tool.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "enterprise-vpn-attack",
@@ -10192,6 +10471,15 @@
     "risk": "critical"
   },
   {
+    "id": "extension-to-functions-codebase",
+    "name": "extension-to-functions-codebase",
+    "path": "skills/extension-to-functions-codebase",
+    "description": "Skill for converting an installed Firebase Extension (or extension source) into a standalone Cloud Functions for Firebase codebase or publishable npm package, including V1 to V2 trigger upgrades, lifecycle hooks, and declarative security",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "extract-document-data",
     "name": "extract-document-data",
     "path": "skills/extract-document-data",
@@ -10642,6 +10930,24 @@
     "risk": "critical"
   },
   {
+    "id": "firebase-ai-logic-basics",
+    "name": "firebase-ai-logic-basics",
+    "path": "skills/firebase-ai-logic-basics",
+    "description": "Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured output, and security.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-app-hosting-basics",
+    "name": "firebase-app-hosting-basics",
+    "path": "skills/firebase-app-hosting-basics",
+    "description": "Deploys and manages full-stack web applications (Next.js, Angular) with Server-Side Rendering (SSR) using Firebase App Hosting. Use when deploying Next.js/Angular apps, configuring apphosting.yaml or firebase.json apphosting blocks, managing secrets, setting up GitHub CI/CD, or configuring Blaze billing requirements. Don't use for classic static web hosting, Auth, Firestore, Crashlytics, or Xcode.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "firebase-app-platform",
     "name": "firebase-app-platform",
     "path": "skills/firebase-app-platform",
@@ -10651,6 +10957,78 @@
     "risk": "critical"
   },
   {
+    "id": "firebase-auth-basics",
+    "name": "firebase-auth-basics",
+    "path": "skills/firebase-auth-basics",
+    "description": "Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using auth rules.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-basics",
+    "name": "firebase-basics",
+    "path": "skills/firebase-basics",
+    "description": "Provides foundational Firebase CLI setup, CLI installation, version checks (`firebase-tools@latest --version`), CLI login (including --no-localhost), project creation, project selection (`firebase use`), and app config file downloads (`google-services.json`, `GoogleService-Info.plist`). Use ONLY for CLI login, project creation/switching, or downloading app config files. Don't use for Firebase Hosting deploy, Firestore, Auth, App Hosting, Data Connect, Crashlytics, or Remote Config.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-crashlytics",
+    "name": "firebase-crashlytics",
+    "path": "skills/firebase-crashlytics",
+    "description": "Comprehensive guide for Firebase Crashlytics, including provisioning and SDK usage. Use this skill when the user needs help setting up Crashlytics, adding crash reporting, or using the Crashlytics SDK in their application.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-data-connect-basics",
+    "name": "firebase-data-connect",
+    "path": "skills/firebase-data-connect-basics",
+    "description": "Builds and deploys Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL securely. Use when designing schemas with tables and relations, writing authorized queries and mutations, configuring real-time data updates, or generating type-safe SDKs. Use when you need a relational database with Firebase, or when the user mentions SQL Connect or Data Connect.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-firestore",
+    "name": "firebase-firestore",
+    "path": "skills/firebase-firestore",
+    "description": "Sets up, manages, queries, and configures Cloud Firestore databases (Standard/Enterprise edition), including data modeling, security rules, indexes, and SDK integrations (Web, Python, iOS, Android, Flutter). Use when creating/listing Firestore databases, defining data models/indexes, writing SDK queries, or integrating Firestore SDKs. For authoring or modifying Firestore Security Rules (firestore.rules), delegate to the firestore-rules-author subagent if subagent delegation is available, or use firestore-rules-creation otherwise. Don't use for Firebase Hosting, Data Connect, Auth, Storage/GCS, Crashlytics, Functions, or BigQuery.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-hosting-basics",
+    "name": "firebase-hosting-basics",
+    "path": "skills/firebase-hosting-basics",
+    "description": "Deploys and configures classic Firebase Hosting for static websites, single-page apps (SPAs), and microservices. Use when deploying static sites/SPAs, setting up custom domains, configuring firebase.json hosting settings (redirects, rewrites, headers, multi-site), or managing preview channels. Don't use for Firebase App Hosting (Next.js/SSR), Auth, Firestore queries/rules, Data Connect, or Crashlytics.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-remote-config-basics",
+    "name": "firebase-remote-config-basics",
+    "path": "skills/firebase-remote-config-basics",
+    "description": "Manages Firebase Remote Config templates, feature flags, loading strategies, and SDKs (Android, iOS). Use when downloading/deploying remoteconfig JSON templates, managing version history/feature flags, setting in-app defaults, fetchAndActivate(), real-time listeners, or SDK setup. Don't use for Firebase Hosting, Auth, Firestore, Data Connect, Crashlytics, or App Hosting.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "firebase-security-rules-auditor",
+    "name": "firebase-security-rules-auditor",
+    "path": "skills/firebase-security-rules-auditor",
+    "description": "Audits Firebase (Firestore, Cloud Storage) security rules for vulnerabilities, privilege escalation, role bypasses, create vs update inconsistencies, resource exhaustion, type safety, size limits, and hasOnly ownership checks. Use when auditing/reviewing rules, running red-team rule assessments, or scoring against auditor checklists. Don't use for Firebase CLI (login, deploy), Auth, Crashlytics, Remote Config, or database queries.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "firecrawl-scraper",
     "name": "firecrawl-scraper",
     "path": "skills/firecrawl-scraper",
@@ -10658,6 +11036,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "firestore-rules-creation",
+    "name": "firestore-rules-creation",
+    "path": "skills/firestore-rules-creation",
+    "description": "Designs, authors, refactors, and hardens production-grade Cloud Firestore Security Rules (firestore.rules). IMPORTANT: If subagent delegation AND the firestore-rules-author subagent are available in your environment, delegate authoring firestore.rules to the firestore-rules-author subagent. If subagent delegation is unavailable (e.g. not enabled in the IDE), firestore-rules-author is not installed, or you are running inside firestore-rules-author, follow this skill directly.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "firewall-config",
@@ -10789,6 +11176,15 @@
       "documentation"
     ],
     "risk": "critical"
+  },
+  {
+    "id": "foldseek-structural-search",
+    "name": "foldseek-structural-search",
+    "path": "skills/foldseek-structural-search",
+    "description": "Performs 3D structural searches of proteins against various databases (PDB, AlphaFold, CATH, MGnify, etc.) using the Foldseek API. Use ONLY when the user provides a physical 3D coordinate file (.cif, .mmcif, or .pdb) and wants to find structurally similar proteins. Do NOT use if the user only provides a protein sequence, gene name, or UniProt ID.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "food-database-query",
@@ -11517,6 +11913,24 @@
     "risk": "critical"
   },
   {
+    "id": "gcp-data-pipelines",
+    "name": "gcp-data-pipelines",
+    "path": "skills/gcp-data-pipelines",
+    "description": "Primary entry point for building, managing, and orchestrating data pipelines",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "gcp-dataflow",
+    "name": "gcp-dataflow",
+    "path": "skills/gcp-dataflow",
+    "description": "Guides writing, packaging, executing, and troubleshooting Apache Beam pipelines on Dataflow. Use when creating new pipelines, configuring Flex Templates, or analyzing performance of Dataflow jobs. Capabilities include Java/Python/Go setup, Cloud Build integration, and deep diagnostic analysis of job health and autoscaling. Use when: - Creating an Apache Beam Dataflow pipeline. - Creating a Google Dataflow Flex Template. - Using an existing Google Dataflow Template. - Debugging Dataflow pipeline - Troubleshooting Dataflow pipeline - Analyzing Performance of Dataflow pipeline. Key capabilities: Java/Python/Go project setup, Flex Templates (with Cloud Build), and diagnostics for streaming job health, bottlenecks, and autoscaling. Do NOT use for: - General GCP resource management unrelated to Dataflow. - Issues with other GCP services (e.g., GCE, GCS, BigQuery) unless directly impacting Dataflow pipeline execution. - Pipeline technologies other than Apache Beam on Dataflow.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "gcp-gke",
     "name": "gcp-gke",
     "path": "skills/gcp-gke",
@@ -11535,6 +11949,24 @@
     "risk": "critical"
   },
   {
+    "id": "gcp-pipeline-orchestration",
+    "name": "gcp-pipeline-orchestration",
+    "path": "skills/gcp-pipeline-orchestration",
+    "description": "This skill helps the agent generate or update orchestration pipeline",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "gcp-pipeline-resource-provisioning",
+    "name": "gcp-pipeline-resource-provisioning",
+    "path": "skills/gcp-pipeline-resource-provisioning",
+    "description": "Automates declarative resource creation and provisioning for data pipelines, supporting BigQuery, Dataform, Dataproc, BigQuery Data Transfer Service (DTS), and other resources. It manages environment-specific configurations (dev, staging, prod) through a deployment.yaml file. Use when: - Modifying or creating deployment.yaml for deployment settings. - Resolving environment-specific variables (e.g., Project IDs, Regions) for deployment. - Provisioning supported infrastructure like BigQuery datasets/tables, Dataform resources, or DTS resources via deployment.yaml. Do not use when: - Resources already exist. - Managing resources not supported by `gcloud beta orchestration-pipelines resource-types list`. - Managing general cloud infrastructure (VMs, networks, Kubernetes, IAM policies), which are better suited for Terraform. - Infrastructure spans multiple cloud providers (AWS, Azure, etc.). - Already uses Terraform for the target resources.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "gcp-secret-manager",
     "name": "gcp-secret-manager",
     "path": "skills/gcp-secret-manager",
@@ -11544,6 +11976,24 @@
     "risk": "critical"
   },
   {
+    "id": "gcp-spark",
+    "name": "gcp-spark",
+    "path": "skills/gcp-spark",
+    "description": "Develops, optimizes and runs PySpark/Spark code on Managed Spark (Dataproc clusters and Serverless) on Google Cloud. Use when: - Authoring or running Spark/PySpark notebooks (any kernel), incl. data analysis, reports and visualizations. - Writing Spark ETL pipelines or preparing workloads for production. - Training or running inference with ML models on Spark. - Optimizing PySpark or Spark SQL for performance, memory, or OOM risks. - Managing Spark clusters, jobs, batches, and interactive sessions. Don't use when: - Writing generic Python that doesn't use Spark. - Performing simple SQL queries that can be done directly in BigQuery. - Troubleshooting failed Spark workloads (use @skill:gcp-spark-troubleshooting).",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "gcp-spark-troubleshooting",
+    "name": "gcp-spark-troubleshooting",
+    "path": "skills/gcp-spark-troubleshooting",
+    "description": "Provides expert guidance for troubleshooting Google Cloud Spark and Dataproc",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "gdb-cli",
     "name": "gdb-cli",
     "path": "skills/gdb-cli",
@@ -11551,6 +12001,15 @@
     "category": "development",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "gdocs",
+    "name": "gdocs",
+    "path": "skills/gdocs",
+    "description": "Read, create, edit, and manage Google Docs. Use when the user shares a docs.google.com URL, asks to summarize or extract content from a doc, wants a doc drafted, edited, formatted, or commented on, wants tables, images, or smart chips inserted, wants markdown imported or synchronized with a doc, or wants a doc exported. Requires a known document ID — to find documents, use the gdrive skill from the Google Drive plugin; if it isn't installed, ask the user for the doc link. Don't use for Google Sheets, Slides, or Drive file management.",
+    "category": "productivity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "gdpr-compliance",
@@ -11569,6 +12028,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "gdrive",
+    "name": "gdrive",
+    "path": "skills/gdrive",
+    "description": "Browse, search, and manage Google Drive files and folders. Use when the user shares a drive.google.com URL, asks what is in a folder, wants a file found, downloaded, uploaded, updated in place, moved, copied, or renamed, wants a Google file exported to PDF, Markdown, or CSV, wants comments read or added, wants sharing and permissions checked or changed, or wants Drive activity watched. Don't use for editing the contents of a Doc, Sheet, or Slides deck.",
+    "category": "productivity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "gemini-api-dev",
@@ -11657,6 +12125,15 @@
       "video-generation"
     ],
     "risk": "critical"
+  },
+  {
+    "id": "generative-ui",
+    "name": "generative-ui",
+    "path": "skills/generative-ui",
+    "description": "How to render rich interactive HTML widgets inline in the chat or as standalone artifacts. Use this skill when you want to show the user diagrams, data visualizations, interactive controls, educational walkthroughs, or any rich visual content beyond plain text and markdown.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "geo-audit",
@@ -12133,6 +12610,15 @@
     "risk": "critical"
   },
   {
+    "id": "gnomad-database",
+    "name": "gnomad-database",
+    "path": "skills/gnomad-database",
+    "description": "Query the Genome Aggregation Database (gnomAD). Use when determining the rarity or allele frequency of specific genetic variants, retrieving gene constraint metrics (pLI, LOEUF) to assess loss-of-function intolerance, finding variants in a genomic region or gene, or querying structural variants. Don't use for analyzing individual patient genomes, tracking somatic mutations in cancer (use COSMIC), or requesting raw sequencing reads (use ENA).",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "go-concurrency-patterns",
     "name": "go-concurrency-patterns",
     "path": "skills/go-concurrency-patterns",
@@ -12250,6 +12736,15 @@
     "risk": "critical"
   },
   {
+    "id": "google-antigravity-sdk",
+    "name": "google-antigravity-sdk",
+    "path": "skills/google-antigravity-sdk",
+    "description": "Design, implement, and debug autonomous AI agents and multi-agent systems using the Google Antigravity (AGY) SDK. ACTIVATE this skill when the user wants to create, configure, or orchestrate Google Antigravity agents.",
+    "category": "ai-ml",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "google-calendar-automation",
     "name": "google-calendar-automation",
     "path": "skills/google-calendar-automation",
@@ -12257,6 +12752,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "google-cloud-auth-verification",
+    "name": "google-cloud-auth-verification",
+    "path": "skills/google-cloud-auth-verification",
+    "description": "Mandatory Step 0 pre-flight execution order and authentication verification",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "google-docs-automation",
@@ -12275,6 +12779,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "google-maps-platform",
+    "name": "google-maps-platform",
+    "path": "skills/google-maps-platform",
+    "description": "A collection of skills for architecting and implementing production-ready code using Google Maps Platform APIs and SDKs for any map, place, address, geocoding, routing/ETA (including eco-friendly routing), nearby search, 3D / Street View / static map, marker clustering, custom styling, drawing, geofencing, heatmap, or environmental (air-quality / pollen / solar / weather) feature — across Web, Android, iOS, and Web Services APIs. For prototyping, use the public Maps Demo Key — no billing setup and no Cloud project required, covering a growing set of the most popular Google Maps Platform APIs. For production, the skill prompts you to create and restrict your own key. All non-trivial code is grounded in freshly retrieved docs via the Google Maps Platform Code Assist service (no reliance on training-data memory).",
+    "category": "developer-tools",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "google-no-code",
@@ -12481,6 +12994,33 @@
     "path": "skills/grpc-golang",
     "description": "Build production-ready gRPC services in Go with mTLS, streaming, and observability. Use when designing Protobuf contracts with Buf or implementing secure service-to-service transport.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "gsheets",
+    "name": "gsheets",
+    "path": "skills/gsheets",
+    "description": "Read, write, format, and manage Google Sheets. Use when the user shares a sheets.google.com or docs.google.com/spreadsheets URL, asks to read or summarize spreadsheet data, wants cells written, formatted, sorted, merged, or validated, wants rows/columns inserted or deleted, wants charts, pivot tables, or tables added, wants CSV imported, or wants a spreadsheet created, copied, shared, or exported. Don't use for Google Docs, Slides, or Drive file management.",
+    "category": "productivity",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "gslides",
+    "name": "gslides",
+    "path": "skills/gslides",
+    "description": "Read, create, and edit Google Slides presentations. Use when creating presentations, when the user shares a slides.google.com URL, asks to summarize or extract content from a deck, wants slides drafted or updated, or wants a presentation exported. Don't use for Google Docs, Sheets, or Drive file management.",
+    "category": "productivity",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "gtex-database",
+    "name": "gtex-database",
+    "path": "skills/gtex-database",
+    "description": "Use when you want to retrieve quantitative RNA expression data and variant eQTL information from the GTEx (Genotype-Tissue Expression) Project across 54 non-diseased tissue sites.",
+    "category": "science",
     "tags": [],
     "risk": "safe"
   },
@@ -13107,6 +13647,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "human-protein-atlas-database",
+    "name": "human-protein-atlas-database",
+    "path": "skills/human-protein-atlas-database",
+    "description": "Use when you want to retrieve semi-quantitative protein expression and spatial localisation data from the Human Protein Atlas (HPA).",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "humanize-chinese",
@@ -14214,6 +14763,15 @@
     "risk": "safe"
   },
   {
+    "id": "interpro-database",
+    "name": "interpro-database",
+    "path": "skills/interpro-database",
+    "description": "Identify domains, families, and sites in proteins; find all proteins in a family or sharing a domain; explore species distribution for a domain; annotate genomes with protein families and GO terms. InterPro combines 14 databases (e.g., Pfam, CDD) into one searchable resource. InterPro-N significantly expands annotation and sequence coverage with deep learning. Includes domain architecture (IDA) search.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "interview-coach",
     "name": "interview-coach",
     "path": "skills/interview-coach",
@@ -14449,6 +15007,15 @@
     "path": "skills/itil-expert",
     "description": "Expert advisor for ITIL 4 and ITIL 5 (2026 digital product paradigm), specialized in AI-native governance, sustainability, and value co-creation.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "jaspar-database",
+    "name": "jaspar-database",
+    "path": "skills/jaspar-database",
+    "description": "Query the JASPAR database for Transcription Factor (TF) binding profiles. Use when retrieving Position Frequency Matrices (PFMs) or Position Weight Matrices (PWMs) for specific TFs, resolving gene symbols to JASPAR Matrix IDs, or getting TF metadata. Supports multiple output formats (MEME, TRANSFAC, PFM, JASPAR, YAML).",
+    "category": "science",
     "tags": [],
     "risk": "safe"
   },
@@ -15580,6 +16147,42 @@
     "risk": "safe"
   },
   {
+    "id": "literature-search-arxiv",
+    "name": "literature-search-arxiv",
+    "path": "skills/literature-search-arxiv",
+    "description": "Search for scientific papers, preprints, and publications on arXiv. Extract metadata, abstracts, and download full-text PDFs or HTML versions of papers. Use when the user asks to find research papers, literature, or specific arXiv IDs.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "literature-search-biorxiv",
+    "name": "literature-search-biorxiv",
+    "path": "skills/literature-search-biorxiv",
+    "description": "Browse, filter, and download life sciences, biology, and medical preprints from bioRxiv and medRxiv. Supports fetching paper metadata by DOI, and browsing by date range with category and keyword filters. Keyword filtering is local, so date ranges MUST be narrow (1-4 weeks) with a category to prevent timeouts.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "literature-search-europepmc",
+    "name": "literature-search-europepmc",
+    "path": "skills/literature-search-europepmc",
+    "description": "Search Europe PMC for scientific literature and download open-access full texts and PDFs. Retrieve full-text XML/plain text by PMCID, get citation lists and bibliography.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "literature-search-openalex",
+    "name": "literature-search-openalex",
+    "path": "skills/literature-search-openalex",
+    "description": "Query the OpenAlex scholarly database for research papers, authors, institutions, topics, sources, publishers, funders, geo-locations, and keywords. Use when searching academic papers, resolving DOIs, downloading open-access PDFs, finding an author's publications, aggregating bibliometric data (citation counts, h-index, impact factor), exploring the research taxonomies, or performing DOI lookups.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "liuguang-banlan-ui",
     "name": "liuguang-banlan-ui",
     "path": "skills/liuguang-banlan-ui",
@@ -16479,6 +17082,15 @@
     "risk": "critical"
   },
   {
+    "id": "managing-python-dependencies",
+    "name": "managing-python-dependencies",
+    "path": "skills/managing-python-dependencies",
+    "description": "Ensures proper Python dependency management, avoiding global `pip install` and adhering to project-specific tooling. Use this skill if any of the following are true: 1. Attempting to run `pip install {package_name}`. 2. Python packages or dependencies need to be added or modified. 3. Initiating a new Python project. 4. Installing missing packages inside a notebook or Python project. 5. Generating Python code that includes `import` statements for third-party libraries. 6. Before executing Python scripts via the terminal to ensure the correct virtual environment is active.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "manifest",
     "name": "manifest",
     "path": "skills/manifest",
@@ -16973,6 +17585,15 @@
     "risk": "critical"
   },
   {
+    "id": "memory-leak-debugging",
+    "name": "memory-leak-debugging",
+    "path": "skills/memory-leak-debugging",
+    "description": "Diagnoses and resolves memory leaks in JavaScript/Node.js applications. Use when a user reports high memory usage, OOM errors, or wants to capture, compare, or inspect heap snapshots with Chrome DevTools MCP memory tools.",
+    "category": "devtools",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "memory-safety-patterns",
     "name": "memory-safety-patterns",
     "path": "skills/memory-safety-patterns",
@@ -17108,6 +17729,15 @@
     "risk": "offensive"
   },
   {
+    "id": "migrate-workflows",
+    "name": "migrate-workflows",
+    "path": "skills/migrate-workflows",
+    "description": "Automatically migrate legacy workflows to modern skills across global and workspace configurations. Scans for existing workflows, creates target SKILL.md files, and safely archives old workflow files.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "minecraft-bukkit-pro",
     "name": "minecraft-bukkit-pro",
     "path": "skills/minecraft-bukkit-pro",
@@ -17178,6 +17808,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "ml-best-practices",
+    "name": "ml-best-practices",
+    "path": "skills/ml-best-practices",
+    "description": "CRITICAL RULE: You MUST use this skill whenever the task involves any machine learning tasks or data analysis. Use this skill if the user's prompt or requirements mention any of the following: * Clustering * Classification * Regression * Time series forecasting * Statistical testing * Model comparison * ML * Data analysis SQL/BigQuery ML HANDOFF: If the user requires a SQL solution, use this skill to dictate the ANALYSIS STEPS (e.g., markdown analysis cells, visualization logic), but defer to `bigquery` for all SQL syntax.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "ml-engineer",
@@ -17330,6 +17969,15 @@
     "path": "skills/modern-javascript-patterns",
     "description": "Comprehensive guide for mastering modern JavaScript (ES6+) features, functional programming patterns, and best practices for writing clean, maintainable, and performant code.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "modern-web-guidance",
+    "name": "modern-web-guidance",
+    "path": "skills/modern-web-guidance",
+    "description": "Search tool for modern web development best practices. MANDATORY: Execute FIRST for all HTML/CSS and clientside JS tasks. Do NOT skip — web APIs evolve rapidly and training weights contain obsolete patterns. Trigger immediately for: - UI/Layout: Modals/dialogs/popovers, tables, dark mode, anchor positioning, container queries, `:has()`, etc. - Scroll/Motion: View Transitions, Scroll-driven animations, parallax/reveals, etc. - Performance: CWV (LCP, INP), content-visibility, Fetch Priority, image optimization, etc. - System/APIs: Security, passkeys, HTML sanitization, Web Components, dates/timezones, Built-in AI, WebAssembly, etc. - Frameworks: Standard HTML/CSS/DOM in React, Vue, Angular, etc. - General Frontend: Forms, validation (`:user-valid`), autofill, accessibility, custom selects, scrollbars, etc. DO NOT trigger for: - Backend: SQL, ORMs, API routes, etc. - Infra/Scripts: CI/CD, Docker, Actions, Python/Go, Git, etc. - Tooling/Trivial: Vite, tsconfig, ESLint, tests, copy/renames, 3P docs, etc.",
+    "category": "frontend",
     "tags": [],
     "risk": "safe"
   },
@@ -17870,6 +18518,15 @@
     "risk": "critical"
   },
   {
+    "id": "ncbi-sequence-fetch",
+    "name": "ncbi-sequence-fetch",
+    "path": "skills/ncbi-sequence-fetch",
+    "description": "Retrieve protein and nucleotide sequences from NCBI databases using E-utilities. Supports direct accession lookup, CDS translation, gene+organism search, locus lookup, PubMed-linked sequences, patent protein extraction, and organism+length fallback search. Use when you need to fetch biological sequences by accession, gene name, locus tag, PubMed ID, or patent number.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "neon-ai-gateway",
     "name": "neon-ai-gateway",
     "path": "skills/neon-ai-gateway",
@@ -18245,6 +18902,15 @@
       "mcp-verification",
       "agent-tools"
     ],
+    "risk": "safe"
+  },
+  {
+    "id": "notebook-guidance",
+    "name": "notebook-guidance",
+    "path": "skills/notebook-guidance",
+    "description": "This skill guides the use of Jupyter notebooks for data analysis, exploration, and visualization, particularly with BigQuery. It outlines best practices for notebook execution and validation (supporting both cell-by-cell execution and full notebook generation depending on tool availability), library installation, and structuring notebooks for clarity. It also covers specific rules for data cleaning, plotting, and integrating with BigQuery SQL and machine learning workflows. Relevant when any of the following conditions are true: 1. The user request involves a data analysis, data exploration, data visualization, or data insights task that requires multiple steps, queries, or visualizations to answer. 2. The user explicitly requests a notebook (.ipynb). 3. You are creating, editing, or executing cells in a Jupyter notebook. 4. You need to query BigQuery from within a notebook. DO NOT use the Python BigQuery client library; instead, you MUST use the `%%bqsql` magics explained in this skill.",
+    "category": "cloud",
+    "tags": [],
     "risk": "safe"
   },
   {
@@ -19038,6 +19704,15 @@
     "risk": "critical"
   },
   {
+    "id": "openfda-database",
+    "name": "openfda-database",
+    "path": "skills/openfda-database",
+    "description": "Query, search, and download data from the openFDA API for drugs, devices, foods, tobacco, cosmetics, animal and veterinary products, substances, and transparency data. Use for FDA adverse events, recalls, labeling, approvals, shortages, 510(k) clearances, NDC lookups, and any FDA safety or regulatory data query across all 28 API endpoints.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "openhook",
     "name": "openhook",
     "path": "skills/openhook",
@@ -19058,6 +19733,15 @@
     "category": "devops",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "opentargets-database",
+    "name": "opentargets-database",
+    "path": "skills/opentargets-database",
+    "description": "Query Open Targets Platform for target-disease associations, drug target discovery, tractability/safety data, genetics/omics evidence, known drugs, for therapeutic target identification.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "opentelemetry",
@@ -19547,6 +20231,15 @@
     "risk": "critical"
   },
   {
+    "id": "pdb-database",
+    "name": "pdb-database",
+    "path": "skills/pdb-database",
+    "description": "Use when you want to search for or download experimentally-determined 3D structures for biomolecules (proteins, nucleic acids, bound ligands). Supports searching by sequence similarity, structure similarity, chemical and other attributes. Also use to get metadata about biomolecular structure experiments.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "pdf",
     "name": "pdf",
     "path": "skills/pdf",
@@ -19884,6 +20577,15 @@
     "risk": "critical"
   },
   {
+    "id": "permissioned-github",
+    "name": "permissioned-github",
+    "path": "skills/permissioned-github",
+    "description": "Guidelines for interacting with GitHub and request permissions from the user when commands fail due to restrictions in the agent environment.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "personal-tool-builder",
     "name": "personal-tool-builder",
     "path": "skills/personal-tool-builder",
@@ -20152,6 +20854,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "plugin",
+    "name": "plugin",
+    "path": "skills/plugin",
+    "description": "How to manage and create plugins — namespaced bundles of skills, agents, rules, MCP servers and hooks that install, enable and disable as a single unit. Use this skill when the user wants to enable, disable, install or uninstall a plugin, when they want to create a new plugin, or when a new customization should be packaged into a plugin rather than left loose. Also triggered by the /plugin slash command. Don't use for the underlying customization system itself — discovery roots, loading priority, or authoring a standalone skill, agent, rule, hook or MCP server outside a plugin; see the customizations guide skill for those.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "podcast-generation",
@@ -20537,6 +21248,15 @@
       "ci-cd",
       "production"
     ],
+    "risk": "safe"
+  },
+  {
+    "id": "predictingthepast",
+    "name": "predictingthepast",
+    "path": "skills/predictingthepast",
+    "description": "Ancient text restoration, attribution, dating, contextualization, and embedding via Aeneas (Latin) / Ithaca (Ancient Greek). Use when asked to \"restore\", \"attribute\", \"date\", \"contextualize\", \"find parallels\", \"where was it written\", \"when was it written\", \"embed\", or \"analyze\" an ancient text, inscription, or epigraphic document, or when the user mentions \"Aeneas\", or \"Ithaca\".",
+    "category": "science",
+    "tags": [],
     "risk": "safe"
   },
   {
@@ -21057,6 +21777,24 @@
     "risk": "critical"
   },
   {
+    "id": "protein-sequence-msa",
+    "name": "protein-sequence-msa",
+    "path": "skills/protein-sequence-msa",
+    "description": "Performs multiple sequence alignment of proteins with EBI Clustal Omega. Use when you need to align multiple sequences to assess similarity, domain conservation, or key residue conservation. Supports up to 4000 sequences and a maximum file size of 4 MB. Do not use to search for homologous proteins in a database (use MMseqs2, BLAST), align non-protein sequences (DNA, RNA), perform structural alignment (use Foldseek, PyMOL), or if you only have a single sequence.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "protein-sequence-similarity-search",
+    "name": "protein-sequence-similarity-search",
+    "path": "skills/protein-sequence-similarity-search",
+    "description": "Searches for homologous protein sequences using MMseqs2 (fast, default) or BLAST (comprehensive, fallback). Trigger this whenever the user provides a protein sequence or FASTA file and asks to find homologues, sequence matches, or wants to infer protein function based on sequence similarity, but not when the user wants to infer protein function based on structural similarity.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "protocol-reverse",
     "name": "protocol-reverse",
     "path": "skills/protocol-reverse",
@@ -21085,6 +21823,15 @@
       "workflow",
       "coding-agents"
     ],
+    "risk": "safe"
+  },
+  {
+    "id": "pubchem-database",
+    "name": "pubchem-database",
+    "path": "skills/pubchem-database",
+    "description": "Query PubChem, search by name/CID/SMILES, retrieve properties, similarity/substructure searches, bioactivity, for cheminformatics. Use when a user asks about a specific chemical, drug, or molecule.",
+    "category": "science",
+    "tags": [],
     "risk": "safe"
   },
   {
@@ -21197,6 +21944,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "pymol",
+    "name": "pymol",
+    "path": "skills/pymol",
+    "description": "Visualize, analyze, and render protein and molecular structures using PyMOL. Use when the user wants to create images of protein structures, perform structural alignments or superposition, measure distances or contacts, highlight binding sites or active site residues, color by B-factor/pLDDT, or analyze protein-ligand interactions. Do not use for docking, molecular dynamics, or sequence-only analysis.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "pypict-skill",
@@ -21352,6 +22108,15 @@
     "path": "skills/quant-analyst",
     "description": "Build financial models, backtest trading strategies, and analyze market data. Implements risk metrics, portfolio optimization, and statistical arbitrage.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "quickgo-database",
+    "name": "quickgo-database",
+    "path": "skills/quickgo-database",
+    "description": "Query the QuickGO and Evidence & Conclusion Ontology (ECO) REST API. Use this when you need to map genes to biological processes, molecular functions, or cellular components, find genes associated with a specific pathway/GO term, or explore the Gene Ontology hierarchy. Do not use for querying drug targets (use OpenTargets) or mechanistic signaling pathway diagrams (use KEGG).",
+    "category": "science",
     "tags": [],
     "risk": "safe"
   },
@@ -21597,6 +22362,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "reactome-database",
+    "name": "reactome-database",
+    "path": "skills/reactome-database",
+    "description": "Query the Reactome database (Analysis and Content Services). Use when the user asks about pathway analysis, gene list enrichment, retrieving results by token, finding unmapped or not-found identifiers, mapping identifiers, reaction participants (inputs, outputs), pathway hierarchy (including top-level pathways), diagram export, cross-reference mapping, or searching the knowledgebase.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "read-all-adrs",
@@ -22111,6 +22885,15 @@
     "risk": "safe"
   },
   {
+    "id": "resolving-mcp-region-configs",
+    "name": "resolving-mcp-region-configs",
+    "path": "skills/resolving-mcp-region-configs",
+    "description": "Mandatory Step 0 pre-flight check for regional Google Cloud MCP servers (e.g. Dataproc) before using MCP tools or falling back to gcloud/bq CLI. Use whenever interacting with Dataproc clusters, Spark batches, jobs, sessions, or regional GCP resources. Fixes regional MCP servers whose endpoint URL still has an unreplaced $GCP_REGION / ${REGION} placeholder across Claude Code, Codex, and Antigravity. Trigger: an expected mcp__*_{service}_* tool is missing entirely (not just failing), or a call to one fails/hangs on a malformed host. Check via ToolSearch/deferred-tools listing before falling back to gcloud/bq CLI. Asks the user for a region, patches the live MCP config file(s), and tells the user how to restart without losing session context.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "resolving-merge-conflicts",
     "name": "resolving-merge-conflicts",
     "path": "skills/resolving-merge-conflicts",
@@ -22132,6 +22915,15 @@
       "verification",
       "agent-workflows"
     ],
+    "risk": "safe"
+  },
+  {
+    "id": "retrieving-developer-knowledge",
+    "name": "retrieving-developer-knowledge",
+    "path": "skills/retrieving-developer-knowledge",
+    "description": "Searches, retrieves, and synthesizes official Google developer documentation across Google Cloud, AI/Gemini, Android, Chrome, Web, Flutter, Go, Firebase, and other Google developer platforms. Integrates with the Developer Knowledge MCP server (search_documents, get_documents, answer_query) or the Developer Knowledge REST API fallback. Use when searching for gcloud CLI commands, API syntax, IAM permissions, official documentation, architectural comparisons, or product choice overviews. Don't use for local filesystem lookups or non-Google documentation.",
+    "category": "general",
+    "tags": [],
     "risk": "safe"
   },
   {
@@ -22380,6 +23172,15 @@
       "evaluation"
     ],
     "risk": "critical"
+  },
+  {
+    "id": "run-workflow",
+    "name": "run-workflow",
+    "path": "skills/run-workflow",
+    "description": "How to write and run a dynamic workflow script with the `run_workflow` tool: a Python script that orchestrates many agents with `agent`, `parallel`, `pipeline`, and `phase`. Use when a task splits into many independent or staged pieces of agent work (fan out over files, modules, bugs, or review angles, then aggregate), or when the user asks for a workflow. Don't use for a single delegated task (use a subagent) or for legacy workflow files (see migrate-workflows).",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "runapi-cli",
@@ -22738,6 +23539,15 @@
       "python"
     ],
     "risk": "critical"
+  },
+  {
+    "id": "schema-mapping",
+    "name": "schema-mapping",
+    "path": "skills/schema-mapping",
+    "description": "Guides the process of analyzing, mapping, and documenting transformations",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "schema-markup",
@@ -24081,6 +24891,15 @@
     "risk": "critical"
   },
   {
+    "id": "skill-repair",
+    "name": "skill-repair",
+    "path": "skills/skill-repair",
+    "description": "Use this to fix and re-install agent skills that have failed installation. This skill provides the necessary context and permissions to surgically update the `manifest.json` after a fix has been applied.",
+    "category": "cloud",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "skill-router",
     "name": "skill-router",
     "path": "skills/skill-router",
@@ -25069,6 +25888,15 @@
     "path": "skills/stride-analysis-patterns",
     "description": "Apply STRIDE methodology to systematically identify threats. Use when analyzing system security, conducting threat modeling sessions, or creating security documentation.",
     "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "string-database",
+    "name": "string-database",
+    "path": "skills/string-database",
+    "description": "Query the STRING database for protein-protein interactions (PPIs), functional enrichment, and homology. Use when the user asks about interactions between specific proteins, interaction evidence, confidence scores, protein interaction partners, or pathway enrichments.",
+    "category": "science",
     "tags": [],
     "risk": "safe"
   },
@@ -26601,6 +27429,15 @@
     "risk": "critical"
   },
   {
+    "id": "troubleshooting",
+    "name": "troubleshooting",
+    "path": "skills/troubleshooting",
+    "description": "Uses Chrome DevTools MCP and documentation to troubleshoot connection and target issues. Trigger this skill when list_pages, new_page, or navigate_page fail, or when the server initialization fails.",
+    "category": "devtools",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "trpc-fullstack",
     "name": "trpc-fullstack",
     "path": "skills/trpc-fullstack",
@@ -26713,6 +27550,15 @@
     "risk": "safe"
   },
   {
+    "id": "ucsc-conservation-and-tfbs",
+    "name": "ucsc-conservation-and-tfbs",
+    "path": "skills/ucsc-conservation-and-tfbs",
+    "description": "Fetch Evolutionary Conservation scores (phyloP, phastCons) and Transcription Factor Binding Sites (TFBS) from the UCSC Genome Browser. Use when analyzing whether genomic variants or regions are evolutionarily conserved, functionally important, or bounded by TF regulators across major projects (ENCODE, JASPAR, ReMap).",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "ui-a11y",
     "name": "ui-a11y",
     "path": "skills/ui-a11y",
@@ -26780,6 +27626,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "ui-plugin-navigation",
+    "name": "ui-plugin-navigation",
+    "path": "skills/ui-plugin-navigation",
+    "description": "Discover UI plugin panels relevant to the current task and surface a one-click pill in chat to open (toggle) them in the side pane. Use when a running UI plugin's panel would help with what the user is doing, or right after the user enables a new UI plugin pane and a shortcut to open it is handy.",
+    "category": "antigravity",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "ui-review",
@@ -26935,6 +27790,15 @@
     "path": "skills/understand-project-yylo",
     "description": "Inspect the current product architecture, dependencies, and validation",
     "category": "project-management",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "unibind-database",
+    "name": "unibind-database",
+    "path": "skills/unibind-database",
+    "description": "Queries the UniBind database for experimentally validated transcription factor (TF) binding sites. Use when retrieving direct TF-DNA interaction datasets, downloading binding site coordinates (BED/FASTA) for local analysis, or listing available datasets by species, cell line, or TF name. Don't use to query specific intervals, locations, genes, motif models or expression data.",
+    "category": "science",
     "tags": [],
     "risk": "safe"
   },
@@ -27333,6 +28197,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "uv",
+    "name": "uv",
+    "path": "skills/uv",
+    "description": "Checks whether the uv Python package manager is installed and installs it if missing. Ensures uv is on PATH. Use when another skill requires uv as a prerequisite.",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "uv-package-manager",
@@ -28689,6 +29562,15 @@
     "risk": "safe"
   },
   {
+    "id": "workflow-skill-creator",
+    "name": "workflow-skill-creator",
+    "path": "skills/workflow-skill-creator",
+    "description": "Distills a completed user workflow or interaction into a reusable agent skill. Use when the user asks to turn their workflow, interaction, or multi-step process into a skill, or when they say \"make this a skill\", \"create a skill from what we just did\", \"package this workflow\" or similar. Do not use for creating skills from scratch without an existing workflow (use a generic skill-creator for that).",
+    "category": "science",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "workflow-yylo",
     "name": "workflow-yylo",
     "path": "skills/workflow-yylo",
@@ -28860,6 +29742,15 @@
       "mcp"
     ],
     "risk": "critical"
+  },
+  {
+    "id": "xcode-project-setup",
+    "name": "xcode-project-setup",
+    "path": "skills/xcode-project-setup",
+    "description": "Safely modifies Xcode projects (.pbxproj) to add Swift Packages and link files. Use this skill whenever an iOS project needs dependencies installed (e.g. Firebase, Alamofire).",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "xiaohongshu-content-strategist",
