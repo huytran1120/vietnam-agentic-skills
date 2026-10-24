@@ -1,11 +1,11 @@
 # 🇻🇳 Vietnam Agentic Skills (VAS)
 
-> **Kho lưu trữ 2,650+ kỹ năng (agentic skills) chuyên sâu được tối ưu hoá riêng cho Google Antigravity.**  
+> **Kho lưu trữ 2,660+ kỹ năng (agentic skills) chuyên sâu được tối ưu hoá riêng cho Google Antigravity.**  
 > **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ thực thi siêu tốc với Python 3 chuẩn.**
 
 [![Google Antigravity](https://img.shields.io/badge/Target-Google%20Antigravity-4285F4?style=for-the-badge&logo=google)](https://github.com/huytran1120/vietnam-agentic-skills)
 [![Website](https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages)](https://huytran1120.github.io/vietnam-agentic-skills/)
-[![Skills Count](https://img.shields.io/badge/Catalog-2%2C650%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
+[![Skills Count](https://img.shields.io/badge/Catalog-2%2C660%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
 [![Zero NPX](https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge)](vas.py)
 [![Author: huytran1120](https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github)](https://github.com/huytran1120)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -33,7 +33,7 @@
 
 **Vietnam Agentic Skills (VAS)** là dự án thư viện kỹ năng agentic mã nguồn mở được khởi xướng và phát triển bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)). 
 
-Dự án đóng gói **hơn 2,650 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, được thiết kế theo đúng chuẩn quy cách mở rộng của **Google Antigravity**, biến AI Assistant thành một cộng sự đắc lực có thể giải quyết các tác vụ kỹ thuật phức tạp từ kiến trúc hệ thống, kiểm toán bảo mật, devops, kiểm thử tự động, đến lập trình fullstack và AI/ML.
+Dự án đóng gói **hơn 2,660 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, được thiết kế theo đúng chuẩn quy cách mở rộng của **Google Antigravity**, biến AI Assistant thành một cộng sự đắc lực có thể giải quyết các tác vụ kỹ thuật phức tạp từ kiến trúc hệ thống, kiểm toán bảo mật, devops, kiểm thử tự động, đến lập trình fullstack và AI/ML.
 
 ---
 
@@ -296,7 +296,7 @@ description: >-
 
 ## 8. Danh Mục Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **2,650+ skills** chia theo 115 nhóm ngành. Xem danh sách chi tiết tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **2,660+ skills** chia theo 115 nhóm ngành. Xem danh sách chi tiết tại [CATALOG.md](CATALOG.md).
 
 ```text
 📊 PHÂN BỔ CÁC DANH MỤC HÀNG ĐẦU:
