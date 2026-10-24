@@ -49,12 +49,33 @@ SKILLS_DIR = REPO_ROOT / "skills"
 INDEX_FILE = REPO_ROOT / "skills_index.json"
 MANIFEST_NAME = ".vas-manifest.json"
 
-# Antigravity target paths
 HOME = Path.home()
-ANTIGRAVITY_WORKSPACE_TARGET = Path(".agents/skills")
-ANTIGRAVITY_WORKSPACE_ALT = Path(".gemini/skills")
-ANTIGRAVITY_GLOBAL_TARGET = HOME / ".gemini" / "antigravity" / "skills"
-ANTIGRAVITY_GLOBAL_ALT = HOME / ".agents" / "skills"
+
+# Multi-Agent target configurations: (workspace_relative_dir, global_home_dir, human_label)
+AGENT_TARGET_MAP = {
+    "antigravity": (Path(".agents/skills"), HOME / ".gemini" / "antigravity" / "skills", "Google Antigravity"),
+    "workspace": (Path(".agents/skills"), HOME / ".agents" / "skills", "Workspace Standard (.agents/skills)"),
+    "claude": (Path(".claude/skills"), HOME / ".claude" / "skills", "Claude Code"),
+    "cursor": (Path(".cursor/skills"), HOME / ".cursor" / "skills", "Cursor IDE"),
+    "windsurf": (Path(".windsurf/skills"), HOME / ".codeium" / "windsurf" / "skills", "Windsurf (Codeium)"),
+    "codex": (Path(".codex/skills"), HOME / ".codex" / "skills", "OpenAI Codex / OpenCode"),
+    "cline": (Path(".cline/skills"), HOME / ".cline" / "skills", "Cline / Roo Code"),
+    "copilot": (Path(".github/skills"), HOME / ".copilot" / "skills", "GitHub Copilot CLI"),
+    "gemini": (Path(".gemini/skills"), HOME / ".gemini" / "skills", "Google Gemini CLI"),
+    "global": (None, HOME / ".gemini" / "antigravity" / "skills", "Antigravity Global"),
+    "global-agents": (None, HOME / ".agents" / "skills", "Global Universal (.agents/skills)"),
+}
+
+ALL_WORKSPACE_TARGETS = [
+    Path(".agents/skills"),
+    Path(".claude/skills"),
+    Path(".cursor/skills"),
+    Path(".windsurf/skills"),
+    Path(".codex/skills"),
+    Path(".cline/skills"),
+    Path(".github/skills"),
+]
+
 
 
 def load_index():
@@ -163,21 +184,36 @@ def extract_skill_metadata(skill_md_path, skill_id):
     }
 
 
-def resolve_target_dir(target_type, custom_path=None):
-    """Determine the destination folder for Antigravity skills."""
+def resolve_target_dirs(target_type, custom_path=None, is_global=False):
+    """Determine destination folder(s) across supported AI agents."""
     if custom_path:
         dest = Path(custom_path).resolve()
-    elif target_type == "global":
-        dest = ANTIGRAVITY_GLOBAL_TARGET
-    elif target_type == "global-agents":
-        dest = ANTIGRAVITY_GLOBAL_ALT
-    elif target_type == "gemini":
-        dest = ANTIGRAVITY_WORKSPACE_ALT.resolve()
-    else:  # default "workspace"
-        dest = ANTIGRAVITY_WORKSPACE_TARGET.resolve()
+        dest.mkdir(parents=True, exist_ok=True)
+        return [dest]
+
+    if target_type == "all":
+        results = []
+        for p in ALL_WORKSPACE_TARGETS:
+            res = p.resolve()
+            res.mkdir(parents=True, exist_ok=True)
+            results.append(res)
+        return results
+
+    info = AGENT_TARGET_MAP.get(target_type, AGENT_TARGET_MAP["workspace"])
+    ws_dir, glob_dir, _ = info
+
+    if is_global or target_type in ("global", "global-agents"):
+        dest = glob_dir
+    else:
+        dest = (ws_dir or glob_dir).resolve()
 
     dest.mkdir(parents=True, exist_ok=True)
-    return dest
+    return [dest]
+
+
+def resolve_target_dir(target_type, custom_path=None, is_global=False):
+    """Determine the destination folder for skills."""
+    return resolve_target_dirs(target_type, custom_path, is_global)[0]
 
 
 def load_manifest(dest_dir):
@@ -210,6 +246,7 @@ def cmd_search(args):
     skills = load_index()
     results = []
 
+    tokens = query.split()
     for s in skills:
         score = 0
         s_id = s.get("id", "").lower()
@@ -232,6 +269,31 @@ def cmd_search(args):
             score += 25
         if query in s_desc:
             score += 10
+
+        # Token matching for multi-word queries
+        if len(tokens) > 1:
+            token_matches = 0
+            for tok in tokens:
+                matched_tok = False
+                if tok in s_id:
+                    score += 25
+                    matched_tok = True
+                if tok in s_name:
+                    score += 15
+                    matched_tok = True
+                if tok in s_cat:
+                    score += 10
+                    matched_tok = True
+                if any(tok in t for t in s_tags):
+                    score += 15
+                    matched_tok = True
+                if tok in s_desc:
+                    score += 5
+                    matched_tok = True
+                if matched_tok:
+                    token_matches += 1
+            if token_matches == len(tokens):
+                score += 50  # Bonus when all tokens are present
 
         if score > 0:
             results.append((score, s))
@@ -372,16 +434,16 @@ def cmd_tags(args):
 
 
 def cmd_install(args):
-    """Install skill(s) into Antigravity workspace or global configuration."""
-    dest_dir = resolve_target_dir(args.target, args.dest)
-    manifest = load_manifest(dest_dir)
+    """Install skill(s) into workspace or global configuration across AI agents."""
+    dest_dirs = resolve_target_dirs(args.target, args.dest, getattr(args, 'is_global', False))
     skills = load_index()
     skills_by_id = {s.get("id"): s for s in skills}
 
     targets_to_install = []
 
     if args.all:
-        confirm = input(f"{Colors.RED}{Colors.BOLD}WARNING:{Colors.RESET} Installing all {len(skills)} skills into {dest_dir}? [y/N]: ")
+        target_names = ", ".join(str(d) for d in dest_dirs)
+        confirm = input(f"{Colors.RED}{Colors.BOLD}WARNING:{Colors.RESET} Installing all {len(skills)} skills into {target_names}? [y/N]: ")
         if confirm.lower() != 'y':
             print("Aborted.")
             return
@@ -408,127 +470,127 @@ def cmd_install(args):
         print(f"{Colors.RED}Error: Provide skill ID(s), --category, --tag, or --all.{Colors.RESET}")
         return
 
-    print(f"\n{Colors.BOLD}Installing {len(targets_to_install)} skill(s) to Antigravity:{Colors.RESET}")
-    print(f"  Target: {Colors.CYAN}{dest_dir}{Colors.RESET}")
-    print(f"  Mode:   {Colors.YELLOW}{args.mode}{Colors.RESET}\n")
+    for dest_dir in dest_dirs:
+        manifest = load_manifest(dest_dir)
+        agent_label = dest_dir.name
+        print(f"\n{Colors.BOLD}Installing {len(targets_to_install)} skill(s) for target:{Colors.RESET}")
+        print(f"  Destination: {Colors.CYAN}{dest_dir}{Colors.RESET}")
+        print(f"  Mode:        {Colors.YELLOW}{args.mode}{Colors.RESET}\n")
 
-    installed_count = 0
-    for s_id in targets_to_install:
-        s_id = s_id.strip()
-        # Locate source skill directory
-        source_dir = None
-        if s_id in skills_by_id:
-            rel_path = skills_by_id[s_id].get("path", f"skills/{s_id}")
-            candidate = REPO_ROOT / rel_path
-            if candidate.is_dir():
-                source_dir = candidate
+        installed_count = 0
+        for s_id in targets_to_install:
+            s_id = s_id.strip()
+            # Locate source skill directory
+            source_dir = None
+            if s_id in skills_by_id:
+                rel_path = skills_by_id[s_id].get("path", f"skills/{s_id}")
+                candidate = REPO_ROOT / rel_path
+                if candidate.is_dir():
+                    source_dir = candidate
 
-        if not source_dir:
-            direct_candidate = SKILLS_DIR / s_id
-            if direct_candidate.is_dir():
-                source_dir = direct_candidate
+            if not source_dir:
+                direct_candidate = SKILLS_DIR / s_id
+                if direct_candidate.is_dir():
+                    source_dir = direct_candidate
 
-        if not source_dir or not (source_dir / "SKILL.md").exists():
-            print(f"  {Colors.RED}✗{Colors.RESET} Skill '{s_id}' not found or missing SKILL.md. Skipped.")
-            continue
+            if not source_dir or not (source_dir / "SKILL.md").exists():
+                print(f"  {Colors.RED}✗{Colors.RESET} Skill '{s_id}' not found or missing SKILL.md. Skipped.")
+                continue
 
-        target_skill_dir = dest_dir / source_dir.name
-        # Remove existing if present
-        if target_skill_dir.exists() or target_skill_dir.is_symlink():
-            if target_skill_dir.is_symlink() or target_skill_dir.is_file():
-                target_skill_dir.unlink()
-            else:
-                shutil.rmtree(target_skill_dir)
+            target_skill_dir = dest_dir / source_dir.name
+            # Remove existing if present
+            if target_skill_dir.exists() or target_skill_dir.is_symlink():
+                if target_skill_dir.is_symlink() or target_skill_dir.is_file():
+                    target_skill_dir.unlink()
+                else:
+                    shutil.rmtree(target_skill_dir)
 
-        try:
-            if args.mode == "link":
-                # Create relative symlink for portability, fallback to absolute
-                try:
-                    rel_target = os.path.relpath(source_dir.resolve(), target_skill_dir.parent.resolve())
-                    os.symlink(rel_target, target_skill_dir)
-                except ValueError:
-                    os.symlink(source_dir.resolve(), target_skill_dir)
-                mode_label = "linked"
-            else:
-                # Copy tree
-                shutil.copytree(source_dir, target_skill_dir)
-                mode_label = "copied"
+            try:
+                if args.mode == "link":
+                    try:
+                        rel_target = os.path.relpath(source_dir.resolve(), target_skill_dir.parent.resolve())
+                        os.symlink(rel_target, target_skill_dir)
+                    except ValueError:
+                        os.symlink(source_dir.resolve(), target_skill_dir)
+                    mode_label = "linked"
+                else:
+                    shutil.copytree(source_dir, target_skill_dir)
+                    mode_label = "copied"
 
-            manifest[s_id] = {
-                "installed_at": target_skill_dir.stat().st_mtime,
-                "mode": args.mode,
-                "source": str(source_dir.resolve()),
-                "category": skills_by_id.get(s_id, {}).get("category", "general")
-            }
-            installed_count += 1
-            print(f"  {Colors.GREEN}✓{Colors.RESET} {s_id} ({mode_label})")
-        except Exception as e:
-            print(f"  {Colors.RED}✗{Colors.RESET} Failed to install {s_id}: {e}")
+                manifest[s_id] = {
+                    "installed_at": target_skill_dir.stat().st_mtime,
+                    "mode": args.mode,
+                    "source": str(source_dir.resolve()),
+                    "category": skills_by_id.get(s_id, {}).get("category", "general")
+                }
+                installed_count += 1
+                print(f"  {Colors.GREEN}✓{Colors.RESET} {s_id} ({mode_label})")
+            except Exception as e:
+                print(f"  {Colors.RED}✗{Colors.RESET} Failed to install {s_id}: {e}")
 
-    save_manifest(dest_dir, manifest)
-    print(f"\n{Colors.GREEN}{Colors.BOLD}Done! Successfully installed {installed_count} skill(s) for Antigravity.{Colors.RESET}")
-    print(f"{Colors.DIM}Antigravity will progressively discover these skills from {dest_dir}.{Colors.RESET}\n")
+            save_manifest(dest_dir, manifest)
+            print(f"\n{Colors.GREEN}{Colors.BOLD}✓ Successfully installed {installed_count} skill(s) into {dest_dir}.{Colors.RESET}")
 
 
 def cmd_uninstall(args):
-    """Uninstall skill(s) from Antigravity workspace or global configuration."""
-    dest_dir = resolve_target_dir(args.target, args.dest)
-    manifest = load_manifest(dest_dir)
-
+    """Uninstall skill(s) from workspace or global configuration across AI agents."""
+    dest_dirs = resolve_target_dirs(args.target, args.dest, getattr(args, 'is_global', False))
     to_remove = args.skill_ids
     if not to_remove:
         print(f"{Colors.RED}Specify skill ID(s) to uninstall.{Colors.RESET}")
         return
 
-    print(f"\n{Colors.BOLD}Uninstalling from {dest_dir}:{Colors.RESET}\n")
-    removed_count = 0
-    for s_id in to_remove:
-        target_skill_dir = dest_dir / s_id
-        if target_skill_dir.exists() or target_skill_dir.is_symlink():
-            try:
-                if target_skill_dir.is_symlink() or target_skill_dir.is_file():
-                    target_skill_dir.unlink()
-                else:
-                    shutil.rmtree(target_skill_dir)
-                manifest.pop(s_id, None)
-                removed_count += 1
-                print(f"  {Colors.GREEN}✓{Colors.RESET} Removed {s_id}")
-            except Exception as e:
-                print(f"  {Colors.RED}✗{Colors.RESET} Error removing {s_id}: {e}")
-        else:
-            print(f"  {Colors.YELLOW}-{Colors.RESET} {s_id} is not installed in {dest_dir}")
+    for dest_dir in dest_dirs:
+        manifest = load_manifest(dest_dir)
+        print(f"\n{Colors.BOLD}Uninstalling from {dest_dir}:{Colors.RESET}\n")
+        removed_count = 0
+        for s_id in to_remove:
+            target_skill_dir = dest_dir / s_id
+            if target_skill_dir.exists() or target_skill_dir.is_symlink():
+                try:
+                    if target_skill_dir.is_symlink() or target_skill_dir.is_file():
+                        target_skill_dir.unlink()
+                    else:
+                        shutil.rmtree(target_skill_dir)
+                    manifest.pop(s_id, None)
+                    removed_count += 1
+                    print(f"  {Colors.GREEN}✓{Colors.RESET} Removed {s_id}")
+                except Exception as e:
+                    print(f"  {Colors.RED}✗{Colors.RESET} Error removing {s_id}: {e}")
+            else:
+                print(f"  {Colors.YELLOW}-{Colors.RESET} {s_id} is not installed in {dest_dir}")
 
-    save_manifest(dest_dir, manifest)
-    print(f"\n{Colors.GREEN}Removed {removed_count} skill(s).{Colors.RESET}\n")
+        save_manifest(dest_dir, manifest)
+        print(f"\n{Colors.GREEN}Removed {removed_count} skill(s) from {dest_dir}.{Colors.RESET}\n")
 
 
 def cmd_status(args):
-    """Show currently installed skills in Antigravity."""
-    dest_dir = resolve_target_dir(args.target, args.dest)
-    manifest = load_manifest(dest_dir)
+    """Show currently installed skills across target AI agents."""
+    dest_dirs = resolve_target_dirs(args.target, args.dest, getattr(args, 'is_global', False))
 
-    print(f"\n{Colors.BOLD}Antigravity Skills Status in:{Colors.RESET} {Colors.CYAN}{dest_dir}{Colors.RESET}\n")
+    for dest_dir in dest_dirs:
+        manifest = load_manifest(dest_dir)
+        print(f"\n{Colors.BOLD}Skills Status in:{Colors.RESET} {Colors.CYAN}{dest_dir}{Colors.RESET}\n")
 
-    # Detect skills on disk
-    skills_on_disk = []
-    if dest_dir.exists():
-        for item in sorted(dest_dir.iterdir()):
-            if item.is_dir() or item.is_symlink():
-                if (item / "SKILL.md").exists() or item.name in manifest:
-                    is_link = item.is_symlink()
-                    skills_on_disk.append((item.name, is_link))
+        skills_on_disk = []
+        if dest_dir.exists():
+            for item in sorted(dest_dir.iterdir()):
+                if item.is_dir() or item.is_symlink():
+                    if (item / "SKILL.md").exists() or item.name in manifest:
+                        is_link = item.is_symlink()
+                        skills_on_disk.append((item.name, is_link))
 
-    if not skills_on_disk:
-        print(f"  {Colors.YELLOW}No skills currently installed.{Colors.RESET}")
-        print(f"  Install some with: ./vas install <skill_id> --target {args.target}")
-    else:
-        print(f"  Total installed: {Colors.GREEN}{len(skills_on_disk)}{Colors.RESET}\n")
-        for name, is_link in skills_on_disk:
-            tag = f"{Colors.BLUE}[symlink]{Colors.RESET}" if is_link else f"{Colors.YELLOW}[copied]{Colors.RESET}"
-            cat = manifest.get(name, {}).get("category", "")
-            cat_label = f"[{cat}]" if cat else ""
-            print(f"  - {Colors.BOLD}{name:<32}{Colors.RESET} {tag} {Colors.DIM}{cat_label}{Colors.RESET}")
-    print()
+        if not skills_on_disk:
+            print(f"  {Colors.YELLOW}No skills currently installed.{Colors.RESET}")
+            print(f"  Install some with: ./vas install <skill_id> --target {args.target}")
+        else:
+            print(f"  Total installed: {Colors.GREEN}{len(skills_on_disk)}{Colors.RESET}\n")
+            for name, is_link in skills_on_disk:
+                tag = f"{Colors.BLUE}[symlink]{Colors.RESET}" if is_link else f"{Colors.YELLOW}[copied]{Colors.RESET}"
+                cat = manifest.get(name, {}).get("category", "")
+                cat_label = f"[{cat}]" if cat else ""
+                print(f"  - {Colors.BOLD}{name:<32}{Colors.RESET} {tag} {Colors.DIM}{cat_label}{Colors.RESET}")
+        print()
 
 
 def cmd_init(args):
@@ -584,48 +646,66 @@ def cmd_sync(args):
 
 
 def cmd_antigravity_guide(args):
-    """Print architectural guide on using VAS with Google Antigravity."""
+    """Print architectural guide on using VAS with all supported AI agents."""
     print(f"""
 {Colors.HEADER}{Colors.BOLD}======================================================================
-  Google Antigravity & Vietnam Agentic Skills (VAS) Guide
+  Vietnam Agentic Skills (VAS) - Universal Multi-Agent Guide
 ======================================================================{Colors.RESET}
 
-{Colors.BOLD}1. How Antigravity Discovers Skills:{Colors.RESET}
-   Antigravity scans skills progressively using hierarchical priority:
-   - Priority 1: Workspace root `.agents/skills/<skill_name>/SKILL.md` (or `.gemini/skills/`)
-   - Priority 2: Workspace declared configs `skills.json`
-   - Priority 3: Global discovery `~/.gemini/antigravity/skills/` or `~/.gemini/config/skills/`
-   - Priority 4: Built-in application skills
+{Colors.BOLD}1. Universal Agent Skills Architecture:{Colors.RESET}
+   VAS adheres to the Open Agent Skills specification (agentskills.io).
+   All playbooks (SKILL.md) are vendor-neutral and natively executable by:
+   - Google Antigravity (.agents/skills)
+   - Claude Code (.claude/skills)
+   - Cursor (.cursor/skills)
+   - Windsurf by Codeium (.windsurf/skills)
+   - OpenAI Codex / OpenCode (.codex/skills or .agents/skills)
+   - Cline / Roo Code (.cline/skills)
+   - GitHub Copilot CLI (.github/skills)
 
-{Colors.BOLD}2. Progressive Disclosure in Antigravity:{Colors.RESET}
-   Only the YAML frontmatter (`name` & `description`) is injected into the initial context.
-   The full playbook is loaded into memory ONLY when Antigravity decides it is relevant.
-   This allows you to keep thousands of skills available without bloating prompt tokens!
+{Colors.BOLD}2. Progressive Disclosure Across Agents:{Colors.RESET}
+   Agents only load the concise frontmatter summary at startup.
+   The full detailed playbook and scripts are loaded into memory ONLY
+   when you ask a relevant question, saving up to 99% of prompt tokens!
 
 {Colors.BOLD}3. Common Workflows (Zero NPX):{Colors.RESET}
    - Search for a skill:
      {Colors.CYAN}./vas search security{Colors.RESET}
    - View details:
-     {Colors.CYAN}./vas show 007{Colors.RESET}
-   - Install to current workspace:
-     {Colors.CYAN}./vas install 007 --target workspace --mode link{Colors.RESET}
-   - Install to global Antigravity (available in all projects):
-     {Colors.CYAN}./vas install docker-security --target global{Colors.RESET}
-   - Batch install an entire category:
-     {Colors.CYAN}./vas install --category ai-ml --target workspace{Colors.RESET}
+     {Colors.CYAN}./vas show ui-ux-pro-max{Colors.RESET}
+   - Install for Google Antigravity (or universal standard):
+     {Colors.CYAN}./vas install ui-ux-pro-max --target antigravity --mode link{Colors.RESET}
+   - Install for OpenAI Codex:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target codex --mode link{Colors.RESET}
+   - Install for Claude Code:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target claude --mode link{Colors.RESET}
+   - Install for Cursor:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target cursor --mode link{Colors.RESET}
+   - Install for Windsurf:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target windsurf --mode link{Colors.RESET}
+   - Install for Cline / Roo Code:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target cline --mode link{Colors.RESET}
+   - Install for GitHub Copilot CLI:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target copilot --mode link{Colors.RESET}
+   - Install for ALL AI agents at once:
+     {Colors.CYAN}./vas install ui-ux-pro-max --target all{Colors.RESET}
    - Check installed skills:
-     {Colors.CYAN}./vas status{Colors.RESET}
-   - Remove a skill:
-     {Colors.CYAN}./vas uninstall 007{Colors.RESET}
+     {Colors.CYAN}./vas status --target codex{Colors.RESET}
 
 {Colors.HEADER}======================================================================{Colors.RESET}
 """)
 
 
 def main():
+    TARGET_CHOICES = [
+        "workspace", "antigravity", "claude", "cursor",
+        "windsurf", "codex", "cline", "copilot", "gemini",
+        "global", "global-agents", "all"
+    ]
+
     parser = argparse.ArgumentParser(
         prog="vas",
-        description="Vietnam Agentic Skills (VAS) - Catalog and Antigravity Installer"
+        description="Vietnam Agentic Skills (VAS) - Universal AI Agent Skills Manager (Zero NPX)"
     )
     subparsers = parser.add_subparsers(dest="command", help="Sub-commands")
 
@@ -657,12 +737,14 @@ def main():
     p_tags.set_defaults(func=cmd_tags)
 
     # install
-    p_install = subparsers.add_parser("install", help="Install skills into Antigravity")
+    p_install = subparsers.add_parser("install", help="Install skills for AI agents (Antigravity, Claude, Cursor, Codex, Windsurf, Cline, Copilot)")
     p_install.add_argument("skill_ids", nargs="*", help="Skill ID(s) to install")
-    p_install.add_argument("--target", choices=["workspace", "global", "global-agents", "gemini"], default="workspace",
-                           help="Installation target (default: workspace -> .agents/skills)")
+    p_install.add_argument("--target", choices=TARGET_CHOICES, default="workspace",
+                           help="Target AI agent: workspace, antigravity, claude, cursor, windsurf, codex, cline, copilot, all (default: workspace -> .agents/skills)")
     p_install.add_argument("--mode", choices=["copy", "link"], default="link",
                            help="Installation mode: link (symlink, zero disk space, auto updates) or copy (default: link)")
+    p_install.add_argument("--global", dest="is_global", action="store_true",
+                           help="Install globally in user's home directory for the selected target")
     p_install.add_argument("--dest", help="Custom destination directory")
     p_install.add_argument("--category", "-c", help="Install all skills in this category")
     p_install.add_argument("--tag", "-t", help="Install all skills with this tag")
@@ -670,20 +752,24 @@ def main():
     p_install.set_defaults(func=cmd_install)
 
     # uninstall / remove
-    p_uninst = subparsers.add_parser("uninstall", aliases=["remove"], help="Uninstall skills from Antigravity")
+    p_uninst = subparsers.add_parser("uninstall", aliases=["remove"], help="Uninstall skills from target agent")
     p_uninst.add_argument("skill_ids", nargs="+", help="Skill ID(s) to uninstall")
-    p_uninst.add_argument("--target", choices=["workspace", "global", "global-agents", "gemini"], default="workspace")
+    p_uninst.add_argument("--target", choices=TARGET_CHOICES, default="workspace")
+    p_uninst.add_argument("--global", dest="is_global", action="store_true",
+                          help="Uninstall from user's global config directory for the selected target")
     p_uninst.add_argument("--dest", help="Custom destination directory")
     p_uninst.set_defaults(func=cmd_uninstall)
 
     # status
-    p_status = subparsers.add_parser("status", help="Show installed skills in Antigravity")
-    p_status.add_argument("--target", choices=["workspace", "global", "global-agents", "gemini"], default="workspace")
+    p_status = subparsers.add_parser("status", help="Show installed skills for target agent")
+    p_status.add_argument("--target", choices=TARGET_CHOICES, default="workspace")
+    p_status.add_argument("--global", dest="is_global", action="store_true",
+                          help="Inspect user's global directory for the selected target")
     p_status.add_argument("--dest", help="Custom destination directory")
     p_status.set_defaults(func=cmd_status)
 
     # init
-    p_init = subparsers.add_parser("init", help="Initialize workspace for Antigravity")
+    p_init = subparsers.add_parser("init", help="Initialize workspace for AI agents")
     p_init.set_defaults(func=cmd_init)
 
     # sync
@@ -691,7 +777,7 @@ def main():
     p_sync.set_defaults(func=cmd_sync)
 
     # guide
-    p_guide = subparsers.add_parser("guide", help="Antigravity integration guide")
+    p_guide = subparsers.add_parser("guide", help="Multi-agent integration guide")
     p_guide.set_defaults(func=cmd_antigravity_guide)
 
     args = parser.parse_args()

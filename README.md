@@ -1,11 +1,17 @@
 # 🇻🇳 Vietnam Agentic Skills (VAS)
 
-> **Kho lưu trữ 2,660+ kỹ năng (agentic skills) chuyên sâu được tối ưu hoá riêng cho Google Antigravity.**  
-> **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ thực thi siêu tốc với Python 3 chuẩn.**
+> **Kho lưu trữ 2,670+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
+> **Tương thích toàn diện: Google Antigravity, Claude Code, Cursor, Windsurf (Codeium), OpenAI Codex / OpenCode, Cline / Roo Code & GitHub Copilot CLI.**  
+> **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ phản hồi sub-second với Python 3 chuẩn.**
 
-[![Google Antigravity](https://img.shields.io/badge/Target-Google%20Antigravity-4285F4?style=for-the-badge&logo=google)](https://github.com/huytran1120/vietnam-agentic-skills)
-[![Website](https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages)](https://huytran1120.github.io/vietnam-agentic-skills/)
-[![Skills Count](https://img.shields.io/badge/Catalog-2%2C660%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
+[![Target: Universal Agents](https://img.shields.io/badge/Agents-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Windsurf%20%7C%20Codex%20%7C%20Cline%20%7C%20Copilot-blueviolet?style=for-the-badge)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![Google Antigravity](https://img.shields.io/badge/Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![Windsurf](https://img.shields.io/badge/Windsurf-09B6A2?style=for-the-badge&logo=codeium&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-412991?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![Live Catalog](https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white)](https://huytran1120.github.io/vietnam-agentic-skills/)
+[![Skills Count](https://img.shields.io/badge/Catalog-2%2C670%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
 [![Zero NPX](https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge)](vas.py)
 [![Author: huytran1120](https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github)](https://github.com/huytran1120)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -17,11 +23,18 @@
 ## 📌 Mục Lục (Table of Contents)
 
 - [1. Giới Thiệu (Overview)](#1-giới-thiệu-overview)
-- [2. Vì Sao Chọn Vietnam Agentic Skills?](#2-vì-sao-chọn-vietnam-agentic-skills)
-- [3. Cài Đặt & Sử Dụng Nhanh (Quickstart)](#3-cài-đặt--sử-dụng-nhanh-quickstart)
-- [4. Cách Google Antigravity Hoạt Động Với Skills](#4-cách-google-antigravity-hoạt-động-với-skills)
-- [5. Cẩm Nang Tra Cứu Lệnh CLI (`./vas`)](#5-cẩm-nang-tra-cứu-lệnh-cli-vas)
-- [6. Các Kịch Bản Sử Dụng Điển Hình](#6-các-kịch-bản-sử-dụng-điển-hình)
+- [2. Hỗ Trợ Đa Nền Tảng (Multi-Agent Compatibility)](#2-hỗ-trợ-đa-nền-tảng-multi-agent-compatibility)
+- [3. Vì Sao Chọn Vietnam Agentic Skills?](#3-vì-sao-chọn-vietnam-agentic-skills)
+- [4. Cài Đặt & Sử Dụng Nhanh (Quickstart)](#4-cài-đặt--sử-dụng-nhanh-quickstart)
+- [5. Hướng Dẫn Chi Tiết Cho Từng AI Agent](#5-hướng-dẫn-chi-tiết-cho-từng-ai-agent)
+  - [Google Antigravity](#-google-antigravity)
+  - [OpenAI Codex / OpenCode](#-openai-codex--opencode)
+  - [Claude Code](#-claude-code)
+  - [Cursor IDE](#-cursor-ide)
+  - [Windsurf (Codeium)](#-windsurf-codeium)
+  - [Cline / Roo Code](#-cline--roo-code)
+  - [GitHub Copilot CLI](#-github-copilot-cli)
+- [6. Cẩm Nang Lệnh CLI (`./vas`)](#6-cẩm-nang-lệnh-cli-vas)
 - [7. Cấu Trúc Chuẩn Của Một Skill](#7-cấu-trúc-chuẩn-của-một-skill)
 - [8. Danh Mục Kỹ Năng Nổi Bật](#8-danh-mục-kỹ-năng-nổi-bật)
 - [9. Câu Hỏi Thường Gặp (FAQ)](#9-câu-hỏi-thường-gặp-faq)
@@ -33,27 +46,45 @@
 
 **Vietnam Agentic Skills (VAS)** là dự án thư viện kỹ năng agentic mã nguồn mở được khởi xướng và phát triển bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)). 
 
-Dự án đóng gói **hơn 2,660 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, được thiết kế theo đúng chuẩn quy cách mở rộng của **Google Antigravity**, biến AI Assistant thành một cộng sự đắc lực có thể giải quyết các tác vụ kỹ thuật phức tạp từ kiến trúc hệ thống, kiểm toán bảo mật, devops, kiểm thử tự động, đến lập trình fullstack và AI/ML.
+Dự án đóng gói **hơn 2,670 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
+
+Với VAS, các AI Coding Agent không còn là những lập trình viên trả lời chung chung, mà trở thành những cộng sự kỹ thuật cấp Senior thực thụ, có quy trình chuẩn đoán, checklist bảo mật, công thức tối ưu và kịch bản thực thi chính xác.
 
 ---
 
-## 2. Vì Sao Chọn Vietnam Agentic Skills?
+## 2. Hỗ Trợ Đa Nền Tảng (Multi-Agent Compatibility)
 
-So sánh giữa giải pháp gốc sử dụng `npx` (`agentic-awesome-skills`) và **Vietnam Agentic Skills (VAS)**:
+VAS hỗ trợ cài đặt bằng một câu lệnh duy nhất cho tất cả các AI coding tools thịnh hành nhất hiện nay:
 
-| Tiêu Chí | Upstream (`agentic-awesome-skills`) | Vietnam Agentic Skills (VAS) |
+| AI Agent / IDE | Thư Mục Mục Tiêu | Lệnh Cài Đặt Với `./vas` |
 | :--- | :--- | :--- |
-| **Công cụ thực thi** | Bắt buộc cài đặt Node.js & gọi `npx` | **Native Python 3 CLI (`./vas`)** dùng thư viện chuẩn |
-| **Phụ thuộc bên ngoài** | Cần kết nối NPM Registry, mạng Internet | **Zero Dependencies**: Chạy 100% offline nội bộ |
-| **Tốc độ phản hồi** | 3s - 15s mỗi lần chạy lệnh qua npx | **< 0.1 giây** (phản hồi tức thì) |
-| **Hệ điều hành hỗ trợ** | Cần môi trường JavaScript runtime | **Tương thích macOS, Linux, Windows** có sẵn Python 3 |
-| **Mục tiêu chính** | Hỗ trợ chung cho nhiều AI IDE | **Tối ưu hoá sâu cho Google Antigravity** |
-| **Cơ chế cài đặt** | Copy file thủ công vào thư mục | Hỗ trợ cả **Symlink** (`--mode link`) và **Deep Copy** |
-| **Bảo toàn ngữ cảnh** | Dễ gây phình token nếu nạp sai | Tuân thủ tuyệt đối **Progressive Disclosure** |
+| **Google Antigravity** | `.agents/skills/` hoặc `~/.gemini/antigravity/skills/` | `./vas install <skill> --target antigravity` |
+| **OpenAI Codex / OpenCode** | `.codex/skills/` hoặc `.agents/skills/` | `./vas install <skill> --target codex` |
+| **Claude Code** | `.claude/skills/` hoặc `~/.claude/skills/` | `./vas install <skill> --target claude` |
+| **Cursor IDE** | `.cursor/skills/` | `./vas install <skill> --target cursor` |
+| **Windsurf (Codeium)** | `.windsurf/skills/` | `./vas install <skill> --target windsurf` |
+| **Cline / Roo Code** | `.cline/skills/` | `./vas install <skill> --target cline` |
+| **GitHub Copilot CLI** | `.github/skills/` | `./vas install <skill> --target copilot` |
+| **TẤT CẢ CÁC AGENT** | Cài đồng bộ vào mọi thư mục trên | `./vas install <skill> --target all` |
 
 ---
 
-## 3. Cài Đặt & Sử Dụng Nhanh (Quickstart)
+## 3. Vì Sao Chọn Vietnam Agentic Skills?
+
+So sánh giữa giải pháp gốc dùng `npx` (`agentic-awesome-skills`) và **Vietnam Agentic Skills (VAS)**:
+
+| Tiêu Chí | Giải Pháp Cũ (`npx`) | Vietnam Agentic Skills (VAS) |
+| :--- | :--- | :--- |
+| **Công cụ quản lý** | Bắt buộc Node.js & gọi `npx` từ remote | **Native Python 3 CLI (`./vas`)** dùng thư viện chuẩn |
+| **Kết nối mạng** | Cần Internet mỗi lần chạy npx | **100% Offline & Zero Dependencies** |
+| **Tốc độ phản hồi** | 3s - 15s mỗi lần chạy | **< 0.05 giây** (tức thì) |
+| **Khả năng tương thích** | Giới hạn hoặc nạp thủ công | **Hỗ trợ 7+ AI Agent lớn** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) |
+| **Cơ chế cài đặt** | Copy thủ công | Hỗ trợ cả **Symlink** (`--mode link`) và **Deep Copy** |
+| **Bảo toàn ngữ cảnh** | Dễ gây phình token ngữ cảnh | Tuân thủ tuyệt đối **Progressive Disclosure** (tiết kiệm 99% token) |
+
+---
+
+## 4. Cài Đặt & Sử Dụng Nhanh (Quickstart)
 
 ### Bước 1: Clone kho lưu trữ về máy
 ```bash
@@ -67,80 +98,103 @@ chmod +x vas vas.py
 # Tìm kiếm kỹ năng theo từ khóa
 ./vas search docker-security
 
-# Liệt kê các kỹ năng trong nhóm bảo mật
+# Liệt kê theo danh mục
 ./vas list --category security --limit 10
 
-# Xem các danh mục có sẵn
+# Khám phá 115 danh mục có sẵn
 ./vas categories
 ```
 
-### Bước 3: Cài đặt vào Google Antigravity
+### Bước 3: Cài đặt cho Agent bạn đang sử dụng
 
-#### Cách A: Cài đặt cho Dự án Hiện tại (Workspace Target - Khuyên dùng)
-Kỹ năng sẽ được cài vào `.agents/skills/<skill_id>` trong dự án của bạn:
 ```bash
-# Cài đặt bằng Symlink (tiết kiệm ổ cứng, tự động cập nhật khi repo update)
-./vas install docker-security --target workspace --mode link
+# Cài cho OpenAI Codex:
+./vas install ui-ux-pro-max --target codex
 
-# Cài đặt nhiều kỹ năng cùng lúc
-./vas install 007 react-performance fastapi-best-practices --target workspace
-```
+# Cài cho Google Antigravity:
+./vas install docker-security --target antigravity
 
-#### Cách B: Cài đặt Toàn cục (Global Target)
-Kỹ năng sẽ có mặt ở **mọi dự án** bạn mở bằng Google Antigravity (`~/.gemini/antigravity/skills/`):
-```bash
-./vas install 007 --target global
-```
+# Cài cho Claude Code:
+./vas install fastapi-best-practices --target claude
 
-### Bước 4: Kiểm tra trạng thái kỹ năng đã cài
-```bash
-./vas status
+# Cài cho Cursor:
+./vas install react-performance --target cursor
+
+# Cài cho tất cả AI Agent trong dự án cùng một lúc:
+./vas install ui-ux-pro-max 007 pdf --target all
 ```
 
 ---
 
-## 4. Cách Google Antigravity Hoạt Động Với Skills
+## 5. Hướng Dẫn Chi Tiết Cho Từng AI Agent
 
-Google Antigravity quản lý và nạp kỹ năng thông qua cơ chế phân cấp ưu tiên và **Progressive Disclosure** (tiết lộ lũy tiến):
+### 🤖 Google Antigravity
+Google Antigravity quét kỹ năng tự động qua thư mục `.agents/skills/` trong workspace hoặc thư mục toàn cục `~/.gemini/antigravity/skills/`:
+```bash
+# Cài đặt cho dự án hiện tại:
+./vas install <skill_id> --target antigravity --mode link
 
-```mermaid
-flowchart TD
-    A["Yêu cầu của bạn (User Prompt)"] --> B["Bộ quét Antigravity"]
-    B --> C["1. Dự án hiện tại: .agents/skills/"]
-    B --> D["2. Khai báo workspace: skills.json"]
-    B --> E["3. Toàn cục: ~/.gemini/antigravity/skills/"]
-    B --> F["4. Kỹ năng mặc định có sẵn (Built-in)"]
-    
-    C --> G["Đọc tiêu đề YAML Frontmatter (name + description)"]
-    D --> G
-    E --> G
-    F --> G
-    
-    G --> H{"Khớp với tác vụ người dùng yêu cầu?"}
-    H -- "Có (Relevant)" --> I["Nạp toàn bộ SKILL.md vào bộ nhớ ngữ cảnh"]
-    H -- "Không (Ignored)" --> J["Bỏ qua, tiết kiệm 99% chi phí token"]
-    
-    I --> K["Thực hiện tác vụ theo quy trình chuyên gia"]
+# Cài đặt toàn cục (dùng cho mọi dự án):
+./vas install <skill_id> --target global
 ```
 
-> [!TIP]
-> **Nguyên tắc Tiết lộ Lũy tiến (Progressive Disclosure):**  
-> Dù bạn có liên kết hàng trăm kỹ năng, Antigravity chỉ đọc phần `name` và `description` ngắn gọn ở đầu file. Chỉ khi bạn yêu cầu thực hiện tác vụ liên quan (ví dụ: *"hãy audit bảo mật container này"*), Antigravity mới nạp quy trình chi tiết từ `SKILL.md` vào ngữ cảnh.
+### 🧠 OpenAI Codex / OpenCode
+OpenAI Codex có thế mạnh vượt trội về suy luận code và thực thi lệnh terminal. Codex nhận diện kỹ năng qua thư mục `.codex/skills/`, `.agents/skills/`, hoặc file chỉ dẫn `AGENTS.md` ở root:
+```bash
+# Cài đặt vào workspace của Codex:
+./vas install <skill_id> --target codex --mode link
+
+# Hoặc cài toàn cục cho Codex trên máy:
+./vas install <skill_id> --target codex --global
+```
+*Prompt mẫu trong Codex:*
+> *"Hãy đọc runbook trong skill `.codex/skills/<skill_id>/SKILL.md` và thực thi kịch bản kiểm tra bảo mật cho thư mục hiện tại."*
+
+### 🟠 Claude Code
+Claude Code đọc các kỹ năng từ thư mục `.claude/skills/` hoặc toàn cục `~/.claude/skills/`:
+```bash
+# Cài đặt vào workspace Claude Code:
+./vas install <skill_id> --target claude --mode link
+
+# Cài đặt toàn cục:
+./vas install <skill_id> --target claude --global
+```
+
+### ⚡ Cursor IDE
+Cursor có thể liên kết trực tiếp các skill vào `.cursor/skills/` và kết hợp với `.cursorrules`:
+```bash
+./vas install <skill_id> --target cursor --mode link
+```
+*Gợi ý:* Trong Cursor Composer, bạn chỉ cần gõ `@.cursor/skills/<skill_id>` để đính kèm playbook vào ngữ cảnh.
+
+### 🌊 Windsurf (Codeium)
+Windsurf hỗ trợ nạp quy trình làm việc từ thư mục `.windsurf/skills/`:
+```bash
+./vas install <skill_id> --target windsurf --mode link
+```
+
+### 💻 Cline / Roo Code
+Dành cho lập trình viên sử dụng extension Cline hoặc Roo Code trên VS Code:
+```bash
+./vas install <skill_id> --target cline --mode link
+```
+
+### 🐙 GitHub Copilot CLI
+Tích hợp các kịch bản kiểm thử và CI/CD vào thư mục `.github/skills/`:
+```bash
+./vas install <skill_id> --target copilot --mode link
+```
 
 ---
 
-## 5. Cẩm Nang Tra Cứu Lệnh CLI (`./vas`)
-
-Bộ công cụ `./vas` được thiết kế theo phong cách CLI hiện đại, có màu sắc trực quan:
+## 6. Cẩm Nang Lệnh CLI (`./vas`)
 
 ```text
 Cú pháp chung:
   ./vas <sub-command> [arguments] [options]
-  (hoặc python3 vas.py <sub-command> ...)
 ```
 
 ### 1. `search` — Tìm kiếm kỹ năng
-Tìm kiếm từ khóa trong tên, ID, mô tả, danh mục và thẻ phân loại:
 ```bash
 ./vas search kubernetes
 ./vas search "react performance" --limit 15
@@ -148,143 +202,79 @@ Tìm kiếm từ khóa trong tên, ID, mô tả, danh mục và thẻ phân lo�
 
 ### 2. `list` — Liệt kê kỹ năng có bộ lọc
 ```bash
-# Xem danh sách theo nhóm danh mục
 ./vas list --category ai-ml
-
-# Xem danh sách theo tag
 ./vas list --tag python --limit 20
 ```
 
-### 3. `show` / `info` — Xem chi tiết & Xem trước nội dung
-Hiển thị metadata, tác giả, mức độ rủi ro và xem trước 40 dòng đầu của file `SKILL.md`:
+### 3. `show` / `info` — Xem chi tiết & Preview Runbook
+Hiển thị metadata, tác giả, rủi ro và xem trước 40 dòng đầu của `SKILL.md`:
 ```bash
-./vas show 007
+./vas show ui-ux-pro-max
 ./vas show docker-security
 ```
 
-### 4. `categories` & `tags` — Khám phá hệ thống
+### 4. `install` — Cài đặt cho AI Agent
 ```bash
-# Xem 115 danh mục kỹ năng và số lượng
-./vas categories
+# Cài đặt 1 hoặc nhiều skills
+./vas install ui-ux-pro-max 007 --target codex
 
-# Xem các tag phổ biến nhất
-./vas tags --limit 30
-```
+# Cài đặt toàn bộ danh mục devops
+./vas install --category devops --target claude
 
-### 5. `install` — Cài đặt vào Antigravity
-```bash
-# Cài 1 hoặc nhiều kỹ năng cụ thể
-./vas install 007 git-rebase-interactive --target workspace --mode link
-
-# Cài đặt toàn bộ kỹ năng thuộc 1 chuyên mục
-./vas install --category devops --target workspace
-
-# Cài đặt theo tag
-./vas install --tag aws --target workspace
-
-# Cài đặt vào thư mục tuỳ ý
-./vas install 007 --dest /path/to/custom/agents/skills
+# Cài đặt đồng bộ cho tất cả các AI Agents
+./vas install --category security --target all
 ```
 
 **Các tuỳ chọn của `install`:**
-* `--target workspace`: Cài vào `.agents/skills` của dự án hiện tại (mặc định).
-* `--target global`: Cài vào `~/.gemini/antigravity/skills/` dùng chung cho toàn máy.
-* `--mode link`: Tạo symbolic link (nhẹ, nhanh, tự cập nhật).
-* `--mode copy`: Sao chép toàn bộ thư mục sang đích.
+* `--target`: `antigravity`, `codex`, `claude`, `cursor`, `windsurf`, `cline`, `copilot`, `workspace`, `all`.
+* `--mode`: `link` (symlink tiết kiệm dung lượng, tự động cập nhật) hoặc `copy` (sao chép độc lập).
+* `--global`: Cài đặt vào thư mục home của người dùng thay vì workspace.
+* `--dest`: Đường dẫn thư mục tùy biến bất kỳ.
 
-### 6. `uninstall` / `remove` — Gỡ bỏ kỹ năng
+### 5. `uninstall` / `remove` — Gỡ bỏ kỹ năng
 ```bash
-./vas uninstall 007 --target workspace
-./vas uninstall docker-security --target global
+./vas uninstall 007 --target codex
+./vas uninstall docker-security --target all
 ```
 
-### 7. `status` — Kiểm tra kỹ năng đã cài
+### 6. `status` — Kiểm tra kỹ năng đã cài
 ```bash
-./vas status
-./vas status --target global
+./vas status --target codex
+./vas status --target antigravity
 ```
 
-### 8. `init` — Khởi tạo thư mục cho dự án bên ngoài
-Di chuyển vào bất kỳ thư mục dự án nào và chạy lệnh để kích hoạt VAS cho Antigravity:
+### 7. `guide` — Hướng dẫn đa nền tảng
 ```bash
-cd /path/to/my-awesome-project
-/path/to/vietnam-agentic-skills/vas init
+./vas guide
 ```
-
-### 9. `sync` — Tái lập chỉ mục (Rebuild Index)
-Tự động quét lại thư mục `skills/` và tái tạo file chỉ mục `skills_index.json`:
-```bash
-./vas sync
-```
-
----
-
-## 6. Các Kịch Bản Sử Dụng Điển Hình
-
-### Kịch bản 1: Kiểm toán Bảo Mật Toàn Diện (Security Audit)
-Bạn cần kiểm tra bảo mật mã nguồn, phân tích lỗ hổng OWASP và mô hình hoá đe dọa (STRIDE):
-```bash
-./vas install 007 --target workspace --mode link
-```
-*Prompt trong Antigravity:*
-> *"Hãy chạy kiểm tra bảo mật theo chuẩn 007 cho toàn bộ source code hiện tại, đánh giá lỗ hổng injection và secrets leakage."*
-
----
-
-### Kịch bản 2: Tối ưu hoá Backend FastAPI & Clean Architecture
-Bạn đang xây dựng một microservice backend bằng Python:
-```bash
-./vas install fastapi-best-practices python-patterns --target workspace
-```
-*Prompt trong Antigravity:*
-> *"Tái cấu trúc thư mục API này theo chuẩn Clean Architecture và tối ưu hóa xử lý async theo fastapi-best-practices."*
-
----
-
-### Kịch bản 3: Tăng tốc Frontend React / Next.js
-Bạn muốn cải thiện chỉ số Core Web Vitals và phát hiện re-render không cần thiết:
-```bash
-./vas install react-performance nextjs-perf --target workspace
-```
-*Prompt trong Antigravity:*
-> *"Kiểm tra file page.tsx này và đề xuất tối ưu hóa re-render, áp dụng memoization và dynamic imports."*
-
----
-
-### Kịch bản 4: Trang bị Full Bộ Kỹ Năng DevOps
-Bạn đang thiết lập hệ thống triển khai CI/CD với Docker và Kubernetes:
-```bash
-./vas install --category devops --target workspace
-```
-Toàn bộ các playbooks về Dockerfile hardening, Kubernetes YAML linter, Helm chart best practices sẽ sẵn sàng để Antigravity tra cứu.
 
 ---
 
 ## 7. Cấu Trúc Chuẩn Của Một Skill
 
-Mỗi kỹ năng trong thư mục `skills/<skill_name>/` tuân thủ nghiêm ngặt cấu trúc mở rộng của Antigravity:
+Mỗi kỹ năng trong thư mục `skills/<skill_name>/` tuân thủ nghiêm ngặt chuẩn mở:
 
 ```text
 skills/<skill_name>/
-├── SKILL.md          # [Bắt buộc] Frontmatter YAML + Bản hướng dẫn quy trình
-├── scripts/          # [Tuỳ chọn] Script tự động hóa (Python, Bash)
-├── examples/         # [Tuỳ chọn] File mẫu, đầu vào / đầu ra tham khảo
-└── references/       # [Tuỳ chọn] Checklist chi tiết hoặc tài liệu chuyên sâu
+├── SKILL.md          # [Bắt buộc] YAML Frontmatter + Runbook từng bước
+├── scripts/          # [Tuỳ chọn] Script tự động hóa (Python, Bash, JS)
+├── examples/         # [Tuỳ chọn] File cấu hình mẫu, input/output tham khảo
+└── references/       # [Tuỳ chọn] Checklist chi tiết hoặc tài liệu kỹ thuật
 ```
 
-### Cấu trúc tiêu chuẩn của `SKILL.md`:
+### Tiêu chuẩn `SKILL.md`:
 ```markdown
 ---
-name: my-specialized-skill
+name: docker-security
 category: devops
-tags: [docker, security, hardening]
+tags: [docker, security, hardening, containers]
 risk: safe
 description: >-
   Use this skill when auditing Dockerfile or container configurations
   against security vulnerabilities, root execution, and secret leaks.
 ---
 
-# My Specialized Skill
+# Docker Security Hardening
 
 ## Step-by-Step Instructions
 1. Run static analysis: `scripts/analyze.sh`
@@ -296,7 +286,7 @@ description: >-
 
 ## 8. Danh Mục Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **2,660+ skills** chia theo 115 nhóm ngành. Xem danh sách chi tiết tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **2,670+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
 
 ```text
 📊 PHÂN BỔ CÁC DANH MỤC HÀNG ĐẦU:
@@ -306,6 +296,7 @@ Kho lưu trữ gồm **2,660+ skills** chia theo 115 nhóm ngành. Xem danh sác
 ├── ⚙️  DevOps                : 167 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
 ├── ☁️  Cloud                 : 147 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
 ├── 🤖  AI & Machine Learning : 134 skills (RAG, LLM Evaluation, Prompt Engineering)
+├── 🎨  Design & UX/UI        :  80+ skills (UI/UX Pro Max, Design Systems, Palettes)
 ├── 🌐  Web & Fullstack       : 113 skills (React, Next.js, Vue, Node.js, FastAPI, Spring)
 ├── 🧪  Testing & QA          :  50 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
 └── ... và hơn 100+ danh mục chuyên biệt khác.
@@ -315,18 +306,21 @@ Kho lưu trữ gồm **2,660+ skills** chia theo 115 nhóm ngành. Xem danh sác
 
 ## 9. Câu Hỏi Thường Gặp (FAQ)
 
+### Q: Tôi dùng OpenAI Codex thì có cần cấu hình gì thêm không?
+**Không cần.** Bạn chỉ cần chạy `./vas install <skill_id> --target codex`. Codex có khả năng đọc Markdown và gọi các script thực thi trực tiếp trong môi trường của bạn.
+
 ### Q: Tôi có cần cài đặt Node.js hay npm/npx không?
-**Không.** Dự án này được thiết kế theo tiêu chí **Zero-NPX**. Tất cả thao tác quản lý, tìm kiếm và cài đặt đều chạy bằng Python 3 tích hợp sẵn trên máy qua file `./vas` (hoặc `python3 vas.py`).
+**Hoàn toàn không.** Dự án được xây dựng theo tiêu chuẩn **Zero-NPX**. Tất cả lệnh tìm kiếm, liệt kê và cài đặt đều chạy bằng Python 3 tích hợp sẵn trên máy qua `./vas`.
 
-### Q: Khi nào nên dùng `--mode link` thay vì `--mode copy`?
-* **`--mode link` (Mặc định)**: Tạo symbolic link tương đối. Ưu điểm là gần như không tốn thêm dung lượng đĩa, và khi repo này được `git pull` cập nhật thì các skill trong dự án của bạn sẽ tự động được làm mới.
-* **`--mode copy`**: Sao chép toàn bộ file sang dự án. Thích hợp khi bạn muốn chỉnh sửa nội dung riêng cho dự án đó mà không ảnh hưởng tới repo gốc.
+### Q: Làm sao để cài đặt một kỹ năng cho TẤT CẢ các AI tools tôi đang dùng?
+Chỉ cần chạy:
+```bash
+./vas install ui-ux-pro-max --target all
+```
+Lệnh này sẽ tự động tạo symlink vào `.agents/skills`, `.claude/skills`, `.cursor/skills`, `.windsurf/skills`, `.codex/skills`, `.cline/skills`, `.github/skills`.
 
-### Q: Antigravity có bị quá tải bộ nhớ khi có quá nhiều skill không?
-**Không.** Nhờ cơ chế **Progressive Disclosure**, Antigravity chỉ nạp vài dòng metadata `name` và `description`. 99.9% nội dung chi tiết chỉ được nạp theo yêu cầu (on-demand) khi bạn nhắc tới tác vụ tương ứng.
-
-### Q: Làm sao để Antigravity nhận diện các skill tôi vừa cài?
-Khi bạn cài đặt vào `.agents/skills` của dự án, Antigravity sẽ tự động nhận biết ngay trong phiên chat tiếp theo mà không cần phải khởi động lại.
+### Q: Cơ chế Progressive Disclosure tiết kiệm token như thế nào?
+Dù bạn cài hàng trăm kỹ năng, các AI agent chỉ quét phần tóm tắt ngắn (YAML frontmatter). Chỉ khi câu hỏi của bạn khớp với chuyên môn của skill, Agent mới nạp toàn bộ nội dung chi tiết vào ngữ cảnh.
 
 ---
 
@@ -335,7 +329,8 @@ Khi bạn cài đặt vào `.agents/skills` của dự án, Antigravity sẽ t�
 * **Tác giả & Duy trì**: **Huy Tran** ([@huytran1120](https://github.com/huytran1120))
 * **Email**: `66549585+huytran1120@users.noreply.github.com`
 * **Kho lưu trữ chính thức**: [https://github.com/huytran1120/vietnam-agentic-skills](https://github.com/huytran1120/vietnam-agentic-skills)
-* **Giấy phép**: [MIT License](LICENSE) — Bạn được tự do sử dụng, chỉnh sửa và tích hợp vào bất kỳ dự án cá nhân hoặc thương mại nào.
+* **Website Catalog**: [https://huytran1120.github.io/vietnam-agentic-skills/](https://huytran1120.github.io/vietnam-agentic-skills/)
+* **Giấy phép**: [MIT License](LICENSE) — Tự do sử dụng cá nhân và thương mại.
 
 ---
 
