@@ -1,6 +1,6 @@
 # 🇻🇳 Vietnam Agentic Skills (VAS)
 
-> **Kho lưu trữ 2,670+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
+> **Kho lưu trữ 2,713+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
 > **Tương thích toàn diện: Google Antigravity, Claude Code, Cursor, Windsurf (Codeium), OpenAI Codex / OpenCode, Cline / Roo Code & GitHub Copilot CLI.**  
 > **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ phản hồi sub-second với Python 3 chuẩn.**
 
@@ -11,7 +11,7 @@
 [![Windsurf](https://img.shields.io/badge/Windsurf-09B6A2?style=for-the-badge&logo=codeium&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
 [![OpenAI Codex](https://img.shields.io/badge/OpenAI%20Codex-412991?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/huytran1120/vietnam-agentic-skills)
 [![Live Catalog](https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white)](https://huytran1120.github.io/vietnam-agentic-skills/)
-[![Skills Count](https://img.shields.io/badge/Catalog-2%2C670%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
+[![Skills Count](https://img.shields.io/badge/Catalog-2%2C713%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
 [![Zero NPX](https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge)](vas.py)
 [![Author: huytran1120](https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github)](https://github.com/huytran1120)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -286,7 +286,22 @@ description: >-
 
 ## 8. Danh Mục Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **2,670+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **2,713+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
+
+### 🔥 Top 10 Siêu Kỹ Năng Thiết Kế, 3D & Video Mới Nhất Đã Tích Hợp:
+
+| # | Skill ID | Stars | Mô Tả Năng Lực | Lệnh Cài Đặt Nhanh |
+| :-: | :--- | :---: | :--- | :--- |
+| 1 | `ui-ux-pro-max` | ⭐ 139K | Tạo hệ thống Design System hoàn chỉnh (79 styles, 192 palettes, 74 font pairings) từ mô tả dự án | `./vas install ui-ux-pro-max --target all` |
+| 2 | `impeccable` | ⭐ 86K | Chống giao diện "AI-slop" với 62 quy tắc kiểm tra tự động & 30+ chế độ tinh chỉnh thiết kế | `./vas install impeccable --target all` |
+| 3 | `hyperframes` | ⭐ 71K | Viết HTML xuất video MP4 chuẩn cho AI Agent; đi kèm `hyperframes-figma`, `motion-doctrine`, `seam-craft` | `./vas install hyperframes --target all` |
+| 4 | `remotion` | ⭐ 67K | Bộ 12 kỹ năng chính thức lập trình video bằng React (`remotion-create`, `remotion-render`, `remotion-captions`...) | `./vas install remotion-best-practices --target all` |
+| 5 | `penpot` | ⭐ 62K | Kết nối Penpot (Figma mã nguồn mở) qua MCP Server kèm 14 kỹ năng AI Kit (`penpot-build-screen`, `penpot-audit-tokens`...) | `./vas install penpot penpot-router --target all` |
+| 6 | `diagram-design` | ⭐ 60K | Xuất 45 loại sơ đồ kiến trúc thành 1 file HTML+SVG độc lập chuẩn màu sắc & font thương hiệu | `./vas install diagram-design --target all` |
+| 7 | `blender-mcp` | ⭐ 32K | Kết nối Blender 3D với bất kỳ LLM nào để dựng hình, gán vật liệu, ánh sáng, rigging & animation bằng prompt | `./vas install blender-mcp --target all` |
+| 8 | `img2threejs` | ⭐ 19K | Tái tạo đối tượng từ ảnh tham chiếu thành mô hình 3D Three.js thuần code, sẵn sàng diễn hoạt | `./vas install img2threejs --target all` |
+| 9 | `video-shotcraft` | ⭐ 13K | Chụp trang thực tế, chọn từ 152 công thức góc máy (shot recipes) và kết xuất video quảng cáo bằng Remotion | `./vas install video-shotcraft --target all` |
+| 10 | `lemo-opuscar` | ⭐ 6.5K | Đạo diễn & sản xuất phim ngắn bằng 59 phong cách điện ảnh viết hoàn toàn bằng code, không cần video model | `./vas install lemo-opuscar --target all` |
 
 ```text
 📊 PHÂN BỔ CÁC DANH MỤC HÀNG ĐẦU:
@@ -296,7 +311,7 @@ Kho lưu trữ gồm **2,670+ skills** chia theo 115 nhóm ngành. Xem danh mụ
 ├── ⚙️  DevOps                : 167 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
 ├── ☁️  Cloud                 : 147 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
 ├── 🤖  AI & Machine Learning : 134 skills (RAG, LLM Evaluation, Prompt Engineering)
-├── 🎨  Design & UX/UI        :  80+ skills (UI/UX Pro Max, Design Systems, Palettes)
+├── 🎨  Design, 3D & Video    : 120+ skills (Impeccable, UI/UX Pro Max, HyperFrames, Remotion, Penpot, Blender)
 ├── 🌐  Web & Fullstack       : 113 skills (React, Next.js, Vue, Node.js, FastAPI, Spring)
 ├── 🧪  Testing & QA          :  50 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
 └── ... và hơn 100+ danh mục chuyên biệt khác.

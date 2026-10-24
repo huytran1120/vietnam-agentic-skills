@@ -1,16 +1,8 @@
 ---
 name: remotion-render
 description: Export a Remotion video
-version: 4.0.526
-source_repo: remotion-dev/skills
-source_type: official
-source: remotion-dev
-date_added: '2026-09-21'
-risk: unknown
+version: 4.0.538
 ---
-## When to Use
-- Use when this upstream workflow matches the user's stated goal.
-- Use when the task requires the procedures documented in this skill.
 
 ## General rendering strategy
 
@@ -30,19 +22,14 @@ npx remotion still
 
 Full list of options: https://www.remotion.dev/docs/cli/still.md
 
-## Transparent videos
+To render several frames as images in one call, use `render --frames`:
 
-See [Transparent videos](transparent-videos.md) for alpha-compatible codec/pixel-format settings. Confirm composition ID, frame range, output path and installed CLI version before rendering. Use a new output and inspect actual frames, duration, audio and alpha on a contrasting background; the command exiting successfully alone does not establish visual correctness.
-
-
-## Examples
-
-```text
-User: Apply this skill to my current task.
-Assistant: Follow the workflow in this skill, cite limitations, and ask before risky steps.
+```
+npx remotion render [composition-id] out/frames --frames=0,30,90 --image-format=png
 ```
 
-## Limitations
+See https://www.remotion.dev/docs/cli/render.md#--frames for more options.
 
-- Imported upstream skill; verify credentials, permissions, and safety boundaries before execution.
-- Does not replace environment-specific validation, testing, or maintainer review.
+## Transparent videos
+
+See [Transparent videos](./transparent-videos.md) for rendering out a video with transparency.

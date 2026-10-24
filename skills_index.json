@@ -4478,6 +4478,26 @@
     "risk": "critical"
   },
   {
+    "id": "blender-mcp",
+    "name": "blender-mcp",
+    "path": "skills/blender-mcp",
+    "description": "Connect Blender 3D to any LLM via Model Context Protocol (MCP) for prompt-driven 3D modeling, scene creation, material application, lighting, rigging, retopology, animation, and asset integration (Poly Haven, Sketchfab, Hyper3D Rodin, Meshy, Hunyuan3D).",
+    "category": "design",
+    "tags": [
+      "blender",
+      "mcp",
+      "3d",
+      "modeling",
+      "bpy",
+      "scene-generation",
+      "polyhaven",
+      "sketchfab",
+      "meshy",
+      "hunyuan3d"
+    ],
+    "risk": "safe"
+  },
+  {
     "id": "block-storage",
     "name": "block-storage",
     "path": "skills/block-storage",
@@ -5374,6 +5394,15 @@
     "risk": "safe"
   },
   {
+    "id": "captions-overlay",
+    "name": "captions-overlay",
+    "path": "skills/captions-overlay",
+    "description": "Overlay doctrine for captions in HyperFrames videos — the caption MODEL (drop / rail / embed) and the rule that captions are an OVERLAY composited on top of the film, never a reserved bottom band you shift content up to avoid. Load when adding captions/subtitles to a talking-head or launch video, when deciding whether a phrase should be dropped, ride the verbatim rail, or be promoted to a scarce embedded climax, when laying out a composition that will carry captions (do NOT reserve a keep-out band), or when centering a composition on the true frame center under captions. Applies ON TOP of the `/hyperframes` skill's references/captions.md.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "career-ops",
     "name": "career-ops",
     "path": "skills/career-ops",
@@ -5525,6 +5554,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "changelog-video",
+    "name": "changelog-video",
+    "path": "skills/changelog-video",
+    "description": "Turn a weekly changelog .md into a finished branded changelog video (square 1080, ~45-60s, Annie VO, animated brand background, mock-UI visualizations, lowkey captions). Use when the user provides a changelog/digest markdown and wants the weekly video, or says \"changelog video\". Self-contained — fonts, background, lexicon, and scripts ship in this skill.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "chat-widget",
@@ -7593,6 +7631,15 @@
     "risk": "safe"
   },
   {
+    "id": "cut-the-curve",
+    "name": "cut-the-curve",
+    "path": "skills/cut-the-curve",
+    "description": "The technique catalog: five velocity-matched SEAMS (zoom-through, INVERSE zoom-through, cut-the-curve, waterfall cut, rack-focus blur-cut) plus the two in-scene techniques — waterfall ENTRY (staggered arrival cascades for title cards / segment openers) and the nudge curve (slow-fast-slow three-phase group slides). Covers partial-travel (~12% of frame) velocity matching via mirrored power4 eases, the Z scale-sign rule, size-scaled blur (10px text / 18-20px full-frame), word-by-word staggered cuts, cascade pacing by element weight, and the 10/65/25 slide ratio. Read before authoring any transition, text-beat handoff, kinetic text entry, or group reposition. [depth, zoom, inverse-zoom, scale-sign, mirrored-zoom, rack-focus, pacing, velocity, cut-the-curve, waterfall, stagger, cascade, kinetic-text, title-card, segment-opener, nudge, slide, easing, group-motion, z-depth, motion-graphics, cinematic, transition, blur, directional-continuity]",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "cv-generator",
     "name": "cv-generator",
     "path": "skills/cv-generator",
@@ -8727,6 +8774,15 @@
       "workflow",
       "coding-agents"
     ],
+    "risk": "safe"
+  },
+  {
+    "id": "diagram-design",
+    "name": "diagram-design",
+    "path": "skills/diagram-design",
+    "description": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph, UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
+    "category": "general",
+    "tags": [],
     "risk": "safe"
   },
   {
@@ -10459,6 +10515,15 @@
     "category": "general",
     "tags": [],
     "risk": "offensive"
+  },
+  {
+    "id": "figma",
+    "name": "figma",
+    "path": "skills/figma",
+    "description": "Bring Figma into a HyperFrames video - rendered assets, brand tokens, components, storyboard frames as reconstructed motion (frames read as states, not slides), shaders and connector-assisted motion. Use when the person pastes a figma.com link or asks to use a Figma design, frame, logo or brand.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "figma-automation",
@@ -13618,6 +13683,42 @@
     "risk": "critical"
   },
   {
+    "id": "hyperframes",
+    "name": "hyperframes",
+    "path": "skills/hyperframes",
+    "description": "Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps, vertical clips, title cards, captions and overlays. Holds the render contract, the work loop and what each kind of video needs.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "hyperframes-cli",
+    "name": "hyperframes-cli",
+    "path": "skills/hyperframes-cli",
+    "description": "The HyperFrames CLI by job - scaffold, check, look at frames, edit the timeline, preview, render locally or in the cloud, publish, project history - plus reading its JSON and recovering from build or render failures.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "hyperframes-figma",
+    "name": "figma",
+    "path": "skills/hyperframes-figma",
+    "description": "Bring Figma into a HyperFrames video - rendered assets, brand tokens, components, storyboard frames as reconstructed motion (frames read as states, not slides), shaders and connector-assisted motion. Use when the person pastes a figma.com link or asks to use a Figma design, frame, logo or brand.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "hyperframes-registry",
+    "name": "hyperframes-registry",
+    "path": "skills/hyperframes-registry",
+    "description": "About 450 ready-made HyperFrames blocks and components installed as editable source - transitions, overlays, titles, kinetic type, captions, charts, map overlays, 3D, camera moves. Use it before hand-building any named visual (CRT scanlines, glitch, film grain, a chart); also for hyperframes add and catalog.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "i-have-adhd",
     "name": "i-have-adhd",
     "path": "skills/i-have-adhd",
@@ -13830,6 +13931,24 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "img2threejs",
+    "name": "img2threejs",
+    "path": "skills/img2threejs",
+    "description": "Turn an object or character reference image into a quality-gated, animation-ready procedural Three.js model built in code. Use for image-to-3D reconstruction, detail-accurate object rebuilds, stylized/likeness-maximized human characters, sculpt specs, and staged code generation.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "impeccable",
+    "name": "impeccable",
+    "path": "skills/impeccable",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, simplify, harden, animate, or otherwise improve a frontend interface: websites, landing pages, dashboards, product UI, components, forms, settings, onboarding, empty states, and native iOS or Android screens. Handles UX review, hierarchy, layout, typography, color, motion, UX copy, accessibility, responsive behavior, edge cases, and capturing or documenting design systems (DESIGN.md, tokens). Also for making bland UI bolder, loud UI quieter, or ambitious visual effects. Not for backend-only or non-UI tasks.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "implement",
@@ -15142,6 +15261,15 @@
       "complexity",
       "gateway"
     ],
+    "risk": "safe"
+  },
+  {
+    "id": "lemo-opuscar",
+    "name": "lemo-opuscar",
+    "path": "skills/lemo-opuscar",
+    "description": "Direct and produce a short film made entirely in code, in one of the styles of the Lemo-Opuscar library (e.g. Impasto Oil Painting 油画厚涂, Watercolor Brush 水彩笔刷, Ukiyo-e 浮世绘, Satellite Briefing 卫星简报, Exploded Teardown 产品拆解). Use when the user asks for a video, film, short, promo, explainer or animation (视频、短片、动画、宣传片) in a named style, including explainers built from real material such as satellite imagery, laser scans, CAD files or archive scans (数据解说、科普、产品拆解), and new films cut from real archive footage and documents (剪辑与纪实, e.g. 用档案影像剪一支新闻片); when they want a film about their own topic and haven't chosen a style (help them choose); when they want to change a style into their own, make their own style from a blank page, or use a style they saved (改风格、从空白开始、我的风格); when they start the skill without saying what they want; or when they ask which film styles there are. Not for plain editing, trimming or converting the user's existing video files.",
+    "category": "general",
+    "tags": [],
     "risk": "safe"
   },
   {
@@ -16796,6 +16924,15 @@
     "risk": "safe"
   },
   {
+    "id": "media-use",
+    "name": "media-use",
+    "path": "skills/media-use",
+    "description": "Get or make any media for a HyperFrames video - music, sound effects, images, icons, logos, voiceover, avatar and generated video, transcripts, cutouts, colour grades and looks - with HeyGen or free local tools, and mix placed audio. Also for footage that looks dark, flat or dull, or should be stylized or hidden.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "meeting-distiller-pro",
     "name": "meeting-distiller-pro",
     "path": "skills/meeting-distiller-pro",
@@ -17424,6 +17561,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "motion-doctrine",
+    "name": "motion-doctrine",
+    "path": "skills/motion-doctrine",
+    "description": "GATEWAY — load FIRST before composing any HyperFrames animation or video. The high-level motion law that makes a multi-scene video feel like ONE continuous camera move instead of a stack of independently-animated slides. Covers the vector law (how you exit determines how you enter, incl. the Z scale-sign rule), the film's current, carrier elements, causal motion, the Seam Gate (build-gate enforcement), the ban on idle wobble (motion must PERFORM, not breathe), stillness-before-climax, and the sustained-motion routes. Routes to the low-level technique skills (cut-the-curve — the full catalog incl. waterfall entry + nudge curve, oversized-cursor, seam-craft). These rules SUPERSEDE generic / upstream motion guidance. [continuity, direction, vector, momentum, seam, transition, ease, performance, idle-motion, narrative-motion, film-grammar]",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "movie-coupon",
@@ -19129,6 +19275,15 @@
     "risk": "safe"
   },
   {
+    "id": "oversized-cursor",
+    "name": "oversized-cursor",
+    "path": "skills/oversized-cursor",
+    "description": "House-style oversized macOS cursor technique for HyperFrames launch videos. Load whenever a scene involves cursors or a pointer-led action, when kicking off a UI scene, when igniting a morph/transition/typing run with a click, or when a scene reads as static, dead, or stale and needs a cheap high-yield source of motion to carry the viewer's eye and segment them out of the stale state. Covers cursor size/look (incl. brand-motif cursors), the off-screen entry law, tip-targeting and the click tap, click-ignites-the-next-beat, and exit / cross-scene handoff.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
     "id": "page-cro",
     "name": "page-cro",
     "path": "skills/page-cro",
@@ -19417,6 +19572,166 @@
     "category": "security",
     "tags": [],
     "risk": "offensive"
+  },
+  {
+    "id": "penpot",
+    "name": "penpot",
+    "path": "skills/penpot",
+    "description": "Integrate Penpot (the open-source Figma alternative) with AI agents via the official Penpot MCP server and Penpot AI Kit. Read design files, inspect layers, audit design tokens and accessibility, build screens/decks, and convert designs to production code.",
+    "category": "design",
+    "tags": [
+      "penpot",
+      "mcp",
+      "figma-alternative",
+      "open-source-design",
+      "design-tokens",
+      "ui-ux",
+      "design-to-code"
+    ],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-anti-slop",
+    "name": "penpot-anti-slop",
+    "path": "skills/penpot-anti-slop",
+    "description": "Opt-in layer that keeps Penpot designs from looking generically AI-generated: a direction step before building, a scored 0–100 slop check of a screen or deck (tree probes + visual review), and reviewed fixes. Triggers: 'avoid the AI look', 'does this look AI-generated', 'anti-slop check', 'make it feel less generic', 'evitar estética IA', '¿parece hecho por IA?'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-audit-accessibility",
+    "name": "penpot-audit-accessibility",
+    "path": "skills/penpot-audit-accessibility",
+    "description": "Audit a Penpot design against WCAG 2.1/2.2 AA (optionally AAA) and produce a structured severity report: color contrast, touch/target sizes, text alternatives, heading hierarchy, and keyboard/focus order. Proposes fixes — does not auto-apply. Also serves as the Evaluator in the brief-to-screen and brief-to-deck loops (scope:deck = slide contrast rules). Triggers: 'check accessibility', 'accessibility audit', 'WCAG check', 'contrast audit', 'a11y review', 'check color contrast', 'is this accessible'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-audit-tokens",
+    "name": "penpot-audit-tokens",
+    "path": "skills/penpot-audit-tokens",
+    "description": "Audit a Penpot design for design-system / token GOVERNANCE issues (distinct from accessibility): hardcoded colors where a token exists, off-grid spacing, orphan/unresolved/unused tokens, duplicated values, and detached parts that should be component instances. Produces a severity report and suggests semantic-token swaps. Triggers: 'audit tokens', 'find hardcoded colors', 'token governance', 'check design system consistency', 'find off-grid spacing', 'detect raw values', 'are we using tokens correctly'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-build-deck",
+    "name": "penpot-build-deck",
+    "path": "skills/penpot-build-deck",
+    "description": "Design a presentation / slide deck in Penpot from a brief, as a senior presentation designer: 1920x1080 slide boards built one slide per call from an approved outline, a committed deck style, varied slide archetypes (cover, agenda, section, content, big-number, comparison, grid, bento, quote, timeline, image-bleed, closing), tokenized, wired into a playable View-mode flow and exportable to PDF. NOT for app screens (use penpot-build-screen). Triggers: 'create a presentation', 'build a slide deck', 'design slides in Penpot', 'pitch deck', 'keynote', 'make slides for this talk', 'turn this outline into slides'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-build-from-code",
+    "name": "penpot-build-from-code",
+    "path": "skills/penpot-build-from-code",
+    "description": "Translate an existing application page, view, or component code into a Penpot screen that is bound to the existing design system — mapping code styles onto semantic tokens and reusing library components instead of raw shapes. Use when the user has real code/markup and wants it reconstructed in Penpot, section by section, on-system. Triggers: 'build this in Penpot from code', 'turn this React/HTML/CSS into a Penpot screen', 'recreate this view in Penpot', 'port this page to Penpot', 'translate this component to Penpot bound to our tokens', 'code to Penpot'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-build-screen",
+    "name": "penpot-build-screen",
+    "path": "skills/penpot-build-screen",
+    "description": "Design production-grade screens in Penpot from a brief, as a senior visual designer — reusing the existing design system (tokens + components) and assembling section by section, never one-shot. Use to create a screen/page/landing/dashboard from a description. NOT for translating existing code (use penpot-build-from-code). Triggers: 'design a dashboard', 'create a landing page', 'design this app screen', 'build a UI from this brief', 'design a settings page', 'mock up a screen in Penpot'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-component-factory",
+    "name": "penpot-component-factory",
+    "path": "skills/penpot-component-factory",
+    "description": "Build and maintain Penpot components with COMPLETE variant matrices — sizes, hierarchies, and all interactive states (default/hover/pressed/focus/disabled) — fully tokenized and correctly named. Use to create a new component with variants, fill in missing states, or normalize an existing component. Triggers: 'create a Button component with variants', 'build component variants', 'add hover/pressed/disabled states', 'make a variant matrix', 'turn this into a component with sizes', 'normalize this component'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-design-md",
+    "name": "penpot-design-md",
+    "path": "skills/penpot-design-md",
+    "description": "Extract a DESIGN.md design-documentation file from a Penpot file: a portable markdown spec (YAML frontmatter with colors/typography/rounded/spacing/components token maps + prose sections: Overview, Colors, Typography, Layout, Shapes, Components, Do's & Don'ts, Iteration Guide, Known Gaps) in the design-md format, grounded in the file's real tokens, library assets, and sampled component styles — never invented. Read-only on the canvas; writes one local markdown file. Triggers: 'generate DESIGN.md', 'create a design.md', 'document the design system as markdown', 'export design guidelines', 'extract design documentation', 'design system spec file', 'make a style guide file from this design'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-design-to-code-review",
+    "name": "penpot-design-to-code-review",
+    "path": "skills/penpot-design-to-code-review",
+    "description": "Review a Penpot design against its implemented code (a source component or Storybook story) and emit a structured DRIFT report. Use when an engineer needs to confirm the build matches the design: extract HTML/CSS from a selection, map its tokens/structure/states to the code component, diff them, and list what each side is missing with severity and a reconciliation. Degrades gracefully to a design-system-token check when no code source is supplied. Triggers: 'design to code review', 'does my code match the design', 'design code parity', 'compare Penpot to my component', 'check this against Storybook', 'extract HTML/CSS from this selection', 'find design drift', 'design implementation diff'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-document-handoff",
+    "name": "penpot-document-handoff",
+    "path": "skills/penpot-document-handoff",
+    "description": "Document a Penpot design for handoff with a hideable annotation layer BESIDE the design (never on top of it): a context card (goal, business rules, links, status), numbered pins on the UI, matching observation/recommendation notes, optional tooltips. Reuses or proposes an annotation component kit + tokens. NOT for auditing (penpot-audit-*) or renaming layers (penpot-rename-layers). Triggers: 'document this design', 'annotate this screen', 'prepare this for handoff', 'add observation notes', 'create a critique card', 'spec this screen for handoff'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-foundations",
+    "name": "penpot-foundations",
+    "path": "skills/penpot-foundations",
+    "description": "Build and govern the token + library foundation of a Penpot design system: primitive/semantic/component token tiers, themes (light/dark), and inferring a token system from an existing hardcoded design. Use BEFORE building components or screens, or when a design has raw values that should become tokens. Triggers: 'set up design tokens', 'create a token system', 'build the design system foundation', 'add dark mode tokens', 'infer tokens from this design', 'tokenize this file', 'create semantic tokens', 'apply tokens to these shapes'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-mcp",
+    "name": "penpot-mcp",
+    "path": "skills/penpot-mcp",
+    "description": "Integrate Penpot (the open-source Figma alternative) with AI agents via the official Penpot MCP server and Penpot AI Kit. Read design files, inspect layers, audit design tokens and accessibility, build screens/decks, and convert designs to production code.",
+    "category": "design",
+    "tags": [
+      "penpot",
+      "mcp",
+      "figma-alternative",
+      "open-source-design",
+      "design-tokens",
+      "ui-ux",
+      "design-to-code"
+    ],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-migrate",
+    "name": "penpot-migrate",
+    "path": "skills/penpot-migrate",
+    "description": "Migrate a Figma design into Penpot with high fidelity: Figma Auto Layout → Penpot flex/grid, Figma Variables → Penpot tokens, Figma component sets → Penpot variants, preserving hierarchy. Reads via the Figma MCP, writes via the Penpot MCP, through an intermediate representation (IR). Degrades to manually-pasted Figma data if the Figma MCP is absent. Triggers: 'migrate from Figma', 'import this Figma file into Penpot', 'move our Figma library to Penpot', 'recreate this Figma design in Penpot', 'Figma to Penpot'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-rename-layers",
+    "name": "penpot-rename-layers",
+    "path": "skills/penpot-rename-layers",
+    "description": "Semantically rename Penpot layers to HTML element names (nav, header, main, section, article, button, input, label, h1-h6, p, ul, li, img) or kebab-case role names, replacing auto-generated names like 'Rectangle 12'. Use to clean up layer naming, prepare a file for handoff, or as a precondition for accessibility audits (heading hierarchy) and design-to-code review (semantic mapping). Triggers: 'rename layers', 'semantic layer names', 'rename to HTML elements', 'clean up layer names', 'fix layer naming', 'add semantic names to layers', 'prepare layers for handoff'.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "penpot-router",
+    "name": "penpot-router",
+    "path": "skills/penpot-router",
+    "description": "Thin dispatcher / entry point for any Penpot request. Use FIRST on any Penpot task to ensure high_level_overview ran, read the user's intent, and route to exactly one target skill or workflow (build a screen, build a slide deck, build a design system, audit accessibility, audit tokens, migrate from Figma, rename layers, code review, extract DESIGN.md, etc.). Never mutates the canvas. Triggers: 'work on this Penpot file', 'help me with Penpot', 'I want to design/build/audit/migrate in Penpot', 'where do I start', 'which skill should I use', 'route this request', ambiguous Penpot asks.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "pentest-checklist",
@@ -21572,10 +21887,10 @@
     "id": "remotion-best-practices",
     "name": "remotion-best-practices",
     "path": "skills/remotion-best-practices",
-    "description": "Best practices for Remotion - Video creation in React",
+    "description": "Router for all Remotion skills",
     "category": "general",
     "tags": [],
-    "risk": "critical"
+    "risk": "safe"
   },
   {
     "id": "remotion-captions",
@@ -21584,7 +21899,7 @@
     "description": "Transcribing, displaying and animating captions",
     "category": "general",
     "tags": [],
-    "risk": "critical"
+    "risk": "safe"
   },
   {
     "id": "remotion-create",
@@ -21593,7 +21908,7 @@
     "description": "Create a new Remotion video",
     "category": "general",
     "tags": [],
-    "risk": "critical"
+    "risk": "safe"
   },
   {
     "id": "remotion-docs",
@@ -21602,7 +21917,7 @@
     "description": "Search Remotion documentation",
     "category": "general",
     "tags": [],
-    "risk": "unknown"
+    "risk": "safe"
   },
   {
     "id": "remotion-interactivity",
@@ -21611,7 +21926,34 @@
     "description": "Structure Remotion markup for interactivity",
     "category": "general",
     "tags": [],
-    "risk": "unknown"
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-maps",
+    "name": "remotion-maps",
+    "path": "skills/remotion-maps",
+    "description": "Remotion Map animation knowledge",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-markup",
+    "name": "remotion-markup",
+    "path": "skills/remotion-markup",
+    "description": "Content, animation and effects best practices",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-multimedia",
+    "name": "remotion-multimedia",
+    "path": "skills/remotion-multimedia",
+    "description": "Interacting with Mediabunny",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "remotion-render",
@@ -21620,7 +21962,43 @@
     "description": "Export a Remotion video",
     "category": "general",
     "tags": [],
-    "risk": "unknown"
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-saas",
+    "name": "remotion-saas",
+    "path": "skills/remotion-saas",
+    "description": "Build an app with Remotion",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-studio",
+    "name": "remotion-studio",
+    "path": "skills/remotion-studio",
+    "description": "Preview a Remotion video",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-to-hyperframes",
+    "name": "remotion-to-hyperframes",
+    "path": "skills/remotion-to-hyperframes",
+    "description": "Bring existing video code or footage into HyperFrames and verify it frame by frame against the original - Remotion first, also Motion Canvas, Lottie, Three.js, p5.js, canvas or plain HTML/CSS animation, or renders from Manim, After Effects or Blender. Use to port, convert, migrate or reuse work made with another tool.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "remotion-upgrade",
+    "name": "remotion-upgrade",
+    "path": "skills/remotion-upgrade",
+    "description": "Upgrade Remotion, and related packages",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "render-automation",
@@ -22488,6 +22866,15 @@
     "category": "general",
     "tags": [],
     "risk": "critical"
+  },
+  {
+    "id": "seam-craft",
+    "name": "seam-craft",
+    "path": "skills/seam-craft",
+    "description": "Render-correctness doctrine for scene-to-scene seams in HyperFrames launch videos — the prerequisites that make transitions composite correctly on the master timeline. Load when assembling the master timeline / index.html, when a white flash appears at a cut or crossfade seam (especially on dark films), when reasoning about why a transition opacity dip shows through, or when verifying the render-side mechanics of how overlapping scene wrappers blend. Covers the opaque stage-ground (#root background) white-flash guard and how the injector overlaps wrappers, holds final frames, ping-pongs tracks, and stamps lint-clean template code onto the master timeline. Does NOT contain the per-transition catalog — see the transition registry for individual transition entries.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "search-specialist",
@@ -23845,6 +24232,15 @@
     "name": "slides",
     "path": "skills/slides",
     "description": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
+  },
+  {
+    "id": "slideshow",
+    "name": "slideshow",
+    "path": "skills/slideshow",
+    "description": "Build a HyperFrames slideshow to present live - slides, fragment reveals, branching hotspots and presenter mode with speaker notes, served by `hyperframes present` - or turn an existing page into one. Use when the person wants a deck or presentation rather than a rendered video.",
     "category": "general",
     "tags": [],
     "risk": "safe"
@@ -27337,6 +27733,15 @@
       "generation"
     ],
     "risk": "none"
+  },
+  {
+    "id": "video-shotcraft",
+    "name": "video-shotcraft",
+    "path": "skills/video-shotcraft",
+    "description": "Create cinematic product videos from shot recipe cards, a validated template, and code/audio assets (Remotion + real page screenshots + 2.5D camera moves + beat-synced cuts + sound design). Use when the user asks to turn a frontend project or webpage into a product video, says \"use video-shotcraft to make a video/promo\", names the Ink Press template or asks to reproduce its effect, or wants a single shot card's motion. 用镜头配方卡 + 已验收模板 + 代码/音频资产制作电影感产品视频（Remotion + 真实页面截图 + 2.5D 运镜 + 节奏卡点 + 声音设计）。当用户要求\"用 video-shotcraft 做视频/宣传片\"、把前端项目/网页做成产品视频、点名 Ink Press 模板或要求复刻模板片效果，或要用镜头卡做单个动效镜头时使用。",
+    "category": "general",
+    "tags": [],
+    "risk": "safe"
   },
   {
     "id": "videodb",

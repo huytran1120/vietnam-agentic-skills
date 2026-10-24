@@ -1,53 +1,109 @@
 ---
 name: remotion-best-practices
-description: "Best practices for Remotion - Video creation in React"
-risk: critical
-source: community
-tags: "remotion, video, react, animation, composition"
-date_added: "2026-02-27"
+description: Router for all Remotion skills
+version: 4.0.538
 ---
 
-## When to Use
-Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.
+## Preserve user changes
 
-## How to use
+Users may make edits in the code outside of the conversation.
 
-Read individual rule files for detailed explanations and code examples:
+If you detect a surprising change made in the meanwhile, don't overwrite it, assume it was intentional or ask for confirmation.
 
-- [rules/3d.md](rules/3d.md) - 3D content in Remotion using Three.js and React Three Fiber
-- [rules/animations.md](rules/animations.md) - Fundamental animation skills for Remotion
-- [rules/assets.md](rules/assets.md) - Importing images, videos, audio, and fonts into Remotion
-- [rules/audio.md](rules/audio.md) - Using audio and sound in Remotion - importing, trimming, volume, speed, pitch
-- [rules/calculate-metadata.md](rules/calculate-metadata.md) - Dynamically set composition duration, dimensions, and props
-- [rules/can-decode.md](rules/can-decode.md) - Check if a video can be decoded by the browser using Mediabunny
-- [rules/charts.md](rules/charts.md) - Chart and data visualization patterns for Remotion
-- [rules/compositions.md](rules/compositions.md) - Defining compositions, stills, folders, default props and dynamic metadata
-- [rules/display-captions.md](rules/display-captions.md) - Displaying captions in Remotion with TikTok-style pages and word highlighting
-- [rules/extract-frames.md](rules/extract-frames.md) - Extract frames from videos at specific timestamps using Mediabunny
-- [rules/fonts.md](rules/fonts.md) - Loading Google Fonts and local fonts in Remotion
-- [rules/get-audio-duration.md](rules/get-audio-duration.md) - Getting the duration of an audio file in seconds with Mediabunny
-- [rules/get-video-dimensions.md](rules/get-video-dimensions.md) - Getting the width and height of a video file with Mediabunny
-- [rules/get-video-duration.md](rules/get-video-duration.md) - Getting the duration of a video file in seconds with Mediabunny
-- [rules/gifs.md](rules/gifs.md) - Displaying GIFs synchronized with Remotion's timeline
-- [rules/images.md](rules/images.md) - Embedding images in Remotion using the Img component
-- [rules/import-srt-captions.md](rules/import-srt-captions.md) - Importing .srt subtitle files into Remotion using @remotion/captions
-- [rules/lottie.md](rules/lottie.md) - Embedding Lottie animations in Remotion
-- [rules/measuring-dom-nodes.md](rules/measuring-dom-nodes.md) - Measuring DOM element dimensions in Remotion
-- [rules/measuring-text.md](rules/measuring-text.md) - Measuring text dimensions, fitting text to containers, and checking overflow
-- [rules/sequencing.md](rules/sequencing.md) - Sequencing patterns for Remotion - delay, trim, limit duration of items
-- [rules/tailwind.md](rules/tailwind.md) - Using TailwindCSS in Remotion
-- [rules/text-animations.md](rules/text-animations.md) - Typography and text animation patterns for Remotion
-- [rules/timing.md](rules/timing.md) - Interpolation curves in Remotion - linear, easing, spring animations
-- [rules/transcribe-captions.md](rules/transcribe-captions.md) - Transcribing audio to generate captions in Remotion
-- [rules/transitions.md](rules/transitions.md) - Scene transition patterns for Remotion
-- [rules/trimming.md](rules/trimming.md) - Trimming patterns for Remotion - cut the beginning or end of animations
-- [rules/videos.md](rules/videos.md) - Embedding videos in Remotion - trimming, volume, speed, looping, pitch
+## Creating a video
 
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+If the user asks to make, create, or build a new video or composition, load [Create a new Remotion video](./remotion-create/REFERENCE.md), whether or not a Remotion project already exists.
 
-## Runtime and data boundaries
+## New project setup
 
-Use installed project tooling and lockfile versions; commands using package runners may download code when the CLI is absent. Install only dependencies needed by the agreed task and keep all Remotion packages on the same version. Remote media, font and transcription requests disclose data to their providers; use authorized assets and confirm paid/cloud transcription scope. Examples are partial component snippets unless exported; hooks belong inside React components, not module scope. `using` examples require TypeScript explicit resource management support. Validate rendered frames and audio in the target runtime.
+If no Remotion project currently exists, load [Create a new Remotion project](./remotion-create/REFERENCE.md)
+
+## React Markup Best Practices
+
+If you are writing Remotion React Markup, load [Remotion Markup Best Practices](./remotion-markup/REFERENCE.md)
+
+## Maps
+
+For static maps, animated routes and markers, geographic explainers, Mapbox, MapLibre, MapTiler, GeoJSON, or 3D geographic flyovers, load [Remotion Maps](./remotion-maps/REFERENCE.md).
+
+## Multimedia
+
+For achieving multimedia tasks in the browser, such as trimming, cropping videos, or getting metadata from them, load [Remotion Multimedia](./remotion-multimedia/REFERENCE.md)
+
+## Improving Interactivity
+
+By structuring the Remotion markup well, we can allow users to interactively change things in the Studio and write back to code. If relevant: [Interactivity Best Practices](./remotion-interactivity/REFERENCE.md)
+
+## Open the preview
+
+If the user asks to "make" a video, "create" a video, etc.
+Don't render the video by default unless they are very explicit. They want to instead see an interactive preview.
+As soon as the project can run, start Studio and open the preview in the browser before building or editing the composition. Keep it open while you work so the user can watch progress and steer.
+
+### If you are using Cursor
+
+Run Studio without `--no-open` so it opens the browser automatically:
+
+```bash
+npx remotion studio
+```
+
+### If you are using another agent client with an in-app browser
+
+You can use the command above to let Studio open the browser, or run:
+
+```bash
+npx remotion studio --no-open
+```
+
+This will start a long-running process and print the server URL for the preview.  
+If the server is already started, it will print the URL.
+If you use `--no-open`, open the exact printed URL in the in-app browser and verify that Studio loads. Once a composition exists, verify that its video preview loads. If you cannot open it there, run Studio without `--no-open`.
+You can visit a specific composition by navigating to `/[composition-id]`, for example `http://localhost:3000/MapAnimation`.
+
+:::note
+The Studio supports WebMCP tools.
+:::
+
+### If you do not have an in-app browser
+
+This will open the Studio in the browser or refocus it if it is already open.
+
+```bash
+npx remotion studio
+```
+
+### More options
+
+To launch a project in Remotion Studio, open its exact local URL, or configure Studio CLI flags, load [Remotion Studio](./remotion-studio/REFERENCE.md).
+
+## Render the video
+
+Only render if the user is very explicit in asking for it.  
+E.g. "Render the video", "Export", "Give me the MP4".
+
+The preview also has a more intuitive rendering interface, so consider using it instead of the command line for rendering.
+
+```
+npx remotion render
+```
+
+For more options, see [Rendering](./remotion-render/REFERENCE.md).
+
+For advanced rendering beyond simple `npx remotion render`, see: [Rendering Best Practices](./remotion-render/REFERENCE.md)
+
+## Captions
+
+When working with Captions, load [Remotion Captions](./remotion-captions/REFERENCE.md).
+
+## Creating a SaaS, automation or application
+
+Use the [Remotion SaaS skill](./remotion-saas/REFERENCE.md) for knowledge about Remotion-powered SaaS apps, such as `<Player>`, rendering on Lambda, Vercel, Cloudflare, via Express.js, client-side rendering, or for finding the right SaaS template.
+
+## Looking up Remotion APIs and documentation
+
+To find and read current Remotion documentation, load [Remotion Docs](./remotion-docs/REFERENCE.md).
+
+## Upgrading
+
+To upgrade Remotion, related packages, compatible Mediabunny packages, and installed Remotion Agent Skills, load [Remotion Upgrade](./remotion-upgrade/REFERENCE.md).

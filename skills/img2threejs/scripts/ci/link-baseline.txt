@@ -1,0 +1,2 @@
+# Known-broken relative links tolerated by the gate ("path: target" per line).
+# Empty on purpose: main currently has none. Fix links instead of adding here.

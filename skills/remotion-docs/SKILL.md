@@ -1,16 +1,8 @@
 ---
 name: remotion-docs
 description: Search Remotion documentation
-version: 4.0.526
-source_repo: remotion-dev/skills
-source_type: official
-source: remotion-dev
-date_added: '2026-09-21'
-risk: unknown
+version: 4.0.538
 ---
-## When to Use
-- Use when this upstream workflow matches the user's stated goal.
-- Use when the task requires the procedures documented in this skill.
 
 This skill teaches you how to discover and read current Remotion documentation.
 If this is not relevant, load Remotion Best Practices instead.
@@ -52,16 +44,3 @@ https://www.remotion.dev/docs/lambda/rendermediaonlambda.md
 2. Pick the most relevant URL(s) from the results.
 3. Fetch each URL with the `.md` suffix.
 4. Implement using the current documentation rather than memorized API knowledge.
-
-
-## Examples
-
-```text
-User: Apply this skill to my current task.
-Assistant: Follow the workflow in this skill, cite limitations, and ask before risky steps.
-```
-
-## Limitations
-
-- Imported upstream skill; verify credentials, permissions, and safety boundaries before execution.
-- Does not replace environment-specific validation, testing, or maintainer review.

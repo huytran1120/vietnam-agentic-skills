@@ -1,23 +1,13 @@
 ---
 name: remotion-create
 description: Create a new Remotion video
-version: 4.0.526
-source_repo: remotion-dev/skills
-source_type: official
-source: remotion-dev
-date_added: '2026-09-21'
-risk: critical
+version: 4.0.538
 ---
-## When to Use
-- Use when this upstream workflow matches the user's stated goal.
-- Use when the task requires the procedures documented in this skill.
 
 These are instructions for making a new Remotion project and composition.  
 If this is not the next task, see Remotion Best Practices
 
 ## Scaffold a project
-
-Inspect the selected create-video package/version and generated manifest/scripts before installation. Replace @latest with the reviewed version for reproducibility; --yes is appropriate only within authorized package installation. Keep all remotion packages compatible. This bundle includes layout/Tailwind notes and an SVG icon, but the named React Markup, interactivity, multi-scene and rendering guides are external prerequisites; do not claim to have loaded them unless actually available.
 
 If a project already exists, skip this.
 Ensure Node.js and Git is installed, and the current folder is appropriate for starting a new project.
@@ -42,21 +32,34 @@ npm i
 If the current folder contains meaningful contents and no project already exists, scaffold into a new subfolder.
 Replace `my-video` with a suitable project name.
 
-
 ```bash
 npx create-video@latest --yes --blank --no-tailwind my-video
 cd my-video
 npm i
 ```
 
+## Open the preview before building the video
+
+As soon as the project can run, open Remotion Studio in the browser before writing or changing the composition. For a new project, do this immediately after scaffolding and installing dependencies. For an existing project, do it before editing the video. Keep Studio running while you work so the user can see changes as they appear and steer the result.
+
 ## Designing a video
 
 Keep the scaffold and add React Markup.
-Follow the installed Remotion React Markup guidance when available and [Video Layout Rules](video-layout.md) for video-first layout and text sizing.
+Follow Remotion React Markup Best Practices and [Video Layout Rules](video-layout.md) for video-first layout and text sizing guidance.
+
+Before writing the root that registers `<Composition>` or `<Still>` elements,
+follow Compositions and stills.
+
+## Is this a timeline of clips?
+
+If the video arranges multiple video or audio clips on a timeline, follow
+Video editing before writing the
+timeline. Give every clip that should be edited independently its own authored
+JSX node.
 
 ## Is this a multi-scene video?
 
-If this is a video with multiple subsequence videos, follow guidance at Multi-scene videos.
+If this is a video with multiple subsequent scenes, follow guidance at Multi-scene videos.
 
 ## Interactivity Best Practices
 
@@ -66,43 +69,7 @@ By structuring the React Markup following Remotion Interactivity Best Practices,
 
 If Tailwind is requested, see [tailwind.md](tailwind.md) for using TailwindCSS in Remotion.
 
-## Open the preview
-
-Start the preview server after building the composition:
-
-```bash
-npx remotion studio --no-open
-```
-
-This will start a long-running process and print the server URL for the preview.  
-If the server is already started, it will print the URL.
-If an in-harness browser is available, open it there.
-You can visit a specific composition by navigating to `/[composition-id]`, for example `http://localhost:3000/MapAnimation`.
-
-## Render the video
-
-Only render if the user explicitly asks for it.
-
-```
-npx remotion render
-```
-
-For more options, see Rendering.
-
 ## Follow-up
 
 The video creation process has finished.
 For follow-up prompts, use Remotion Best Practices
-
-
-## Examples
-
-```text
-User: Apply this skill to my current task.
-Assistant: Follow the workflow in this skill, cite limitations, and ask before risky steps.
-```
-
-## Limitations
-
-- Imported upstream skill; verify credentials, permissions, and safety boundaries before execution.
-- Does not replace environment-specific validation, testing, or maintainer review.

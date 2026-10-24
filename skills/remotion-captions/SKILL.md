@@ -1,16 +1,8 @@
 ---
 name: remotion-captions
 description: Transcribing, displaying and animating captions
-version: 4.0.526
-source_repo: remotion-dev/skills
-source_type: official
-source: remotion-dev
-date_added: '2026-09-21'
-risk: critical
+version: 4.0.538
 ---
-## When to Use
-- Use when this upstream workflow matches the user's stated goal.
-- Use when the task requires the procedures documented in this skill.
 
 All captions must be processed in JSON. The captions must use the [`Caption`](https://www.remotion.dev/docs/captions/caption.md) type which is the following:
 
@@ -43,15 +35,8 @@ To display captions in your video, load the [display-captions.md](display-captio
 
 To import captions from a .srt file, load the [import-srt-captions.md](import-srt-captions.md) file for more instructions.
 
+## Post-creation
 
-## Examples
+After you're done, load this skill: Remotion Best Practices
 
-```text
-User: Apply this skill to my current task.
-Assistant: Follow the workflow in this skill, cite limitations, and ask before risky steps.
-```
-
-## Limitations
-
-- Imported upstream skill; verify credentials, permissions, and safety boundaries before execution.
-- Does not replace environment-specific validation, testing, or maintainer review.
+If not alreay done, open the Remotion Studio, unless instructed otherwise.

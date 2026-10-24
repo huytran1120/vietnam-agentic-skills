@@ -88,7 +88,7 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({
   props,
 }) => {
   return {
-    defaultCodec: "vp9",
+    defaultCodec: "vp8",
     defaultVideoImageFormat: "png",
     defaultPixelFormat: "yuva420p",
   };
