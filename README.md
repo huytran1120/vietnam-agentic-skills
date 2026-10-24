@@ -4,10 +4,13 @@
 > **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ thực thi siêu tốc với Python 3 chuẩn.**
 
 [![Google Antigravity](https://img.shields.io/badge/Target-Google%20Antigravity-4285F4?style=for-the-badge&logo=google)](https://github.com/huytran1120/vietnam-agentic-skills)
+[![Website](https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages)](https://huytran1120.github.io/vietnam-agentic-skills/)
 [![Skills Count](https://img.shields.io/badge/Catalog-2%2C650%2B%20Skills-00C853?style=for-the-badge)](CATALOG.md)
 [![Zero NPX](https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge)](vas.py)
 [![Author: huytran1120](https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github)](https://github.com/huytran1120)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+
+> 🌐 **Trải nghiệm tìm kiếm và tra cứu trực tiếp trên web**: [https://huytran1120.github.io/vietnam-agentic-skills/](https://huytran1120.github.io/vietnam-agentic-skills/)
 
 ---
 

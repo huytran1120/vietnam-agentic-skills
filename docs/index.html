@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Vietnam Agentic Skills (VAS) — 2,650+ Kỹ Năng Cho Google Antigravity | huytran1120</title>
+  <meta name="title" content="Vietnam Agentic Skills (VAS) — 2,650+ Kỹ Năng Cho Google Antigravity | huytran1120">
+  <meta name="description" content="Kho 2,650+ kỹ năng (agentic skills) chuyên sâu được tối ưu hoá riêng cho Google Antigravity. Zero-NPX, chạy offline bằng Python 3, tiết kiệm 99% token ngữ cảnh. Khởi xướng và duy trì bởi Huy Tran (huytran1120).">
+  <meta name="keywords" content="Vietnam Agentic Skills, VAS, Google Antigravity, Antigravity skills, huytran1120, Huy Tran, AI agent, AI coding, DevOps, OWASP, Docker security, React performance, Python 3, zero npx, AI playbooks, LLM, Claude Code, Gemini">
+  <meta name="author" content="Huy Tran (huytran1120)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://huytran1120.github.io/vietnam-agentic-skills/">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph / Facebook / Zalo / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://huytran1120.github.io/vietnam-agentic-skills/">
+  <meta property="og:title" content="Vietnam Agentic Skills (VAS) — 2,650+ Kỹ Năng Cho Google Antigravity">
+  <meta property="og:description" content="Thư viện kỹ năng agentic hàng đầu cho Google Antigravity. Hoàn toàn không cần npx, chạy offline siêu tốc, đầy đủ 2,650+ playbooks chuyên nghiệp.">
+  <meta property="og:site_name" content="Vietnam Agentic Skills">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://raw.githubusercontent.com/huytran1120/vietnam-agentic-skills/main/README.md">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://huytran1120.github.io/vietnam-agentic-skills/">
+  <meta name="twitter:title" content="Vietnam Agentic Skills (VAS) — 2,650+ Kỹ Năng Cho Google Antigravity">
+  <meta name="twitter:description" content="2,650+ agentic skills tối ưu riêng cho Google Antigravity. Zero-NPX, Native Python 3 CLI, tiết kiệm 99% prompt token.">
+  <meta name="twitter:creator" content="@huytran1120">
+
+  <!-- Structured Data: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://huytran1120.github.io/vietnam-agentic-skills/#website",
+        "url": "https://huytran1120.github.io/vietnam-agentic-skills/",
+        "name": "Vietnam Agentic Skills (VAS)",
+        "description": "Kho 2,650+ kỹ năng cho Google Antigravity & AI Coding Agents",
+        "inLanguage": "vi-VN",
+        "publisher": {
+          "@type": "Person",
+          "name": "Huy Tran",
+          "url": "https://github.com/huytran1120"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Vietnam Agentic Skills",
+        "operatingSystem": "macOS, Linux, Windows",
+        "applicationCategory": "DeveloperApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Huy Tran",
+          "url": "https://github.com/huytran1120"
+        },
+        "downloadUrl": "https://github.com/huytran1120/vietnam-agentic-skills",
+        "softwareVersion": "1.0.0",
+        "description": "Thư viện 2,650+ kỹ năng agentic chuyên sâu cho Google Antigravity, hoàn toàn không cần npx, chạy offline với Python 3."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Font & Tailwind Play CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            },
+            vietnam: {
+              red: '#da251d',
+              yellow: '#ff0',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e2e8f0;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    .hero-glow {
+      background: radial-gradient(circle 600px at 50% -10%, rgba(59, 130, 246, 0.25), transparent 70%);
+    }
+    .card-glass {
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-glass:hover {
+      border-color: rgba(96, 165, 250, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(37, 99, 235, 0.2);
+    }
+    .code-box {
+      background: #060913;
+      border: 1px solid #1e293b;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen antialiased selection:bg-blue-600 selection:text-white hero-glow">
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="./" class="flex items-center gap-3 group">
+        <span class="text-2xl" aria-hidden="true">🇻🇳</span>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-lg text-white tracking-tight group-hover:text-blue-400 transition-colors">
+            Vietnam Agentic Skills
+          </span>
+          <span class="text-xs text-slate-400 font-mono -mt-1">Google Antigravity Catalog</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#catalog" class="hover:text-white transition-colors">Kho Kỹ Năng</a>
+        <a href="#antigravity" class="hover:text-white transition-colors">Cơ Chế Antigravity</a>
+        <a href="#quickstart" class="hover:text-white transition-colors">Cài Đặt</a>
+        <a href="#author" class="hover:text-white transition-colors">Tác Giả</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/huytran1120/vietnam-agentic-skills" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-all hover:scale-105 shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-950/80 text-blue-400 border border-blue-800/60 mb-6">
+        <span class="inline-block w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        Kho Kỹ Năng Agentic Hàng Đầu Cho Google Antigravity
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+        2,650+ Kỹ Năng Agentic Chuyên Sâu Cho <span class="bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">Google Antigravity</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-8 font-normal leading-relaxed">
+        Thư viện kỹ năng mở rộng được tinh chỉnh riêng cho cộng đồng lập trình viên Việt Nam.
+        <strong class="text-white font-semibold">100% Zero-NPX</strong>, chạy nội bộ siêu tốc với Python 3 chuẩn, tiết kiệm 99% chi phí token ngữ cảnh.
+      </p>
+
+      <!-- Fast Command Box -->
+      <div class="max-w-2xl mx-auto mb-12">
+        <div class="code-box rounded-xl p-3 flex items-center justify-between shadow-2xl">
+          <div class="flex items-center gap-3 font-mono text-sm sm:text-base text-slate-200 overflow-x-auto px-2">
+            <span class="text-slate-500 select-none">$</span>
+            <span class="text-blue-400">git clone</span> https://github.com/huytran1120/vietnam-agentic-skills.git
+          </div>
+          <button id="copy-clone-btn" onclick="copyText('git clone https://github.com/huytran1120/vietnam-agentic-skills.git', this)"
+                  class="ml-3 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-sans text-xs font-semibold transition-all shrink-0">
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="card-glass p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">2,650+</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Kỹ Năng Đã Xác Thực</div>
+        </div>
+        <div class="card-glass p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-extrabold text-blue-400 mb-1">115</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Danh Mục Kỹ Thuật</div>
+        </div>
+        <div class="card-glass p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mb-1">0 NPX</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Không Node.js Runtime</div>
+        </div>
+        <div class="card-glass p-5 rounded-2xl">
+          <div class="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-1">&lt; 0.1s</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Tốc Độ Tra Cứu</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Explorer Section -->
+    <section id="catalog" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Tra Cứu Kỹ Năng (Live Explorer)</h2>
+          <p class="text-sm text-slate-400 mt-1">Tìm kiếm tức thì trong kho 2,650+ playbooks với tên, danh mục, từ khóa hoặc rủi ro.</p>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">
+          Hiển thị: <span id="count-display" class="text-blue-400 font-bold">2,650</span> kỹ năng
+        </div>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="mb-8 space-y-4">
+        <div class="relative">
+          <input type="text" id="search-input" placeholder="🔍 Nhập từ khóa (vd: docker, react, security, aws, pytest, rag)..."
+                 class="w-full px-5 py-4 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-base font-medium shadow-inner transition-all">
+          <button id="clear-search" onclick="clearSearch()" class="hidden absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-sm px-2 py-1">✕</button>
+        </div>
+
+        <!-- Category Pills -->
+        <div id="category-pills" class="flex flex-wrap gap-2 pt-2">
+          <button onclick="filterCategory('')" class="cat-pill active px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-blue-600 text-white border-blue-500 shadow-sm transition-all" data-cat="">Tất cả (All)</button>
+          <button onclick="filterCategory('security')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="security">🛡️ Security (267)</button>
+          <button onclick="filterCategory('development')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="development">💻 Development (229)</button>
+          <button onclick="filterCategory('devops')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="devops">⚙️ DevOps (167)</button>
+          <button onclick="filterCategory('cloud')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="cloud">☁️ Cloud (147)</button>
+          <button onclick="filterCategory('ai-ml')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="ai-ml">🤖 AI & ML (134)</button>
+          <button onclick="filterCategory('web-development')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="web-development">🌐 Web (67)</button>
+          <button onclick="filterCategory('testing')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="testing">🧪 Testing (50)</button>
+          <button onclick="filterCategory('workflow')" class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all" data-cat="workflow">⚡ Workflow (69)</button>
+        </div>
+      </div>
+
+      <!-- Skills Grid Container -->
+      <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Rendered by JS -->
+        <div class="col-span-full py-12 text-center text-slate-400">
+          <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mb-3"></div>
+          <p>Đang tải danh mục 2,650+ kỹ năng...</p>
+        </div>
+      </div>
+
+      <!-- Pagination / Load more -->
+      <div id="pagination-controls" class="mt-8 text-center hidden">
+        <button onclick="loadMoreSkills()" class="px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm border border-slate-700 transition-all shadow-md">
+          Tải thêm kỹ năng khác...
+        </button>
+      </div>
+    </section>
+
+    <!-- Antigravity Architecture Section -->
+    <section id="antigravity" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+      <div class="max-w-3xl mb-12">
+        <div class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">Kiến Trúc Tích Hợp</div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Cơ Chế Khám Phá & Tiết Lộ Lũy Tiến</h2>
+        <p class="text-slate-400 mt-2 text-base leading-relaxed">
+          Google Antigravity được thiết kế để duy trì token context tinh gọn nhất có thể. Dưới đây là cách hệ thống quét và kích hoạt kỹ năng từ Vietnam Agentic Skills.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card-glass p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-blue-900/60 text-blue-400 flex items-center justify-center font-extrabold mb-4 border border-blue-700/50">1</div>
+          <h3 class="text-lg font-bold text-white mb-2">Ưu Tiên Workspace</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Antigravity ưu tiên tìm trong thư mục <code class="text-blue-300 font-mono text-xs">.agents/skills/</code> của dự án đang mở. Bạn cài skill vào dự án nào thì dự án đó được phục vụ.
+          </p>
+        </div>
+
+        <div class="card-glass p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-purple-900/60 text-purple-400 flex items-center justify-center font-extrabold mb-4 border border-purple-700/50">2</div>
+          <h3 class="text-lg font-bold text-white mb-2">Progressive Disclosure</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Chỉ có tiêu đề và mô tả trong YAML frontmatter được đọc khi khởi động. Nội dung chi tiết chỉ nạp khi câu lệnh của bạn cần đến, tiết kiệm 99% chi phí token.
+          </p>
+        </div>
+
+        <div class="card-glass p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-xl bg-emerald-900/60 text-emerald-400 flex items-center justify-center font-extrabold mb-4 border border-emerald-700/50">3</div>
+          <h3 class="text-lg font-bold text-white mb-2">Zero-NPX Native Symlink</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Lệnh <code class="text-emerald-300 font-mono text-xs">--mode link</code> tạo symbolic link tương đối, không tốn dung lượng ổ đĩa và tự động đồng bộ khi cập nhật catalog.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quickstart Guide Section -->
+    <section id="quickstart" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+      <div class="max-w-3xl mb-10">
+        <div class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-2">Bắt Đầu Nhanh</div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Cài Đặt & Sử Dụng Sau 3 Bước</h2>
+      </div>
+
+      <div class="space-y-6 max-w-4xl">
+        <div class="card-glass p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-blue-600 text-white font-mono text-xs font-bold">BƯỚC 1</span>
+            <h3 class="text-lg font-bold text-white">Tải kho lưu trữ về máy</h3>
+          </div>
+          <div class="code-box p-3 rounded-lg font-mono text-xs sm:text-sm text-slate-200">
+            git clone https://github.com/huytran1120/vietnam-agentic-skills.git<br>
+            cd vietnam-agentic-skills<br>
+            chmod +x vas vas.py
+          </div>
+        </div>
+
+        <div class="card-glass p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-blue-600 text-white font-mono text-xs font-bold">BƯỚC 2</span>
+            <h3 class="text-lg font-bold text-white">Cài đặt kỹ năng vào dự án Antigravity của bạn</h3>
+          </div>
+          <div class="code-box p-3 rounded-lg font-mono text-xs sm:text-sm text-slate-200">
+            # Cài đặt vào workspace hiện tại (dạng link tương đối, siêu nhẹ):<br>
+            ./vas install docker-security --target workspace --mode link<br><br>
+            # Cài đặt toàn cục cho Antigravity (dùng ở mọi dự án):<br>
+            ./vas install 007 --target global
+          </div>
+        </div>
+
+        <div class="card-glass p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-blue-600 text-white font-mono text-xs font-bold">BƯỚC 3</span>
+            <h3 class="text-lg font-bold text-white">Tận hưởng sức mạnh của Agentic Playbooks</h3>
+          </div>
+          <p class="text-sm text-slate-400">
+            Mở Google Antigravity trong thư mục dự án và bắt đầu ra lệnh. Antigravity sẽ tự động nhận diện và làm theo đúng tiêu chuẩn của skill đã cài đặt!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author & Community Section -->
+    <section id="author" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+      <div class="card-glass p-8 sm:p-12 rounded-3xl text-center max-w-3xl mx-auto relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 text-white flex items-center justify-center font-bold text-2xl mx-auto mb-4 ring-4 ring-slate-800 shadow-xl">
+            HT
+          </div>
+          <h2 class="text-2xl font-extrabold text-white">Khởi Xướng & Duy Trì Bởi Huy Tran</h2>
+          <p class="text-blue-400 font-mono text-sm mt-1 mb-4">@huytran1120</p>
+          <p class="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed mb-6">
+            Dự án được xây dựng với mong muốn mang lại giải pháp agentic playbooks hoàn chỉnh, nhẹ, bảo mật và phù hợp nhất cho các kỹ sư và lập trình viên Việt Nam làm việc cùng AI Coding Agents.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="https://github.com/huytran1120/vietnam-agentic-skills" target="_blank" rel="noopener"
+               class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-blue-500/25">
+              ⭐ Tặng 1 Star Trên GitHub
+            </a>
+            <a href="https://github.com/huytran1120/vietnam-agentic-skills/issues" target="_blank" rel="noopener"
+               class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-all">
+              Đóng Góp Ý Kiến (Issues)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span>🇻🇳</span>
+        <span>Vietnam Agentic Skills (VAS) — Phát triển bởi <strong>Huy Tran</strong> (<a href="https://github.com/huytran1120" class="hover:underline text-slate-400">@huytran1120</a>).</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/huytran1120/vietnam-agentic-skills/blob/main/LICENSE" class="hover:text-slate-400">MIT License</a>
+        <a href="sitemap.xml" class="hover:text-slate-400">Sitemap</a>
+        <a href="robots.txt" class="hover:text-slate-400">Robots.txt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 rounded-xl bg-slate-900 text-white text-xs font-semibold border border-blue-500/60 shadow-2xl transition-all transform translate-y-20 opacity-0 pointer-events-none z-50 flex items-center gap-2">
+    <span class="text-emerald-400">✓</span>
+    <span id="toast-msg">Đã copy lệnh cài đặt!</span>
+  </div>
+
+  <!-- Client-side Interactive Search Logic -->
+  <script>
+    let allSkills = [];
+    let displayedSkills = [];
+    let currentCategory = '';
+    let searchQuery = '';
+    let page = 1;
+    const PAGE_SIZE = 30;
+
+    // Load minified index
+    async function initCatalog() {
+      try {
+        const res = await fetch('skills.min.json');
+        allSkills = await res.json();
+        document.getElementById('count-display').innerText = allSkills.length.toLocaleString();
+        applyFilters();
+      } catch (err) {
+        console.error('Failed to load skills:', err);
+        document.getElementById('skills-grid').innerHTML = `
+          <div class="col-span-full py-8 text-center text-red-400">
+            Không thể tải dữ liệu catalog. Vui lòng thử lại sau.
+          </div>
+        `;
+      }
+    }
+
+    function applyFilters() {
+      page = 1;
+      const q = searchQuery.toLowerCase().trim();
+      displayedSkills = allSkills.filter(s => {
+        const matchesCategory = !currentCategory || s.category.toLowerCase() === currentCategory;
+        if (!matchesCategory) return false;
+
+        if (!q) return true;
+        return (
+          s.id.toLowerCase().includes(q) ||
+          s.name.toLowerCase().includes(q) ||
+          s.description.toLowerCase().includes(q) ||
+          (s.tags && s.tags.some(t => t.toLowerCase().includes(q)))
+        );
+      });
+
+      document.getElementById('count-display').innerText = displayedSkills.length.toLocaleString();
+      renderSkills();
+    }
+
+    function renderSkills() {
+      const grid = document.getElementById('skills-grid');
+      const count = page * PAGE_SIZE;
+      const visible = displayedSkills.slice(0, count);
+
+      if (visible.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-slate-400">
+            <div class="text-4xl mb-2">🔍</div>
+            <p class="text-base font-semibold text-white">Không tìm thấy kỹ năng phù hợp</p>
+            <p class="text-xs mt-1">Hãy thử tìm với từ khóa khác hoặc bấm "Tất cả" danh mục.</p>
+          </div>
+        `;
+        document.getElementById('pagination-controls').classList.add('hidden');
+        return;
+      }
+
+      grid.innerHTML = visible.map(s => {
+        const isCritical = s.risk === 'critical';
+        const riskBadge = isCritical 
+          ? '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-950 text-amber-400 border border-amber-800">Critical</span>'
+          : '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-800">Safe</span>';
+
+        const installCmd = `./vas install ${s.id} --target workspace --mode link`;
+
+        return `
+          <article class="card-glass p-5 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-950/80 text-blue-400 border border-blue-800/60 font-mono">
+                  ${escapeHtml(s.category)}
+                </span>
+                ${riskBadge}
+              </div>
+
+              <h3 class="text-base font-bold text-white mb-2 leading-snug hover:text-blue-400 transition-colors">
+                <a href="https://github.com/huytran1120/vietnam-agentic-skills/tree/main/skills/${encodeURIComponent(s.id)}" target="_blank" rel="noopener">
+                  ${escapeHtml(s.id)}
+                </a>
+              </h3>
+
+              <p class="text-xs text-slate-300 leading-relaxed line-clamp-3 mb-4">
+                ${escapeHtml(s.description || 'Không có mô tả chi tiết.')}
+              </p>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                ${(s.tags || []).slice(0, 3).map(t => `
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800/80 text-slate-400 border border-slate-700/50">#${escapeHtml(t)}</span>
+                `).join('')}
+              </div>
+
+              <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-2">
+                <button onclick="copyText('${installCmd}', this)" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/40 text-xs font-semibold transition-all">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                  <span>Cài Đặt</span>
+                </button>
+                <a href="https://github.com/huytran1120/vietnam-agentic-skills/tree/main/skills/${encodeURIComponent(s.id)}" target="_blank" rel="noopener" class="text-xs text-slate-400 hover:text-white font-medium flex items-center gap-1 transition-colors">
+                  <span>Chi tiết</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      const hasMore = visible.length < displayedSkills.length;
+      document.getElementById('pagination-controls').classList.toggle('hidden', !hasMore);
+    }
+
+    function loadMoreSkills() {
+      page++;
+      renderSkills();
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat.toLowerCase();
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        const isActive = btn.getAttribute('data-cat') === currentCategory;
+        btn.className = isActive
+          ? 'cat-pill active px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-blue-600 text-white border-blue-500 shadow-sm transition-all'
+          : 'cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium border bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-500 transition-all';
+      });
+      applyFilters();
+    }
+
+    const searchInput = document.getElementById('search-input');
+    const clearBtn = document.getElementById('clear-search');
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      clearBtn.classList.toggle('hidden', !searchQuery);
+      applyFilters();
+    });
+
+    function clearSearch() {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+      applyFilters();
+    }
+
+    function copyText(text, btnElement) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`Đã sao chép: "${text}"`);
+        if (btnElement) {
+          const originalText = btnElement.innerText;
+          btnElement.innerText = 'Đã chép!';
+          setTimeout(() => {
+            btnElement.innerText = originalText;
+          }, 1500);
+        }
+      }).catch(() => {
+        prompt('Copy lệnh này:', text);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    function escapeHtml(str) {
+      return (str || '').replace(/[&<>'"]/g, 
+        tag => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag)
+      );
+    }
+
+    // Start
+    initCatalog();
+  </script>
+</body>
+</html>
