@@ -1,6 +1,6 @@
 # 🇻🇳 Vietnam Agentic Skills (VAS)
 
-> **Kho lưu trữ 2,812+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
+> **Kho lưu trữ 2,904+ kỹ năng (Agentic Skills) chuẩn quốc tế cho mọi AI Coding Agent.**  
 > **Tương thích toàn diện: Google Antigravity, Claude Code, Cursor, Windsurf (Codeium), OpenAI Codex / OpenCode, Cline / Roo Code & GitHub Copilot CLI.**  
 > **100% Zero-NPX. Không phụ thuộc Node.js hay NPM Registry. Tốc độ phản hồi sub-second với Python 3 chuẩn.**
 
@@ -46,7 +46,7 @@
 
 **Vietnam Agentic Skills (VAS)** là dự án thư viện kỹ năng agentic mã nguồn mở được khởi xướng và phát triển bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)). 
 
-Dự án đóng gói **hơn 2,812 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
+Dự án đóng gói **hơn 2,904 playbooks (`SKILL.md`)** chuyên sâu thuộc 115 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
 
 Với VAS, các AI Coding Agent không còn là những lập trình viên trả lời chung chung, mà trở thành những cộng sự kỹ thuật cấp Senior thực thụ, có quy trình chuẩn đoán, checklist bảo mật, công thức tối ưu và kịch bản thực thi chính xác.
 
@@ -96,12 +96,12 @@ chmod +x vas vas.py
 ### Bước 2: Tìm kiếm kỹ năng bạn cần
 ```bash
 # Tìm kiếm kỹ năng theo từ khóa
-./vas search docker-security
+./vas search docker-expert
 
 # Liệt kê theo danh mục
 ./vas list --category security --limit 10
 
-# Khám phá 115 danh mục có sẵn
+# Khám phá các danh mục có sẵn
 ./vas categories
 ```
 
@@ -112,17 +112,18 @@ chmod +x vas vas.py
 ./vas install ui-ux-pro-max --target codex
 
 # Cài cho Google Antigravity:
-./vas install docker-security --target antigravity
+./vas install docker-expert --target antigravity
 
 # Cài cho Claude Code:
-./vas install fastapi-best-practices --target claude
+./vas install fastapi-pro --target claude
 
 # Cài cho Cursor:
-./vas install react-performance --target cursor
+./vas install react-component-performance --target cursor
 
 # Cài cho tất cả AI Agent trong dự án cùng một lúc:
 ./vas install ui-ux-pro-max 007 pdf --target all
 ```
+*(Hệ thống hỗ trợ bí danh tự động: các lệnh gọi alias như `docker-security`, `fastapi-best-practices`, `react-performance`, `nextjs-perf` sẽ tự động trỏ tới skill thực).*
 
 ---
 
@@ -210,7 +211,7 @@ Cú pháp chung:
 Hiển thị metadata, tác giả, rủi ro và xem trước 40 dòng đầu của `SKILL.md`:
 ```bash
 ./vas show ui-ux-pro-max
-./vas show docker-security
+./vas show docker-expert
 ```
 
 ### 4. `install` — Cài đặt cho AI Agent
@@ -234,7 +235,7 @@ Hiển thị metadata, tác giả, rủi ro và xem trước 40 dòng đầu c�
 ### 5. `uninstall` / `remove` — Gỡ bỏ kỹ năng
 ```bash
 ./vas uninstall 007 --target codex
-./vas uninstall docker-security --target all
+./vas uninstall docker-expert --target all
 ```
 
 ### 6. `status` — Kiểm tra kỹ năng đã cài
@@ -265,7 +266,7 @@ skills/<skill_name>/
 ### Tiêu chuẩn `SKILL.md`:
 ```markdown
 ---
-name: docker-security
+name: docker-expert
 category: devops
 tags: [docker, security, hardening, containers]
 risk: safe
@@ -286,7 +287,7 @@ description: >-
 
 ## 8. Danh Mục Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **2,812+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **2,904+ skills** chia theo 115 nhóm ngành. Xem danh mục tại [CATALOG.md](CATALOG.md).
 
 ### 🔥 Top 10 Siêu Kỹ Năng Thiết Kế, 3D & Video Mới Nhất Đã Tích Hợp:
 

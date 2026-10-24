@@ -4,7 +4,7 @@ Vietnam Agentic Skills (VAS) - CLI & Antigravity Installer
 Author: Huy Tran (https://github.com/huytran1120)
 License: MIT
 
-Zero-dependency tool to search, inspect, install, and manage 2,650+ agentic skills
+Zero-dependency tool to search, inspect, install, and manage 2,904+ agentic skills
 specifically designed for Google Antigravity and AI coding agents. No npm/npx required.
 """
 
@@ -78,6 +78,68 @@ ALL_WORKSPACE_TARGETS = [
 
 
 
+def load_aliases():
+    """Load alias mappings from data/aliases.json if available."""
+    aliases_file = REPO_ROOT / "data" / "aliases.json"
+    if aliases_file.exists():
+        try:
+            with open(aliases_file, "r", encoding="utf-8") as f:
+                return json.load(f).get("aliases", {})
+        except Exception:
+            pass
+    return {}
+
+
+def load_category_overrides():
+    """Load maintainer category overrides from data/category-overrides.json."""
+    overrides_file = REPO_ROOT / "data" / "category-overrides.json"
+    if overrides_file.exists():
+        try:
+            with open(overrides_file, "r", encoding="utf-8") as f:
+                return json.load(f).get("overrides", {})
+        except Exception:
+            pass
+    return {}
+
+
+def load_source_catalog():
+    """Load curated metadata from data/catalog.json if available."""
+    catalog_file = REPO_ROOT / "data" / "catalog.json"
+    if catalog_file.exists():
+        try:
+            with open(catalog_file, "r", encoding="utf-8") as f:
+                return json.load(f).get("skills", [])
+        except Exception:
+            pass
+    return []
+
+
+def resolve_skill_id(query_id, skills_by_id=None, aliases=None):
+    """Resolve aliases, canonical IDs, or subpaths to the canonical skill ID."""
+    if aliases is None:
+        aliases = load_aliases()
+    clean_id = query_id.strip()
+
+    # 1. Direct match in skills_by_id
+    if skills_by_id and clean_id in skills_by_id:
+        return clean_id
+
+    # 2. Match in aliases map
+    if clean_id in aliases:
+        aliased = aliases[clean_id]
+        if skills_by_id and aliased in skills_by_id:
+            return aliased
+        return aliased
+
+    # 3. Match canonical_id or trailing subpath (e.g. 2d-games -> game-development/2d-games)
+    if skills_by_id:
+        for s_id, s_data in skills_by_id.items():
+            if s_data.get("canonical_id") == clean_id or s_id.endswith(f"/{clean_id}"):
+                return s_id
+
+    return clean_id
+
+
 def load_index():
     """Load skills index from skills_index.json with fallback to local scan."""
     if INDEX_FILE.exists():
@@ -90,36 +152,73 @@ def load_index():
 
 
 def scan_skills_locally():
-    """Scan skills directory and build an in-memory index."""
+    """Scan skills directory and build an in-memory index, resolving child skills and categories."""
     skills = []
     if not SKILLS_DIR.exists():
         return skills
 
+    overrides = load_category_overrides()
+    source_catalog = load_source_catalog()
+    catalog_by_key = {}
+    for s in source_catalog:
+        if s.get("id"):
+            catalog_by_key[s["id"]] = s
+        if s.get("canonical_id"):
+            catalog_by_key[s["canonical_id"]] = s
+        if s.get("path"):
+            catalog_by_key[s["path"]] = s
+
     for entry in sorted(SKILLS_DIR.iterdir()):
-        if entry.is_dir():
-            skill_md = entry / "SKILL.md"
-            if skill_md.exists():
-                skill_id = entry.name
-                metadata = extract_skill_metadata(skill_md, skill_id)
-                skills.append(metadata)
-            else:
-                # Check for subdirectories (e.g. security/aws-compliance-checker)
-                for subentry in sorted(entry.iterdir()):
-                    if subentry.is_dir() and (subentry / "SKILL.md").exists():
-                        sub_id = f"{entry.name}/{subentry.name}"
-                        metadata = extract_skill_metadata(subentry / "SKILL.md", sub_id)
-                        skills.append(metadata)
+        if not entry.is_dir():
+            continue
+
+        candidates = []
+        # Check parent directory
+        if (entry / "SKILL.md").exists():
+            candidates.append((entry.name, entry / "SKILL.md"))
+
+        # Check subdirectories (child skills) regardless of whether parent has SKILL.md!
+        for subentry in sorted(entry.iterdir()):
+            if subentry.is_dir() and (subentry / "SKILL.md").exists():
+                candidates.append((f"{entry.name}/{subentry.name}", subentry / "SKILL.md"))
+
+        for s_id, smd_path in candidates:
+            metadata = extract_skill_metadata(
+                smd_path, s_id,
+                catalog_by_key=catalog_by_key,
+                overrides=overrides
+            )
+            skills.append(metadata)
+
     return skills
 
 
-def extract_skill_metadata(skill_md_path, skill_id):
-    """Extract YAML frontmatter name and description from SKILL.md without external dependencies."""
-    name = skill_id
-    description = ""
-    category = "general"
-    tags = []
-    risk = "safe"
+def extract_skill_metadata(skill_md_path, skill_id, catalog_by_key=None, overrides=None):
+    """Extract YAML frontmatter name and description harmonized with catalog sources."""
+    if overrides is None:
+        overrides = load_category_overrides()
+    if catalog_by_key is None:
+        catalog_by_key = {}
+        for s in load_source_catalog():
+            if s.get("id"):
+                catalog_by_key[s["id"]] = s
+            if s.get("canonical_id"):
+                catalog_by_key[s["canonical_id"]] = s
+            if s.get("path"):
+                catalog_by_key[s["path"]] = s
 
+    base_id = skill_id.split("/")[-1]
+    source_meta = catalog_by_key.get(skill_id) or catalog_by_key.get(base_id) or {}
+    rel_path = str(skill_md_path.parent.relative_to(REPO_ROOT))
+
+    name = skill_id
+    description = source_meta.get("description", "")
+    category = "general"
+    tags = list(source_meta.get("tags", []))
+    risk = source_meta.get("risk", "safe")
+    canonical_id = source_meta.get("canonical_id", base_id)
+
+    fm_cat = None
     try:
         with open(skill_md_path, "r", encoding="utf-8", errors="ignore") as f:
             content = f.read(8192)
@@ -139,7 +238,7 @@ def extract_skill_metadata(skill_md_path, skill_id):
                 if line.startswith("name:"):
                     name = line.split(":", 1)[1].strip().strip('"\'')
                 elif line.startswith("category:"):
-                    category = line.split(":", 1)[1].strip().strip('"\'')
+                    fm_cat = line.split(":", 1)[1].strip().strip('"\'')
                 elif line.startswith("risk:"):
                     risk = line.split(":", 1)[1].strip().strip('"\'')
                 elif line.startswith("description:"):
@@ -173,12 +272,26 @@ def extract_skill_metadata(skill_md_path, skill_id):
     except Exception:
         pass
 
+    # Category hierarchy:
+    # 1. Maintainer override
+    # 2. Curated catalog.json
+    # 3. Explicit frontmatter (not default "general")
+    # 4. Fallback to "general"
+    final_cat = (
+        overrides.get(skill_id)
+        or overrides.get(base_id)
+        or (source_meta.get("category") if source_meta.get("category") else None)
+        or (fm_cat if fm_cat and fm_cat != "general" else None)
+        or "general"
+    )
+
     return {
         "id": skill_id,
-        "name": name,
-        "path": str(skill_md_path.parent.relative_to(REPO_ROOT)),
+        "canonical_id": canonical_id,
+        "name": name or skill_id,
+        "path": rel_path,
         "description": description or "No description available",
-        "category": category,
+        "category": final_cat,
         "tags": tags,
         "risk": risk
     }
@@ -355,19 +468,23 @@ def cmd_list(args):
 
 def cmd_show(args):
     """Show detailed metadata and preview SKILL.md of a skill."""
-    skill_id = args.skill_id.strip()
+    raw_id = args.skill_id.strip()
     skills = load_index()
-    skill = next((s for s in skills if s.get("id") == skill_id), None)
+    skills_by_id = {s.get("id"): s for s in skills}
+    aliases = load_aliases()
+
+    resolved_id = resolve_skill_id(raw_id, skills_by_id, aliases)
+    skill = skills_by_id.get(resolved_id)
 
     # Fallback to local directory check
-    skill_dir = SKILLS_DIR / skill_id
-    if not skill and skill_dir.is_dir():
-        skill_md = skill_dir / "SKILL.md"
-        if skill_md.exists():
-            skill = extract_skill_metadata(skill_md, skill_id)
+    if not skill:
+        for cand in [SKILLS_DIR / resolved_id, SKILLS_DIR / raw_id]:
+            if cand.is_dir() and (cand / "SKILL.md").exists():
+                skill = extract_skill_metadata(cand / "SKILL.md", resolved_id)
+                break
 
     if not skill:
-        print(f"{Colors.RED}Skill '{skill_id}' not found.{Colors.RESET}", file=sys.stderr)
+        print(f"{Colors.RED}Skill '{raw_id}' not found.{Colors.RESET}", file=sys.stderr)
         sys.exit(1)
 
     print(f"\n{Colors.HEADER}======================================================================{Colors.RESET}")
@@ -382,10 +499,10 @@ def cmd_show(args):
     print(f"{Colors.HEADER}======================================================================{Colors.RESET}\n")
 
     # Read SKILL.md preview
-    skill_path = REPO_ROOT / skill.get("path", f"skills/{skill_id}")
+    skill_path = REPO_ROOT / skill.get("path", f"skills/{resolved_id}")
     skill_md = skill_path / "SKILL.md" if skill_path.is_dir() else skill_path
-    if not skill_md.exists() and (SKILLS_DIR / skill_id / "SKILL.md").exists():
-        skill_md = SKILLS_DIR / skill_id / "SKILL.md"
+    if not skill_md.exists() and (SKILLS_DIR / resolved_id / "SKILL.md").exists():
+        skill_md = SKILLS_DIR / resolved_id / "SKILL.md"
 
     if skill_md.exists():
         print(f"{Colors.BOLD}Preview of {skill_md.name}:{Colors.RESET}\n")
@@ -438,6 +555,7 @@ def cmd_install(args):
     dest_dirs = resolve_target_dirs(args.target, args.dest, getattr(args, 'is_global', False))
     skills = load_index()
     skills_by_id = {s.get("id"): s for s in skills}
+    aliases = load_aliases()
 
     targets_to_install = []
 
@@ -446,14 +564,14 @@ def cmd_install(args):
         confirm = input(f"{Colors.RED}{Colors.BOLD}WARNING:{Colors.RESET} Installing all {len(skills)} skills into {target_names}? [y/N]: ")
         if confirm.lower() != 'y':
             print("Aborted.")
-            return
+            sys.exit(1)
         targets_to_install = list(skills_by_id.keys())
     elif args.category:
         cat = args.category.lower()
         matched = [s.get("id") for s in skills if s.get("category", "").lower() == cat]
         if not matched:
             print(f"{Colors.RED}No skills found in category '{args.category}'.{Colors.RESET}")
-            return
+            sys.exit(1)
         print(f"Selected {len(matched)} skill(s) in category '{args.category}'.")
         targets_to_install.extend(matched)
     elif args.tag:
@@ -461,25 +579,31 @@ def cmd_install(args):
         matched = [s.get("id") for s in skills if tag in [t.lower() for t in s.get("tags", [])]]
         if not matched:
             print(f"{Colors.RED}No skills found with tag '{args.tag}'.{Colors.RESET}")
-            return
+            sys.exit(1)
         print(f"Selected {len(matched)} skill(s) with tag '{args.tag}'.")
         targets_to_install.extend(matched)
     elif args.skill_ids:
         targets_to_install.extend(args.skill_ids)
     else:
         print(f"{Colors.RED}Error: Provide skill ID(s), --category, --tag, or --all.{Colors.RESET}")
-        return
+        sys.exit(1)
+
+    total_installed = 0
+    total_failed = 0
 
     for dest_dir in dest_dirs:
+        dest_dir = dest_dir.resolve()
+        dest_dir.mkdir(parents=True, exist_ok=True)
         manifest = load_manifest(dest_dir)
-        agent_label = dest_dir.name
         print(f"\n{Colors.BOLD}Installing {len(targets_to_install)} skill(s) for target:{Colors.RESET}")
         print(f"  Destination: {Colors.CYAN}{dest_dir}{Colors.RESET}")
         print(f"  Mode:        {Colors.YELLOW}{args.mode}{Colors.RESET}\n")
 
         installed_count = 0
-        for s_id in targets_to_install:
-            s_id = s_id.strip()
+        for raw_id in targets_to_install:
+            raw_id = raw_id.strip()
+            s_id = resolve_skill_id(raw_id, skills_by_id, aliases)
+
             # Locate source skill directory
             source_dir = None
             if s_id in skills_by_id:
@@ -489,47 +613,102 @@ def cmd_install(args):
                     source_dir = candidate
 
             if not source_dir:
-                direct_candidate = SKILLS_DIR / s_id
-                if direct_candidate.is_dir():
-                    source_dir = direct_candidate
+                for cand in [SKILLS_DIR / s_id, SKILLS_DIR / raw_id]:
+                    if cand.is_dir() and (cand / "SKILL.md").exists():
+                        source_dir = cand
+                        break
 
             if not source_dir or not (source_dir / "SKILL.md").exists():
-                print(f"  {Colors.RED}✗{Colors.RESET} Skill '{s_id}' not found or missing SKILL.md. Skipped.")
+                print(f"  {Colors.RED}✗{Colors.RESET} Skill '{raw_id}' not found or missing SKILL.md. Skipped.")
+                total_failed += 1
                 continue
 
-            target_skill_dir = dest_dir / source_dir.name
-            # Remove existing if present
-            if target_skill_dir.exists() or target_skill_dir.is_symlink():
-                if target_skill_dir.is_symlink() or target_skill_dir.is_file():
-                    target_skill_dir.unlink()
-                else:
-                    shutil.rmtree(target_skill_dir)
+            target_name = source_dir.name
+            target_skill_dir = dest_dir / target_name
+            norm_target = Path(os.path.normpath(target_skill_dir))
 
+            # Boundary scope check
+            if not norm_target.is_relative_to(dest_dir) or norm_target == dest_dir:
+                print(f"  {Colors.RED}✗{Colors.RESET} Security error: target directory '{target_name}' escapes destination. Skipped.")
+                total_failed += 1
+                continue
+
+            # Check overlap between source and destination (prevent deleting catalog source)
+            source_resolved = source_dir.resolve()
+            if target_skill_dir.exists() and not target_skill_dir.is_symlink():
+                try:
+                    if target_skill_dir.resolve() == source_resolved or source_resolved.is_relative_to(target_skill_dir.resolve()):
+                        print(f"  {Colors.RED}✗{Colors.RESET} Destination overlaps or matches source directory in catalog. Skipped.")
+                        total_failed += 1
+                        continue
+                except Exception:
+                    pass
+
+            # Atomic install using staging and backup
+            staging_dir = dest_dir / f".tmp_{target_name}_{os.getpid()}"
+            if staging_dir.exists() or staging_dir.is_symlink():
+                if staging_dir.is_symlink() or staging_dir.is_file():
+                    staging_dir.unlink()
+                else:
+                    shutil.rmtree(staging_dir)
+
+            backup_dir = None
             try:
                 if args.mode == "link":
                     try:
-                        rel_target = os.path.relpath(source_dir.resolve(), target_skill_dir.parent.resolve())
-                        os.symlink(rel_target, target_skill_dir)
+                        rel_target = os.path.relpath(source_resolved, dest_dir)
+                        os.symlink(rel_target, staging_dir)
                     except ValueError:
-                        os.symlink(source_dir.resolve(), target_skill_dir)
+                        os.symlink(source_resolved, staging_dir)
                     mode_label = "linked"
                 else:
-                    shutil.copytree(source_dir, target_skill_dir)
+                    shutil.copytree(source_resolved, staging_dir)
                     mode_label = "copied"
+
+                if target_skill_dir.exists() or target_skill_dir.is_symlink():
+                    backup_dir = dest_dir / f".bak_{target_name}_{os.getpid()}"
+                    if backup_dir.exists() or backup_dir.is_symlink():
+                        if backup_dir.is_symlink() or backup_dir.is_file():
+                            backup_dir.unlink()
+                        else:
+                            shutil.rmtree(backup_dir)
+                    target_skill_dir.rename(backup_dir)
+
+                staging_dir.rename(target_skill_dir)
+
+                # Cleanup backup on success
+                if backup_dir and (backup_dir.exists() or backup_dir.is_symlink()):
+                    if backup_dir.is_symlink() or backup_dir.is_file():
+                        backup_dir.unlink()
+                    else:
+                        shutil.rmtree(backup_dir)
 
                 manifest[s_id] = {
                     "installed_at": target_skill_dir.stat().st_mtime,
                     "mode": args.mode,
-                    "source": str(source_dir.resolve()),
+                    "source": str(source_resolved),
+                    "target_name": target_name,
                     "category": skills_by_id.get(s_id, {}).get("category", "general")
                 }
                 installed_count += 1
+                total_installed += 1
                 print(f"  {Colors.GREEN}✓{Colors.RESET} {s_id} ({mode_label})")
             except Exception as e:
                 print(f"  {Colors.RED}✗{Colors.RESET} Failed to install {s_id}: {e}")
+                total_failed += 1
+                if staging_dir.exists() or staging_dir.is_symlink():
+                    if staging_dir.is_symlink() or staging_dir.is_file():
+                        staging_dir.unlink()
+                    else:
+                        shutil.rmtree(staging_dir)
+                if backup_dir and (backup_dir.exists() or backup_dir.is_symlink()):
+                    backup_dir.rename(target_skill_dir)
 
-            save_manifest(dest_dir, manifest)
-            print(f"\n{Colors.GREEN}{Colors.BOLD}✓ Successfully installed {installed_count} skill(s) into {dest_dir}.{Colors.RESET}")
+        save_manifest(dest_dir, manifest)
+        print(f"\n{Colors.GREEN}{Colors.BOLD}✓ Successfully installed {installed_count} skill(s) into {dest_dir}.{Colors.RESET}")
+
+    if total_installed == 0 or total_failed > 0:
+        sys.exit(1)
 
 
 def cmd_uninstall(args):
@@ -538,30 +717,82 @@ def cmd_uninstall(args):
     to_remove = args.skill_ids
     if not to_remove:
         print(f"{Colors.RED}Specify skill ID(s) to uninstall.{Colors.RESET}")
-        return
+        sys.exit(1)
+
+    aliases = load_aliases()
+    skills = load_index()
+    skills_by_id = {s.get("id"): s for s in skills}
+
+    total_removed = 0
+    total_failed = 0
 
     for dest_dir in dest_dirs:
+        dest_dir = dest_dir.resolve()
         manifest = load_manifest(dest_dir)
         print(f"\n{Colors.BOLD}Uninstalling from {dest_dir}:{Colors.RESET}\n")
         removed_count = 0
-        for s_id in to_remove:
-            target_skill_dir = dest_dir / s_id
+        for raw_id in to_remove:
+            clean_id = raw_id.strip()
+            s_id = resolve_skill_id(clean_id, skills_by_id, aliases)
+
+            target_name = None
+            manifest_keys_to_remove = []
+
+            # 1. Lookup in manifest by resolved ID or raw ID
+            if s_id in manifest:
+                target_name = manifest[s_id].get("target_name") or Path(s_id).name
+                manifest_keys_to_remove.append(s_id)
+            elif clean_id in manifest:
+                target_name = manifest[clean_id].get("target_name") or Path(clean_id).name
+                manifest_keys_to_remove.append(clean_id)
+            else:
+                # 2. Check if clean_id matches target_name in manifest
+                for k, v in list(manifest.items()):
+                    if v.get("target_name") == clean_id or Path(k).name == clean_id:
+                        target_name = v.get("target_name") or Path(k).name
+                        manifest_keys_to_remove.append(k)
+                        break
+
+            if not target_name:
+                target_name = Path(clean_id).name
+
+            target_skill_dir = dest_dir / target_name
+            norm_target = Path(os.path.normpath(target_skill_dir))
+
+            # Boundary scope check (prevent ../ or path traversal out of dest_dir)
+            if not norm_target.is_relative_to(dest_dir) or norm_target == dest_dir:
+                print(f"  {Colors.RED}✗{Colors.RESET} Security warning: path '{target_name}' escapes destination directory. Skipped.")
+                total_failed += 1
+                continue
+
             if target_skill_dir.exists() or target_skill_dir.is_symlink():
                 try:
                     if target_skill_dir.is_symlink() or target_skill_dir.is_file():
                         target_skill_dir.unlink()
                     else:
                         shutil.rmtree(target_skill_dir)
-                    manifest.pop(s_id, None)
+                    for mk in manifest_keys_to_remove:
+                        manifest.pop(mk, None)
+                    for mk, mv in list(manifest.items()):
+                        if mv.get("target_name") == target_name:
+                            manifest.pop(mk, None)
                     removed_count += 1
-                    print(f"  {Colors.GREEN}✓{Colors.RESET} Removed {s_id}")
+                    total_removed += 1
+                    print(f"  {Colors.GREEN}✓{Colors.RESET} Removed {clean_id}")
                 except Exception as e:
-                    print(f"  {Colors.RED}✗{Colors.RESET} Error removing {s_id}: {e}")
+                    print(f"  {Colors.RED}✗{Colors.RESET} Error removing {clean_id}: {e}")
+                    total_failed += 1
             else:
-                print(f"  {Colors.YELLOW}-{Colors.RESET} {s_id} is not installed in {dest_dir}")
+                for mk in manifest_keys_to_remove:
+                    manifest.pop(mk, None)
+                print(f"  {Colors.YELLOW}-{Colors.RESET} {clean_id} is not installed in {dest_dir}")
+                total_failed += 1
 
         save_manifest(dest_dir, manifest)
         print(f"\n{Colors.GREEN}Removed {removed_count} skill(s) from {dest_dir}.{Colors.RESET}\n")
+
+    if total_removed == 0 or total_failed > 0:
+        sys.exit(1)
 
 
 def cmd_status(args):
@@ -569,12 +800,15 @@ def cmd_status(args):
     dest_dirs = resolve_target_dirs(args.target, args.dest, getattr(args, 'is_global', False))
 
     for dest_dir in dest_dirs:
+        dest_dir = dest_dir.resolve()
         manifest = load_manifest(dest_dir)
         print(f"\n{Colors.BOLD}Skills Status in:{Colors.RESET} {Colors.CYAN}{dest_dir}{Colors.RESET}\n")
 
         skills_on_disk = []
         if dest_dir.exists():
             for item in sorted(dest_dir.iterdir()):
+                if item.name.startswith("."):
+                    continue
                 if item.is_dir() or item.is_symlink():
                     if (item / "SKILL.md").exists() or item.name in manifest:
                         is_link = item.is_symlink()
@@ -588,6 +822,11 @@ def cmd_status(args):
             for name, is_link in skills_on_disk:
                 tag = f"{Colors.BLUE}[symlink]{Colors.RESET}" if is_link else f"{Colors.YELLOW}[copied]{Colors.RESET}"
                 cat = manifest.get(name, {}).get("category", "")
+                if not cat:
+                    for k, v in manifest.items():
+                        if v.get("target_name") == name or Path(k).name == name:
+                            cat = v.get("category", "")
+                            break
                 cat_label = f"[{cat}]" if cat else ""
                 print(f"  - {Colors.BOLD}{name:<32}{Colors.RESET} {tag} {Colors.DIM}{cat_label}{Colors.RESET}")
         print()
@@ -598,9 +837,20 @@ def cmd_init(args):
     target_dir = Path(".agents/skills").resolve()
     target_dir.mkdir(parents=True, exist_ok=True)
     meta_skill_dir = target_dir / "vietnam-agentic-skills"
+
+    # Avoid writing through symlinks into catalog repository
+    if meta_skill_dir.is_symlink():
+        meta_skill_dir.unlink()
     meta_skill_dir.mkdir(parents=True, exist_ok=True)
 
     meta_skill_md = meta_skill_dir / "SKILL.md"
+    if meta_skill_md.is_symlink():
+        meta_skill_md.unlink()
+
+    # Space-safe quoting for REPO_ROOT / vas.py
+    vas_path = REPO_ROOT / "vas.py"
+    vas_cmd = f'"{vas_path}"'
+
     content = f"""---
 name: vietnam-agentic-skills
 description: >-
@@ -615,13 +865,13 @@ This workspace is enabled with Vietnam Agentic Skills catalog.
 ## Commands
 
 Search skills:
-`python3 {REPO_ROOT}/vas.py search <keyword>`
+`python3 {vas_cmd} search <keyword>`
 
 Install a skill to this workspace:
-`python3 {REPO_ROOT}/vas.py install <skill_id> --target workspace`
+`python3 {vas_cmd} install <skill_id> --target workspace`
 
 List categories:
-`python3 {REPO_ROOT}/vas.py categories`
+`python3 {vas_cmd} categories`
 """
     with open(meta_skill_md, "w", encoding="utf-8") as f:
         f.write(content)
@@ -632,7 +882,7 @@ List categories:
 
 
 def cmd_sync(args):
-    """Rebuild skills_index.json from the skills directory."""
+    """Rebuild skills_index.json and docs/skills.min.json from the skills directory."""
     print(f"\n{Colors.BOLD}Scanning skills directory to rebuild index...{Colors.RESET}")
     scanned = scan_skills_locally()
     print(f"Scanned {len(scanned)} skills.")
@@ -640,7 +890,66 @@ def cmd_sync(args):
     try:
         with open(INDEX_FILE, "w", encoding="utf-8") as f:
             json.dump(scanned, f, indent=2, ensure_ascii=False)
-        print(f"{Colors.GREEN}✓ Successfully saved {INDEX_FILE}{Colors.RESET}\n")
+        print(f"{Colors.GREEN}✓ Successfully saved {INDEX_FILE}{Colors.RESET}")
+    except Exception as e:
+        print(f"{Colors.RED}✗ Error writing index: {e}{Colors.RESET}")
+        sys.exit(1)
+
+    min_file = REPO_ROOT / "docs" / "skills.min.json"
+    if min_file.parent.exists():
+        try:
+            with open(min_file, "w", encoding="utf-8") as f:
+                json.dump(scanned, f, separators=(",", ":"), ensure_ascii=False)
+            print(f"{Colors.GREEN}✓ Successfully saved {min_file}{Colors.RESET}")
+        except Exception as e:
+            print(f"{Colors.YELLOW}Warning: Could not save minified index: {e}{Colors.RESET}")
+
+    # Update CATALOG.md
+    catalog_md = REPO_ROOT / "CATALOG.md"
+    try:
+        categories = {}
+        for s in scanned:
+            cat = s.get("category", "general")
+            categories.setdefault(cat, []).append(s)
+
+        lines = [
+            "# Vietnam Agentic Skills (VAS) - Catalog",
+            "",
+            f"Tổng hợp **{len(scanned):,}** kỹ năng Agentic tiêu chuẩn hóa, chia theo **{len(categories)}** danh mục chuyên biệt.",
+            "",
+            "| Danh mục | Số lượng | Lệnh cài đặt nhanh |",
+            "| :--- | :---: | :--- |",
+        ]
+        for cat in sorted(categories.keys()):
+            cnt = len(categories[cat])
+            lines.append(f"| **{cat}** | {cnt} skills | `./vas install --category {cat} --target codex` |")
+
+        lines.extend([
+            "",
+            "---",
+            "",
+            "## Chi Tiết Các Kỹ Năng",
+            "",
+        ])
+        for cat in sorted(categories.keys()):
+            lines.append(f"### {cat.upper()} ({len(categories[cat])} skills)")
+            lines.append("")
+            lines.append("| Skill ID | Rủi ro | Mô tả tóm tắt |")
+            lines.append("| :--- | :---: | :--- |")
+            for s in sorted(categories[cat], key=lambda x: x.get("id", "")):
+                s_id = s.get("id")
+                risk = s.get("risk", "safe")
+                desc = s.get("description", "").replace("\n", " ")
+                if len(desc) > 80:
+                    desc = desc[:77] + "..."
+                lines.append(f"| `{s_id}` | `{risk}` | {desc} |")
+            lines.append("")
+
+        with open(catalog_md, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines))
+        print(f"{Colors.GREEN}✓ Successfully generated {catalog_md}{Colors.RESET}\n")
+    except Exception as e:
+        print(f"{Colors.YELLOW}Warning: Could not update CATALOG.md: {e}{Colors.RESET}\n")
     except Exception as e:
         print(f"{Colors.RED}✗ Error writing index: {e}{Colors.RESET}\n")
 
