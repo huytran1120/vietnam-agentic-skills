@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "description": "Empty seed cache, not evidence of a prior run; copy into the user-selected workspace before use.",
+  "last_run": null,
+  "source_stats": {
+    "_comment": "记录每个源的历史表现，用于动态调整优先级",
+    "hn": {
+      "total_fetches": 0,
+      "success_count": 0,
+      "avg_items_per_fetch": 0,
+      "avg_quality_score": 0,
+      "last_fetch": null,
+      "last_success": null
+    }
+  },
+  "url_cache": {
+    "_comment": "已处理的 URL 缓存，避免重复收录",
+    "_ttl_hours": 168,
+    "entries": {}
+  },
+  "content_hashes": {
+    "_comment": "内容指纹，用于去重",
+    "_ttl_hours": 168,
+    "entries": {}
+  },
+  "article_history": {}
+}

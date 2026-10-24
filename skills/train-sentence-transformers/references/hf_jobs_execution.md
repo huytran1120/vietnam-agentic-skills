@@ -1,0 +1,11 @@
+# Hugging Face Jobs Execution
+
+Jobs incur charges and may upload code/data to a remote provider. Obtain explicit account, region/data, script, dependency, hardware, maximum cost/time and artifact-destination scope before submission. Planning a model is not job authorization. Verify current [official Jobs documentation](https://huggingface.co/docs/huggingface_hub/guides/jobs) and hardware/credit balance; current documentation allows users/organizations with a positive credit balance rather than a universal paid-plan prerequisite.
+
+Review the exact local script and lock dependencies. The CLI supports reviewed local UV scripts as well as remote scripts; local input does not imply arbitrary local datasets are mounted. Avoid mutable remote URLs: pin/review bytes. The packaged local examples use a sibling safety helper and cached assets; copying a single file inline will not supply those files. Prepare and inspect the complete job bundle and an intentional remote policy before deployment.
+
+Specify a timeout and approved cancellation policy; include preparation, evaluation, saving and a bounded retry allowance in cost estimates. Use the actual available CLI/MCP schema, never assume tool names or token interpolation. A timeout is not proof that all output was persisted. Inspect job completion, exit status and artifact checksums. Persistent storage or an explicitly approved private repository are options; public publication is never the default. Do not promise each checkpoint upload survives abrupt termination.
+
+Inject only necessary scoped secrets through the provider secret mechanism. Secrets may still leak through code, exceptions, external calls or logs; never claim injection makes them inherently unloggable. Training input usually requires read access; write access is only for an approved destination. Keep tracking disabled unless its service, visibility and payload are authorized. No automatic recurring jobs; schedules require a separate explicit request.
+
+Monitor the returned job ID at a bounded cadence and report real status. Do not call a successful training process published, validated or cost-complete until the relevant destination, evaluation and billing evidence are checked. No paid jobs were run as part of this catalog review.

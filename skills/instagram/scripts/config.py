@@ -1,0 +1,154 @@
+"""
+Configuração central da skill Instagram.
+
+Todos os paths, constantes da API e specs de mídia ficam aqui.
+Importado por todos os outros scripts.
+"""
+from __future__ import annotations
+
+import os
+import stat
+import shutil
+from pathlib import Path
+from typing import Any, Dict
+
+# ── Paths ─────────────────────────────────────────────────────────────────────
+ROOT_DIR = Path(__file__).parent.parent
+SCRIPTS_DIR = ROOT_DIR / "scripts"
+LEGACY_DATA_DIR = ROOT_DIR / "data"
+DATA_DIR = Path(os.environ.get(
+    "AAS_INSTAGRAM_DATA_DIR",
+    Path.home() / ".local" / "share" / "agentic-awesome-skills" / "instagram",
+)).expanduser()
+EXPORTS_DIR = DATA_DIR / "exports"
+STATIC_DIR = ROOT_DIR / "static"
+DB_PATH = DATA_DIR / "instagram.db"
+
+def protect_state_path(path, *, directory=False):
+    """Repair only owned state paths; never follow links or mutate hard links."""
+    flags = os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0) | getattr(os, "O_NONBLOCK", 0)
+    if path.is_symlink():
+        raise OSError(f"Refusing linked state path: {path}")
+    if directory:
+        path.mkdir(parents=True, exist_ok=True, mode=0o700)
+        # Windows does not support opening directories this way; privacy there
+        # is governed by the user profile ACL, not POSIX permission bits.
+        if os.name == "nt":
+            path.chmod(0o700)
+            return
+        flags |= getattr(os, "O_DIRECTORY", 0)
+    elif not path.exists():
+        return
+    fd = os.open(path, flags)
+    try:
+        info = os.fstat(fd)
+        valid = stat.S_ISDIR(info.st_mode) if directory else stat.S_ISREG(info.st_mode) and info.st_nlink == 1
+        if not valid:
+            raise OSError(f"Refusing unsafe state path: {path}")
+        if hasattr(os, "fchmod"):
+            os.fchmod(fd, 0o700 if directory else 0o600)
+        else:
+            os.chmod(path, 0o600)
+    finally:
+        os.close(fd)
+
+
+# Tokens and app secrets are stored in the SQLite database. Keep every newly
+# created database, journal, and sidecar private, and migrate legacy state once.
+os.umask(0o077)
+if LEGACY_DATA_DIR.exists() and LEGACY_DATA_DIR != DATA_DIR and not DATA_DIR.exists():
+    DATA_DIR.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+    shutil.move(str(LEGACY_DATA_DIR), str(DATA_DIR))
+    print(f"AVISO: dados sensiveis do Instagram migrados para {DATA_DIR}")
+for directory in (DATA_DIR, EXPORTS_DIR):
+    protect_state_path(directory, directory=True)
+protect_state_path(DB_PATH)
+
+# ── Instagram Graph API ───────────────────────────────────────────────────────
+API_VERSION = "v21.0"
+GRAPH_API_BASE = f"https://graph.facebook.com/{API_VERSION}"
+GRAPH_IG_BASE = f"https://graph.instagram.com/{API_VERSION}"
+
+# OAuth
+OAUTH_REDIRECT_PORT = 8765
+OAUTH_REDIRECT_URI = f"http://localhost:{OAUTH_REDIRECT_PORT}/callback"
+OAUTH_AUTHORIZE_URL = f"https://www.facebook.com/{API_VERSION}/dialog/oauth"
+OAUTH_TOKEN_URL = f"{GRAPH_API_BASE}/oauth/access_token"
+
+# Scopes necessários
+OAUTH_SCOPES = [
+    "instagram_basic",
+    "instagram_content_publish",
+    "instagram_manage_comments",
+    "instagram_manage_insights",
+    "instagram_manage_messages",
+    "pages_show_list",
+    "pages_read_engagement",
+]
+
+# ── Rate Limits ───────────────────────────────────────────────────────────────
+RATE_LIMIT_REQUESTS_PER_HOUR = 200
+RATE_LIMIT_PUBLISHES_PER_DAY = 25
+RATE_LIMIT_HASHTAGS_PER_WEEK = 30
+RATE_LIMIT_DMS_PER_HOUR = 200
+RATE_LIMIT_WARNING_THRESHOLD = 0.9  # alerta em 90% do limite
+
+# ── Media Specs ───────────────────────────────────────────────────────────────
+MEDIA_SPECS: Dict[str, Dict[str, Any]] = {
+    "PHOTO": {
+        "formats": ["JPEG"],
+        "min_width": 320,
+        "max_width": 1440,
+        "aspect_ratio_min": 4 / 5,   # 0.8
+        "aspect_ratio_max": 1.91,
+        "max_size_mb": 8,
+    },
+    "VIDEO": {
+        "formats": ["MP4", "MOV"],
+        "codec": "H.264",
+        "audio": "AAC",
+        "min_duration_sec": 3,
+        "max_duration_sec": 60,
+        "max_size_mb": 100,
+    },
+    "REEL": {
+        "formats": ["MP4", "MOV"],
+        "codec": "H.264",
+        "audio": "AAC",
+        "recommended_width": 1080,
+        "recommended_height": 1920,
+        "aspect_ratio": "9:16",
+        "min_duration_sec": 3,
+        "max_duration_sec": 90,
+        "max_size_mb": 1024,
+    },
+    "STORY": {
+        "recommended_width": 1080,
+        "recommended_height": 1920,
+        "aspect_ratio": "9:16",
+    },
+    "CAROUSEL": {
+        "min_items": 2,
+        "max_items": 10,
+    },
+}
+
+# ── Imgur (upload de mídia local) ─────────────────────────────────────────────
+IMGUR_UPLOAD_URL = "https://api.imgur.com/3/image"
+IMGUR_CLIENT_ID = os.environ.get("IMGUR_CLIENT_ID", "")  # use your own client; public uploads require explicit opt-in
+
+# ── Retry / Backoff ──────────────────────────────────────────────────────────
+MAX_RETRIES = 3
+RETRY_BACKOFF_BASE = 2  # segundos: 2^1, 2^2, 2^3
+REQUEST_TIMEOUT = 30.0
+
+# ── Governance ────────────────────────────────────────────────────────────────
+# Categorias de ação para confirmação
+ACTION_CATEGORIES = {
+    "READ": [],  # sem confirmação
+    "ENGAGE": ["reply_comment", "hide_comment", "unhide_comment"],
+    "PUBLISH": ["publish_photo", "publish_video", "publish_reel",
+                "publish_story", "publish_carousel", "schedule_post"],
+    "DELETE": ["delete_comment"],
+    "MESSAGE": ["send_dm"],
+}

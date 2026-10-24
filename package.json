@@ -1,0 +1,42 @@
+{
+  "name": "vietnam-agentic-skills",
+  "version": "1.0.0",
+  "description": "Vietnam Agentic Skills (VAS) - Curated catalog of 2,650+ agentic skills for Google Antigravity, with zero npm/npx requirement.",
+  "author": "Huy Tran <66549585+huytran1120@users.noreply.github.com> (https://github.com/huytran1120)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huytran1120/vietnam-agentic-skills.git"
+  },
+  "keywords": [
+    "antigravity",
+    "agentic-skills",
+    "vietnam-agentic-skills",
+    "vas",
+    "ai-coding",
+    "playbooks",
+    "gemini"
+  ],
+  "bin": {
+    "vas": "vas"
+  },
+  "scripts": {
+    "search": "python3 vas.py search",
+    "list": "python3 vas.py list",
+    "categories": "python3 vas.py categories",
+    "tags": "python3 vas.py tags",
+    "status": "python3 vas.py status",
+    "sync": "python3 vas.py sync",
+    "guide": "python3 vas.py guide"
+  },
+  "files": [
+    "skills",
+    "skills_index.json",
+    "data",
+    "vas",
+    "vas.py",
+    "CATALOG.md",
+    "AGENTS.md",
+    "README.md"
+  ]
+}

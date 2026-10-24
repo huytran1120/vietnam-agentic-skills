@@ -1,0 +1,281 @@
+# Checked Azure AI Projects API snapshot
+
+This replaces a mixed, inaccurate claim of 373 SDK exports. Checked by static inspection of the published PyPI azure-ai-projects 2.0.0b4 wheel; no SDK code was executed or Azure account accessed. This is a historical compatibility reference, not an instruction to install an old preview.
+
+Wheel SHA-256: `f4cf1615bd815744ddce304b97eea9456b7f6f0bd8725547c4e54e3a67534635`.
+
+## Client and generation boundaries
+
+- `AIProjectClient`: agents, connections, datasets, deployments, indexes, evaluation_rules and beta operations.
+- `project.beta`: evaluators, evaluation_taxonomies, memory_stores, red_teams, schedules and insights. These are not direct properties in this snapshot.
+- `project.get_openai_client()`: returns a separately closable OpenAI client for responses/conversations/evals, with constructor keyword arguments forwarded.
+- `AgentsClient` from azure-ai-agents: classic threads/messages/runs and low-level helper ToolSet patterns. Do not call those on the project-v2 agents object.
+
+## Agent operations present in this snapshot
+
+`create_version`, `create_version_from_manifest`, `delete`, `delete_version`, `get`, `get_version`, `list`, `list_versions`.
+
+`create_version(agent_name, definition=PromptAgentDefinition(...))` has no `version_label` parameter; use metadata for an application label. `delete_version(agent_name, agent_version)` differs from deleting all versions of an agent. Preserve existing versions unless explicitly authorized.
+
+## Tool constructors
+
+`PromptAgentDefinition` takes model, instructions and project-model tools. It does not take classic tool_resources or a classic response_format. Structured text uses its version-specific text configuration. `FunctionTool` declares name, parameters, strict and optional description; it does not accept Python functions=[...]. Classic FunctionTool has a different shape. `AzureAISearchTool` takes azure_ai_search=AzureAISearchToolResource(...), not resources=[...]. Verify nested fields from the installed version before composing a tool.
+
+MCP/tool declarations do not authorize execution. Use an approved cloud-reachable HTTPS destination, narrow tools, least privilege, validated arguments and approval for consequential calls. Do not forward secrets in model-visible content.
+
+## Declared model exports
+
+The following names are the literal __all__ list from that wheel. It is an import inventory only, not validation of every constructor or live service feature; conditional patch exports and future versions may differ.
+
+- `A2APreviewTool`
+- `AISearchIndexResource`
+- `AgentClusterInsightRequest`
+- `AgentClusterInsightResult`
+- `AgentDefinition`
+- `AgentDetails`
+- `AgentObjectVersions`
+- `AgentTaxonomyInput`
+- `AgentVersionDetails`
+- `AgenticIdentityPreviewCredentials`
+- `ApiError`
+- `ApiErrorResponse`
+- `ApiKeyCredentials`
+- `ApplyPatchToolParam`
+- `ApproximateLocation`
+- `AzureAIAgentTarget`
+- `AzureAIModelTarget`
+- `AzureAISearchIndex`
+- `AzureAISearchTool`
+- `AzureAISearchToolResource`
+- `AzureFunctionBinding`
+- `AzureFunctionDefinition`
+- `AzureFunctionDefinitionFunction`
+- `AzureFunctionStorageQueue`
+- `AzureFunctionTool`
+- `AzureOpenAIModelConfiguration`
+- `BaseCredentials`
+- `BingCustomSearchConfiguration`
+- `BingCustomSearchPreviewTool`
+- `BingCustomSearchToolParameters`
+- `BingGroundingSearchConfiguration`
+- `BingGroundingSearchToolParameters`
+- `BingGroundingTool`
+- `BlobReference`
+- `BlobReferenceSasCredential`
+- `BrowserAutomationPreviewTool`
+- `BrowserAutomationToolConnectionParameters`
+- `BrowserAutomationToolParameters`
+- `CaptureStructuredOutputsTool`
+- `ChartCoordinate`
+- `ChatSummaryMemoryItem`
+- `ClusterInsightResult`
+- `ClusterTokenUsage`
+- `CodeBasedEvaluatorDefinition`
+- `CodeInterpreterContainerAuto`
+- `CodeInterpreterTool`
+- `ComparisonFilter`
+- `CompoundFilter`
+- `ComputerUsePreviewTool`
+- `Connection`
+- `ContainerAppAgentDefinition`
+- `ContinuousEvaluationRuleAction`
+- `CosmosDBIndex`
+- `CronTrigger`
+- `CustomCredential`
+- `CustomGrammarFormatParam`
+- `CustomTextFormatParam`
+- `CustomToolParam`
+- `CustomToolParamFormat`
+- `DailyRecurrenceSchedule`
+- `DatasetCredential`
+- `DatasetVersion`
+- `DeleteAgentResponse`
+- `DeleteAgentVersionResponse`
+- `DeleteMemoryStoreResult`
+- `Deployment`
+- `EmbeddingConfiguration`
+- `EntraIDCredentials`
+- `EvalResult`
+- `EvalRunResultCompareItem`
+- `EvalRunResultComparison`
+- `EvalRunResultSummary`
+- `EvaluationComparisonInsightRequest`
+- `EvaluationComparisonInsightResult`
+- `EvaluationResultSample`
+- `EvaluationRule`
+- `EvaluationRuleAction`
+- `EvaluationRuleFilter`
+- `EvaluationRunClusterInsightRequest`
+- `EvaluationRunClusterInsightResult`
+- `EvaluationScheduleTask`
+- `EvaluationTaxonomy`
+- `EvaluationTaxonomyInput`
+- `EvaluatorDefinition`
+- `EvaluatorMetric`
+- `EvaluatorVersion`
+- `FabricDataAgentToolParameters`
+- `FieldMapping`
+- `FileDatasetVersion`
+- `FileSearchTool`
+- `FolderDatasetVersion`
+- `FunctionShellToolParam`
+- `FunctionTool`
+- `HostedAgentDefinition`
+- `HourlyRecurrenceSchedule`
+- `HumanEvaluationPreviewRuleAction`
+- `HybridSearchOptions`
+- `ImageGenTool`
+- `ImageGenToolInputImageMask`
+- `Index`
+- `Insight`
+- `InsightCluster`
+- `InsightModelConfiguration`
+- `InsightRequest`
+- `InsightResult`
+- `InsightSample`
+- `InsightScheduleTask`
+- `InsightSummary`
+- `InsightsMetadata`
+- `LocalShellToolParam`
+- `MCPTool`
+- `MCPToolFilter`
+- `MCPToolRequireApproval`
+- `ManagedAzureAISearchIndex`
+- `MemoryItem`
+- `MemoryOperation`
+- `MemorySearchItem`
+- `MemorySearchOptions`
+- `MemorySearchPreviewTool`
+- `MemoryStoreDefaultDefinition`
+- `MemoryStoreDefaultOptions`
+- `MemoryStoreDefinition`
+- `MemoryStoreDeleteScopeResult`
+- `MemoryStoreDetails`
+- `MemoryStoreOperationUsage`
+- `MemoryStoreSearchResult`
+- `MemoryStoreUpdateCompletedResult`
+- `MemoryStoreUpdateResult`
+- `MicrosoftFabricPreviewTool`
+- `ModelDeployment`
+- `ModelDeploymentSku`
+- `ModelSamplingParams`
+- `MonthlyRecurrenceSchedule`
+- `NoAuthenticationCredentials`
+- `OneTimeTrigger`
+- `OpenApiAnonymousAuthDetails`
+- `OpenApiAuthDetails`
+- `OpenApiFunctionDefinition`
+- `OpenApiFunctionDefinitionFunction`
+- `OpenApiManagedAuthDetails`
+- `OpenApiManagedSecurityScheme`
+- `OpenApiProjectConnectionAuthDetails`
+- `OpenApiProjectConnectionSecurityScheme`
+- `OpenApiTool`
+- `PendingUploadRequest`
+- `PendingUploadResponse`
+- `PromptAgentDefinition`
+- `PromptAgentDefinitionTextOptions`
+- `PromptBasedEvaluatorDefinition`
+- `ProtocolVersionRecord`
+- `RaiConfig`
+- `RankingOptions`
+- `Reasoning`
+- `RecurrenceSchedule`
+- `RecurrenceTrigger`
+- `RedTeam`
+- `ResponseUsageInputTokensDetails`
+- `ResponseUsageOutputTokensDetails`
+- `SASCredentials`
+- `Schedule`
+- `ScheduleRun`
+- `ScheduleTask`
+- `SharepointGroundingToolParameters`
+- `SharepointPreviewTool`
+- `SpecificApplyPatchParam`
+- `SpecificFunctionShellParam`
+- `StructuredInputDefinition`
+- `StructuredOutputDefinition`
+- `Target`
+- `TargetConfig`
+- `TaxonomyCategory`
+- `TaxonomySubCategory`
+- `TextResponseFormatConfiguration`
+- `TextResponseFormatConfigurationResponseFormatJsonObject`
+- `TextResponseFormatConfigurationResponseFormatText`
+- `TextResponseFormatJsonSchema`
+- `Tool`
+- `ToolChoiceAllowed`
+- `ToolChoiceCodeInterpreter`
+- `ToolChoiceComputerUsePreview`
+- `ToolChoiceCustom`
+- `ToolChoiceFileSearch`
+- `ToolChoiceFunction`
+- `ToolChoiceImageGeneration`
+- `ToolChoiceMCP`
+- `ToolChoiceParam`
+- `ToolChoiceWebSearchPreview`
+- `ToolChoiceWebSearchPreview20250311`
+- `ToolDescription`
+- `ToolProjectConnection`
+- `Trigger`
+- `UserProfileMemoryItem`
+- `WebSearchApproximateLocation`
+- `WebSearchConfiguration`
+- `WebSearchPreviewTool`
+- `WebSearchTool`
+- `WebSearchToolFilters`
+- `WeeklyRecurrenceSchedule`
+- `WorkflowAgentDefinition`
+- `AgentKind`
+- `AgentObjectType`
+- `AgentProtocol`
+- `AttackStrategy`
+- `AzureAISearchQueryType`
+- `ComputerEnvironment`
+- `ConnectionType`
+- `ContainerMemoryLimit`
+- `CredentialType`
+- `CustomToolParamFormatType`
+- `DatasetType`
+- `DayOfWeek`
+- `DeploymentType`
+- `EvaluationRuleActionType`
+- `EvaluationRuleEventType`
+- `EvaluationTaxonomyInputType`
+- `EvaluatorCategory`
+- `EvaluatorDefinitionType`
+- `EvaluatorMetricDirection`
+- `EvaluatorMetricType`
+- `EvaluatorType`
+- `FoundryFeaturesOptInKeys`
+- `GrammarSyntax1`
+- `IndexType`
+- `InputFidelity`
+- `InsightType`
+- `MemoryItemKind`
+- `MemoryOperationKind`
+- `MemoryStoreKind`
+- `MemoryStoreObjectType`
+- `MemoryStoreUpdateStatus`
+- `OpenApiAuthType`
+- `OperationState`
+- `PageOrder`
+- `PendingUploadType`
+- `RankerVersionType`
+- `RecurrenceType`
+- `RiskCategory`
+- `SampleType`
+- `ScheduleProvisioningStatus`
+- `ScheduleTaskType`
+- `SearchContextSize`
+- `TextResponseFormatConfigurationType`
+- `ToolChoiceParamType`
+- `ToolType`
+- `TreatmentEffectType`
+- `TriggerType`
+
+## References
+
+- https://pypi.org/project/azure-ai-projects/2.0.0b4/
+- https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/migrate
+- https://learn.microsoft.com/python/api/overview/azure/ai-projects-readme?view=azure-python-preview
