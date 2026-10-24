@@ -11,7 +11,10 @@
   <meta name="keywords" content="Vietnam Agentic Skills, VAS, Google Antigravity, Antigravity skills, huytran1120, Huy Tran, AI agent, AI coding, DevOps, OWASP, Docker security, React performance, Python 3, zero npx, AI playbooks, LLM, Claude Code, Gemini">
   <meta name="author" content="Huy Tran (huytran1120)">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://huytran1120.github.io/vietnam-agentic-skills/">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="apple-touch-icon" href="./favicon.svg">
   <meta name="theme-color" content="#080c14">
 
   <!-- Open Graph / Facebook / LinkedIn -->
@@ -69,6 +72,43 @@
         "downloadUrl": "https://github.com/huytran1120/vietnam-agentic-skills",
         "softwareVersion": "1.2.0",
         "description": "Thư viện 2,650+ kỹ năng agentic chuyên sâu cho Google Antigravity, hoàn toàn không cần npx, chạy offline với Python 3."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Vietnam Agentic Skills (VAS) là gì?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vietnam Agentic Skills (VAS) là kho 2,659+ kỹ năng (agentic skills) chuyên sâu được tối ưu hoá riêng cho Google Antigravity, giúp AI áp dụng chính xác các quy chuẩn kỹ sư Senior mà không cần npx và tiết kiệm 99% token ngữ cảnh."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Làm thế nào để cài đặt kỹ năng VAS vào Google Antigravity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bạn chỉ cần clone repo và dùng lệnh './vas install <skill_id> --target workspace --mode link' để tạo liên kết symlink siêu nhẹ vào thư mục .agents/skills/ của dự án."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tại sao VAS lại sử dụng kiến trúc Zero-NPX?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zero-NPX đảm bảo công cụ quản lý kỹ năng chạy 100% bằng Python 3 thuần có sẵn trên máy, hoạt động offline siêu tốc, không phụ thuộc môi trường Node.js và không tiềm ẩn rủi ro bảo mật từ các package mạng bên ngoài."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cơ chế Progressive Disclosure tiết kiệm token như thế nào?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Antigravity chỉ nạp phần tiêu đề và mô tả ngắn gọn lúc khởi động. Khi bạn đặt câu hỏi cụ thể, AI mới tự động mở và đọc toàn bộ hướng dẫn chuyên sâu, giúp tránh làm tràn bộ nhớ context."
+            }
+          }
+        ]
       }
     ]
   }
@@ -242,6 +282,7 @@
         <a href="#how-it-works" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Cách Hoạt Động</a>
         <a href="#comparison" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Ưu Điểm</a>
         <a href="#quickstart" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Cài Đặt</a>
+        <a href="#faq" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Hỏi Đáp</a>
         <a href="#author" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Tác Giả</a>
       </nav>
 
@@ -611,6 +652,57 @@
             <button onclick="copyText('./vas install 007 --mode link', this)" class="text-blue-400 hover:text-white text-[11px] font-sans font-semibold cursor-pointer">Copy</button>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section for SEO & User Experience -->
+    <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2 font-mono">Giải Đáp Thắc Mắc (FAQ)</h2>
+        <p class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Câu Hỏi Thường Gặp Về Vietnam Agentic Skills</p>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">Mọi điều bạn cần biết về việc tích hợp và tối ưu hoá kỹ năng cho Google Antigravity.</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-4">
+        <details class="card-glass p-5 rounded-2xl group cursor-pointer border border-slate-800/80 transition-all">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>1. Vietnam Agentic Skills (VAS) là gì?</span>
+            <span class="text-blue-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-slate-800/60 pt-3">
+            Vietnam Agentic Skills (VAS) là kho 2,659+ kỹ năng (agentic skills) chuyên sâu được tối ưu hoá riêng cho Google Antigravity. Dự án cung cấp các bộ cẩm nang (playbooks) chuẩn kỹ sư Senior bao phủ từ DevOps, Bảo mật, Web Frontend đến AI/ML, giúp AI code chính xác, an toàn và chuẩn production.
+          </p>
+        </details>
+
+        <details class="card-glass p-5 rounded-2xl group cursor-pointer border border-slate-800/80 transition-all">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>2. Làm thế nào để cài đặt kỹ năng vào Google Antigravity?</span>
+            <span class="text-blue-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-slate-800/60 pt-3">
+            Rất đơn giản, bạn chỉ cần clone repo và dùng lệnh: <code class="text-blue-300 bg-slate-900 px-1.5 py-0.5 rounded font-mono text-xs">./vas install &lt;skill_id&gt; --target workspace --mode link</code>. Lệnh này sẽ tạo một symlink siêu nhẹ vào thư mục <code class="text-emerald-400 font-mono text-xs">.agents/skills/</code> của dự án mà không tốn dung lượng ổ đĩa.
+          </p>
+        </details>
+
+        <details class="card-glass p-5 rounded-2xl group cursor-pointer border border-slate-800/80 transition-all">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>3. Tại sao VAS lại sử dụng kiến trúc Zero-NPX?</span>
+            <span class="text-blue-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-slate-800/60 pt-3">
+            Zero-NPX giúp loại bỏ hoàn toàn việc phụ thuộc vào runtime Node.js/npm nặng nề. Toàn bộ CLI được viết bằng Python 3 thuần có sẵn trên macOS/Linux/Windows, giúp tra cứu và cài đặt kỹ năng offline tức thì chỉ dưới 0.05 giây mà không lo lỗi mạng hay rủi ro bảo mật từ bên ngoài.
+          </p>
+        </details>
+
+        <details class="card-glass p-5 rounded-2xl group cursor-pointer border border-slate-800/80 transition-all">
+          <summary class="font-bold text-sm sm:text-base text-white flex items-center justify-between list-none">
+            <span>4. Cơ chế Progressive Disclosure tiết kiệm token như thế nào?</span>
+            <span class="text-blue-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed border-t border-slate-800/60 pt-3">
+            Thay vì nạp toàn bộ hàng ngàn dòng tài liệu vào bộ nhớ của AI gây quá tải và hallucinate, Antigravity chỉ quét qua phần tóm tắt ngắn (frontmatter). Khi bạn đặt câu hỏi cụ thể liên quan, AI mới tự động mở và đọc toàn bộ hướng dẫn chuyên sâu, giúp tiết kiệm tới 99% chi phí token ngữ cảnh.
+          </p>
+        </details>
       </div>
     </section>
 

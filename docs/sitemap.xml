@@ -5,14 +5,8 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://huytran1120.github.io/vietnam-agentic-skills/</loc>
-    <lastmod>2026-10-24T22:40:00+07:00</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-10-24T23:30:00+07:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://github.com/huytran1120/vietnam-agentic-skills</loc>
-    <lastmod>2026-10-24T22:40:00+07:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
   </url>
 </urlset>
