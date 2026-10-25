@@ -147,13 +147,16 @@
     </div>`;
   }
   function installation(skill) {
+    const currentAgent = agents.find(a => a[0] === state.target) || agents[0];
+    const isAntigravity = state.target === 'antigravity';
+    const targetDisplay = isAntigravity ? 'Antigravity (Mặc định)' : currentAgent[1];
     return `<div class="install-panel" id="install-${escapeHtml(skill.id)}">
-      <div class="install-heading"><strong>Cài đặt với VAS</strong><button data-close-skill="${escapeHtml(skill.id)}" aria-label="Thu gọn ${escapeHtml(skill.id)}">×</button></div>
-      <div class="command-box"><code>${escapeHtml(installCommand(skill.id, state.target))}</code><button class="button primary" data-copy-skill="${escapeHtml(skill.id)}">${icon('copy')}Sao chép</button></div>
-      <span class="agent-label">Chọn agent của bạn</span>
+      <div class="install-heading"><strong>Lệnh cài đặt cho ${escapeHtml(currentAgent[1])}</strong><button data-close-skill="${escapeHtml(skill.id)}" aria-label="Thu gọn ${escapeHtml(skill.id)}">×</button></div>
+      <span class="agent-label">Chọn agent của bạn (Đang chọn: <strong>${escapeHtml(targetDisplay)}</strong>)</span>
       <div class="agent-options" role="group" aria-label="Agent cài đặt cho ${escapeHtml(skill.id)}">
         ${agents.map(([id, label, mark]) => `<button class="agent-option" data-agent="${id}" aria-pressed="${id === state.target}"><span aria-hidden="true">${mark}</span>${label}</button>`).join('')}
       </div>
+      <div class="command-box"><code>${escapeHtml(installCommand(skill.id, state.target))}</code><button class="button primary" data-copy-skill="${escapeHtml(skill.id)}">${icon('copy')}Sao chép</button></div>
       <p class="install-footnote">Chạy tại thư mục VAS đã clone. Chưa clone? <a href="#quickstart">Xem hướng dẫn</a>.</p>
       <div class="install-links"><a href="${escapeHtml(skillUrl(skill))}" target="_blank" rel="noopener noreferrer">Đọc SKILL.md ↗</a><button class="text-button" data-show-command="${escapeHtml(skill.id)}">Sao chép lệnh xem playbook</button></div>
     </div>`;

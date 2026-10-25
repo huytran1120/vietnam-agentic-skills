@@ -129,13 +129,13 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
             <select id="category-select"><option value="all">117 danh mục</option></select>
           </div>
           <div class="sidebar-field" id="agents">
-            <label for="agent-select">Agent của bạn</label>
+            <label for="agent-select">Agent mục tiêu (Mặc định: Antigravity)</label>
             <select id="agent-select">
-              <option value="antigravity">Google Antigravity</option><option value="codex">OpenAI Codex / OpenCode</option>
+              <option value="antigravity" selected>Google Antigravity (Mặc định)</option><option value="codex">OpenAI Codex / OpenCode</option>
               <option value="claude">Claude Code</option><option value="cursor">Cursor</option><option value="windsurf">Windsurf</option>
-              <option value="cline">Cline / Roo Code</option><option value="copilot">GitHub Copilot</option><option value="all">Tất cả agent</option>
+              <option value="cline">Cline / Roo Code</option><option value="copilot">GitHub Copilot</option><option value="all">Tất cả agent (--target all)</option>
             </select>
-            <p>Chọn nơi cài skill, không phải bộ lọc khả năng tương thích.</p>
+            <p>Chọn agent bạn đang dùng để tự động cập nhật cờ <code>--target</code> trong lệnh cài đặt.</p>
           </div>
           <a class="sidebar-help" href="#quickstart"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Hướng dẫn cài với VAS</a>
         </aside>

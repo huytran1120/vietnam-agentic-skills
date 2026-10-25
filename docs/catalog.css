@@ -149,8 +149,8 @@ select { appearance: none; min-height: 44px; border: 1px solid var(--line); bord
 .command-box .button { flex-shrink: 0; padding-inline: 10px; font-size: 12px; }
 .install-panel .command-box { flex-wrap: wrap; }
 .install-panel .command-box code { flex-basis: 180px; }
-.agent-label { display: block; font-size: 12px; margin: 12px 0 7px; }
-.agent-options { display: flex; flex-wrap: wrap; gap: 5px; }
+.agent-label { display: block; font-size: 12px; margin: 6px 0 7px; }
+.agent-options { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
 .agent-option { flex: 1 0 54px; min-height: 49px; border: 1px solid var(--line); border-radius: 7px; padding: 6px 4px; background: var(--surface); font-size: 10px; }
 .agent-option span { display: block; font-size: 13px; font-weight: 750; line-height: 1.3; color: var(--muted); }
 .agent-option[aria-pressed="true"] { border-color: var(--blue); color: var(--blue); background: var(--selected); }
