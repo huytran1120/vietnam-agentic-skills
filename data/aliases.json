@@ -281,6 +281,7 @@
     "react-performance": "react-component-performance",
     "fastapi-best-practices": "fastapi-pro",
     "nextjs-perf": "nextjs-best-practices",
-    "ai-design-skills": "landing-page-design"
+    "ai-design-skills": "landing-page-design",
+    "alphafold-fetch": "alphafold-database-fetch-and-analyze"
   }
 }

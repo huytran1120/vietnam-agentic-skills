@@ -252,9 +252,22 @@ Kho lưu trữ gồm **2,921+ skills** chia theo **117 danh mục**. Xem chi ti�
 └── ... và hơn 100+ danh mục chuyên biệt khác.
 ```
 
-#### 🌟 Trưng Bày Hình Ảnh Trực Quan & Live Demos (Visual Showcases)
+#### 🌟 10 Thẻ Demo Đồ Họa Cao Cấp: Trưng Bày Đầy Đủ Các Kỹ Năng
 
-Các kỹ năng mới tích hợp đi kèm đồ họa minh họa trực quan, runbook chuẩn hóa và hướng dẫn thực thi rõ ràng:
+<p align="center">
+  <img src="docs/assets/demos/10-skills-demo-showcase.svg" alt="10 Thẻ Demo Đồ Họa Cao Cấp - Vietnam Agentic Skills" width="100%" />
+</p>
+
+* **landing-page-design**: Kiến trúc trang đích chuyển đổi cao & Fluid Nav
+* **ui-ux-pro-max**: Hệ thống Design System, 192 bảng màu & font pairing
+* **impeccable**: Bộ công cụ chống AI-slop với 62 quy tắc định lượng
+* **blender-mcp & img2threejs**: Điều khiển Blender 3D & Three.js thuần code
+* **video-shotcraft, hyperframes, remotion**: Lập trình video trong React/HTML
+* **diagram-design**: Sơ đồ kiến trúc cloud HTML+SVG
+* **chrome-devtools**: Gỡ lỗi LCP, rò rỉ bộ nhớ & A11y
+* **bigquery-sql**: Tối ưu hóa chi phí & hiệu năng BigQuery
+* **firebase-firestore**: Kiểm toán bảo mật rules & data model
+* **alphafold-fetch**: Phân tích sinh học phân tử 3D & pLDDT
 
 <details open>
 <summary><b>1. Kiến Trúc Landing Page Chuyển Đổi Cao (<code>landing-page-design</code>)</b></summary>
@@ -320,7 +333,7 @@ Các kỹ năng mới tích hợp đi kèm đồ họa minh họa trực quan, r
 * **HyperFrames**: Lập trình video MP4 từ HTML/CSS/SVG thuần túy dành cho AI Agent.
 * **Remotion Suite**: Bộ 12 skills chính thức viết video bằng React components.
 * **Video Shotcraft & Lemo Opuscar**: 152 công thức góc máy tự động và 59 phong cách điện ảnh viết hoàn toàn bằng code, không phụ thuộc AI video model đắt đỏ.
-* **Cài đặt**: `./vas install hyperframes video-shotcraft remotion-best-practices --target all`
+* **Cài đặt**: `./vas install hyperframes video-shotcraft remotion --target all`
 </details>
 
 <details open>
@@ -334,6 +347,58 @@ Các kỹ năng mới tích hợp đi kèm đồ họa minh họa trực quan, r
 * **Năng lực**: Xuất hơn 45 loại sơ đồ kiến trúc phức tạp (AWS/GCP Cloud Architecture, K8s topology, Sequence Diagram) thành một file HTML+SVG duy nhất.
 * **Chuẩn thương hiệu**: Tự động áp dụng bảng màu, phông chữ và tỷ lệ bố cục chuẩn doanh nghiệp.
 * **Cài đặt**: `./vas install diagram-design --target all`
+</details>
+
+<details open>
+<summary><b>7. Gỡ Lỗi Trình Duyệt Tự Động & Kiểm Toán A11y (<code>chrome-devtools</code> — Google Official)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/chrome-devtools.svg" alt="Chrome DevTools MCP Automation Demo" width="850" />
+</p>
+
+* **Năng lực**: Điều khiển trình duyệt trực tiếp qua giao thức Chrome DevTools MCP, gỡ lỗi DOM theo thời gian thực, chẩn đoán rò rỉ bộ nhớ (Heap Snapshot), đo lường chỉ số Core Web Vitals (LCP) và kiểm toán khả năng tiếp cận WCAG A11y.
+* **Tự động hóa**: Hỗ trợ ghi lại network trace, chẩn đoán mã lỗi 401/403/500 và tự sửa lỗi giao diện không cần thao tác tay.
+* **Cài đặt**: `./vas install chrome-devtools --target all`
+</details>
+
+<details open>
+<summary><b>8. Tối Ưu Hóa Chi Phí & Hiệu Năng BigQuery SQL (<code>bigquery-sql</code> — Data Agent Kit)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/bigquery-sql.svg" alt="BigQuery SQL Performance Demo" width="850" />
+</p>
+
+* **Năng lực**: Tự động kiểm tra cú pháp và tối ưu hóa truy vấn BigQuery SQL, áp dụng Partitioning theo ngày/tháng, gom cụm Clustering dữ liệu, giảm thiểu tới 84% dung lượng quét (bytes billed) và tăng tốc độ xử lý slot-ms.
+* **Hệ sinh thái**: Tích hợp chặt chẽ với dbt-bigquery, Dataform ELT và Dataproc Serverless Spark.
+* **Cài đặt**: `./vas install bigquery-sql --target all`
+</details>
+
+<details open>
+<summary><b>9. Kiểm Toán Bảo Mật Rules & Data Model NoSQL (<code>firebase-firestore</code> — Firebase Suite)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/firebase-firestore.svg" alt="Firebase Firestore Security Demo" width="850" />
+</p>
+
+* **Năng lực**: Đánh giá an ninh Red-Team cho `firestore.rules`, triệt tiêu lỗ hổng leo thang đặc quyền (Privilege Escalation), đảm bảo kiểm tra kiểu dữ liệu tĩnh (type safety) và phòng chống cạn kiệt tài nguyên (resource exhaustion).
+* **Kiến trúc**: Thiết kế cấu trúc NoSQL đa đối tượng, thiết lập chỉ mục hỗn hợp (composite indexes) và tích hợp an toàn với App Hosting SSR (Next.js/Angular).
+* **Cài đặt**: `./vas install firebase-firestore --target all`
+</details>
+
+<details open>
+<summary><b>10. Phân Tích Cấu Trúc Sinh Học Phân Tử 3D & pLDDT (<code>alphafold-fetch</code> — Science Plugin)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/alphafold-science.svg" alt="AlphaFold Science 3D Suite Demo" width="850" />
+</p>
+
+* **Năng lực**: Tự động tra cứu và phân tích cấu trúc 3D protein từ AlphaFold Database qua mã UniProt ID, đánh giá độ tin cậy cấu trúc pLDDT, xác định ranh giới domain cứng và vùng rối vô định hình (disordered regions).
+* **Sidecar 3D tương tác**: Kết nối trực tiếp trình hiển thị Mol* 3D Viewer và bộ công cụ tính toán sinh học (ChEMBL, ClinVar, BLAST).
+* **Cài đặt**: `./vas install alphafold-fetch --target all`
 </details>
 
 ---
@@ -601,9 +666,22 @@ VAS includes **2,921+ skills** across **117 specialized categories**. Browse the
 └── ... and 100+ more specialized domains.
 ```
 
-#### 🌟 Visual Demos & Runbook Showcases
+#### 🌟 Top 10 High-End Demo Cards: Full Capabilities Showcase
 
-The newly integrated skills come with crisp visual previews, standardized runbooks, and deterministic execution scripts:
+<p align="center">
+  <img src="docs/assets/demos/10-skills-demo-showcase.svg" alt="Top 10 High-End Demo Cards - Vietnam Agentic Skills" width="100%" />
+</p>
+
+* **landing-page-design**: High-converting landing page architecture & Fluid Island Nav
+* **ui-ux-pro-max**: Generative Design System, 192 product palettes & 74 font pairings
+* **impeccable**: Anti AI-slop design suite with 62 quantitative audit rules
+* **blender-mcp & img2threejs**: Natural language Blender 3D control & procedural Three.js
+* **video-shotcraft, hyperframes, remotion**: Programmatic video generation in React/HTML
+* **diagram-design**: Enterprise cloud architecture diagrams in single HTML+SVG
+* **chrome-devtools**: Automated browser debugging, LCP optimization, heap profiling & A11y
+* **bigquery-sql**: BigQuery query optimization, cost reduction & partition tuning
+* **firebase-firestore**: NoSQL data modeling & Firestore security rules red-team audit
+* **alphafold-fetch**: 3D biomolecular structure analysis & pLDDT confidence scoring
 
 <details open>
 <summary><b>1. High-Converting Landing Page Architecture (<code>landing-page-design</code>)</b></summary>
@@ -669,7 +747,7 @@ The newly integrated skills come with crisp visual previews, standardized runboo
 * **HyperFrames**: Render HTML/CSS/SVG into deterministic MP4 videos for AI agents.
 * **Remotion Suite**: Official 12-skill suite for programming video compositions in React.
 * **Video Shotcraft & Lemo Opuscar**: 152 automated shot recipes and 59 cinema styles crafted completely in code, zero expensive video models needed.
-* **Install**: `./vas install hyperframes video-shotcraft remotion-best-practices --target all`
+* **Install**: `./vas install hyperframes video-shotcraft remotion --target all`
 </details>
 
 <details open>
@@ -683,6 +761,58 @@ The newly integrated skills come with crisp visual previews, standardized runboo
 * **Capabilities**: Generates 45+ complex architectural and system diagrams (AWS/GCP Cloud Architecture, K8s topology, Sequence Diagrams) into a single standalone HTML+SVG file.
 * **Brand Alignment**: Automatically adopts corporate color palettes, font stacks, and layout hierarchy.
 * **Install**: `./vas install diagram-design --target all`
+</details>
+
+<details open>
+<summary><b>7. Automated Browser Debugging & A11y Audits (<code>chrome-devtools</code> — Google Official)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/chrome-devtools.svg" alt="Chrome DevTools MCP Automation Demo" width="850" />
+</p>
+
+* **Capabilities**: Direct autonomous browser interaction via Chrome DevTools MCP protocol. Live DOM tree inspection, memory leak diagnostics via heap snapshots, Core Web Vitals (LCP) performance profiling, and automated WCAG accessibility audits.
+* **Automation**: Captures network HAR logs, pinpoints auth / CORS redirects, and autonomously fixes UI and rendering bugs.
+* **Install**: `./vas install chrome-devtools --target all`
+</details>
+
+<details open>
+<summary><b>8. Enterprise BigQuery SQL Cost & Performance Optimizer (<code>bigquery-sql</code> — Data Agent Kit)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/bigquery-sql.svg" alt="BigQuery SQL Performance Demo" width="850" />
+</p>
+
+* **Capabilities**: Analyzes SQL queries for anti-patterns, recommends date/timestamp partitioning and clustering keys, cuts scan volume (bytes billed) by up to 84%, and slashes query execution slot-ms.
+* **Data Ecosystem**: Pairs seamlessly with dbt-bigquery, Dataform ELT, and Dataproc Serverless PySpark.
+* **Install**: `./vas install bigquery-sql --target all`
+</details>
+
+<details open>
+<summary><b>9. Firestore Security Rules Red-Team Auditor & NoSQL Modeling (<code>firebase-firestore</code> — Firebase Suite)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/firebase-firestore.svg" alt="Firebase Firestore Security Demo" width="850" />
+</p>
+
+* **Capabilities**: Automated security rule auditor identifying privilege escalation vulnerabilities, missing authorization checks, unvalidated writes, and resource exhaustion attacks.
+* **Architecture**: Production-ready NoSQL document modeling, composite index creation, and SSR integration with Next.js/Angular via Firebase App Hosting.
+* **Install**: `./vas install firebase-firestore --target all`
+</details>
+
+<details open>
+<summary><b>10. 3D Biomolecular Structure Analysis & AlphaFold Scoring (<code>alphafold-fetch</code> — Science Plugin)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/alphafold-science.svg" alt="AlphaFold Science 3D Suite Demo" width="850" />
+</p>
+
+* **Capabilities**: Queries the AlphaFold Database by UniProt accession ID, retrieves predicted 3D structures (mmCIF), calculates pLDDT confidence scores, assesses domain boundaries, and flags disordered regions.
+* **Interactive 3D Viewer**: Plugs directly into the Mol* Biomolecular Structure Viewer sidecar and biological research databases (ChEMBL, ClinVar, BLAST).
+* **Install**: `./vas install alphafold-fetch --target all`
 </details>
 
 ---

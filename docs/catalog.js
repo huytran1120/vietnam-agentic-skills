@@ -22,16 +22,16 @@
   ];
   const recommended = ['ui-ux-pro-max', 'code-review', 'impeccable', 'webapp-testing', 'frontend-design', 'research', 'landing-page-design', 'writing-for-agents', 'setup-pre-commit', 'web-performance-optimization'];
   const showcases = [
-    ['landing-page-design', 'Landing page design', 'Chiến lược nội dung và thiết kế landing page.', 'landing-page-design.svg', 'design'],
-    ['ui-ux-pro-max', 'UI/UX Pro Max', 'Tra cứu bảng màu, font chữ và design system.', 'ui-ux-pro-max.svg', 'design'],
-    ['impeccable', 'Impeccable', 'Tinh chỉnh thiết kế và chất lượng giao diện.', 'impeccable.svg', 'design'],
-    ['blender-mcp', 'Blender & Three.js', 'Quy trình 3D với Blender MCP và img2threejs.', 'blender-and-3d.svg', '3d'],
-    ['hyperframes', 'Video & motion', 'Video bằng code với HyperFrames và Video Shotcraft.', 'video-and-motion.svg', 'video'],
-    ['diagram-design', 'Diagram design', 'Sơ đồ kiến trúc bằng HTML và SVG.', 'diagram-design.svg', 'cloud'],
-    ['chrome-devtools', 'Chrome DevTools', 'Chẩn đoán hiệu năng và hành vi trình duyệt.', 'chrome-devtools.svg', 'cloud'],
-    ['bigquery-sql', 'BigQuery SQL', 'Tối ưu truy vấn, phân vùng và chi phí dữ liệu.', 'bigquery-sql.svg', 'cloud'],
-    ['firebase-firestore', 'Firebase Firestore', 'Thiết kế NoSQL, security rules và index.', 'firebase-firestore.svg', 'cloud'],
-    ['alphafold-database-fetch-and-analyze', 'AlphaFold', 'Tra cứu và phân tích cấu trúc protein.', 'alphafold-science.svg', 'cloud']
+    ['landing-page-design', 'landing-page-design', 'Kiến trúc trang đích chuyển đổi cao & Fluid Nav', 'landing-page-design.svg', 'design'],
+    ['ui-ux-pro-max', 'ui-ux-pro-max', 'Hệ thống Design System, 192 bảng màu & font pairing', 'ui-ux-pro-max.svg', 'design'],
+    ['impeccable', 'impeccable', 'Bộ công cụ chống AI-slop với 62 quy tắc định lượng', 'impeccable.svg', 'design'],
+    ['blender-mcp', 'blender-mcp & img2threejs', 'Điều khiển Blender 3D & Three.js thuần code', 'blender-and-3d.svg', '3d'],
+    ['hyperframes', 'video-shotcraft, hyperframes, remotion', 'Lập trình video trong React/HTML', 'video-and-motion.svg', 'video'],
+    ['diagram-design', 'diagram-design', 'Sơ đồ kiến trúc cloud HTML+SVG', 'diagram-design.svg', 'cloud'],
+    ['chrome-devtools', 'chrome-devtools', 'Gỡ lỗi LCP, rò rỉ bộ nhớ & A11y', 'chrome-devtools.svg', 'cloud'],
+    ['bigquery-sql', 'bigquery-sql', 'Tối ưu hóa chi phí & hiệu năng BigQuery', 'bigquery-sql.svg', 'cloud'],
+    ['firebase-firestore', 'firebase-firestore', 'Kiểm toán bảo mật rules & data model', 'firebase-firestore.svg', 'cloud'],
+    ['alphafold-database-fetch-and-analyze', 'alphafold-fetch', 'Phân tích sinh học phân tử 3D & pLDDT', 'alphafold-science.svg', 'cloud']
   ];
 
   function normalize(value) {

@@ -249,9 +249,22 @@ VAS includes **2,921+ skills** across **117 specialized categories**. Browse the
 └── ... and 100+ more specialized domains.
 ```
 
-#### 🌟 Visual Demos & Runbook Showcases
+#### 🌟 Top 10 High-End Demo Cards: Full Capabilities Showcase
 
-The newly integrated skills come with crisp visual previews, standardized runbooks, and deterministic execution scripts:
+<p align="center">
+  <img src="docs/assets/demos/10-skills-demo-showcase.svg" alt="Top 10 High-End Demo Cards - Vietnam Agentic Skills" width="100%" />
+</p>
+
+* **landing-page-design**: High-converting landing page architecture & Fluid Island Nav
+* **ui-ux-pro-max**: Generative Design System, 192 product palettes & 74 font pairings
+* **impeccable**: Anti AI-slop design suite with 62 quantitative audit rules
+* **blender-mcp & img2threejs**: Natural language Blender 3D control & procedural Three.js
+* **video-shotcraft, hyperframes, remotion**: Programmatic video generation in React/HTML
+* **diagram-design**: Enterprise cloud architecture diagrams in single HTML+SVG
+* **chrome-devtools**: Automated browser debugging, LCP optimization, heap profiling & A11y
+* **bigquery-sql**: BigQuery query optimization, cost reduction & partition tuning
+* **firebase-firestore**: NoSQL data modeling & Firestore security rules red-team audit
+* **alphafold-fetch**: 3D biomolecular structure analysis & pLDDT confidence scoring
 
 <details open>
 <summary><b>1. High-Converting Landing Page Architecture (<code>landing-page-design</code>)</b></summary>
@@ -317,7 +330,7 @@ The newly integrated skills come with crisp visual previews, standardized runboo
 * **HyperFrames**: Render HTML/CSS/SVG into deterministic MP4 videos for AI agents.
 * **Remotion Suite**: Official 12-skill suite for programming video compositions in React.
 * **Video Shotcraft & Lemo Opuscar**: 152 automated shot recipes and 59 cinema styles crafted completely in code, zero expensive video models needed.
-* **Install**: `./vas install hyperframes video-shotcraft remotion-best-practices --target all`
+* **Install**: `./vas install hyperframes video-shotcraft remotion --target all`
 </details>
 
 <details open>
@@ -331,6 +344,58 @@ The newly integrated skills come with crisp visual previews, standardized runboo
 * **Capabilities**: Generates 45+ complex architectural and system diagrams (AWS/GCP Cloud Architecture, K8s topology, Sequence Diagrams) into a single standalone HTML+SVG file.
 * **Brand Alignment**: Automatically adopts corporate color palettes, font stacks, and layout hierarchy.
 * **Install**: `./vas install diagram-design --target all`
+</details>
+
+<details open>
+<summary><b>7. Automated Browser Debugging & A11y Audits (<code>chrome-devtools</code> — Google Official)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/chrome-devtools.svg" alt="Chrome DevTools MCP Automation Demo" width="850" />
+</p>
+
+* **Capabilities**: Direct autonomous browser interaction via Chrome DevTools MCP protocol. Live DOM tree inspection, memory leak diagnostics via heap snapshots, Core Web Vitals (LCP) performance profiling, and automated WCAG accessibility audits.
+* **Automation**: Captures network HAR logs, pinpoints auth / CORS redirects, and autonomously fixes UI and rendering bugs.
+* **Install**: `./vas install chrome-devtools --target all`
+</details>
+
+<details open>
+<summary><b>8. Enterprise BigQuery SQL Cost & Performance Optimizer (<code>bigquery-sql</code> — Data Agent Kit)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/bigquery-sql.svg" alt="BigQuery SQL Performance Demo" width="850" />
+</p>
+
+* **Capabilities**: Analyzes SQL queries for anti-patterns, recommends date/timestamp partitioning and clustering keys, cuts scan volume (bytes billed) by up to 84%, and slashes query execution slot-ms.
+* **Data Ecosystem**: Pairs seamlessly with dbt-bigquery, Dataform ELT, and Dataproc Serverless PySpark.
+* **Install**: `./vas install bigquery-sql --target all`
+</details>
+
+<details open>
+<summary><b>9. Firestore Security Rules Red-Team Auditor & NoSQL Modeling (<code>firebase-firestore</code> — Firebase Suite)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/firebase-firestore.svg" alt="Firebase Firestore Security Demo" width="850" />
+</p>
+
+* **Capabilities**: Automated security rule auditor identifying privilege escalation vulnerabilities, missing authorization checks, unvalidated writes, and resource exhaustion attacks.
+* **Architecture**: Production-ready NoSQL document modeling, composite index creation, and SSR integration with Next.js/Angular via Firebase App Hosting.
+* **Install**: `./vas install firebase-firestore --target all`
+</details>
+
+<details open>
+<summary><b>10. 3D Biomolecular Structure Analysis & AlphaFold Scoring (<code>alphafold-fetch</code> — Science Plugin)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/alphafold-science.svg" alt="AlphaFold Science 3D Suite Demo" width="850" />
+</p>
+
+* **Capabilities**: Queries the AlphaFold Database by UniProt accession ID, retrieves predicted 3D structures (mmCIF), calculates pLDDT confidence scores, assesses domain boundaries, and flags disordered regions.
+* **Interactive 3D Viewer**: Plugs directly into the Mol* Biomolecular Structure Viewer sidecar and biological research databases (ChEMBL, ClinVar, BLAST).
+* **Install**: `./vas install alphafold-fetch --target all`
 </details>
 
 ---
