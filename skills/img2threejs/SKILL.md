@@ -7,6 +7,10 @@ version: 2.0.0
 
 # img2threejs — Image to procedural Three.js
 
+<p align="center">
+  <img src="assets/preview.svg" alt="img2threejs Procedural 3D Preview" width="100%" />
+</p>
+
 Rebuild the object visible in a reference image as a **code-only** procedural Three.js model,
 gated by a staged sculpting pipeline and an AI-vision self-correction loop. This is
 reconstruction-by-code, **not** photogrammetry, mesh extraction, or downloaded art packs. That

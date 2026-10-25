@@ -11,6 +11,10 @@ author: elayadesign
 
 # Landing Page Design
 
+<p align="center">
+  <img src="assets/preview.svg" alt="Landing Page Design Architecture Preview" width="100%" />
+</p>
+
 A landing page is not a homepage. A homepage serves multiple intents. A landing page wins one intent:
 
 **one offer → one audience → one primary action.**

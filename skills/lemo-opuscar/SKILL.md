@@ -5,6 +5,10 @@ description: Direct and produce a short film made entirely in code, in one of th
 
 # Lemo-Opuscar
 
+<p align="center">
+  <img src="assets/preview.svg" alt="Lemo-Opuscar Cinema Preview" width="100%" />
+</p>
+
 The styles, guides and tools live in the Lemo-Opuscar library (github.com/lemomo-ai/lemo-opuscar). This skill fetches it and hands you over to it.
 
 1. **Get the library.** Run `sh "<skill base directory>/scripts/setup.sh"`. It clones or updates the library (default `~/lemo-opuscar`; a clone the user is standing in is used as it is) and prints `LIB=<path>` on its last line.

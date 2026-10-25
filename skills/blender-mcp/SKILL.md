@@ -11,6 +11,10 @@ description: >-
 
 # MCP for Blender (BlenderMCP)
 
+<p align="center">
+  <img src="assets/preview.svg" alt="Blender MCP 3D Preview" width="100%" />
+</p>
+
 Connect Blender to AI Coding Agents (Antigravity, Claude Code, Cursor, Windsurf, Codex) via the Model Context Protocol (`blender-mcp`) to directly inspect, create, modify, render, and animate 3D scenes in Blender using natural language and `bpy` scripts.
 
 ## Core Capabilities

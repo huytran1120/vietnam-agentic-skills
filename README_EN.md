@@ -247,6 +247,90 @@ VAS includes **2,905+ skills** across **117 specialized categories**. Browse the
 └── ... and 100+ more specialized domains.
 ```
 
+#### 🌟 Visual Demos & Runbook Showcases
+
+The newly integrated skills come with crisp visual previews, standardized runbooks, and deterministic execution scripts:
+
+<details open>
+<summary><b>1. High-Converting Landing Page Architecture (<code>landing-page-design</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/landing-page-design.svg" alt="Landing Page Architecture Demo" width="850" />
+</p>
+
+* **Dual-Track Framework**: Strict separation between **Part A (Conversion Strategy & Copy)** and **Part B (Strict Visual Token System)**.
+* **Core Doctrine**: *One offer → One audience → One primary action*.
+* **Precision Engineering**: Fluid Island Navigation (floating pill nav), nested corner radius formula `r_in = r_out - padding`, fluid motion physics `cubic-bezier(0.32, 0.72, 0, 1)`, zero gratuitous background gradients.
+* **Install**: `./vas install landing-page-design --target all`
+</details>
+
+<details open>
+<summary><b>2. Full Design System & Palette Generation (<code>ui-ux-pro-max</code> — ⭐ 139K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/ui-ux-pro-max.svg" alt="UI UX Pro Max Demo" width="850" />
+</p>
+
+* **Capabilities**: Generates complete, harmonious design systems from brief descriptions (79 styles, 192 product palettes, 74 typography pairings).
+* **Standards**: WCAG 2.1 AAA/AA contrast compliance, 119 UX guidelines, with fast interactive CLI style search.
+* **Install**: `./vas install ui-ux-pro-max --target all`
+</details>
+
+<details open>
+<summary><b>3. Anti AI-Slop & Design Refinement Suite (<code>impeccable</code> — ⭐ 86K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/impeccable.svg" alt="Impeccable Anti AI-Slop Demo" width="850" />
+</p>
+
+* **Capabilities**: Eliminates generic AI design tropes (gratuitous purple gradients, card soup, random spacing) using 62 rule-based checks.
+* **Senior Modes**: Offers 30+ bespoke refinement modes (`/delight`, `/polish`, `/audit`, `/critique`) to elevate code to Out-of-Distribution Craft.
+* **Install**: `./vas install impeccable --target all`
+</details>
+
+<details open>
+<summary><b>4. Blender 3D Control & Procedural Three.js (<code>blender-mcp</code> & <code>img2threejs</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/blender-and-3d.svg" alt="Blender and Three.js 3D Demo" width="850" />
+</p>
+
+* **Blender MCP**: Direct two-way bridge to Blender 3D via MCP server. Create meshes, assign PBR materials, rig, light, and render via natural language prompts.
+* **img2threejs**: Reconstructs objects from 2D reference images into lightweight, code-only, animation-ready Three.js procedural models.
+* **Install**: `./vas install blender-mcp img2threejs --target all`
+</details>
+
+<details open>
+<summary><b>5. Programmatic Video & Motion Suite (<code>hyperframes</code>, <code>remotion</code>, <code>video-shotcraft</code>, <code>lemo-opuscar</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/video-and-motion.svg" alt="Video and Motion Demo" width="850" />
+</p>
+
+* **HyperFrames**: Render HTML/CSS/SVG into deterministic MP4 videos for AI agents.
+* **Remotion Suite**: Official 12-skill suite for programming video compositions in React.
+* **Video Shotcraft & Lemo Opuscar**: 152 automated shot recipes and 59 cinema styles crafted completely in code, zero expensive video models needed.
+* **Install**: `./vas install hyperframes video-shotcraft remotion-best-practices --target all`
+</details>
+
+<details open>
+<summary><b>6. Editorial & Cloud Architecture Diagramming (<code>diagram-design</code> — ⭐ 60K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/diagram-design.svg" alt="Diagram Design Demo" width="850" />
+</p>
+
+* **Capabilities**: Generates 45+ complex architectural and system diagrams (AWS/GCP Cloud Architecture, K8s topology, Sequence Diagrams) into a single standalone HTML+SVG file.
+* **Brand Alignment**: Automatically adopts corporate color palettes, font stacks, and layout hierarchy.
+* **Install**: `./vas install diagram-design --target all`
+</details>
+
 ---
 
 ### 9. Frequently Asked Questions (FAQ)

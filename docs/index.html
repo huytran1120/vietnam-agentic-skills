@@ -280,6 +280,10 @@
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300" aria-label="Main Navigation">
         <a href="#agents" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Nền Tảng AI</a>
+        <a href="#showcase" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400 flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+          Live Demos
+        </a>
         <a href="#catalog" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Kho Kỹ Năng</a>
         <a href="#how-it-works" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Cách Hoạt Động</a>
         <a href="#quickstart" class="hover:text-white transition-colors focus:outline-none focus:text-blue-400">Cài Đặt</a>
@@ -514,6 +518,241 @@
             <span class="text-purple-400">&gt;</span> Tối ưu Dockerfile này giúp tôi
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Visual Demos & Featured Showcase Section -->
+    <section id="showcase" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/60">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-mono text-xs font-semibold mb-3">
+          <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span>
+          PHÒNG TRƯNG BÀY TRỰC QUAN &amp; LIVE DEMOS
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Kỹ Năng Đồ Họa, 3D, Video &amp; Design Hàng Đầu</h2>
+        <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+          Trang bị cho AI Coding Agent bộ công cụ hình ảnh, chuyển động và thiết kế cấp Senior: từ chống AI-slop, tạo Landing Page chuyển đổi cao, đến điều khiển Blender 3D và dựng video bằng React.
+        </p>
+      </div>
+
+      <!-- 6 Showcase Grid Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Landing Page Design -->
+        <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950/60 border-b border-slate-800/80 p-3">
+              <img src="./assets/demos/landing-page-design.svg" alt="Landing Page Design Demo" class="w-full h-auto rounded-xl border border-slate-800/60 shadow-lg group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+              <span class="absolute top-5 right-5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-600/90 text-white shadow">HOT • DESIGN</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-blue-400 font-bold uppercase">landing-page-design</span>
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">★ Complete System</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">High-Converting Landing Pages</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Hệ thống 2 phần chuyên sâu: Chiến lược nội dung (Outcome without pain) và Hệ thống thị giác chuẩn (Zero gradients thừa, Nested Radii Formula, Fluid Motion Physics).
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#landing-page</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#fluid-motion</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#nested-radii</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <div class="code-box rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-3">
+              <code class="text-blue-300 truncate">./vas install landing-page-design --target all</code>
+              <button onclick="copyShowcaseCommand(this, './vas install landing-page-design --target all')" class="text-slate-400 hover:text-white ml-2 text-xs cursor-pointer" title="Copy lệnh">
+                Copy
+              </button>
+            </div>
+            <button onclick="openDrawerById('landing-page-design')" class="w-full py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-all cursor-pointer">
+              Xem Runbook &amp; Hướng Dẫn &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: UI UX Pro Max -->
+        <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950/60 border-b border-slate-800/80 p-3">
+              <img src="./assets/demos/ui-ux-pro-max.svg" alt="UI UX Pro Max Demo" class="w-full h-auto rounded-xl border border-slate-800/60 shadow-lg group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+              <span class="absolute top-5 right-5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-600/90 text-white shadow">⭐ 139K STARS</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-blue-400 font-bold uppercase">ui-ux-pro-max</span>
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">★ Design System</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Design System &amp; Palette Engine</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Sinh tự động toàn diện hệ thống thiết kế từ brief: 79 phong cách nghệ thuật, 192 bảng màu hòa hợp, 74 phối cặp phông chữ và kiểm tra tương phản chuẩn WCAG 2.1.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#design-system</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#palettes</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#typography</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <div class="code-box rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-3">
+              <code class="text-blue-300 truncate">./vas install ui-ux-pro-max --target all</code>
+              <button onclick="copyShowcaseCommand(this, './vas install ui-ux-pro-max --target all')" class="text-slate-400 hover:text-white ml-2 text-xs cursor-pointer" title="Copy lệnh">
+                Copy
+              </button>
+            </div>
+            <button onclick="openDrawerById('ui-ux-pro-max')" class="w-full py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-all cursor-pointer">
+              Xem Runbook &amp; Hướng Dẫn &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Impeccable -->
+        <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950/60 border-b border-slate-800/80 p-3">
+              <img src="./assets/demos/impeccable.svg" alt="Impeccable Anti-Slop Demo" class="w-full h-auto rounded-xl border border-slate-800/60 shadow-lg group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+              <span class="absolute top-5 right-5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-600/90 text-white shadow">⭐ 86K STARS</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-blue-400 font-bold uppercase">impeccable</span>
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">★ Anti AI-Slop</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Anti AI-Slop Design Suite</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Chặn đứng các mẫu giao diện AI sáo rỗng với 62 quy tắc kiểm tra tự động và hơn 30 chế độ tinh chỉnh (`/delight`, `/polish`, `/audit`, `/critique`) nâng tầm code frontend.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#anti-slop</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#62-rules</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#frontend-polish</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <div class="code-box rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-3">
+              <code class="text-blue-300 truncate">./vas install impeccable --target all</code>
+              <button onclick="copyShowcaseCommand(this, './vas install impeccable --target all')" class="text-slate-400 hover:text-white ml-2 text-xs cursor-pointer" title="Copy lệnh">
+                Copy
+              </button>
+            </div>
+            <button onclick="openDrawerById('impeccable')" class="w-full py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-all cursor-pointer">
+              Xem Runbook &amp; Hướng Dẫn &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Blender 3D & Three.js -->
+        <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950/60 border-b border-slate-800/80 p-3">
+              <img src="./assets/demos/blender-and-3d.svg" alt="Blender and Three.js 3D Demo" class="w-full h-auto rounded-xl border border-slate-800/60 shadow-lg group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+              <span class="absolute top-5 right-5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-orange-600/90 text-white shadow">⭐ 51K+ 3D</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-blue-400 font-bold uppercase">blender-mcp &amp; img2threejs</span>
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">★ 3D Modeling</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Blender MCP &amp; Procedural Three.js</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Điều khiển Blender 3D trực tiếp từ câu lệnh prompt qua MCP server. Kết hợp img2threejs để tái tạo ảnh tham chiếu 2D thành code Three.js tối ưu và sẵn sàng animation.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#blender-mcp</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#threejs</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#procedural-3d</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <div class="code-box rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-3">
+              <code class="text-blue-300 truncate">./vas install blender-mcp img2threejs --target all</code>
+              <button onclick="copyShowcaseCommand(this, './vas install blender-mcp img2threejs --target all')" class="text-slate-400 hover:text-white ml-2 text-xs cursor-pointer" title="Copy lệnh">
+                Copy
+              </button>
+            </div>
+            <button onclick="openDrawerById('blender-mcp')" class="w-full py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-all cursor-pointer">
+              Xem Runbook &amp; Hướng Dẫn &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Video & Motion Suite -->
+        <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950/60 border-b border-slate-800/80 p-3">
+              <img src="./assets/demos/video-and-motion.svg" alt="Video and Motion Demo" class="w-full h-auto rounded-xl border border-slate-800/60 shadow-lg group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+              <span class="absolute top-5 right-5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-pink-600/90 text-white shadow">⭐ 150K+ VIDEO</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-blue-400 font-bold uppercase">video-shotcraft &amp; remotion</span>
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">★ Code-Only Video</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Programmatic Video &amp; Motion Suite</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Xuất video MP4 từ HTML/CSS (HyperFrames), lập trình video bằng React (Remotion), 150+ góc máy tự động (Video Shotcraft) và 59 phong cách điện ảnh (Lemo Opuscar).
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#hyperframes</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#remotion</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#shotcraft</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <div class="code-box rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-3">
+              <code class="text-blue-300 truncate">./vas install hyperframes video-shotcraft --target all</code>
+              <button onclick="copyShowcaseCommand(this, './vas install hyperframes video-shotcraft --target all')" class="text-slate-400 hover:text-white ml-2 text-xs cursor-pointer" title="Copy lệnh">
+                Copy
+              </button>
+            </div>
+            <button onclick="openDrawerById('hyperframes')" class="w-full py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-all cursor-pointer">
+              Xem Runbook &amp; Hướng Dẫn &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Diagram Design -->
+        <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between border border-slate-800 hover:border-blue-500/50 transition-all duration-300 group">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950/60 border-b border-slate-800/80 p-3">
+              <img src="./assets/demos/diagram-design.svg" alt="Diagram Design Demo" class="w-full h-auto rounded-xl border border-slate-800/60 shadow-lg group-hover:scale-[1.02] transition-transform duration-300" loading="lazy">
+              <span class="absolute top-5 right-5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-indigo-600/90 text-white shadow">⭐ 60K STARS</span>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-mono text-blue-400 font-bold uppercase">diagram-design</span>
+                <span class="text-xs text-amber-400 font-semibold flex items-center gap-1">★ Editorial Diagrams</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Editorial &amp; Cloud Diagrams</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Xuất 45 loại sơ đồ kiến trúc phức tạp (AWS, GCP, Microservices, Topology) thành 1 file HTML+SVG duy nhất, chuẩn hóa hoàn toàn theo màu sắc và font chữ thương hiệu.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#cloud-architecture</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#svg-diagram</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">#brand-tokens</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <div class="code-box rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-3">
+              <code class="text-blue-300 truncate">./vas install diagram-design --target all</code>
+              <button onclick="copyShowcaseCommand(this, './vas install diagram-design --target all')" class="text-slate-400 hover:text-white ml-2 text-xs cursor-pointer" title="Copy lệnh">
+                Copy
+              </button>
+            </div>
+            <button onclick="openDrawerById('diagram-design')" class="w-full py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white border border-blue-500/30 text-xs font-semibold transition-all cursor-pointer">
+              Xem Runbook &amp; Hướng Dẫn &rarr;
+            </button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -1299,8 +1538,7 @@
 
     let lastFocusedElement = null;
 
-    function openDrawerByIndex(index) {
-      const skill = displayedSkills[index];
+    function populateAndOpenDrawer(skill) {
       if (!skill) return;
       activeSkill = skill;
       lastFocusedElement = document.activeElement;
@@ -1339,6 +1577,30 @@
         const closeBtn = document.getElementById('drawer-close-btn');
         if (closeBtn) closeBtn.focus();
       }, 50);
+    }
+
+    function openDrawerByIndex(index) {
+      const skill = displayedSkills[index];
+      populateAndOpenDrawer(skill);
+    }
+
+    function openDrawerById(skillId) {
+      const skill = allSkills.find(s => s.id === skillId);
+      if (skill) {
+        populateAndOpenDrawer(skill);
+      } else {
+        fetch('./skills.min.json')
+          .then(res => res.json())
+          .then(data => {
+            allSkills = data;
+            const found = allSkills.find(s => s.id === skillId);
+            if (found) populateAndOpenDrawer(found);
+          });
+      }
+    }
+
+    function copyShowcaseCommand(btn, cmd) {
+      copyText(cmd, btn);
     }
 
     function closeDrawer() {

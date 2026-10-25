@@ -8,6 +8,10 @@ metadata:
 
 # Diagram Design
 
+<p align="center">
+  <img src="assets/preview.svg" alt="Diagram Design Preview" width="100%" />
+</p>
+
 Create diagrams as self-contained HTML files with inline SVG and an editorial design system.
 
 Forty-five visual types. Semantic patterns describe behavior; type references describe layout.

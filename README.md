@@ -250,6 +250,90 @@ Kho lưu trữ gồm **2,905+ skills** chia theo **117 danh mục**. Xem chi ti�
 └── ... và hơn 100+ danh mục chuyên biệt khác.
 ```
 
+#### 🌟 Trưng Bày Hình Ảnh Trực Quan & Live Demos (Visual Showcases)
+
+Các kỹ năng mới tích hợp đi kèm đồ họa minh họa trực quan, runbook chuẩn hóa và hướng dẫn thực thi rõ ràng:
+
+<details open>
+<summary><b>1. Kiến Trúc Landing Page Chuyển Đổi Cao (<code>landing-page-design</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/landing-page-design.svg" alt="Landing Page Architecture Demo" width="850" />
+</p>
+
+* **Bộ quy chuẩn kép**: Phân định rõ ràng giữa **Part A (Chiến lược & Bố cục)** và **Part B (Hệ thống thị giác nghiêm ngặt)**.
+* **Nguyên tắc cốt lõi**: *One offer → One audience → One primary action*.
+* **Kỹ thuật tiên tiến**: Fluid Island Navigation (floating pill bo góc), công thức lồng bo góc `r_in = r_out - padding`, vật lý chuyển động mượt mà `cubic-bezier(0.32, 0.72, 0, 1)`, cấm gradient nền lòe loẹt.
+* **Cài đặt**: `./vas install landing-page-design --target all`
+</details>
+
+<details open>
+<summary><b>2. Sinh Design System & Bảng Màu Toàn Diện (<code>ui-ux-pro-max</code> — ⭐ 139K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/ui-ux-pro-max.svg" alt="UI UX Pro Max Demo" width="850" />
+</p>
+
+* **Năng lực**: Tự động sinh trọn bộ Design System từ project brief ngắn gọn (79 phong cách nghệ thuật, 192 bảng màu hòa hợp, 74 phối cặp font typography chuẩn quốc tế).
+* **Tiêu chuẩn**: Đáp ứng tỷ lệ tương phản tiếp cận WCAG 2.1 (AAA/AA) và tích hợp script tra cứu style tức thì qua CLI.
+* **Cài đặt**: `./vas install ui-ux-pro-max --target all`
+</details>
+
+<details open>
+<summary><b>3. Bộ Công Cụ Chống Giao Diện "AI-Slop" (<code>impeccable</code> — ⭐ 86K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/impeccable.svg" alt="Impeccable Anti AI-Slop Demo" width="850" />
+</p>
+
+* **Năng lực**: Loại bỏ hoàn toàn giao diện "AI-slop" (gradient tím sến, card nhồi nhét, spacing lộn xộn, template sáo rỗng) với 62 quy tắc kiểm tra định lượng.
+* **Chế độ Senior**: Cung cấp hơn 30 chế độ tinh chỉnh (`/delight`, `/polish`, `/audit`, `/critique`) nâng tầm thẩm mỹ frontend lên chuẩn Out-of-Distribution Craft.
+* **Cài đặt**: `./vas install impeccable --target all`
+</details>
+
+<details open>
+<summary><b>4. Điều Khiển Blender 3D & Three.js Thuần Code (<code>blender-mcp</code> & <code>img2threejs</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/blender-and-3d.svg" alt="Blender and Three.js 3D Demo" width="850" />
+</p>
+
+* **Blender MCP**: Kết nối trực tiếp Blender 3D qua Model Context Protocol. Tạo mesh, gán vật liệu PBR, điều chỉnh ánh sáng, rigging và render bằng câu lệnh tự nhiên.
+* **img2threejs**: Tái tạo vật thể từ ảnh tham chiếu 2D thành code Three.js tối ưu, nhẹ tênh và sẵn sàng animation mà không cần file 3D nặng nề bên ngoài.
+* **Cài đặt**: `./vas install blender-mcp img2threejs --target all`
+</details>
+
+<details open>
+<summary><b>5. Lập Trình Video & Chuyển Động Bằng Code (<code>hyperframes</code>, <code>remotion</code>, <code>video-shotcraft</code>, <code>lemo-opuscar</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/video-and-motion.svg" alt="Video and Motion Demo" width="850" />
+</p>
+
+* **HyperFrames**: Lập trình video MP4 từ HTML/CSS/SVG thuần túy dành cho AI Agent.
+* **Remotion Suite**: Bộ 12 skills chính thức viết video bằng React components.
+* **Video Shotcraft & Lemo Opuscar**: 152 công thức góc máy tự động và 59 phong cách điện ảnh viết hoàn toàn bằng code, không phụ thuộc AI video model đắt đỏ.
+* **Cài đặt**: `./vas install hyperframes video-shotcraft remotion-best-practices --target all`
+</details>
+
+<details open>
+<summary><b>6. Sơ Đồ Kiến Trúc Đám Mây & Hệ Thống Chuẩn Xuất Bản (<code>diagram-design</code> — ⭐ 60K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/diagram-design.svg" alt="Diagram Design Demo" width="850" />
+</p>
+
+* **Năng lực**: Xuất hơn 45 loại sơ đồ kiến trúc phức tạp (AWS/GCP Cloud Architecture, K8s topology, Sequence Diagram) thành một file HTML+SVG duy nhất.
+* **Chuẩn thương hiệu**: Tự động áp dụng bảng màu, phông chữ và tỷ lệ bố cục chuẩn doanh nghiệp.
+* **Cài đặt**: `./vas install diagram-design --target all`
+</details>
+
 ---
 
 ### 9. Câu Hỏi Thường Gặp (FAQ)
@@ -497,6 +581,90 @@ VAS includes **2,905+ skills** across **117 specialized categories**. Browse the
 ├── 🧪  Testing & QA          :  50 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
 └── ... and 100+ more specialized domains.
 ```
+
+#### 🌟 Visual Demos & Runbook Showcases
+
+The newly integrated skills come with crisp visual previews, standardized runbooks, and deterministic execution scripts:
+
+<details open>
+<summary><b>1. High-Converting Landing Page Architecture (<code>landing-page-design</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/landing-page-design.svg" alt="Landing Page Architecture Demo" width="850" />
+</p>
+
+* **Dual-Track Framework**: Strict separation between **Part A (Conversion Strategy & Copy)** and **Part B (Strict Visual Token System)**.
+* **Core Doctrine**: *One offer → One audience → One primary action*.
+* **Precision Engineering**: Fluid Island Navigation (floating pill nav), nested corner radius formula `r_in = r_out - padding`, fluid motion physics `cubic-bezier(0.32, 0.72, 0, 1)`, zero gratuitous background gradients.
+* **Install**: `./vas install landing-page-design --target all`
+</details>
+
+<details open>
+<summary><b>2. Full Design System & Palette Generation (<code>ui-ux-pro-max</code> — ⭐ 139K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/ui-ux-pro-max.svg" alt="UI UX Pro Max Demo" width="850" />
+</p>
+
+* **Capabilities**: Generates complete, harmonious design systems from brief descriptions (79 styles, 192 product palettes, 74 typography pairings).
+* **Standards**: WCAG 2.1 AAA/AA contrast compliance, 119 UX guidelines, with fast interactive CLI style search.
+* **Install**: `./vas install ui-ux-pro-max --target all`
+</details>
+
+<details open>
+<summary><b>3. Anti AI-Slop & Design Refinement Suite (<code>impeccable</code> — ⭐ 86K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/impeccable.svg" alt="Impeccable Anti AI-Slop Demo" width="850" />
+</p>
+
+* **Capabilities**: Eliminates generic AI design tropes (gratuitous purple gradients, card soup, random spacing) using 62 rule-based checks.
+* **Senior Modes**: Offers 30+ bespoke refinement modes (`/delight`, `/polish`, `/audit`, `/critique`) to elevate code to Out-of-Distribution Craft.
+* **Install**: `./vas install impeccable --target all`
+</details>
+
+<details open>
+<summary><b>4. Blender 3D Control & Procedural Three.js (<code>blender-mcp</code> & <code>img2threejs</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/blender-and-3d.svg" alt="Blender and Three.js 3D Demo" width="850" />
+</p>
+
+* **Blender MCP**: Direct two-way bridge to Blender 3D via MCP server. Create meshes, assign PBR materials, rig, light, and render via natural language prompts.
+* **img2threejs**: Reconstructs objects from 2D reference images into lightweight, code-only, animation-ready Three.js procedural models.
+* **Install**: `./vas install blender-mcp img2threejs --target all`
+</details>
+
+<details open>
+<summary><b>5. Programmatic Video & Motion Suite (<code>hyperframes</code>, <code>remotion</code>, <code>video-shotcraft</code>, <code>lemo-opuscar</code>)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/video-and-motion.svg" alt="Video and Motion Demo" width="850" />
+</p>
+
+* **HyperFrames**: Render HTML/CSS/SVG into deterministic MP4 videos for AI agents.
+* **Remotion Suite**: Official 12-skill suite for programming video compositions in React.
+* **Video Shotcraft & Lemo Opuscar**: 152 automated shot recipes and 59 cinema styles crafted completely in code, zero expensive video models needed.
+* **Install**: `./vas install hyperframes video-shotcraft remotion-best-practices --target all`
+</details>
+
+<details open>
+<summary><b>6. Editorial & Cloud Architecture Diagramming (<code>diagram-design</code> — ⭐ 60K)</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/demos/diagram-design.svg" alt="Diagram Design Demo" width="850" />
+</p>
+
+* **Capabilities**: Generates 45+ complex architectural and system diagrams (AWS/GCP Cloud Architecture, K8s topology, Sequence Diagrams) into a single standalone HTML+SVG file.
+* **Brand Alignment**: Automatically adopts corporate color palettes, font stacks, and layout hierarchy.
+* **Install**: `./vas install diagram-design --target all`
+</details>
 
 ---
 

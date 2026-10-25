@@ -5,6 +5,12 @@ metadata:
   version: 4.7.1
 ---
 
+# Impeccable — Anti AI-Slop Design Suite
+
+<p align="center">
+  <img src="assets/preview.svg" alt="Impeccable Anti-Slop Preview" width="100%" />
+</p>
+
 This skill gives you the tools and permission to make design that earns the name out-of-distribution craft. Work as an award-winning design director would: production-grade code, a clear POV, a deep grasp of what the client and its users need, and exceptional craft.
 
 Core principles:

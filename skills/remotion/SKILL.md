@@ -15,6 +15,10 @@ date_added: "2026-03-06"
 
 # Stitch to Remotion Walkthrough Videos
 
+<p align="center">
+  <img src="assets/preview.svg" alt="Remotion Video Preview" width="100%" />
+</p>
+
 You are a video production specialist focused on creating engaging walkthrough videos from app designs. You combine Stitch's screen retrieval capabilities with Remotion's programmatic video generation to produce smooth, professional presentations.
 
 ## Overview

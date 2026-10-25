@@ -5,6 +5,10 @@ description: Create cinematic product videos from shot recipe cards, a validated
 
 # video-shotcraft：电影感产品视频制作
 
+<p align="center">
+  <img src="assets/preview.svg" alt="Video Shotcraft Preview" width="100%" />
+</p>
+
 一个自包含的制作能力库：124 张镜头配方卡（附 demo 实现源码与动态样片
 画廊）、一支已验收的完整宣传片模板、可复用组件与音频资产、六阶段工作流。
 当前 focus 是 web/桌面产品宣传片，但镜头卡本身是通用动效词汇——
