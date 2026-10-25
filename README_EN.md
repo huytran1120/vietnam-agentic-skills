@@ -20,7 +20,7 @@
 </p>
 <p align="center">
   <a href="https://huytran1120.github.io/vietnam-agentic-skills/"><img src="https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Catalog" /></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-2%2C905%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-2%2C921%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
   <a href="vas.py"><img src="https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge" alt="Zero NPX" /></a>
   <a href="https://github.com/huytran1120"><img src="https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github" alt="Author" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
@@ -46,7 +46,7 @@
 
 ### 1. Overview
 
-**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **2,905+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
+**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **2,921+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
 VAS strictly adheres to the **Open Agent Skills specification ([agentskills.io](https://agentskills.io/))** and is engineered specifically for modern AI coding agents such as **Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf (Codeium), Cline / Roo Code, and GitHub Copilot CLI**.
 
@@ -217,7 +217,7 @@ description: >-
 
 ### 8. Featured & Viral Skills Showcase
 
-VAS includes **2,905+ skills** across **117 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
+VAS includes **2,921+ skills** across **117 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Capability Overview | Quick Install Command |
 | :-: | :--- | :---: | :--- | :--- |
@@ -236,14 +236,14 @@ VAS includes **2,905+ skills** across **117 specialized categories**. Browse the
 ```text
 📊 TOP CATEGORY DISTRIBUTION:
 ├── 🛡️  Security              : 267 skills (OWASP, Pentest, Secret Audit, IAM, Hardening)
-├── 💻  Development           : 229 skills (Refactoring, Clean Code, Design Patterns, OOP)
+├── 💻  Development           : 230 skills (Refactoring, Clean Code, Design Patterns, OOP)
 ├── 📈  Business & Strategy   : 179 skills (Market Research, Financial Models, Growth)
 ├── ☁️  Cloud                 : 170 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
-├── ⚙️  DevOps                : 167 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
+├── ⚙️  DevOps                : 169 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
 ├── 🤖  AI & Machine Learning : 135 skills (RAG, LLM Evaluation, Prompt Engineering)
 ├── 🎨  Design, 3D & Video    : 120+ skills (Impeccable, UI/UX Pro Max, HyperFrames, Remotion, Penpot, Blender)
 ├── 🌐  Web & Fullstack       : 113 skills (React, Next.js, Vue, Node.js, FastAPI, Spring)
-├── 🧪  Testing & QA          :  50 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
+├── 🧪  Testing & QA          :  51 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
 └── ... and 100+ more specialized domains.
 ```
 
@@ -332,6 +332,22 @@ The newly integrated skills come with crisp visual previews, standardized runboo
 </details>
 
 ---
+
+#### Matt Pocock skills
+
+Added **16 missing stable skills** from [mattpocock/skills](https://github.com/mattpocock/skills)
+at revision `5beb35b040e3de97e54fa9e386d7e42d15c295c2`, preserving **19 existing customized skills**.
+All 31 current stable upstream skills are represented; 4 legacy entries remain available.
+The 7 experimental `in-progress/` skills are intentionally excluded.
+
+```bash
+./vas search mattpocock/skills --limit 40
+./vas install code-review to-spec to-tickets writing-for-agents --target antigravity
+```
+
+New imports retain Matt Pocock's MIT license and supporting files. Target-project prerequisites
+(such as Claude Code, Bash/jq, or Node.js) are separate from the dependency-free VAS manager.
+See the [pinned import manifest](data/mattpocock-skills.json) for provenance.
 
 ### 9. Frequently Asked Questions (FAQ)
 

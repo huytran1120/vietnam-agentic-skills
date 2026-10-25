@@ -20,7 +20,7 @@
 </p>
 <p align="center">
   <a href="https://huytran1120.github.io/vietnam-agentic-skills/"><img src="https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Catalog" /></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-2%2C905%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-2%2C921%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
   <a href="vas.py"><img src="https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge" alt="Zero NPX" /></a>
   <a href="https://github.com/huytran1120"><img src="https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github" alt="Author" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
@@ -51,7 +51,7 @@
 
 **Vietnam Agentic Skills (VAS)** là kho lưu trữ kỹ năng agentic mã nguồn mở tiêu chuẩn quốc tế được xây dựng và duy trì bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
-Dự án cung cấp **2,905+ playbooks (`SKILL.md`)** chuyên sâu thuộc 117 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
+Dự án cung cấp **2,921+ playbooks (`SKILL.md`)** chuyên sâu thuộc 117 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
 
 Với VAS, các AI Coding Agent không còn là lập trình viên chung chung, mà biến thành các cộng sự kỹ thuật cấp Senior thực thụ: có checklist bảo mật, quy trình kiểm thử, công thức tối ưu và kịch bản thực thi chính xác.
 
@@ -220,7 +220,7 @@ description: >-
 
 ### 8. Danh Mục & Top 10 Siêu Kỹ Năng Mới Nhất
 
-Kho lưu trữ gồm **2,905+ skills** chia theo **117 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **2,921+ skills** chia theo **117 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Mô Tả Năng Lực | Lệnh Cài Đặt Nhanh |
 | :-: | :--- | :---: | :--- | :--- |
@@ -239,14 +239,14 @@ Kho lưu trữ gồm **2,905+ skills** chia theo **117 danh mục**. Xem chi ti�
 ```text
 📊 PHÂN BỔ CÁC DANH MỤC HÀNG ĐẦU:
 ├── 🛡️  Security              : 267 skills (OWASP, Pentest, Secret Audit, IAM, Hardening)
-├── 💻  Development           : 229 skills (Refactoring, Clean Code, Design Patterns, OOP)
+├── 💻  Development           : 230 skills (Refactoring, Clean Code, Design Patterns, OOP)
 ├── 📈  Business & Strategy   : 179 skills (Market Research, Financial Models, Growth)
 ├── ☁️  Cloud                 : 170 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
-├── ⚙️  DevOps                : 167 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
+├── ⚙️  DevOps                : 169 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
 ├── 🤖  AI & Machine Learning : 135 skills (RAG, LLM Evaluation, Prompt Engineering)
 ├── 🎨  Design, 3D & Video    : 120+ skills (Impeccable, UI/UX Pro Max, HyperFrames, Remotion, Penpot, Blender)
 ├── 🌐  Web & Fullstack       : 113 skills (React, Next.js, Vue, Node.js, FastAPI, Spring)
-├── 🧪  Testing & QA          :  50 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
+├── 🧪  Testing & QA          :  51 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
 └── ... và hơn 100+ danh mục chuyên biệt khác.
 ```
 
@@ -336,6 +336,23 @@ Các kỹ năng mới tích hợp đi kèm đồ họa minh họa trực quan, r
 
 ---
 
+#### Bộ skill Matt Pocock
+
+Bổ sung **16 skill ổn định** từ [mattpocock/skills](https://github.com/mattpocock/skills)
+tại commit `5beb35b040e3de97e54fa9e386d7e42d15c295c2`: review code, triển khai spec,
+viết PR, nghiên cứu, retrospective, chia ticket, lập kế hoạch, wizard và công cụ workflow.
+Giữ nguyên **19 skill đã tùy biến**; không nhập **7 skill thử nghiệm** trong `in-progress/`.
+Toàn bộ 31 skill ổn định hiện tại của upstream đều đã có mặt trong kho; 4 bản legacy vẫn được giữ.
+
+```bash
+./vas search mattpocock/skills --limit 40
+./vas install code-review to-spec to-tickets writing-for-agents --target antigravity
+```
+
+Mỗi skill mới giữ nguyên giấy phép MIT, tác giả Matt Pocock và các file hỗ trợ.
+Một số workflow cần công cụ riêng của dự án đích (ví dụ Claude Code, Bash/jq hoặc Node.js);
+chúng không phải phụ thuộc của CLI VAS. Xem [nguồn và bản ghi nhập](data/mattpocock-skills.json).
+
 ### 9. Câu Hỏi Thường Gặp (FAQ)
 
 **Q: Tôi dùng OpenAI Codex thì có cần cấu hình gì thêm không?**  
@@ -381,7 +398,7 @@ Dù bạn cài hàng trăm kỹ năng, AI agent chỉ quét phần tóm tắt ng
 
 ### 1. Overview
 
-**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **2,905+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
+**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **2,921+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
 VAS strictly adheres to the **Open Agent Skills specification ([agentskills.io](https://agentskills.io/))** and is engineered specifically for AI coding agents such as **Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf (Codeium), Cline / Roo Code, and GitHub Copilot CLI**.
 
@@ -552,7 +569,7 @@ description: >-
 
 ### 8. Featured & Viral Skills Showcase
 
-VAS includes **2,905+ skills** across **117 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
+VAS includes **2,921+ skills** across **117 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Capability Overview | Quick Install Command |
 | :-: | :--- | :---: | :--- | :--- |
@@ -571,14 +588,14 @@ VAS includes **2,905+ skills** across **117 specialized categories**. Browse the
 ```text
 📊 TOP CATEGORY DISTRIBUTION:
 ├── 🛡️  Security              : 267 skills (OWASP, Pentest, Secret Audit, IAM, Hardening)
-├── 💻  Development           : 229 skills (Refactoring, Clean Code, Design Patterns, OOP)
+├── 💻  Development           : 230 skills (Refactoring, Clean Code, Design Patterns, OOP)
 ├── 📈  Business & Strategy   : 179 skills (Market Research, Financial Models, Growth)
 ├── ☁️  Cloud                 : 170 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
-├── ⚙️  DevOps                : 167 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
+├── ⚙️  DevOps                : 169 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
 ├── 🤖  AI & Machine Learning : 135 skills (RAG, LLM Evaluation, Prompt Engineering)
 ├── 🎨  Design, 3D & Video    : 120+ skills (Impeccable, UI/UX Pro Max, HyperFrames, Remotion, Penpot, Blender)
 ├── 🌐  Web & Fullstack       : 113 skills (React, Next.js, Vue, Node.js, FastAPI, Spring)
-├── 🧪  Testing & QA          :  50 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
+├── 🧪  Testing & QA          :  51 skills (Playwright, Jest, Pytest, E2E, Chaos Testing)
 └── ... and 100+ more specialized domains.
 ```
 
@@ -667,6 +684,22 @@ The newly integrated skills come with crisp visual previews, standardized runboo
 </details>
 
 ---
+
+#### Matt Pocock skills
+
+Added **16 missing stable skills** from [mattpocock/skills](https://github.com/mattpocock/skills)
+at revision `5beb35b040e3de97e54fa9e386d7e42d15c295c2`, preserving **19 existing customized skills**.
+All 31 current stable upstream skills are represented; 4 legacy entries remain available.
+The 7 experimental `in-progress/` skills are intentionally excluded.
+
+```bash
+./vas search mattpocock/skills --limit 40
+./vas install code-review to-spec to-tickets writing-for-agents --target antigravity
+```
+
+New imports retain Matt Pocock's MIT license and supporting files. Target-project prerequisites
+(such as Claude Code, Bash/jq, or Node.js) are separate from the dependency-free VAS manager.
+See the [pinned import manifest](data/mattpocock-skills.json) for provenance.
 
 ### 9. Frequently Asked Questions (FAQ)
 

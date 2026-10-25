@@ -4,7 +4,7 @@ Vietnam Agentic Skills (VAS) - CLI & Antigravity Installer
 Author: Huy Tran (https://github.com/huytran1120)
 License: MIT
 
-Zero-dependency tool to search, inspect, install, and manage 2,905+ agentic skills
+Zero-dependency tool to search, inspect, install, and manage 2,921+ agentic skills
 specifically designed for Google Antigravity and AI coding agents. No npm/npx required.
 """
 
@@ -217,6 +217,15 @@ def extract_skill_metadata(skill_md_path, skill_id, catalog_by_key=None, overrid
     tags = list(source_meta.get("tags", []))
     risk = source_meta.get("risk", "safe")
     canonical_id = source_meta.get("canonical_id", base_id)
+    provenance_fields = (
+        "source", "source_repo", "author", "license", "license_source",
+        "source_revision", "source_path",
+    )
+    provenance = {
+        key: source_meta[key]
+        for key in provenance_fields
+        if isinstance(source_meta.get(key), str) and source_meta[key]
+    }
 
     fm_cat = None
     try:
@@ -241,6 +250,9 @@ def extract_skill_metadata(skill_md_path, skill_id, catalog_by_key=None, overrid
                     fm_cat = line.split(":", 1)[1].strip().strip('"\'')
                 elif line.startswith("risk:"):
                     risk = line.split(":", 1)[1].strip().strip('"\'')
+                elif line.partition(":")[0] in provenance_fields:
+                    key, _, value = line.partition(":")
+                    provenance[key] = value.strip().strip('"\'')
                 elif line.startswith("description:"):
                     val = line.split(":", 1)[1].strip()
                     if val in (">-", ">", "|", "|-") or not val:
@@ -293,7 +305,8 @@ def extract_skill_metadata(skill_md_path, skill_id, catalog_by_key=None, overrid
         "description": description or "No description available",
         "category": final_cat,
         "tags": tags,
-        "risk": risk
+        "risk": risk,
+        **provenance,
     }
 
 
@@ -354,7 +367,7 @@ def save_manifest(dest_dir, manifest_data):
 # CLI Subcommands
 
 def cmd_search(args):
-    """Search skills by keywords in id, name, description, category, tags."""
+    """Search skills by keywords, source repository, or author."""
     query = args.query.lower().strip()
     skills = load_index()
     results = []
@@ -367,6 +380,9 @@ def cmd_search(args):
         s_desc = s.get("description", "").lower()
         s_cat = s.get("category", "").lower()
         s_tags = [t.lower() for t in s.get("tags", [])]
+        s_source = " ".join(
+            s.get(key, "") for key in ("source", "source_repo", "author")
+        ).lower()
 
         if query == s_id:
             score += 100
@@ -382,6 +398,8 @@ def cmd_search(args):
             score += 25
         if query in s_desc:
             score += 10
+        if query in s_source:
+            score += 20
 
         # Token matching for multi-word queries
         if len(tokens) > 1:
@@ -402,6 +420,9 @@ def cmd_search(args):
                     matched_tok = True
                 if tok in s_desc:
                     score += 5
+                    matched_tok = True
+                if tok in s_source:
+                    score += 10
                     matched_tok = True
                 if matched_tok:
                     token_matches += 1
@@ -492,7 +513,11 @@ def cmd_show(args):
     print(f"{Colors.BOLD}Name:{Colors.RESET}         {skill.get('name', 'N/A')}")
     print(f"{Colors.BOLD}Category:{Colors.RESET}     {Colors.YELLOW}{skill.get('category', 'N/A')}{Colors.RESET}")
     print(f"{Colors.BOLD}Risk Level:{Colors.RESET}   {skill.get('risk', 'safe')}")
-    print(f"{Colors.BOLD}Source:{Colors.RESET}       {skill.get('source', 'personal/community')}")
+    print(f"{Colors.BOLD}Source:{Colors.RESET}       {skill.get('source_repo') or skill.get('source', 'personal/community')}")
+    if skill.get("author"):
+        print(f"{Colors.BOLD}Author:{Colors.RESET}       {skill['author']}")
+    if skill.get("license"):
+        print(f"{Colors.BOLD}License:{Colors.RESET}      {skill['license']}")
     print(f"{Colors.BOLD}Tags:{Colors.RESET}         {', '.join(skill.get('tags', [])) or 'None'}")
     print(f"{Colors.BOLD}Path:{Colors.RESET}         {skill.get('path', 'N/A')}")
     print(f"{Colors.BOLD}Description:{Colors.RESET}  {skill.get('description', 'N/A')}")

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-24T08:21:30.000Z",
-  "total": 2750,
+  "generatedAt": "2026-10-25T11:50:59+00:00",
+  "total": 2766,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -18184,6 +18184,38 @@
       "path": "skills/code-refactoring-tech-debt/SKILL.md"
     },
     {
+      "id": "code-review",
+      "canonical_id": "code-review",
+      "name": "code-review",
+      "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+      "category": "code-quality",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/code-review",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/code-review",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "code-review",
+        "standards"
+      ],
+      "path": "skills/code-review/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "code-review",
+        "standards",
+        "code",
+        "review"
+      ]
+    },
+    {
       "id": "code-review-ai-ai-review",
       "canonical_id": "code-review-ai-ai-review",
       "name": "code-review-ai-ai-review",
@@ -35500,6 +35532,41 @@
       "path": "skills/git-commit-message/SKILL.md"
     },
     {
+      "id": "git-guardrails-claude-code",
+      "canonical_id": "git-guardrails-claude-code",
+      "name": "git-guardrails-claude-code",
+      "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+      "category": "workflow",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/git-guardrails-claude-code",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/misc/git-guardrails-claude-code",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "git",
+        "claude-code",
+        "hooks"
+      ],
+      "path": "skills/git-guardrails-claude-code/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "git",
+        "claude-code",
+        "hooks",
+        "guardrails",
+        "claude",
+        "code"
+      ]
+    },
+    {
       "id": "git-hooks-automation",
       "canonical_id": "git-hooks-automation",
       "name": "git-hooks-automation",
@@ -41432,6 +41499,38 @@
         "issues"
       ],
       "path": "skills/implement/SKILL.md"
+    },
+    {
+      "id": "implement-spec",
+      "canonical_id": "implement-spec",
+      "name": "implement-spec",
+      "description": "Implement the result of /to-spec and /to-tickets in code.",
+      "category": "development",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/implement-spec",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/implement-spec",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "implementation",
+        "specifications"
+      ],
+      "path": "skills/implement-spec/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "implementation",
+        "specifications",
+        "implement",
+        "spec"
+      ]
     },
     {
       "id": "improve-codebase-architecture",
@@ -49952,6 +50051,39 @@
         "security"
       ],
       "path": "skills/mid-engagement-ir-detection/SKILL.md"
+    },
+    {
+      "id": "migrate-to-shoehorn",
+      "canonical_id": "migrate-to-shoehorn",
+      "name": "migrate-to-shoehorn",
+      "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+      "category": "testing",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/migrate-to-shoehorn",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/misc/migrate-to-shoehorn",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "typescript",
+        "test-data"
+      ],
+      "path": "skills/migrate-to-shoehorn/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "typescript",
+        "test-data",
+        "migrate",
+        "to",
+        "shoehorn"
+      ]
     },
     {
       "id": "minecraft-bukkit-pro",
@@ -58892,6 +59024,37 @@
       "path": "skills/pptx-deck-creation/SKILL.md"
     },
     {
+      "id": "pr",
+      "canonical_id": "pr",
+      "name": "pr",
+      "description": "Use when writing a PR body.",
+      "category": "project-management",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/pr",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/pr",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "pull-requests",
+        "documentation"
+      ],
+      "path": "skills/pr/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "pull-requests",
+        "documentation",
+        "pr"
+      ]
+    },
+    {
       "id": "pr-merge-champion",
       "canonical_id": "pr-merge-champion",
       "name": "pr-merge-champion",
@@ -63077,6 +63240,36 @@
       "path": "skills/requesting-code-review/SKILL.md"
     },
     {
+      "id": "research",
+      "canonical_id": "research",
+      "name": "research",
+      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "category": "productivity",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/research",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/research",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "research",
+        "primary-sources"
+      ],
+      "path": "skills/research/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "research",
+        "primary-sources"
+      ]
+    },
+    {
       "id": "research-prompt",
       "canonical_id": "research-prompt",
       "name": "research-prompt",
@@ -63169,6 +63362,37 @@
         "work"
       ],
       "path": "skills/resumable-implementation-contracts/SKILL.md"
+    },
+    {
+      "id": "retro",
+      "canonical_id": "retro",
+      "name": "retro",
+      "description": "Conduct a retrospective on a coding session.",
+      "category": "productivity",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/retro",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/retro",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "retrospectives",
+        "agent-workflow"
+      ],
+      "path": "skills/retro/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "retrospectives",
+        "agent-workflow",
+        "retro"
+      ]
     },
     {
       "id": "returns-reverse-logistics",
@@ -64721,6 +64945,37 @@
         "implementing"
       ],
       "path": "skills/sbom-supply-chain/SKILL.md"
+    },
+    {
+      "id": "scaffold-exercises",
+      "canonical_id": "scaffold-exercises",
+      "name": "scaffold-exercises",
+      "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+      "category": "education",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/scaffold-exercises",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/misc/scaffold-exercises",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "exercises",
+        "course-authoring"
+      ],
+      "path": "skills/scaffold-exercises/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "exercises",
+        "course-authoring",
+        "scaffold"
+      ]
     },
     {
       "id": "scala-pro",
@@ -67629,6 +67884,39 @@
         "issue"
       ],
       "path": "skills/setup-matt-pocock-skills/SKILL.md"
+    },
+    {
+      "id": "setup-pre-commit",
+      "canonical_id": "setup-pre-commit",
+      "name": "setup-pre-commit",
+      "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+      "category": "devops",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/misc/setup-pre-commit",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/misc/setup-pre-commit",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "git-hooks",
+        "linting"
+      ],
+      "path": "skills/setup-pre-commit/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "git-hooks",
+        "linting",
+        "setup",
+        "pre",
+        "commit"
+      ]
     },
     {
       "id": "sexual-health-analyzer",
@@ -74879,6 +75167,102 @@
       "path": "skills/to-prd/SKILL.md"
     },
     {
+      "id": "to-questionnaire",
+      "canonical_id": "to-questionnaire",
+      "name": "to-questionnaire",
+      "description": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+      "category": "productivity",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/to-questionnaire",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/productivity/to-questionnaire",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "questionnaires",
+        "requirements"
+      ],
+      "path": "skills/to-questionnaire/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "questionnaires",
+        "requirements",
+        "to",
+        "questionnaire"
+      ]
+    },
+    {
+      "id": "to-spec",
+      "canonical_id": "to-spec",
+      "name": "to-spec",
+      "description": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+      "category": "project-management",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-spec",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/to-spec",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "specifications",
+        "issue-tracking"
+      ],
+      "path": "skills/to-spec/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "specifications",
+        "issue-tracking",
+        "to",
+        "spec"
+      ]
+    },
+    {
+      "id": "to-tickets",
+      "canonical_id": "to-tickets",
+      "name": "to-tickets",
+      "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
+      "category": "project-management",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-tickets",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/to-tickets",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "planning",
+        "issue-tracking"
+      ],
+      "path": "skills/to-tickets/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "planning",
+        "issue-tracking",
+        "to",
+        "tickets"
+      ]
+    },
+    {
       "id": "todoist-automation",
       "canonical_id": "todoist-automation",
       "name": "todoist-automation",
@@ -79426,6 +79810,38 @@
       "path": "skills/waf-setup/SKILL.md"
     },
     {
+      "id": "wait-what",
+      "canonical_id": "wait-what",
+      "name": "wait-what",
+      "description": "Stop. That last message did not land: re-pitch it.",
+      "category": "productivity",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/wait-what",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/productivity/wait-what",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "communication",
+        "clarification"
+      ],
+      "path": "skills/wait-what/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "communication",
+        "clarification",
+        "wait",
+        "what"
+      ]
+    },
+    {
       "id": "warehouse",
       "canonical_id": "warehouse",
       "name": "warehouse",
@@ -79554,6 +79970,37 @@
         "local"
       ],
       "path": "skills/watch-igaming/SKILL.md"
+    },
+    {
+      "id": "wayfinder",
+      "canonical_id": "wayfinder",
+      "name": "wayfinder",
+      "description": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+      "category": "project-management",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wayfinder",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/wayfinder",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "planning",
+        "decision-making"
+      ],
+      "path": "skills/wayfinder/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "planning",
+        "decision-making",
+        "wayfinder"
+      ]
     },
     {
       "id": "wcag-audit-patterns",
@@ -81020,6 +81467,37 @@
       "path": "skills/wireshark-analysis/SKILL.md"
     },
     {
+      "id": "wizard",
+      "canonical_id": "wizard",
+      "name": "wizard",
+      "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.",
+      "category": "devops",
+      "risk": "critical",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wizard",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/engineering/wizard",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "manual-setup",
+        "bash"
+      ],
+      "path": "skills/wizard/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "manual-setup",
+        "bash",
+        "wizard"
+      ]
+    },
+    {
       "id": "wjttc-builder",
       "canonical_id": "wjttc-builder",
       "name": "wjttc-builder",
@@ -81583,6 +82061,39 @@
         "person"
       ],
       "path": "skills/write-in-my-voice/SKILL.md"
+    },
+    {
+      "id": "writing-for-agents",
+      "canonical_id": "writing-for-agents",
+      "name": "writing-for-agents",
+      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "category": "skill-authoring",
+      "risk": "safe",
+      "source": "https://github.com/mattpocock/skills/tree/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/writing-for-agents",
+      "source_repo": "mattpocock/skills",
+      "author": "Matt Pocock",
+      "license": "MIT",
+      "license_source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/LICENSE",
+      "source_revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+      "source_path": "skills/productivity/writing-for-agents",
+      "tags": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "agent-instructions",
+        "documentation"
+      ],
+      "path": "skills/writing-for-agents/SKILL.md",
+      "triggers": [
+        "mattpocock",
+        "workflow",
+        "coding-agents",
+        "agent-instructions",
+        "documentation",
+        "writing",
+        "for",
+        "agents"
+      ]
     },
     {
       "id": "writing-great-skills",

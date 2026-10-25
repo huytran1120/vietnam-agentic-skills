@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** danh mục chuyên biệt.
+Tổng hợp **2,921** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -30,7 +30,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **career-jobs** | 2 skills | `./vas install --category career-jobs --target codex` |
 | **cloud** | 170 skills | `./vas install --category cloud --target codex` |
 | **code** | 18 skills | `./vas install --category code --target codex` |
-| **code-quality** | 44 skills | `./vas install --category code-quality --target codex` |
+| **code-quality** | 45 skills | `./vas install --category code-quality --target codex` |
 | **coding** | 1 skills | `./vas install --category coding --target codex` |
 | **collaboration** | 1 skills | `./vas install --category collaboration --target codex` |
 | **communication** | 2 skills | `./vas install --category communication --target codex` |
@@ -51,14 +51,14 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **design** | 48 skills | `./vas install --category design --target codex` |
 | **design-it** | 48 skills | `./vas install --category design-it --target codex` |
 | **developer-tools** | 9 skills | `./vas install --category developer-tools --target codex` |
-| **development** | 229 skills | `./vas install --category development --target codex` |
+| **development** | 230 skills | `./vas install --category development --target codex` |
 | **development-and-testing** | 6 skills | `./vas install --category development-and-testing --target codex` |
-| **devops** | 167 skills | `./vas install --category devops --target codex` |
+| **devops** | 169 skills | `./vas install --category devops --target codex` |
 | **devtools** | 6 skills | `./vas install --category devtools --target codex` |
 | **document-processing** | 4 skills | `./vas install --category document-processing --target codex` |
 | **document-verification** | 7 skills | `./vas install --category document-verification --target codex` |
 | **ecommerce** | 4 skills | `./vas install --category ecommerce --target codex` |
-| **education** | 5 skills | `./vas install --category education --target codex` |
+| **education** | 6 skills | `./vas install --category education --target codex` |
 | **engineering** | 21 skills | `./vas install --category engineering --target codex` |
 | **finance** | 21 skills | `./vas install --category finance --target codex` |
 | **framework** | 13 skills | `./vas install --category framework --target codex` |
@@ -93,8 +93,8 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **presentation-processing** | 4 skills | `./vas install --category presentation-processing --target codex` |
 | **product** | 5 skills | `./vas install --category product --target codex` |
 | **product-management** | 1 skills | `./vas install --category product-management --target codex` |
-| **productivity** | 61 skills | `./vas install --category productivity --target codex` |
-| **project-management** | 31 skills | `./vas install --category project-management --target codex` |
+| **productivity** | 65 skills | `./vas install --category productivity --target codex` |
+| **project-management** | 35 skills | `./vas install --category project-management --target codex` |
 | **prompt-engineering** | 1 skills | `./vas install --category prompt-engineering --target codex` |
 | **quality** | 2 skills | `./vas install --category quality --target codex` |
 | **reasoning** | 2 skills | `./vas install --category reasoning --target codex` |
@@ -105,11 +105,11 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **security** | 267 skills | `./vas install --category security --target codex` |
 | **seo** | 34 skills | `./vas install --category seo --target codex` |
 | **shopping** | 5 skills | `./vas install --category shopping --target codex` |
-| **skill-authoring** | 2 skills | `./vas install --category skill-authoring --target codex` |
+| **skill-authoring** | 3 skills | `./vas install --category skill-authoring --target codex` |
 | **spreadsheet-processing** | 3 skills | `./vas install --category spreadsheet-processing --target codex` |
 | **super-code** | 16 skills | `./vas install --category super-code --target codex` |
 | **test-automation** | 9 skills | `./vas install --category test-automation --target codex` |
-| **testing** | 50 skills | `./vas install --category testing --target codex` |
+| **testing** | 51 skills | `./vas install --category testing --target codex` |
 | **tool-quality** | 1 skills | `./vas install --category tool-quality --target codex` |
 | **tools** | 1 skills | `./vas install --category tools --target codex` |
 | **travel** | 1 skills | `./vas install --category travel --target codex` |
@@ -118,7 +118,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **voice-agents** | 5 skills | `./vas install --category voice-agents --target codex` |
 | **web** | 1 skills | `./vas install --category web --target codex` |
 | **web-development** | 67 skills | `./vas install --category web-development --target codex` |
-| **workflow** | 71 skills | `./vas install --category workflow --target codex` |
+| **workflow** | 72 skills | `./vas install --category workflow --target codex` |
 | **workflow-bundle** | 9 skills | `./vas install --category workflow-bundle --target codex` |
 | **writing** | 5 skills | `./vas install --category writing --target codex` |
 
@@ -1078,7 +1078,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `typescript-pro` | `safe` | Master TypeScript with advanced types, generics, and strict type safety. Hand... |
 | `unreal-engine-cpp-pro` | `safe` | Expert guide for Unreal Engine 5.x C++ development, covering UObject hygiene,... |
 
-### CODE-QUALITY (44 skills)
+### CODE-QUALITY (45 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1094,6 +1094,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `clean-code` | `safe` | This skill embodies the principles of \"Clean Code\" by Robert C. Martin (Unc... |
 | `clean-code-guard` | `critical` | Review generated or changed production code with Clean Code, SOLID, DRY, KISS... |
 | `code-refactoring-refactor-clean` | `critical` | You are a code refactoring expert specializing in clean code principles, SOLI... |
+| `code-review` | `safe` | Review the changes since a fixed point (commit, branch, tag, or merge-base) a... |
 | `code-review-checklist` | `critical` | Comprehensive checklist for conducting thorough code reviews covering functio... |
 | `codebase-cleanup-tech-debt` | `critical` | Identify technical debt from actual code and change history, estimate its imp... |
 | `codex-review` | `critical` | Professional code review with auto CHANGELOG generation, integrated with Code... |
@@ -1530,7 +1531,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `skill-porter` | `critical` | Preview conservative tool-name translations and copy complete local skill bun... |
 | `tokenwise` | `critical` | Measurement-driven model router for Claude Code. Routes Haiku/Sonnet/Opus per... |
 
-### DEVELOPMENT (229 skills)
+### DEVELOPMENT (230 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1654,6 +1655,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `hig-technologies` | `safe` | Review Apple-platform technology UX against HIG patterns for payments, health... |
 | `i18n-localization` | `safe` | Internationalization and localization patterns. Detecting hardcoded strings, ... |
 | `implement` | `critical` | Implement a piece of work based on a PRD or set of issues. |
+| `implement-spec` | `critical` | Implement the result of /to-spec and /to-tickets in code. |
 | `improve-codebase-architecture` | `safe` | Scan a codebase for deepening opportunities, present them as a visual HTML re... |
 | `incremental-implementation` | `critical` | Delivers changes incrementally. Use when implementing any feature or change t... |
 | `instructree` | `safe` | Map, explain, and lint repository-scoped coding-agent instructions before cha... |
@@ -1775,7 +1777,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `systematic-debugging` | `critical` | Use when encountering any bug, test failure, or unexpected behavior, before p... |
 | `test-fixing` | `critical` | Systematically identify and fix all failing tests using smart grouping strate... |
 
-### DEVOPS (167 skills)
+### DEVOPS (169 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1922,6 +1924,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `semantic-versioning` | `critical` | Automate versioning and changelog generation using semantic versioning |
 | `service-mesh` | `critical` | Implement Istio and Linkerd service meshes. Configure mTLS, traffic management, |
 | `service-mesh-observability` | `critical` | Complete guide to observability patterns for Istio, Linkerd, and service mesh... |
+| `setup-pre-commit` | `critical` | Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and... |
 | `shipping-and-launch` | `critical` | Prepares production launches. Use when preparing to deploy to production. Use... |
 | `solidping` | `critical` | Run SolidPing uptime monitoring through its hosted MCP server: list and diagn... |
 | `sre-dashboards` | `critical` | Design and operationalize SRE dashboards that surface reliability, latency, |
@@ -1946,6 +1949,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `vibecode-production-qa-validator` | `critical` | 13-phase production QA for fullstack Next.js apps: build verification, SEO ta... |
 | `vllm-server` | `critical` | Deploy and manage vLLM for high-throughput LLM inference. Configure continuous |
 | `windows-server` | `critical` | Administer Windows Server systems. Manage IIS, Active Directory, and |
+| `wizard` | `critical` | Generate an interactive bash wizard that walks a human through steps only the... |
 
 ### DEVTOOLS (6 skills)
 
@@ -1988,7 +1992,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `etsy-shop-sales-history` | `critical` | Read Etsy shop sales counters, deltas, and breakout flags from Apify Actor pu... |
 | `woo-guard` | `critical` | Review generated or changed WooCommerce extensions, payment and shipping inte... |
 
-### EDUCATION (5 skills)
+### EDUCATION (6 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1996,6 +2000,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `learn` | `safe` | Help a user learn a topic through adaptive tutoring, lesson planning, practic... |
 | `lesson-generator` | `safe` | Build compact, standalone multi-lesson course artifacts with lesson navigatio... |
 | `puzzle-activity-planner` | `safe` | Plan puzzle-based activities for classrooms, parties, and events with pre-con... |
+| `scaffold-exercises` | `safe` | Create exercise directory structures with sections, problems, solutions, and ... |
 | `teach` | `safe` | Teach the user a new skill or concept, within this workspace. |
 
 ### ENGINEERING (21 skills)
@@ -2725,7 +2730,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | :--- | :---: | :--- |
 | `idea-os` | `safe` | Five-phase pipeline (triage → clarify → research → PRD → plan) that turns a r... |
 
-### PRODUCTIVITY (61 skills)
+### PRODUCTIVITY (65 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2779,6 +2784,8 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `ppl-personal-crm` | `critical` | Uses the ppl personal CRM over MCP to prepare for conversations, recall facts... |
 | `project-memory-log` | `critical` | Maintain one operation log and one deduplicated document catalog for long-run... |
 | `read-all-adrs` | `safe` | Read every ADR in a project before summarizing architectural context or decis... |
+| `research` | `safe` | Investigate a question against high-trust primary sources and capture the fin... |
+| `retro` | `safe` | Conduct a retrospective on a coding session. |
 | `rich-elicitation` | `none` | Asks clarifying questions in multiple rounds before starting ambiguous tasks.... |
 | `session-handoff` | `safe` | Use when context approaches capacity, before /clear or /compact, when switchi... |
 | `setup-help` | `safe` | Walk a user through setup or installation one step at a time with the remaini... |
@@ -2786,12 +2793,14 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `taasky` | `critical` | Negotiate terms with another person or their agent through the hosted Taasky ... |
 | `telegram-bot-messaging` | `critical` | Send Telegram messages, files, and alerts via bot API; ask questions with inl... |
 | `time-ledger` | `critical` | Natural-language time tracking: parse what the user says they did into Activi... |
+| `to-questionnaire` | `safe` | Turn a decision you can't fully answer into a questionnaire for someone else ... |
 | `trading-ledger` | `critical` | A trading journal that captures the decision, not just the fill: thesis, plan... |
 | `unpaid-intern` | `critical` | A free second brain for work in plain markdown files the user owns. Turns tra... |
 | `usage-engineer` | `critical` | Cut wasted tokens in coding-agent sessions: compact long logs, stop identical... |
+| `wait-what` | `safe` | Stop. That last message did not land: re-pitch it. |
 | `workorai` | `critical` | WorkorAI talent-marketplace skill: candidates search jobs and manage applicat... |
 
-### PROJECT-MANAGEMENT (31 skills)
+### PROJECT-MANAGEMENT (35 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2810,6 +2819,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `miro-automation` | `critical` | Automate Miro tasks via Rube MCP (Composio): boards, items, sticky notes, fra... |
 | `monday-automation` | `critical` | Automate Monday.com work management including boards, items, columns, groups,... |
 | `plan-ledger-tasks-yylo` | `critical` | Create a concise Product Development Requirement and one or more implementati... |
+| `pr` | `safe` | Use when writing a PR body. |
 | `progressive-estimation` | `safe` | Estimate AI-assisted and hybrid human+agent development work with explicit PE... |
 | `project-skill-audit` | `safe` | Audit a project and recommend the highest-value skills to add or update. |
 | `project-state-governor` | `critical` | Govern evidence-backed canonical project state across sessions, branches, rev... |
@@ -2820,9 +2830,12 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `team-collaboration-standup-notes` | `critical` | You are an expert team communication specialist focused on async-first standu... |
 | `to-issues` | `safe` | Break a plan, spec, or PRD into independently-grabbable issues on the project... |
 | `to-prd` | `safe` | Turn the current conversation into a PRD and publish it to the project issue ... |
+| `to-spec` | `critical` | Turn the current conversation into a spec and publish it to the project issue... |
+| `to-tickets` | `critical` | Break a plan, spec, or the current conversation into a set of tracer-bullet t... |
 | `todoist-automation` | `critical` | Automate Todoist task management, projects, sections, filtering, and bulk ope... |
 | `trello-automation` | `critical` | Automate Trello boards, cards, and workflows via Rube MCP (Composio). Create ... |
 | `understand-project-yylo` | `safe` | Inspect the current product architecture, dependencies, and validation |
+| `wayfinder` | `critical` | Plan a huge chunk of work (more than one agent session can hold) as a shared ... |
 | `wiki-yylo` | `safe` | Use YYLO Ledger wiki Records as durable project knowledge. Search before |
 | `workflow-yylo` | `safe` | Create and maintain validated YYLO Ledger workflow Records while keeping |
 | `wrike-automation` | `critical` | Automate Wrike project management via Rube MCP (Composio): create tasks/folde... |
@@ -3285,10 +3298,11 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `takeout-coupon` | `critical` | Call takeout coupon API to fetch hidden coupon lists, red packets and aggrega... |
 | `trip-coupon` | `critical` | Call trip/travel coupon API to fetch travel coupons including DiDi ride-haili... |
 
-### SKILL-AUTHORING (2 skills)
+### SKILL-AUTHORING (3 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
+| `writing-for-agents` | `safe` | Writing documents for agents. Use when creating or editing skills, or modifyi... |
 | `writing-great-skills` | `safe` | Reference for writing and editing skills well — the vocabulary and principles... |
 | `yao-meta-skill` | `critical` | Create, refactor, evaluate, and package agent skills from workflows, prompts,... |
 
@@ -3335,7 +3349,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `test-automator` | `critical` | Master AI-powered test automation with modern frameworks, self-healing tests,... |
 | `webapp-testing` | `critical` | Toolkit for interacting with and testing local web applications using Playwri... |
 
-### TESTING (50 skills)
+### TESTING (51 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -3359,6 +3373,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `k6-load-testing` | `safe` | Comprehensive k6 load testing skill for API, browser, and scalability testing... |
 | `lambdatest-agent-skills` | `safe` | Production-grade test automation skills for 46 frameworks across E2E, unit, m... |
 | `mailtrap-testing-with-sandbox` | `safe` | Capture outbound email in Mailtrap Email Sandbox for development, staging, CI... |
+| `migrate-to-shoehorn` | `safe` | Migrate test files from `as` type assertions to @total-typescript/shoehorn. U... |
 | `mock-hunter` | `critical` | Audit a live web page in five phases (catalog, click, trace, classify, report... |
 | `network-101` | `offensive` | Configure and test common network services (HTTP, HTTPS, SNMP, SMB) for penet... |
 | `oneroster-csv-validator` | `safe` | Validates 1EdTech / IMS Global OneRoster v1.1 and v1.2 CSV roster sets: manif... |
@@ -3516,7 +3531,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `web-artifacts-builder` | `critical` | Suite of tools for creating elaborate, multi-component claude.ai HTML artifac... |
 | `webdriverio-skill` | `critical` | Generates WebdriverIO (WDIO) automation tests in JavaScript or TypeScript. Su... |
 
-### WORKFLOW (71 skills)
+### WORKFLOW (72 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -3554,6 +3569,7 @@ Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `full-stack-orchestration-full-stack-feature` | `critical` | Use when working with full stack orchestration full stack feature |
 | `gh-review-requests` | `safe` | Fetch unread GitHub notifications for open PRs where review is requested from... |
 | `git-advanced-workflows` | `critical` | Master advanced Git techniques to maintain clean history, collaborate effecti... |
+| `git-guardrails-claude-code` | `critical` | Set up Claude Code hooks to block dangerous git commands (push, reset --hard,... |
 | `git-hooks-automation` | `safe` | Master Git hooks setup with Husky, lint-staged, pre-commit framework, and com... |
 | `git-pr-review` | `safe` | Generate a concise and structured PR description from commit history with min... |
 | `git-pr-workflows-git-workflow` | `critical` | Orchestrate review, tests, commits, branch pushes, and pull-request creation ... |
