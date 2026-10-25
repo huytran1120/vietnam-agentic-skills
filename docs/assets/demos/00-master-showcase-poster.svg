@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="mesh-bg" cx="50%" cy="0%" r="85%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#0e172a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#060911" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="cyan-glow" cx="85%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#060911" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purple-glow" cx="15%" cy="70%" r="40%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#060911" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="#060911"/>
+  <rect width="1200" height="630" fill="url(#mesh-bg)"/>
+  <rect width="1200" height="630" fill="url(#cyan-glow)"/>
+  <rect width="1200" height="630" fill="url(#purple-glow)"/>
+
+  <!-- Technical Grid Overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="90" x2="1200" y2="90"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- Main Outer Frame -->
+  <rect x="30" y="30" width="1140" height="570" rx="24" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Top Announcement Badge -->
+  <g transform="translate(60, 60)">
+    <rect width="360" height="34" rx="17" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="20" cy="17" r="5" fill="#38bdf8"/>
+    <text x="35" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#bae6fd" letter-spacing="1">VIETNAM AGENTIC SKILLS (VAS) • v1.3</text>
+  </g>
+
+  <g transform="translate(920, 60)">
+    <rect width="220" height="34" rx="17" fill="#047857" fill-opacity="0.25" stroke="#10b981" stroke-width="1"/>
+    <circle cx="20" cy="17" r="4" fill="#34d399"/>
+    <text x="34" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#6ee7b7">100% ZERO-NPX • PYTHON 3</text>
+  </g>
+
+  <!-- Big Title -->
+  <text x="60" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="url(#title-grad)" letter-spacing="-1">
+    TOP 10 SIÊU KỸ NĂNG CHO AI CODING AGENTS
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="500" fill="#94a3b8">
+    Bộ cẩm nang thực chiến: Thiết Kế UI/UX • Đồ Họa 3D • Video Bằng Code • Sơ Đồ Kiến Trúc &amp; Cloud
+  </text>
+
+  <!-- 10 Skills Feature Grid -->
+  <!-- Row 1 (5 items) -->
+  <g transform="translate(60, 220)">
+    <!-- Item 1: landing-page-design -->
+    <g transform="translate(0, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#3b82f6" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#1e3a8a" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#60a5fa" text-anchor="middle">✦</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#38bdf8">HOT • CONVERSION</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">landing-page-design</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">High-Converting Landing</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">Fluid Island Nav &amp; Nested Radii</text>
+    </g>
+
+    <!-- Item 2: ui-ux-pro-max -->
+    <g transform="translate(227, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#78350f" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#fbbf24" text-anchor="middle">★</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#f59e0b">⭐ 139K STARS</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">ui-ux-pro-max</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Design System &amp; Palette</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">79 styles • 192 palettes • WCAG</text>
+    </g>
+
+    <!-- Item 3: impeccable -->
+    <g transform="translate(454, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#ef4444" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#7f1d1d" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#f87171" text-anchor="middle">🛡️</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#ef4444">⭐ 86K STARS</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">impeccable</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Anti AI-Slop Suite</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">62 checks • 30+ Senior Modes</text>
+    </g>
+
+    <!-- Item 4: blender-mcp & threejs -->
+    <g transform="translate(681, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#ea580c" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#7c2d12" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#fb923c" text-anchor="middle">🧊</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#ea580c">⭐ 51K+ COMBINED</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">blender-mcp + 3js</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Blender 3D &amp; Three.js</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">Prompt modeling &amp; 2D-to-3D</text>
+    </g>
+
+    <!-- Item 5: video & motion -->
+    <g transform="translate(908, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#d946ef" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#701a75" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#f472b6" text-anchor="middle">🎬</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#e879f9">⭐ 150K+ ECOSYSTEM</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">remotion + hyperframes</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Code-Only Video</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">React video • 152 shot recipes</text>
+    </g>
+  </g>
+
+  <!-- Row 2 (5 items) -->
+  <g transform="translate(60, 345)">
+    <!-- Item 6: diagram-design -->
+    <g transform="translate(0, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#312e81" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#818cf8" text-anchor="middle">📊</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#818cf8">⭐ 60K STARS</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">diagram-design</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Cloud &amp; Arch Diagrams</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">45 types • Single HTML+SVG</text>
+    </g>
+
+    <!-- Item 7: chrome-devtools -->
+    <g transform="translate(227, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#0c4a6e" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#38bdf8" text-anchor="middle">🛠️</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#38bdf8">GOOGLE OFFICIAL</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">chrome-devtools</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">DevTools MCP Auto</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">LCP optimization • Memory leak</text>
+    </g>
+
+    <!-- Item 8: bigquery-sql -->
+    <g transform="translate(454, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#2563eb" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#1e3a8a" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#60a5fa" text-anchor="middle">⚡</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#60a5fa">DATA AGENT KIT</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">bigquery-sql</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">BigQuery Performance</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">Partitioning • Slot-ms reduction</text>
+    </g>
+
+    <!-- Item 9: firebase-firestore -->
+    <g transform="translate(681, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#ea580c" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#7c2d12" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#fb923c" text-anchor="middle">🔒</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#fb923c">FIREBASE SUITE</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">firebase-firestore</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Firestore Rules Auditor</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">Zero privilege escalation audit</text>
+    </g>
+
+    <!-- Item 10: alphafold-fetch -->
+    <g transform="translate(908, 0)">
+      <rect width="212" height="110" rx="14" fill="url(#card-grad)" stroke="#8b5cf6" stroke-width="1.2" stroke-opacity="0.4"/>
+      <rect x="12" y="12" width="28" height="28" rx="8" fill="#4c1d95" fill-opacity="0.8"/>
+      <text x="26" y="31" font-size="14" fill="#c084fc" text-anchor="middle">🧬</text>
+      <text x="48" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700" fill="#c084fc">SCIENCE PLUGIN</text>
+      <text x="48" y="37" font-family="monospace" font-size="10" font-weight="600" fill="#94a3b8">alphafold-fetch</text>
+      <text x="12" y="68" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#ffffff">AlphaFold 3D Science</text>
+      <text x="12" y="86" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#94a3b8">pLDDT score • Mol* Viewer</text>
+    </g>
+  </g>
+
+  <!-- Supported AI Platforms Bar -->
+  <g transform="translate(60, 480)">
+    <rect width="1080" height="85" rx="16" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Platform Pills -->
+    <text x="25" y="30" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#94a3b8">TƯƠNG THÍCH ĐA NỀN TẢNG:</text>
+    <text x="25" y="60" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" fill="#38bdf8">
+      Google Antigravity <tspan fill="#64748b">•</tspan> OpenAI Codex <tspan fill="#64748b">•</tspan> Claude Code <tspan fill="#64748b">•</tspan> Cursor IDE <tspan fill="#64748b">•</tspan> Windsurf <tspan fill="#64748b">•</tspan> Cline <tspan fill="#64748b">•</tspan> GitHub Copilot
+    </text>
+
+    <!-- Author & Link on the right -->
+    <text x="1055" y="32" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" text-anchor="end">
+      Tác giả &amp; Duy trì: <tspan fill="#60a5fa" font-weight="700">Huy Tran (@huytran1120)</tspan>
+    </text>
+    <text x="1055" y="60" font-family="monospace" font-size="13" font-weight="600" fill="#10b981" text-anchor="end">
+      https://huytran1120.github.io/vietnam-agentic-skills/
+    </text>
+  </g>
+</svg>
