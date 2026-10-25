@@ -1,0 +1,42 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0D1117" stroke="#21262D" stroke-width="1.5"/>
+  
+  <rect x="40" y="30" width="145" height="26" rx="13" fill="#DC2626" fill-opacity="0.2" stroke="#EF4444" stroke-width="1"/>
+  <text x="112" y="47" fill="#FCA5A5" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">86K ★ IMPECCABLE</text>
+  
+  <text x="40" y="90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Anti AI-Slop Design System</text>
+  <text x="40" y="114" fill="#8B949E" font-family="system-ui, sans-serif" font-size="13">62 Automated Craft Audits • Eliminating Cliché AI Gradients, Bad Contrast &amp; Weak States</text>
+
+  <!-- Before vs After Comparison Grid -->
+  <g transform="translate(40, 140)">
+    <!-- Bad: AI-Slop -->
+    <rect x="0" y="0" width="345" height="265" rx="12" fill="#161B22" stroke="#EF4444" stroke-width="1" stroke-dasharray="4 4"/>
+    <rect x="16" y="16" width="95" height="22" rx="11" fill="#991B1B" fill-opacity="0.4"/>
+    <text x="63" y="31" fill="#FCA5A5" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">✕ GENERIC AI-SLOP</text>
+    
+    <text x="20" y="68" fill="#D1D5DB" font-family="system-ui, sans-serif" font-size="14" font-weight="600">"Unleash Next-Gen Seamless Solutions"</text>
+    <rect x="20" y="82" width="305" height="60" rx="8" fill="#8B5CF6" fill-opacity="0.2" stroke="#A855F7" stroke-width="1"/>
+    <text x="32" y="104" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="11">✕ Cliché purple-blue mesh gradient background</text>
+    <text x="32" y="122" fill="#E9D5FF" font-family="system-ui, sans-serif" font-size="11">✕ Arbitrary text-[19px], missing hover/active states</text>
+    <text x="20" y="164" fill="#9CA3AF" font-family="monospace" font-size="11">• Vague outcomes: "save time", "boost productivity"</text>
+    <text x="20" y="184" fill="#9CA3AF" font-family="monospace" font-size="11">• Lorem Ipsum and fake round stats (99.99%)</text>
+    <text x="20" y="204" fill="#9CA3AF" font-family="monospace" font-size="11">• Competing CTAs above fold without clear focus</text>
+    <rect x="20" y="222" width="130" height="26" rx="6" fill="#374151"/>
+    <text x="85" y="239" fill="#D1D5DB" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Submit</text>
+
+    <!-- Good: Impeccable Craft -->
+    <rect x="375" y="0" width="345" height="265" rx="12" fill="#161B22" stroke="#10B981" stroke-width="1.5"/>
+    <rect x="391" y="16" width="110" height="22" rx="11" fill="#065F46" fill-opacity="0.4"/>
+    <text x="446" y="31" fill="#6EE7B7" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">✓ IMPECCABLE CRAFT</text>
+    
+    <text x="391" y="68" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="800">"Cut Monthly Cloud Invoices by 42%"</text>
+    <rect x="391" y="82" width="310" height="60" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="403" y="104" fill="#34D399" font-family="system-ui, sans-serif" font-size="11">✓ Flat dark surface: #0a0d14, text gradient hero</text>
+    <text x="403" y="122" fill="#34D399" font-family="system-ui, sans-serif" font-size="11">✓ Tailwind step-snapped scales &amp; tabular-nums</text>
+    <text x="391" y="164" fill="#E5E7EB" font-family="monospace" font-size="11">• Concrete numbers: ,200 saved across 18 clusters</text>
+    <text x="391" y="184" fill="#E5E7EB" font-family="monospace" font-size="11">• Full states: hover, focus-ring, skeleton loading</text>
+    <text x="391" y="204" fill="#E5E7EB" font-family="monospace" font-size="11">• Single action: "Start Free Sandbox Benchmark"</text>
+    <rect x="391" y="222" width="190" height="28" rx="6" fill="#2563EB"/>
+    <text x="486" y="240" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Run Benchmark Today →</text>
+  </g>
+</svg>

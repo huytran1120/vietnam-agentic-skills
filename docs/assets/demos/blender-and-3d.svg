@@ -1,0 +1,52 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0F1117" stroke="#1F2430" stroke-width="1.5"/>
+  
+  <rect x="40" y="30" width="170" height="26" rx="13" fill="#EA580C" fill-opacity="0.2" stroke="#F97316" stroke-width="1"/>
+  <text x="125" y="47" fill="#FDBA74" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">BLENDER MCP &amp; THREE.JS</text>
+  
+  <text x="40" y="90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Prompt-Driven 3D Modeling &amp; WebGL</text>
+  <text x="40" y="114" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">Control Blender via LLM Tools • Procedural 2D Reference Image to Three.js Meshes</text>
+
+  <!-- 3D Pipeline Visual -->
+  <g transform="translate(40, 140)">
+    <!-- Panel 1: Prompt Input -->
+    <rect x="0" y="0" width="225" height="260" rx="12" fill="#181B24" stroke="#2A3040"/>
+    <text x="16" y="28" fill="#F97316" font-family="monospace" font-size="11" font-weight="bold">1. MCP TOOL CALL</text>
+    <rect x="14" y="42" width="197" height="80" rx="8" fill="#0F1117" stroke="#2A3040"/>
+    <text x="24" y="64" fill="#E2E8F0" font-family="monospace" font-size="10">execute_blender_code({</text>
+    <text x="32" y="80" fill="#38BDF8" font-family="monospace" font-size="10">"shape": "cyber_drone",</text>
+    <text x="32" y="96" fill="#38BDF8" font-family="monospace" font-size="10">"material": "metallic_pbr",</text>
+    <text x="32" y="112" fill="#38BDF8" font-family="monospace" font-size="10">"bevel": 0.04, "subsurf": 2</text>
+    <text x="24" y="128" fill="#E2E8F0" font-family="monospace" font-size="10">})</text>
+    <text x="16" y="160" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Direct Python API execution inside Blender viewport via Model Context Protocol socket.</text>
+
+    <!-- Arrow -->
+    <text x="233" y="135" fill="#F97316" font-size="18" font-weight="bold">→</text>
+
+    <!-- Panel 2: 3D Wireframe / Modeling -->
+    <rect x="248" y="0" width="225" height="260" rx="12" fill="#181B24" stroke="#2A3040"/>
+    <text x="264" y="28" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="bold">2. 3D SCENE GENERATION</text>
+    <!-- Geometric 3D Polygon Wireframe -->
+    <path d="M360 65 L415 95 L415 165 L360 195 L305 165 L305 95 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    <path d="M360 65 L360 135 L415 165 M360 135 L305 165" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <circle cx="360" cy="135" r="4" fill="#F97316"/>
+    <text x="264" y="225" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Blender 4.x Viewport</text>
+    <text x="264" y="242" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">PBR lighting, cameras &amp; modifiers</text>
+
+    <!-- Arrow -->
+    <text x="481" y="135" fill="#38BDF8" font-size="18" font-weight="bold">→</text>
+
+    <!-- Panel 3: img2threejs WebGL Output -->
+    <rect x="495" y="0" width="225" height="260" rx="12" fill="#181B24" stroke="#2A3040"/>
+    <text x="511" y="28" fill="#10B981" font-family="monospace" font-size="11" font-weight="bold">3. THREE.JS EXPORT</text>
+    <rect x="509" y="42" width="197" height="130" rx="8" fill="#020617" stroke="#1E293B"/>
+    <text x="521" y="64" fill="#A5B4FC" font-family="monospace" font-size="10">const mesh = new THREE.Mesh(</text>
+    <text x="529" y="80" fill="#93C5FD" font-family="monospace" font-size="10">  proceduralGeometry,</text>
+    <text x="529" y="96" fill="#93C5FD" font-family="monospace" font-size="10">  customShaderMaterial</text>
+    <text x="521" y="112" fill="#A5B4FC" font-family="monospace" font-size="10">);</text>
+    <text x="521" y="132" fill="#34D399" font-family="monospace" font-size="10">mesh.rotation.y += 0.01;</text>
+    <text x="521" y="148" fill="#34D399" font-family="monospace" font-size="10">renderer.render(scene, cam);</text>
+    <text x="511" y="200" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Animation-Ready WebGL</text>
+    <text x="511" y="218" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Zero-bloat pure JavaScript Three.js</text>
+  </g>
+</svg>

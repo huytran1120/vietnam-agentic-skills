@@ -1,0 +1,53 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0B0F17" stroke="#1E293B" stroke-width="1.5"/>
+  
+  <!-- Header Badge -->
+  <rect x="40" y="30" width="160" height="26" rx="13" fill="#2563EB" fill-opacity="0.25" stroke="#60A5FA" stroke-width="1"/>
+  <text x="120" y="47" fill="#60A5FA" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">GOOGLE CLOUD DATA</text>
+  
+  <text x="40" y="90" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">BigQuery SQL &amp; Data Pipeline Suite</text>
+  <text x="40" y="114" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="13">Query Optimization • Partitioning Advisor • Dataform ELT • Spark Dataproc</text>
+
+  <!-- BigQuery Query Optimizer Card -->
+  <g transform="translate(40, 140)">
+    <rect x="0" y="0" width="720" height="180" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.2"/>
+    
+    <!-- Top bar -->
+    <path d="M0 12C0 5.37258 5.37258 0 12 0H708C714.627 0 720 5.37258 720 12V32H0V12Z" fill="#1E293B"/>
+    <text x="20" y="21" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="12" font-weight="700">BigQuery SQL Optimization Engine</text>
+    <rect x="580" y="6" width="125" height="20" rx="6" fill="#10B981" fill-opacity="0.2"/>
+    <text x="642" y="20" fill="#34D399" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">-84% BYTES BILLED</text>
+
+    <!-- Code & Metrics Columns -->
+    <g transform="translate(20, 48)">
+      <!-- Left: SQL Before & After -->
+      <rect x="0" y="0" width="450" height="115" rx="8" fill="#050811" stroke="#1E293B"/>
+      <text x="16" y="22" fill="#60A5FA" font-family="monospace" font-size="11">SELECT</text>
+      <text x="75" y="22" fill="#E2E8F0" font-family="monospace" font-size="11">user_id, SUM(amount) AS total_revenue</text>
+      <text x="16" y="44" fill="#60A5FA" font-family="monospace" font-size="11">FROM</text>
+      <text x="58" y="44" fill="#FACC15" font-family="monospace" font-size="11">`enterprise_dw.transactions_partitioned`</text>
+      <text x="16" y="66" fill="#60A5FA" font-family="monospace" font-size="11">WHERE</text>
+      <text x="65" y="66" fill="#A78BFA" font-family="monospace" font-size="11">_PARTITIONDATE &gt;= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)</text>
+      <text x="16" y="88" fill="#60A5FA" font-family="monospace" font-size="11">GROUP BY</text>
+      <text x="88" y="88" fill="#E2E8F0" font-family="monospace" font-size="11">1 CLUSTER BY user_id;</text>
+      <text x="16" y="106" fill="#10B981" font-family="monospace" font-size="10">✓ Optimized: Pruning unnecessary partitions</text>
+
+      <!-- Right: Cost & Speed Impact -->
+      <rect x="465" y="0" width="215" height="115" rx="8" fill="#020617" stroke="#1E293B"/>
+      <text x="480" y="24" fill="#94A3B8" font-family="monospace" font-size="10">Scan Size:</text>
+      <text x="480" y="42" fill="#F87171" font-family="monospace" font-size="11" text-decoration="line-through">142.8 GB</text>
+      <text x="550" y="42" fill="#34D399" font-family="monospace" font-size="12" font-weight="bold">➔ 22.4 GB</text>
+      
+      <text x="480" y="70" fill="#94A3B8" font-family="monospace" font-size="10">Execution Slot Time:</text>
+      <text x="480" y="88" fill="#38BDF8" font-family="monospace" font-size="12" font-weight="bold">2.4s (3.5x faster)</text>
+      <text x="480" y="106" fill="#10B981" font-family="monospace" font-size="10">Cost: $0.11 / query</text>
+    </g>
+  </g>
+
+  <!-- Terminal Command Footer -->
+  <g transform="translate(40, 340)">
+    <rect x="0" y="0" width="720" height="75" rx="12" fill="#0F172A" stroke="#1E293B"/>
+    <text x="20" y="30" fill="#38BDF8" font-family="monospace" font-size="12" font-weight="bold">$ ./vas install bigquery-sql --target workspace --mode link</text>
+    <text x="20" y="55" fill="#64748B" font-family="monospace" font-size="11">✓ Enterprise SQL rules injected: BigQuery, dbt-bigquery, Dataform, Dataproc Spark.</text>
+  </g>
+</svg>

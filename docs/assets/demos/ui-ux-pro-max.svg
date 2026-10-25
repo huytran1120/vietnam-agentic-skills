@@ -1,0 +1,52 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" rx="16" fill="#0B0F17" stroke="#1E293B" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <rect x="40" y="30" width="140" height="26" rx="13" fill="#4338CA" fill-opacity="0.3" stroke="#6366F1" stroke-width="1"/>
+  <text x="110" y="47" fill="#A5B4FC" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">139K ★ UI UX PRO MAX</text>
+  
+  <text x="40" y="90" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800">Generative Design System Suite</text>
+  <text x="40" y="114" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13">79 Searchable Styles • 192 Curated Palettes • 74 Production Font Pairings</text>
+
+  <!-- Palettes & Style Grid -->
+  <g transform="translate(40, 140)">
+    <!-- Style Cards -->
+    <rect x="0" y="0" width="225" height="125" rx="12" fill="#1E293B" fill-opacity="0.6" stroke="#334155"/>
+    <text x="16" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Bento Grid Minimal</text>
+    <text x="16" y="46" fill="#94A3B8" font-family="monospace" font-size="10">font: Plus Jakarta Sans</text>
+    <circle cx="26" cy="75" r="12" fill="#0F172A" stroke="#475569"/>
+    <circle cx="56" cy="75" r="12" fill="#3B82F6"/>
+    <circle cx="86" cy="75" r="12" fill="#60A5FA"/>
+    <circle cx="116" cy="75" r="12" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="16" y="108" fill="#38BDF8" font-family="monospace" font-size="10">stack: Tailwind + Radix</text>
+
+    <!-- Style Card 2 -->
+    <rect x="245" y="0" width="225" height="125" rx="12" fill="#1E293B" fill-opacity="0.6" stroke="#334155"/>
+    <text x="261" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Neo-Brutalist High Contrast</text>
+    <text x="261" y="46" fill="#94A3B8" font-family="monospace" font-size="10">font: Space Grotesk</text>
+    <circle cx="271" cy="75" r="12" fill="#000000" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="301" cy="75" r="12" fill="#FFE600"/>
+    <circle cx="331" cy="75" r="12" fill="#FF5C00"/>
+    <circle cx="361" cy="75" r="12" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+    <text x="261" y="108" fill="#FACC15" font-family="monospace" font-size="10">stack: Shadcn / UI</text>
+
+    <!-- Style Card 3 -->
+    <rect x="490" y="0" width="230" height="125" rx="12" fill="#1E293B" fill-opacity="0.6" stroke="#334155"/>
+    <text x="506" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Cyberpunk Glow &amp; Glass</text>
+    <text x="506" y="46" fill="#94A3B8" font-family="monospace" font-size="10">font: Syne + JetBrains Mono</text>
+    <circle cx="516" cy="75" r="12" fill="#030712" stroke="#A855F7"/>
+    <circle cx="546" cy="75" r="12" fill="#A855F7"/>
+    <circle cx="576" cy="75" r="12" fill="#EC4899"/>
+    <circle cx="606" cy="75" r="12" fill="#22D3EE"/>
+    <text x="506" y="108" fill="#C084FC" font-family="monospace" font-size="10">stack: Framer Motion</text>
+  </g>
+
+  <!-- Interactive Spec Box -->
+  <g transform="translate(40, 285)">
+    <rect x="0" y="0" width="720" height="125" rx="12" fill="#0F172A" stroke="#1E293B"/>
+    <text x="20" y="32" fill="#38BDF8" font-family="monospace" font-size="12" font-weight="bold">$ python3 skills/ui-ux-pro-max/scripts/search.py "fintech dark dashboard"</text>
+    <rect x="20" y="48" width="680" height="62" rx="8" fill="#020617" stroke="#1E293B"/>
+    <text x="32" y="70" fill="#A5B4FC" font-family="monospace" font-size="11">Match: [Dark Luxury Fintech] • Style 42/79 • Palette: Platinum Gold (#D4AF37, #0B0F19)</text>
+    <text x="32" y="92" fill="#64748B" font-family="monospace" font-size="11">Typography: Cormorant Garamond (Headers) + Plus Jakarta Sans (UI Numbers) • Radius: 12px</text>
+  </g>
+</svg>
