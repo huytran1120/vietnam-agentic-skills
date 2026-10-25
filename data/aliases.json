@@ -280,6 +280,7 @@
     "docker-security": "docker-expert",
     "react-performance": "react-component-performance",
     "fastapi-best-practices": "fastapi-pro",
-    "nextjs-perf": "nextjs-best-practices"
+    "nextjs-perf": "nextjs-best-practices",
+    "ai-design-skills": "landing-page-design"
   }
 }

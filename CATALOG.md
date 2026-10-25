@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,904** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** danh mục chuyên biệt.
+Tổng hợp **2,905** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -48,7 +48,7 @@ Tổng hợp **2,904** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **database-processing** | 6 skills | `./vas install --category database-processing --target codex` |
 | **databases** | 3 skills | `./vas install --category databases --target codex` |
 | **debugging** | 4 skills | `./vas install --category debugging --target codex` |
-| **design** | 47 skills | `./vas install --category design --target codex` |
+| **design** | 48 skills | `./vas install --category design --target codex` |
 | **design-it** | 48 skills | `./vas install --category design-it --target codex` |
 | **developer-tools** | 9 skills | `./vas install --category developer-tools --target codex` |
 | **development** | 229 skills | `./vas install --category development --target codex` |
@@ -1410,7 +1410,7 @@ Tổng hợp **2,904** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `logic-locate` | `safe` | Locate the root cause of a CONFIRMED failure via backward-then-forward semi-f... |
 | `phase-gated-debugging` | `safe` | Use when debugging any bug. Enforces a 5-phase protocol where code edits are ... |
 
-### DESIGN (47 skills)
+### DESIGN (48 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1434,6 +1434,7 @@ Tổng hợp **2,904** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `favicon` | `critical` | Generate favicons from a source image |
 | `figma-automation` | `critical` | Automate Figma tasks via Rube MCP (Composio): files, components, design token... |
 | `free-design-resources` | `safe` | Design resource register: resource and provider, licence type, commercial-use... |
+| `landing-page-design` | `safe` | Complete system for building high converting landing pages: intake questions,... |
 | `logo-to-stickers` | `safe` | Turn a brand mark or existing IP into consistent, playful paper stickers with... |
 | `lookdev` | `safe` | Human-in-the-loop web studio to tune AI-generated output by eye. Stand up a l... |
 | `lookdev-auto` | `safe` | Automated visual tuning: a vision or video model rates rendered variants in a... |
