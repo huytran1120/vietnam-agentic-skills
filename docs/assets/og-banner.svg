@@ -29,7 +29,7 @@
   <text x="80" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="800" fill="url(#titleGrad)">Vietnam Agentic Skills (VAS)</text>
 
   <!-- Subtitle -->
-  <text x="80" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="500" fill="#cbd5e1">2,905+ Kỹ Năng Agentic Chuẩn Quốc Tế Cho Các AI Coding Agent</text>
+  <text x="80" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="500" fill="#cbd5e1">2,921+ Kỹ Năng Agentic Chuẩn Quốc Tế Cho Các AI Coding Agent</text>
   <text x="80" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="500" fill="#94a3b8">Google Antigravity • OpenAI Codex • Claude Code • Cursor • Windsurf • Cline • Copilot</text>
 
   <!-- Badges / Pillars -->
@@ -37,7 +37,7 @@
     <!-- Pill 1 -->
     <rect x="0" y="0" width="220" height="70" rx="14" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
     <text x="20" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">KỸ NĂNG CHUẨN</text>
-    <text x="20" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#ffffff">2,905+ Skills</text>
+    <text x="20" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#ffffff">2,921+ Skills</text>
 
     <!-- Pill 2 -->
     <rect x="240" y="0" width="220" height="70" rx="14" fill="#0b0f19" stroke="#334155" stroke-width="1"/>

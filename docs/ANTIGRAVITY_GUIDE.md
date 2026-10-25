@@ -1,6 +1,6 @@
 # Hướng Dẫn Sử Dụng Vietnam Agentic Skills (VAS) Cho Google Antigravity
 
-Vietnam Agentic Skills (VAS) được thiết kế và tối ưu hoá trực tiếp cho **Google Antigravity**, cho phép lập trình viên và AI agent dễ dàng khai thác hơn 2,650+ playbooks chuyên nghiệp mà **hoàn toàn không cần dùng `npx` hay cài đặt package Node.js cồng kềnh**.
+Vietnam Agentic Skills (VAS) được thiết kế và tối ưu hoá trực tiếp cho **Google Antigravity**, cho phép lập trình viên và AI agent dễ dàng khai thác hơn 2,921+ playbooks chuyên nghiệp mà **hoàn toàn không cần dùng `npx` hay cài đặt package Node.js cồng kềnh**.
 
 ---
 
@@ -25,7 +25,7 @@ flowchart TD
 ```
 
 ### Tại sao lại quan trọng?
-Nếu nạp cả 2,650+ file kỹ năng vào ngữ cảnh, token sẽ bị tràn ngay lập tức. Với cơ chế của Antigravity:
+Nếu nạp cả 2,921+ file kỹ năng vào ngữ cảnh, token sẽ bị tràn ngay lập tức. Với cơ chế của Antigravity:
 1. Bạn chỉ cần cài đặt (hoặc link) các kỹ năng bạn muốn vào `.agents/skills/` trong project hoặc `~/.gemini/antigravity/skills/` toàn cục.
 2. Antigravity chỉ quét tiêu đề và phần tóm tắt (`description`).
 3. Khi bạn yêu cầu thực hiện một tác vụ tương ứng, Antigravity tự động kích hoạt và làm theo đúng quy trình chuẩn trong file `SKILL.md`.

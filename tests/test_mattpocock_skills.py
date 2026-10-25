@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import io
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -100,9 +101,10 @@ class MattPocockCatalogTests(unittest.TestCase):
         for query in ("mattpocock/skills", "Matt Pocock"):
             with contextlib.redirect_stdout(io.StringIO()) as output:
                 VAS.cmd_search(Namespace(query=query, limit=100))
+            clean_output = re.sub(r"\x1b\[[0-9;]*m", "", output.getvalue())
             for skill_id in expected:
                 with self.subTest(query=query, skill_id=skill_id):
-                    self.assertIn(f". {skill_id}", output.getvalue())
+                    self.assertIn(f". {skill_id}", clean_output)
 
     def test_show_includes_author_source_and_license(self):
         with contextlib.redirect_stdout(io.StringIO()) as output:
