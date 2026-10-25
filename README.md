@@ -28,6 +28,8 @@
 
 > 🌐 **Live Web Explorer / Tra cứu trực tuyến**: [https://huytran1120.github.io/vietnam-agentic-skills/](https://huytran1120.github.io/vietnam-agentic-skills/)
 
+Giao diện web ưu tiên danh mục: tìm theo từ khóa/tác giả/nguồn, lọc danh mục, chọn agent và sao chép lệnh cài ngay trong kết quả. Số lượng lấy trực tiếp từ catalog; không có số lượt tải hoặc đánh giá giả. Website chỉ cung cấp lệnh, không tự cài vào máy. Chạy `python3 -m http.server 8765 --directory docs` để xem bản local. Kiểm tra giao diện: `node --test tests/pages.test.cjs`.
+
 ---
 
 <a id="vietnamese"></a>

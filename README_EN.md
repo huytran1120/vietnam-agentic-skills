@@ -28,6 +28,8 @@
 
 > 🌐 **Live Web Explorer**: [https://huytran1120.github.io/vietnam-agentic-skills/](https://huytran1120.github.io/vietnam-agentic-skills/)
 
+The catalog-first website supports keyword/author/source search, category filters, agent selection, and inline install commands. Counts come from the actual catalog; no download or rating figures are fabricated. The website copies commands, not installs software on your machine. Preview locally with `python3 -m http.server 8765 --directory docs`. Run the UI logic regressions with `node --test tests/pages.test.cjs`.
+
 ---
 
 ### 📌 Table of Contents

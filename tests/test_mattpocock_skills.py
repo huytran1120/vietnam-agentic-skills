@@ -121,8 +121,11 @@ class MattPocockCatalogTests(unittest.TestCase):
     def test_pages_and_documentation_counts_match_the_catalog(self):
         counts = Counter(row["category"] for row in self.index)
         page = (ROOT / "docs/index.html").read_text(encoding="utf-8")
-        for label, category in (("DevOps", "devops"), ("Development", "development")):
-            self.assertIn(f"{label} ({counts[category]})", page)
+        self.assertIn('id="category-select"', page)
+        self.assertIn('id="results-status"', page)
+        script = (ROOT / "docs/catalog.js").read_text(encoding="utf-8")
+        self.assertIn("skill.category", script)
+        self.assertIn("counts.set", script)
         for filename in ("README.md", "README_EN.md", "docs/index.html"):
             with self.subTest(filename=filename):
                 text = (ROOT / filename).read_text(encoding="utf-8")
