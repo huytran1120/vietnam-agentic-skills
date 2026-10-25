@@ -255,16 +255,16 @@ VAS includes **2,921+ skills** across **117 specialized categories**. Browse the
   <img src="docs/assets/demos/10-skills-demo-showcase.svg" alt="Top 10 High-End Demo Cards - Vietnam Agentic Skills" width="100%" />
 </p>
 
-* **landing-page-design**: High-converting landing page architecture & Fluid Island Nav
-* **ui-ux-pro-max**: Generative Design System, 192 product palettes & 74 font pairings
-* **impeccable**: Anti AI-slop design suite with 62 quantitative audit rules
-* **blender-mcp & img2threejs**: Natural language Blender 3D control & procedural Three.js
-* **video-shotcraft, hyperframes, remotion**: Programmatic video generation in React/HTML
-* **diagram-design**: Enterprise cloud architecture diagrams in single HTML+SVG
-* **chrome-devtools**: Automated browser debugging, LCP optimization, heap profiling & A11y
-* **bigquery-sql**: BigQuery query optimization, cost reduction & partition tuning
-* **firebase-firestore**: NoSQL data modeling & Firestore security rules red-team audit
-* **alphafold-fetch**: 3D biomolecular structure analysis & pLDDT confidence scoring
+* 🚀 **landing-page-design**: High-converting landing page architecture & Fluid Island Nav
+* 🎨 **ui-ux-pro-max**: Generative Design System, 192 product palettes & 74 font pairings
+* 🛡️ **impeccable**: Anti AI-slop design suite with 62 quantitative audit rules
+* 🧊 **blender-mcp & img2threejs**: Natural language Blender 3D control & procedural Three.js
+* 🎬 **video-shotcraft, hyperframes, remotion**: Programmatic video generation in React/HTML
+* 📊 **diagram-design**: Enterprise cloud architecture diagrams in single HTML+SVG
+* 🛠️ **chrome-devtools**: Automated browser debugging, LCP optimization, heap profiling & A11y
+* ⚡ **bigquery-sql**: BigQuery query optimization, cost reduction & partition tuning
+* 🔒 **firebase-firestore**: NoSQL data modeling & Firestore security rules red-team audit
+* 🧬 **alphafold-fetch**: 3D biomolecular structure analysis & pLDDT confidence scoring
 
 <details open>
 <summary><b>1. High-Converting Landing Page Architecture (<code>landing-page-design</code>)</b></summary>
