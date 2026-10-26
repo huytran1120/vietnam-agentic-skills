@@ -1,0 +1,60 @@
+name: CI Tests & Catalog Verification
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run Automated Tests & Index Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: ""
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify VAS CLI Execution
+        run: |
+          python3 --version
+          node --version
+          ./vas --help
+          ./vas status --target all
+          ./vas search security --limit 5
+
+      - name: Run Python Unit Tests (12 tests)
+        run: |
+          python3 tests/test_mattpocock_skills.py
+
+      - name: Run Web Catalog Integration Tests (18 tests)
+        run: |
+          node tests/pages.test.cjs
+
+      - name: Run Cloudflare Coverage Ledger Tests (31 tests)
+        run: |
+          node skills/cloudflare-security-audit/validate-coverage-ledger.test.cjs
+
+      - name: Run Cloudflare Findings Schema Tests (34 tests)
+        run: |
+          node skills/cloudflare-security-audit/validate-findings.test.cjs
+
+      - name: Verify Catalog & Index Sync Integrity
+        run: |
+          ./vas sync
+          git diff --exit-code skills_index.json docs/skills.min.json CATALOG.md
