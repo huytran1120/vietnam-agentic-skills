@@ -54,7 +54,8 @@ svg { flex-shrink: 0; }
 .site-header { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
 .header-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; gap: 12px; align-items: center; text-decoration: none; flex-shrink: 0; }
-.brand-mark { width: 42px; height: 42px; border-radius: 13px; color: white; background: #0756e8; display: grid; place-items: center; font-weight: 750; font-size: 21px; letter-spacing: -.06em; }
+.brand-mark { width: 84px; height: 34px; display: block; object-fit: contain; flex-shrink: 0; }
+:root[data-theme="dark"] .brand-mark { filter: brightness(0) invert(1); }
 .brand strong { font-size: 18px; letter-spacing: -.045em; display: block; }
 .brand small { display: block; font-size: 11px; letter-spacing: .03em; color: var(--muted); }
 .desktop-nav, .header-actions { display: flex; align-items: center; gap: 25px; }
@@ -255,7 +256,7 @@ select { appearance: none; min-height: 44px; border: 1px solid var(--line); bord
   .shell { padding-inline: 18px; }
   .header-inner { min-height: 68px; gap: 8px; }
   .brand { gap: 8px; }
-  .brand-mark { width: 35px; height: 35px; border-radius: 10px; font-size: 18px; }
+  .brand-mark { width: 58px; height: 26px; }
   .brand strong { font-size: 14px; }
   .brand small { font-size: 9px; }
   .header-actions { gap: 0; }
@@ -319,4 +320,11 @@ select { appearance: none; min-height: 44px; border: 1px solid var(--line); bord
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media (max-width: 380px) {
+  .brand { min-width: 0; }
+  .brand-mark { width: 48px; height: 24px; }
+  .brand strong { font-size: 12px; }
+  .brand small { display: none; }
+  .header-actions { flex-shrink: 0; }
 }
