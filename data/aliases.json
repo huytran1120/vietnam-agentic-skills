@@ -301,6 +301,8 @@
     "trader-broker": "day-trader-skill/trader-broker",
     "trader-alerts": "day-trader-skill/trader-alerts",
     "trader-analyst": "day-trader-skill/trader-analyst",
-    "trader-pelosi": "day-trader-skill/trader-pelosi"
+    "trader-pelosi": "day-trader-skill/trader-pelosi",
+    "ffmpeg": "ffmpeg-skill",
+    "ffmpeg-tools": "ffmpeg-skill"
   }
 }

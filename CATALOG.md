@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,934** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **2,935** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -77,7 +77,7 @@ Tổng hợp **2,934** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **lifestyle** | 1 skills | `./vas install --category lifestyle --target codex` |
 | **marketing** | 115 skills | `./vas install --category marketing --target codex` |
 | **mcp** | 8 skills | `./vas install --category mcp --target codex` |
-| **media** | 50 skills | `./vas install --category media --target codex` |
+| **media** | 51 skills | `./vas install --category media --target codex` |
 | **media-processing** | 1 skills | `./vas install --category media-processing --target codex` |
 | **memory** | 7 skills | `./vas install --category memory --target codex` |
 | **meta** | 38 skills | `./vas install --category meta --target codex` |
@@ -2489,7 +2489,7 @@ Tổng hợp **2,934** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `protect-mcp-governance` | `critical` | Agent governance skill for MCP tool calls — Cedar policy authoring, shadow-to... |
 | `serply-search-mcp` | `safe` | Search Google, Bing, Google News and Google Scholar, and read public pages, w... |
 
-### MEDIA (50 skills)
+### MEDIA (51 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2506,6 +2506,7 @@ Tổng hợp **2,934** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `beatra` | `critical` | Install and use the official AI Media Generator package, pinned by digest, fo... |
 | `beatra-ai-video-studio` | `critical` | Install and use the official Beatra AI Video Studio package, pinned by digest... |
 | `ecommerce-listing-image-set` | `critical` | Install and use the official Ecommerce Product Images package, pinned by dige... |
+| `ffmpeg-skill` | `safe` | Edit video and audio with local FFmpeg from natural-language requests: cut, t... |
 | `film-crew` | `safe` | Turn a one-line AI video idea into a shot list and per-shot, model-ready prom... |
 | `gemini-omni-flash-api` | `critical` | Use this skill for generative video editing, text-to-video, image-referenced ... |
 | `generate-nanobanana` | `critical` | Generate and edit images/video with Google's Gemini media models (Nano Banana... |

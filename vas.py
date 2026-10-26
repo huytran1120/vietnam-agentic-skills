@@ -4,7 +4,7 @@ Vietnam Agentic Skills (VAS) - CLI & Antigravity Installer
 Author: Huy Tran (https://github.com/huytran1120)
 License: MIT
 
-Zero-dependency tool to search, inspect, install, and manage 2,934+ agentic skills
+Zero-dependency tool to search, inspect, install, and manage 2,935+ agentic skills
 specifically designed for Google Antigravity and AI coding agents. No npm/npx required.
 """
 
