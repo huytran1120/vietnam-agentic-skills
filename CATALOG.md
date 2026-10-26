@@ -3020,7 +3020,7 @@ Tổng hợp **2,921** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `client-secret-exposure-audit` | `critical` | Audit a deployed web app for secrets exposed to the browser: hardcoded API ke... |
 | `cloud-iam-deep` | `offensive` | Cloud IAM red-team attack chain across AWS, Azure, GCP |
 | `cloud-k8s` | `offensive` | Authorized cloud, container, and Kubernetes security assessment: metadata SSR... |
-| `cloudflare-security-audit` | `offensive` | Audit authorized codebases for exploitable vulnerabilities using scoped recon... |
+| `cloudflare-security-audit` | `offensive` | Security guidance and vulnerability review for codebases, APIs, services, CLI... |
 | `constant-time-analysis` | `critical` | Analyze cryptographic code to detect operations that leak secret data through... |
 | `container-hardening` | `critical` | Secure Docker images and container runtime configurations. |
 | `container-scanning` | `critical` | Scan container images for vulnerabilities using Trivy, Grype, and cloud-native |

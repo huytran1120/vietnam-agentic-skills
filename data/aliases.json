@@ -282,6 +282,9 @@
     "fastapi-best-practices": "fastapi-pro",
     "nextjs-perf": "nextjs-best-practices",
     "ai-design-skills": "landing-page-design",
-    "alphafold-fetch": "alphafold-database-fetch-and-analyze"
+    "alphafold-fetch": "alphafold-database-fetch-and-analyze",
+    "security-audit-skill": "cloudflare-security-audit",
+    "cloudflare-security": "cloudflare-security-audit",
+    "cf-security-audit": "cloudflare-security-audit"
   }
 }

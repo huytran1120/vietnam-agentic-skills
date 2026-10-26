@@ -9790,13 +9790,21 @@
     "canonical_id": "cloudflare-security-audit",
     "name": "cloudflare-security-audit",
     "path": "skills/cloudflare-security-audit",
-    "description": "Audit authorized codebases for exploitable vulnerabilities using scoped reconnaissance, adversarial review, validation, and structured reporting.",
+    "description": "Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Uses Cloudflare's 6-phase review pipeline (Reconnaissance, Coverage-Led Hunting, Candidate Validation, and Structured Reporting).",
     "category": "security",
-    "tags": [],
+    "tags": [
+      "security",
+      "audit",
+      "cloudflare",
+      "vulnerability",
+      "pentest",
+      "code-review",
+      "appsec"
+    ],
     "risk": "offensive",
     "source": "community",
     "source_repo": "cloudflare/security-audit-skill",
-    "author": "community"
+    "author": "Cloudflare"
   },
   {
     "id": "cloudflare-workers",
