@@ -22,16 +22,16 @@
   ];
   const recommended = ['ui-ux-pro-max', 'code-review', 'cloudflare-security-audit', 'impeccable', 'webapp-testing', 'frontend-design', 'research', 'landing-page-design', 'writing-for-agents', 'setup-pre-commit', 'web-performance-optimization'];
   const showcases = [
-    ['landing-page-design', 'Landing page design', 'Xây dựng trang đích có bố cục rõ ràng và tập trung vào chuyển đổi.', 'landing-page-design-v2.jpg', 'design'],
-    ['ui-ux-pro-max', 'UI/UX & design systems', 'Thiết kế giao diện nhất quán, từ bảng màu đến component.', 'ui-ux-pro-max-v2.jpg', 'design'],
-    ['impeccable', 'Tinh chỉnh giao diện', 'Rà soát và hoàn thiện typography, khoảng cách và trải nghiệm.', 'impeccable-v2.jpg', 'design'],
-    ['blender-mcp', '3D & mô hình tương tác', 'Khám phá quy trình dựng hình và làm việc với scene trong Blender.', 'blender-and-3d-v2.jpg', '3d'],
-    ['hyperframes', 'Video & motion', 'Tạo video bằng HTML và điều khiển chuyển động theo timeline.', 'video-and-motion-v2.jpg', 'video'],
-    ['diagram-design', 'Sơ đồ & kiến trúc', 'Biến hệ thống và luồng xử lý thành sơ đồ dễ theo dõi.', 'diagram-design-v2.jpg', 'cloud'],
-    ['chrome-devtools', 'Debug & performance', 'Kiểm tra website, tìm lỗi và cải thiện trải nghiệm trình duyệt.', 'chrome-devtools-v2.jpg', 'cloud'],
-    ['bigquery-sql', 'SQL & data pipelines', 'Viết truy vấn BigQuery hiệu quả và tối ưu chi phí xử lý dữ liệu.', 'bigquery-sql-v2.jpg', 'cloud'],
-    ['firebase-firestore', 'Bảo mật Firestore', 'Kiểm tra security rules và tổ chức dữ liệu cho Firestore.', 'firebase-firestore-v2.jpg', 'cloud'],
-    ['alphafold-database-fetch-and-analyze', 'Cấu trúc protein & AI', 'Tra cứu và phân tích cấu trúc protein từ AlphaFold.', 'alphafold-science-v2.jpg', 'cloud']
+    ['landing-page-design', '🚀 landing-page-design', 'Kiến trúc trang đích chuyển đổi cao & Fluid Nav', 'landing-page-design.svg', 'design'],
+    ['ui-ux-pro-max', '🎨 ui-ux-pro-max', 'Hệ thống Design System, 192 bảng màu & font pairing', 'ui-ux-pro-max.svg', 'design'],
+    ['impeccable', '🛡️ impeccable', 'Bộ công cụ chống AI-slop với 62 quy tắc định lượng', 'impeccable.svg', 'design'],
+    ['blender-mcp', '🧊 blender-mcp & img2threejs', 'Điều khiển Blender 3D & Three.js thuần code', 'blender-and-3d.svg', '3d'],
+    ['hyperframes', '🎬 video-shotcraft, hyperframes, remotion', 'Lập trình video trong React/HTML', 'video-and-motion.svg', 'video'],
+    ['diagram-design', '📊 diagram-design', 'Sơ đồ kiến trúc cloud HTML+SVG', 'diagram-design.svg', 'cloud'],
+    ['chrome-devtools', '🛠️ chrome-devtools', 'Gỡ lỗi LCP, rò rỉ bộ nhớ & A11y', 'chrome-devtools.svg', 'cloud'],
+    ['bigquery-sql', '⚡ bigquery-sql', 'Tối ưu hóa chi phí & hiệu năng BigQuery', 'bigquery-sql.svg', 'cloud'],
+    ['firebase-firestore', '🔒 firebase-firestore', 'Kiểm toán bảo mật rules & data model', 'firebase-firestore.svg', 'cloud'],
+    ['alphafold-database-fetch-and-analyze', '🧬 alphafold-fetch', 'Phân tích sinh học phân tử 3D & pLDDT', 'alphafold-science.svg', 'cloud']
   ];
 
   function normalize(value) {
@@ -310,12 +310,9 @@
     syncUrl();
   }
   function renderShowcase(category = 'all') {
-    const labels = { design: 'UI/UX & Design', '3d': '3D & Three.js', video: 'Video & motion', cloud: 'Cloud & dữ liệu' };
-    byId('showcase-grid').innerHTML = showcases.filter(item => category === 'all' || item[4] === category).map(([id, name, description, image, group]) => `
-      <article class="showcase-card"><a class="showcase-link" href="?skill=${encodeURIComponent(id)}#catalog" data-discover="${id}">
-      <img src="./assets/demos/${image}" alt="" width="800" height="500" loading="lazy" decoding="async">
-      <div class="showcase-content"><span class="showcase-category">${labels[group]}</span><h3>${escapeHtml(name)}</h3><p>${escapeHtml(description)}</p>
-      <div class="showcase-footer"><code>${escapeHtml(id)}</code><span class="showcase-action">Khám phá skill ${icon('arrow')}</span></div></div></a></article>`).join('');
+    byId('showcase-grid').innerHTML = showcases.filter(item => category === 'all' || item[4] === category).map(([id, name, description, image]) => `
+      <article class="showcase-card"><img src="./assets/demos/${image}" alt="Minh họa ${escapeHtml(name)}" width="480" height="300" loading="lazy">
+      <h3><button data-discover="${id}">${name} <span aria-hidden="true">↗</span></button></h3><p>${description}</p></article>`).join('');
     document.querySelectorAll('[data-showcase]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showcase === category)));
   }
   async function loadCatalog() {
@@ -459,13 +456,6 @@
     }
   });
   document.addEventListener('click', event => {
-    const showcaseLink = event.target.closest('a[data-discover]');
-    if (showcaseLink) {
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
-      event.preventDefault();
-      discover(showcaseLink.dataset.discover);
-      return;
-    }
     const button = event.target.closest('button');
     if (!button) return;
     if (button.dataset.group) {

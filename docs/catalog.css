@@ -192,19 +192,11 @@ select { appearance: none; min-height: 44px; border: 1px solid var(--line); bord
 .section-heading { display: flex; justify-content: space-between; align-items: start; gap: 32px; margin-bottom: 20px; }
 .section-heading p, .quickstart > div > p, .faq > div > p { color: var(--muted); max-width: 65ch; font-size: 14px; margin-top: 10px; }
 .showcase-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
-.showcase-card { min-width: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; transition: border-color .16s, box-shadow .16s; }
-.showcase-card:hover, .showcase-card:focus-within { border-color: var(--selected-line); box-shadow: 0 6px 20px #1023470a; }
-.showcase-link { height: 100%; display: flex; flex-direction: column; text-decoration: none; }
-.showcase-link:focus-visible { outline-offset: -4px; }
-.showcase-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; background: #f5f7fa; border-bottom: 1px solid var(--line); }
-.showcase-content { padding: 16px; display: flex; flex-direction: column; flex: 1; min-width: 0; }
-.showcase-category { font-size: 11px; line-height: 1.4; font-weight: 600; color: var(--blue); margin-bottom: 8px; }
-.showcase-card h3 { font-size: 16px; line-height: 1.35; letter-spacing: -.02em; margin-bottom: 8px; }
-.showcase-card p { color: var(--muted); font-size: 13px; line-height: 1.6; margin-bottom: 18px; }
-.showcase-footer { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
-.showcase-footer code { display: block; font-size: 10px; color: var(--muted); overflow-wrap: anywhere; line-height: 1.5; margin-bottom: 8px; }
-.showcase-action { display: flex; align-items: center; justify-content: space-between; color: var(--blue); font-size: 12px; font-weight: 650; min-height: 32px; }
-.showcase-action .icon { width: 16px; height: 16px; }
+.showcase-card { min-width: 0; }
+.showcase-card img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: var(--soft); }
+.showcase-card button { display: block; text-align: left; border: 0; background: none; font-size: 13px; padding: 8px 0; min-height: 44px; color: var(--ink); font-weight: 650; }
+.showcase-card button:hover { color: var(--blue); }
+.showcase-card p { color: var(--muted); font-size: 12px; line-height: 1.6; }
 .steps { padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; margin: 28px 0 0; }
 .steps li > span { display: grid; place-items: center; border: 1px solid var(--line); width: 32px; height: 32px; border-radius: 50%; color: var(--blue); font-size: 12px; margin-bottom: 14px; }
 .steps h3 { font-size: 17px; }
@@ -335,12 +327,4 @@ select { appearance: none; min-height: 44px; border: 1px solid var(--line); bord
   .brand strong { font-size: 12px; }
   .brand small { display: none; }
   .header-actions { flex-shrink: 0; }
-}
-@media (max-width: 480px) {
-  .showcase-grid { grid-template-columns: minmax(0, 1fr); }
-  .showcase-card img { aspect-ratio: 16 / 9; }
-  .showcase-card h3 { font-size: 18px; }
-  .showcase-card p { font-size: 14px; }
-  .showcase-footer code { font-size: 12px; }
-  .showcase-action { font-size: 14px; min-height: 44px; }
 }
