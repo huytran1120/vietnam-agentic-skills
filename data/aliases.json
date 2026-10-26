@@ -287,6 +287,20 @@
     "cloudflare-security": "cloudflare-security-audit",
     "cf-security-audit": "cloudflare-security-audit",
     "skills-manager-cli": "skills-manager",
-    "skillsmanager": "skills-manager"
+    "skillsmanager": "skills-manager",
+    "day-trader": "day-trader-skill",
+    "daytrader": "day-trader-skill",
+    "day-trader-suite": "day-trader-skill",
+    "trader-scanner": "day-trader-skill/trader-scanner",
+    "trader-news": "day-trader-skill/trader-news",
+    "trader-entry": "day-trader-skill/trader-entry",
+    "trader-exit": "day-trader-skill/trader-exit",
+    "trader-timemachine": "day-trader-skill/trader-timemachine",
+    "trader-risk": "day-trader-skill/trader-risk",
+    "trader-budget": "day-trader-skill/trader-budget",
+    "trader-broker": "day-trader-skill/trader-broker",
+    "trader-alerts": "day-trader-skill/trader-alerts",
+    "trader-analyst": "day-trader-skill/trader-analyst",
+    "trader-pelosi": "day-trader-skill/trader-pelosi"
   }
 }

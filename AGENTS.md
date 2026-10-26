@@ -1,7 +1,7 @@
 # Vietnam Agentic Skills (VAS) - Instructions for AI Agents
 
 This repository is **Vietnam Agentic Skills (VAS)**, curated and maintained by **Huy Tran** (`huytran1120`).
-It serves as a comprehensive catalog of 2,922+ modular, agentic skills designed for **Google Antigravity, Claude Code, Cursor, Windsurf (Codeium), OpenAI Codex / OpenCode, Cline / Roo Code, and GitHub Copilot CLI**.
+It serves as a comprehensive catalog of 2,934+ modular, agentic skills designed for **Google Antigravity, Claude Code, Cursor, Windsurf (Codeium), OpenAI Codex / OpenCode, Cline / Roo Code, and GitHub Copilot CLI**.
 
 ## Golden Rules for Agents
 

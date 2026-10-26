@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,922** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **2,934** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -60,7 +60,7 @@ Tổng hợp **2,922** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **ecommerce** | 4 skills | `./vas install --category ecommerce --target codex` |
 | **education** | 6 skills | `./vas install --category education --target codex` |
 | **engineering** | 21 skills | `./vas install --category engineering --target codex` |
-| **finance** | 21 skills | `./vas install --category finance --target codex` |
+| **finance** | 33 skills | `./vas install --category finance --target codex` |
 | **framework** | 13 skills | `./vas install --category framework --target codex` |
 | **front-end** | 14 skills | `./vas install --category front-end --target codex` |
 | **frontend** | 45 skills | `./vas install --category frontend --target codex` |
@@ -2030,12 +2030,24 @@ Tổng hợp **2,922** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `web3-transaction-relayer-pool` | `safe` | Gasless transaction relayer node pool register: fee sponsorship limits, nonce... |
 | `zk-proof-verification-pipeline` | `safe` | Zero-knowledge cryptographic verification pipeline register: proving system, ... |
 
-### FINANCE (21 skills)
+### FINANCE (33 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
 | `axonx` | `critical` | Develop AxonX research plugins and operate quantitative research tasks throug... |
 | `calibrate-first` | `critical` | Measure a dataset's detection floor before reading any trading-signal result,... |
+| `day-trader-skill` | `safe` | Suite of 11 modular day trading skills for US equities — scan thousands of ch... |
+| `day-trader-skill/trader-alerts` | `safe` | Price Alerts. Rings when a price, a stop or the opening bell hits. Turns the ... |
+| `day-trader-skill/trader-analyst` | `safe` | The Earnings Analyst. Reads a company's reported numbers straight from SEC ED... |
+| `day-trader-skill/trader-broker` | `safe` | Order Executor. Sends approved orders to your broker, paper trading by defaul... |
+| `day-trader-skill/trader-budget` | `safe` | Budget Manager. Sizes every position to your budget and your max loss per tra... |
+| `day-trader-skill/trader-entry` | `safe` | Entry Timer. Watches a setup bar by bar and tells you the moment to get in. R... |
+| `day-trader-skill/trader-exit` | `safe` | Exit Planner. Sets your stop and your target before you enter, so you know wh... |
+| `day-trader-skill/trader-news` | `safe` | News Monitor. Tracks breaking news on every stock you watch and flags what mo... |
+| `day-trader-skill/trader-pelosi` | `safe` | The Pelosi Tracker. Watches the stock trades members of Congress must disclos... |
+| `day-trader-skill/trader-risk` | `safe` | Risk Manager. Checks every trade against your limits and stops anything over ... |
+| `day-trader-skill/trader-scanner` | `safe` | Chart Scanner. Scans thousands of charts for setups: opening-range breakouts,... |
+| `day-trader-skill/trader-timemachine` | `safe` | Time Machine. Replays every possible outcome of a trade before you risk a dol... |
 | `equibles` | `safe` | Query Equibles for US stock market data: SEC filing search, XBRL financial st... |
 | `fxmacrodata` | `safe` | Query FXMacroData for official-source macro indicators, release calendars, ce... |
 | `krexa` | `critical` | Turn a trading idea, post or video into fixed rules, backtest and paper-trade... |
