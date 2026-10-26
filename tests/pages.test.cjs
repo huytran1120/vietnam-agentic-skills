@@ -63,6 +63,54 @@ test('every agent generates the explicit target and link mode', () => {
   assert.equal(catalog.installCommand("test'; whoami", 'codex'), "./vas install 'test'\\''; whoami' --target codex --mode link");
 });
 
+test('project installation points at each agent folder and quotes shell-sensitive paths', () => {
+  for (const [target, folder] of Object.entries(catalog.targetFolders)) {
+    assert.equal(catalog.installCommand('code-review', target, { scope: 'project', projectPath: '/Projects/my app' }),
+      `./vas install code-review --target ${target} --mode link --dest '/Projects/my app/${folder}'`);
+  }
+  const all = catalog.installCommand('code-review', 'all', { scope: 'project', projectPath: '/Projects/app/' }).split('\n');
+  assert.equal(all.length, 7);
+  assert.ok(all.every(line => !line.includes('--target all') && line.includes('--dest /Projects/app/')));
+  assert.equal(catalog.installCommand('code-review', 'codex', { scope: 'project', projectPath: 'C:\\Projects\\my-app' }),
+    "./vas install code-review --target codex --mode link --dest 'C:/Projects/my-app/.codex/skills'");
+  const quoted = catalog.installCommand('code-review', 'codex', { scope: 'project', projectPath: "/Projects/it's $(whoami)" });
+  assert.ok(quoted.endsWith("--dest '/Projects/it'\\''s $(whoami)/.codex/skills'"));
+  for (const projectPath of ['', 'relative/path', '~/app', '/app\nmalicious']) {
+    assert.throws(() => catalog.installCommand('code-review', 'codex', { scope: 'project', projectPath }));
+  }
+});
+
+test('global installation uses supported CLI semantics and rejects global all', () => {
+  assert.equal(catalog.installCommand('code-review', 'codex', { scope: 'global' }), './vas install code-review --target codex --mode link --global');
+  assert.throws(() => catalog.installCommand('code-review', 'all', { scope: 'global' }));
+});
+
+test('search ranks exact names, name prefixes and tags before description matches', () => {
+  const fixtures = [
+    { id: 'a-description', category: 'general', description: 'docker frontend' },
+    { id: 'b-tags', category: 'general', tags: ['docker', 'front-end'] },
+    { id: 'docker-expert', category: 'devops' },
+    { id: 'docker', category: 'devops' }
+  ];
+  assert.deepEqual(catalog.filterSkills(fixtures, { query: 'docker' }).map(s => s.id), ['docker', 'docker-expert', 'b-tags', 'a-description']);
+  assert.deepEqual(catalog.filterSkills(fixtures, { query: 'front-end' }).map(s => s.id), ['b-tags']);
+  assert.deepEqual(catalog.filterSkills(fixtures, { query: 'frontend' }).map(s => s.id), ['a-description']);
+  assert.deepEqual(catalog.filterSkills(fixtures, { query: 'docker', sort: 'az' }).map(s => s.id), ['a-description', 'b-tags', 'docker', 'docker-expert']);
+});
+
+test('catalog links restore filters and skills without sharing local project paths', () => {
+  const state = { query: 'front-end design', selected: 'code-review', target: 'codex', group: 'web', category: 'frontend', sort: 'za', view: 'grid', projectPath: '/private/project', scope: 'project' };
+  const params = catalog.catalogParams(state);
+  assert.ok(!params.includes('private'));
+  const restored = catalog.readCatalogState(params);
+  for (const key of ['query', 'selected', 'target', 'group', 'category', 'sort', 'view']) assert.equal(restored[key], state[key]);
+  const invalid = catalog.readCatalogState('?agent=oops&group=oops&sort=oops&view=oops');
+  assert.equal(invalid.target, 'antigravity');
+  assert.equal(invalid.group, 'all');
+  assert.equal(invalid.sort, 'recommended');
+  assert.equal(invalid.view, 'list');
+});
+
 test('all links use actual catalog paths, including nested skills', () => {
   for (const skill of skills) {
     const url = catalog.skillUrl(skill);

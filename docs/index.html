@@ -117,7 +117,7 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
       <form class="search-form" role="search" id="search-form">
         <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
         <label class="sr-only" for="search-input">Tìm kỹ năng, công nghệ, tác giả hoặc nguồn</label>
-        <input type="search" id="search-input" placeholder="Tìm kỹ năng… ví dụ: react, docker, kiểm thử, Matt Pocock" autocomplete="off" aria-controls="skills-results">
+        <input type="search" id="search-input" placeholder="Tìm kỹ năng… ví dụ: react, docker, frontend, Matt Pocock" autocomplete="off" aria-controls="skills-results">
         <button class="search-clear" id="clear-search" type="button" hidden>Xóa</button>
         <kbd aria-hidden="true">⌘ / Ctrl K</kbd>
       </form>
@@ -132,9 +132,9 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
             <select id="category-select"><option value="all">117 danh mục</option></select>
           </div>
           <div class="sidebar-field" id="agents">
-            <label for="agent-select">Agent mục tiêu (Mặc định: Antigravity)</label>
+            <label for="agent-select">Agent mục tiêu</label>
             <select id="agent-select">
-              <option value="antigravity" selected>Google Antigravity (Mặc định)</option><option value="codex">OpenAI Codex / OpenCode</option>
+              <option value="antigravity" selected>Google Antigravity</option><option value="codex">OpenAI Codex / OpenCode</option>
               <option value="claude">Claude Code</option><option value="cursor">Cursor</option><option value="windsurf">Windsurf</option>
               <option value="cline">Cline / Roo Code</option><option value="copilot">GitHub Copilot</option><option value="all">Tất cả agent (--target all)</option>
             </select>
@@ -144,6 +144,15 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
         </aside>
 
         <div class="catalog-main">
+      <fieldset class="install-settings">
+        <legend>Nơi cài skill</legend>
+        <div class="install-settings-fields">
+          <div><label for="install-scope">Phạm vi cài đặt</label><select id="install-scope"><option value="project">Dự án cụ thể</option><option value="global">Toàn máy cho agent đã chọn</option></select></div>
+          <div id="project-path-field"><label for="project-path">Đường dẫn tuyệt đối đến dự án</label><input id="project-path" type="text" placeholder="/Users/ban/my-project hoặc C:/Projects/my-app" autocomplete="off" spellcheck="false" aria-describedby="install-location-help"></div>
+        </div>
+        <p id="install-location-help" role="status">Nhập thư mục gốc của dự án. VAS sẽ thêm thư mục skill tương ứng với agent; đường dẫn chỉ dùng trong phiên này và không được đưa vào liên kết chia sẻ.</p>
+      </fieldset>
+
           <div class="results-toolbar">
             <div><h2 id="results-title">Tất cả kỹ năng</h2><p id="results-status" role="status" aria-live="polite">Đang tải 2,921 kỹ năng…</p></div>
             <div class="results-controls">
@@ -185,8 +194,8 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
       <div><h2 id="quickstart-title">Sẵn sàng dùng thử?</h2><p>Chỉ cần Git và Python 3 để quản lý kho skill. Không cần NPX. Một số skill có công cụ riêng; đọc runbook để biết yêu cầu.</p><a class="text-link" href="https://github.com/huytran1120/vietnam-agentic-skills#readme" target="_blank" rel="noopener noreferrer">Đọc tài liệu đầy đủ trên GitHub ↗</a></div>
       <div class="quickstart-commands">
         <div><h3>Clone kho và mở thư mục</h3><div class="command-box"><code id="clone-command">git clone https://github.com/huytran1120/vietnam-agentic-skills.git &amp;&amp; cd vietnam-agentic-skills</code><button class="button secondary" data-copy-element="clone-command"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Sao chép</button></div></div>
-        <div><h3>Cài thử một skill cho agent đã chọn</h3><div class="command-box"><code id="quickstart-command">./vas install ui-ux-pro-max --target antigravity --mode link</code><button class="button primary" data-copy-element="quickstart-command"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Sao chép</button></div></div>
-        <p>Lệnh trên cài vào workspace của kho VAS. Để cài cho dự án khác, dùng <code>--dest /đường/dẫn/dự-án/.agents/skills</code> (thay bằng thư mục skill tương ứng với agent).</p>
+        <div><h3>Cài skill đang chọn vào đúng nơi</h3><a class="text-link" href="#install-scope">Chọn nơi cài skill</a><div class="command-box"><code id="quickstart-command">Chọn nơi cài skill và nhập đường dẫn dự án để tạo lệnh.</code><button class="button primary" data-copy-element="quickstart-command" disabled><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>Sao chép</button></div></div>
+        <p id="quickstart-destination">Chạy lệnh trong thư mục VAS đã clone. Chọn dự án cụ thể để cài vào dự án của bạn, hoặc toàn máy để agent dùng ở nhiều dự án. Với chế độ link, hãy giữ kho VAS tại vị trí đã clone.</p>
       </div>
     </section>
 

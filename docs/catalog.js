@@ -50,6 +50,20 @@
     });
     return matches.sort((a, b) => {
       if (sort === 'recommended') {
+        if (words.length) {
+          const relevance = skill => {
+            const names = [normalize(skill.id), normalize(skill.name)];
+            const phrase = normalize(query).trim();
+            if (names.includes(phrase)) return 0;
+            if (names.some(name => name.startsWith(phrase))) return 1;
+            if (names.some(name => words.every(word => name.includes(word)))) return 2;
+            const tags = normalize([skill.category, ...(skill.tags || [])].join(' '));
+            if (words.every(word => tags.includes(word))) return 3;
+            return 4;
+          };
+          const difference = relevance(a) - relevance(b);
+          if (difference) return difference;
+        }
         const aRank = recommended.indexOf(a.id);
         const bRank = recommended.indexOf(b.id);
         const difference = (aRank < 0 ? recommended.length : aRank) - (bRank < 0 ? recommended.length : bRank);
@@ -61,9 +75,46 @@
   function shellQuote(value) {
     return /^[a-zA-Z0-9_./-]+$/.test(value) ? value : "'" + value.replace(/'/g, "'\\''") + "'";
   }
-  function installCommand(id, target) {
+  const targetFolders = { antigravity: '.agents/skills', codex: '.codex/skills', claude: '.claude/skills', cursor: '.cursor/skills', windsurf: '.windsurf/skills', cline: '.cline/skills', copilot: '.github/skills' };
+  function installCommand(id, target, { scope = 'repository', projectPath = '' } = {}) {
     if (!agents.some(agent => agent[0] === target)) throw new Error('Agent không được hỗ trợ');
-    return `./vas install ${shellQuote(id)} --target ${target} --mode link`;
+    const command = agent => `./vas install ${shellQuote(id)} --target ${agent} --mode link`;
+    if (scope === 'repository') return command(target);
+    if (scope === 'global') {
+      if (target === 'all') throw new Error('Chọn một agent để cài toàn máy.');
+      return command(target) + ' --global';
+    }
+    if (scope !== 'project') throw new Error('Nơi cài không được hỗ trợ.');
+    let root = projectPath.trim();
+    if (!root || /[\x00-\x1f\x7f]/.test(root) || !(/^(\/|[A-Za-z]:[\\/])/.test(root))) {
+      throw new Error('Nhập đường dẫn tuyệt đối đến dự án, ví dụ /Users/ban/my-project hoặc C:/Projects/my-app.');
+    }
+    if (/^[A-Za-z]:/.test(root)) root = root.replace(/\\/g, '/');
+    root = root.replace(/\/+$/, '');
+    const targets = target === 'all' ? Object.keys(targetFolders) : [target];
+    return targets.map(agent => command(agent) + ' --dest ' + shellQuote(`${root}/${targetFolders[agent]}`)).join('\n');
+  }
+  function readCatalogState(search) {
+    const params = new URLSearchParams(search);
+    return {
+      query: params.get('q') || '', selected: params.get('skill') || null,
+      target: agents.some(agent => agent[0] === params.get('agent')) ? params.get('agent') : 'antigravity',
+      group: groups.some(group => group.id === params.get('group')) ? params.get('group') : 'all',
+      category: params.get('category') || 'all',
+      sort: ['az', 'za'].includes(params.get('sort')) ? params.get('sort') : 'recommended',
+      view: params.get('view') === 'grid' ? 'grid' : 'list'
+    };
+  }
+  function catalogParams(value) {
+    const params = new URLSearchParams();
+    if (value.query) params.set('q', value.query);
+    if (value.selected) params.set('skill', value.selected);
+    if (value.target && value.target !== 'antigravity') params.set('agent', value.target);
+    if (value.group && value.group !== 'all') params.set('group', value.group);
+    if (value.category && value.category !== 'all') params.set('category', value.category);
+    if (value.sort && value.sort !== 'recommended') params.set('sort', value.sort);
+    if (value.view === 'grid') params.set('view', 'grid');
+    return params.toString();
   }
   function skillUrl(skill) {
     const path = String(skill.path || `skills/${skill.id}`).replace(/\/SKILL\.md$/, '');
@@ -80,11 +131,12 @@
   function escapeHtml(value) {
     return String(value == null ? '' : value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
   }
-  const api = { normalize, matchesGroup, filterSkills, installCommand, skillUrl, sourceUrl, groups, agents };
+  const api = { normalize, matchesGroup, filterSkills, installCommand, skillUrl, sourceUrl, groups, agents, targetFolders, readCatalogState, catalogParams };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof document === 'undefined') return;
 
-  const state = { skills: [], query: '', group: 'all', category: 'all', sort: 'recommended', target: 'antigravity', view: 'list', page: 1, selected: null, loaded: false };
+  const state = { skills: [], query: '', group: 'all', category: 'all', sort: 'recommended', target: 'antigravity', view: 'list', page: 1, selected: null, loaded: false, scope: 'project', projectPath: '' };
+  if (typeof window !== 'undefined') Object.assign(state, readCatalogState(window.location.search));
   const pageSize = 18;
   const byId = id => document.getElementById(id);
   const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
@@ -99,11 +151,11 @@
     byId('toast').hidden = false;
     toastTimer = setTimeout(() => { byId('toast').hidden = true; }, 3500);
   }
-  async function copy(text, button) {
+  async function copy(text, button, message = 'Đã sao chép lệnh. Chạy trong terminal của bạn.') {
     try {
       if (!navigator.clipboard) throw new Error('Clipboard API không khả dụng');
       await navigator.clipboard.writeText(text);
-      toast('Đã sao chép lệnh. Chạy trong terminal của bạn.');
+      toast(message);
     } catch (error) {
       console.warn('Không thể sao chép tự động:', error);
       copyReturnFocus = button;
@@ -146,19 +198,43 @@
       <p class="risk-label">Metadata risk: ${escapeHtml(skill.risk || 'unknown')}</p>
     </div>`;
   }
+  function commandPreview(id) {
+    try { return { command: installCommand(id, state.target, state) }; }
+    catch (error) { return { error: error.message }; }
+  }
+  function syncInstallation() {
+    byId('agent-select').value = state.target;
+    byId('install-scope').value = state.scope;
+    byId('project-path-field').hidden = state.scope !== 'project';
+    const preview = commandPreview(state.selected || 'ui-ux-pro-max');
+    byId('quickstart-command').textContent = state.selected ? (preview.command || preview.error) : 'Chọn một skill trong catalog để tạo lệnh cài.';
+    document.querySelectorAll('[data-copy-element="quickstart-command"]').forEach(button => { button.disabled = !state.selected || !preview.command; });
+    document.querySelectorAll('[data-install-command]').forEach(code => { code.textContent = preview.command || preview.error; });
+    document.querySelectorAll('[data-copy-skill]').forEach(button => { button.disabled = !preview.command; });
+    byId('project-path').setAttribute('aria-invalid', String(state.scope === 'project' && Boolean(state.projectPath) && !preview.command));
+    byId('install-location-help').textContent = state.scope === 'global'
+      ? (state.target === 'all' ? preview.error : 'Cài vào thư mục skill toàn máy của agent đã chọn bằng --global. Giữ kho VAS tại vị trí đã clone khi dùng chế độ link.')
+      : (preview.command ? 'Lệnh dùng --dest trỏ đến thư mục skill trong dự án. Đường dẫn chỉ dùng trong phiên này và không được đưa vào liên kết chia sẻ.' : preview.error);
+  }
+  function syncUrl(push = false) {
+    if (typeof window === 'undefined' || !state.loaded) return;
+    const params = catalogParams(state);
+    const url = window.location.pathname + (params ? '?' + params : '') + window.location.hash;
+    if (url !== window.location.pathname + window.location.search + window.location.hash) {
+      window.history[push ? 'pushState' : 'replaceState'](null, '', url);
+    }
+  }
   function installation(skill) {
     const currentAgent = agents.find(a => a[0] === state.target) || agents[0];
-    const isAntigravity = state.target === 'antigravity';
-    const targetDisplay = isAntigravity ? 'Antigravity (Mặc định)' : currentAgent[1];
+    const preview = commandPreview(skill.id);
     return `<div class="install-panel" id="install-${escapeHtml(skill.id)}">
       <div class="install-heading"><strong>Lệnh cài đặt cho ${escapeHtml(currentAgent[1])}</strong><button data-close-skill="${escapeHtml(skill.id)}" aria-label="Thu gọn ${escapeHtml(skill.id)}">×</button></div>
-      <span class="agent-label">Chọn agent của bạn (Đang chọn: <strong>${escapeHtml(targetDisplay)}</strong>)</span>
-      <div class="agent-options" role="group" aria-label="Agent cài đặt cho ${escapeHtml(skill.id)}">
-        ${agents.map(([id, label, mark]) => `<button class="agent-option" data-agent="${id}" aria-pressed="${id === state.target}"><span aria-hidden="true">${mark}</span>${label}</button>`).join('')}
-      </div>
-      <div class="command-box"><code>${escapeHtml(installCommand(skill.id, state.target))}</code><button class="button primary" data-copy-skill="${escapeHtml(skill.id)}">${icon('copy')}Sao chép</button></div>
+      <label class="agent-label" for="skill-agent">Agent sử dụng</label>
+      <select id="skill-agent" data-install-agent>${agents.map(([id, label]) => `<option value="${id}"${id === state.target ? ' selected' : ''}>${label}</option>`).join('')}</select>
+      <p class="install-destination">${state.scope === 'global' ? 'Toàn máy' : 'Dự án cụ thể'} · <a href="#install-scope">Đổi nơi cài</a></p>
+      <div class="command-box"><code data-install-command>${escapeHtml(preview.command || preview.error)}</code><button class="button primary" data-copy-skill="${escapeHtml(skill.id)}"${preview.command ? '' : ' disabled'}>${icon('copy')}Sao chép lệnh</button></div>
       <p class="install-footnote">Chạy tại thư mục VAS đã clone. Chưa clone? <a href="#quickstart">Xem hướng dẫn</a>.</p>
-      <div class="install-links"><a href="${escapeHtml(skillUrl(skill))}" target="_blank" rel="noopener noreferrer">Đọc SKILL.md ↗</a><button class="text-button" data-show-command="${escapeHtml(skill.id)}">Sao chép lệnh xem playbook</button></div>
+      <div class="install-links"><a href="${escapeHtml(skillUrl(skill))}" target="_blank" rel="noopener noreferrer">Đọc SKILL.md ↗</a><button class="text-button" data-share-skill="${escapeHtml(skill.id)}">Sao chép liên kết</button><button class="text-button" data-show-command="${escapeHtml(skill.id)}">Sao chép lệnh xem playbook</button></div>
     </div>`;
   }
   function renderResults() {
@@ -193,9 +269,27 @@
     byId('load-more').hidden = visible.length >= filtered.length;
     document.querySelectorAll('[data-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === state.view)));
     updateNavigation();
+    syncInstallation();
   }
   function applyFilters() {
     state.page = 1;
+    if (state.loaded && !filterSkills(state.skills, state).some(skill => skill.id === state.selected)) state.selected = null;
+    renderResults();
+    syncUrl();
+  }
+  function restoreLocation() {
+    Object.assign(state, readCatalogState(window.location.search));
+    if (!state.skills.some(skill => skill.category === state.category)) state.category = 'all';
+    if (state.selected && !state.skills.some(skill => skill.id === state.selected)) {
+      toast('Skill trong liên kết không còn trong catalog. Bạn có thể tìm lại bên dưới.');
+      state.selected = null;
+    }
+    const params = new URLSearchParams(window.location.search);
+    if (state.selected && !params.has('q') && !params.has('group') && !params.has('category')) state.query = state.selected;
+    byId('search-input').value = state.query;
+    byId('sort-select').value = state.sort;
+    const selectedIndex = filterSkills(state.skills, state).findIndex(skill => skill.id === state.selected);
+    state.page = Math.max(1, Math.ceil((selectedIndex + 1) / pageSize));
     renderResults();
   }
   function resetFilters() {
@@ -212,9 +306,8 @@
   }
   function setTarget(target) {
     state.target = target;
-    byId('agent-select').value = target;
-    byId('quickstart-command').textContent = installCommand('ui-ux-pro-max', target);
     renderResults();
+    syncUrl();
   }
   function renderShowcase(category = 'all') {
     byId('showcase-grid').innerHTML = showcases.filter(item => category === 'all' || item[4] === category).map(([id, name, description, image]) => `
@@ -240,10 +333,20 @@
         data.forEach(skillUrl);
         state.skills = data;
         state.loaded = true;
-        state.selected = recommended.find(id => data.some(skill => skill.id === id)) || data[0].id;
+        if (typeof window === 'undefined' || !new URLSearchParams(window.location.search).has('skill')) {
+          state.selected = recommended.find(id => data.some(skill => skill.id === id)) || data[0].id;
+        }
         renderNavigation();
         renderCategories();
-        applyFilters();
+        if (typeof window !== 'undefined' && window.location.search) restoreLocation();
+        else {
+          byId('search-input').value = state.query;
+          renderResults();
+        }
+        if (typeof window !== 'undefined' && state.selected && new URLSearchParams(window.location.search).has('skill')) {
+          const row = [...byId('skills-results').children].find(element => element.dataset.skill === state.selected);
+          if (row) row.scrollIntoView({ block: 'start', behavior: 'instant' });
+        }
         return true;
       } catch (error) {
         console.error('Lỗi tải danh mục:', error);
@@ -286,6 +389,21 @@
   byId('sort-select').addEventListener('change', event => { state.sort = event.target.value; applyFilters(); });
   byId('category-select').addEventListener('change', event => { state.category = event.target.value; state.group = 'all'; applyFilters(); });
   byId('agent-select').addEventListener('change', event => setTarget(event.target.value));
+  byId('install-scope').addEventListener('change', event => {
+    state.scope = event.target.value;
+    renderResults();
+  });
+  byId('project-path').addEventListener('input', event => {
+    state.projectPath = event.target.value;
+    syncInstallation();
+  });
+  document.addEventListener('change', event => {
+    if (event.target.matches('[data-install-agent]')) {
+      setTarget(event.target.value);
+      byId('skill-agent').focus({ preventScroll: true });
+    }
+  });
+  if (typeof window !== 'undefined') window.addEventListener('popstate', () => { if (state.loaded) restoreLocation(); });
   byId('load-more').addEventListener('click', () => {
     const firstNew = state.page * pageSize;
     state.page++;
@@ -347,10 +465,12 @@
     } else if (button.dataset.view) {
       state.view = button.dataset.view;
       renderResults();
+      syncUrl();
     } else if (button.dataset.openSkill || button.dataset.closeSkill) {
       const id = button.dataset.openSkill || button.dataset.closeSkill;
       state.selected = state.selected === id ? null : id;
       renderResults();
+      syncUrl(true);
       const row = [...byId('skills-results').children].find(element => element.dataset.skill === id);
       if (row) row.querySelector('.skill-name').focus({ preventScroll: true });
     } else if (button.dataset.agent) {
@@ -359,7 +479,13 @@
       const selected = byId('skills-results').querySelector(`[data-agent="${target}"]`);
       if (selected) selected.focus({ preventScroll: true });
     } else if (button.dataset.copySkill) {
-      copy(installCommand(button.dataset.copySkill, state.target), button);
+      const preview = commandPreview(button.dataset.copySkill);
+      if (preview.command) copy(preview.command, button);
+    } else if (button.dataset.shareSkill) {
+      const url = new URL(window.location.href);
+      url.search = catalogParams({ selected: button.dataset.shareSkill, target: state.target });
+      url.hash = '';
+      copy(url.href, button, 'Đã sao chép liên kết đến skill.');
     } else if (button.dataset.showCommand) {
       copy(`./vas show ${shellQuote(button.dataset.showCommand)}`, button);
     } else if (button.dataset.copyElement) {
@@ -370,6 +496,7 @@
       renderShowcase(button.dataset.showcase);
     }
   });
+  byId('search-input').value = state.query;
   renderShowcase();
   loadCatalog();
 })();
