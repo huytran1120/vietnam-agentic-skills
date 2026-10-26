@@ -20,7 +20,7 @@
     { id: 'cloud', label: 'Cloud', categories: ['cloud'] },
     { id: 'workflow', label: 'Quy trình & tiện ích', categories: ['workflow', 'productivity', 'automation'] }
   ];
-  const recommended = ['ui-ux-pro-max', 'code-review', 'impeccable', 'webapp-testing', 'frontend-design', 'research', 'landing-page-design', 'writing-for-agents', 'setup-pre-commit', 'web-performance-optimization'];
+  const recommended = ['ui-ux-pro-max', 'code-review', 'cloudflare-security-audit', 'impeccable', 'webapp-testing', 'frontend-design', 'research', 'landing-page-design', 'writing-for-agents', 'setup-pre-commit', 'web-performance-optimization'];
   const showcases = [
     ['landing-page-design', 'Landing page design', 'Xây dựng trang đích có bố cục rõ ràng và tập trung vào chuyển đổi.', 'landing-page-design-v2.jpg', 'design'],
     ['ui-ux-pro-max', 'UI/UX & design systems', 'Thiết kế giao diện nhất quán, từ bảng màu đến component.', 'ui-ux-pro-max-v2.jpg', 'design'],

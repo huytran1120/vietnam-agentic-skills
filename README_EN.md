@@ -416,6 +416,27 @@ New imports retain Matt Pocock's MIT license and supporting files. Target-projec
 (such as Claude Code, Bash/jq, or Node.js) are separate from the dependency-free VAS manager.
 See the [pinned import manifest](data/mattpocock-skills.json) for provenance.
 
+---
+
+#### 🛡️ Cloudflare Security Audit (`cloudflare-security-audit`)
+
+Integrated directly from Cloudflare's official open-source repository: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill).
+
+Enterprise-grade security guidance and adversarial vulnerability review pipeline designed to eliminate LLM context degradation and speculative false positives:
+* **Deterministic Six-Phase Review Pipeline**: Reconnaissance, Coverage-Led Hunting, Candidate Validation, Structured Output, Independent Record Verification, Target-Neutral Reporting.
+* **12 Targeted Attack Class Companions**: AI/LLM Prompt Injection & Tool Poisoning, Memory Safety & Binary, Cloud & Deployment SSRF, Web Protocols & Auth, ReDoS, Supply Chain, and Data Isolation.
+* **Zero-Dependency Validators Included**: Bundled with deterministic Node.js verification harnesses (`validate-coverage-ledger.cjs` & `validate-findings.cjs`, passing all 65 test suites).
+
+```bash
+# Inspect the skill or use convenient aliases:
+./vas show cloudflare-security-audit
+./vas show security-audit-skill
+
+# Install into your preferred AI agent:
+./vas install cloudflare-security-audit --target antigravity --mode link
+./vas install cloudflare-security-audit --target all
+```
+
 ### 9. Frequently Asked Questions (FAQ)
 
 **Q: Do I need any special setup for OpenAI Codex / OpenCode?**  

@@ -420,6 +420,27 @@ Mỗi skill mới giữ nguyên giấy phép MIT, tác giả Matt Pocock và cá
 Một số workflow cần công cụ riêng của dự án đích (ví dụ Claude Code, Bash/jq hoặc Node.js);
 chúng không phải phụ thuộc của CLI VAS. Xem [nguồn và bản ghi nhập](data/mattpocock-skills.json).
 
+---
+
+#### 🛡️ Cloudflare Security Audit (`cloudflare-security-audit`)
+
+Tích hợp trực tiếp từ repo mã nguồn mở chính thức của Cloudflare: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill).
+
+Đây là bộ khung kiểm toán an ninh mã nguồn cấp doanh nghiệp giúp biến AI Coding Agent thành một kiểm toán viên an ninh bảo vệ trust boundary thực thụ:
+* **Quy trình 6 giai đoạn (Six-Phase Pipeline)**: Reconnaissance (thăm dò kiến trúc), Coverage-Led Hunting (rà soát định hướng), Candidate Validation (phản biện độc lập), Structured Output (xuất JSON Schema), Record Verification (đối soát chéo), Target-Neutral Report (báo cáo hoàn chỉnh).
+* **12 Chuyên đề an ninh thực chiến**: AI/LLM Prompt Injection & Tool Poisoning, Memory Safety (Rust/C/Go), Cloud & Deployment SSRF, ReDoS, Web Protocols & Auth, Supply Chain, Data Isolation.
+* **Tích hợp sẵn Validator không phụ thuộc thư viện ngoài**: Kèm 2 script kiểm định `validate-coverage-ledger.cjs` và `validate-findings.cjs` đạt 65/65 unit test pass.
+
+```bash
+# Tra cứu thông tin hoặc dùng alias ngắn gọn:
+./vas show cloudflare-security-audit
+./vas show security-audit-skill
+
+# Cài đặt cho AI Agent yêu thích:
+./vas install cloudflare-security-audit --target antigravity --mode link
+./vas install cloudflare-security-audit --target all
+```
+
 ### 9. Câu Hỏi Thường Gặp (FAQ)
 
 **Q: Tôi dùng OpenAI Codex thì có cần cấu hình gì thêm không?**  
@@ -832,6 +853,27 @@ The 7 experimental `in-progress/` skills are intentionally excluded.
 New imports retain Matt Pocock's MIT license and supporting files. Target-project prerequisites
 (such as Claude Code, Bash/jq, or Node.js) are separate from the dependency-free VAS manager.
 See the [pinned import manifest](data/mattpocock-skills.json) for provenance.
+
+---
+
+#### 🛡️ Cloudflare Security Audit (`cloudflare-security-audit`)
+
+Integrated directly from Cloudflare's official open-source repository: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill).
+
+Enterprise-grade security guidance and adversarial vulnerability review pipeline designed to eliminate LLM context degradation and speculative false positives:
+* **Deterministic Six-Phase Review Pipeline**: Reconnaissance, Coverage-Led Hunting, Candidate Validation, Structured Output, Independent Record Verification, Target-Neutral Reporting.
+* **12 Targeted Attack Class Companions**: AI/LLM Prompt Injection & Tool Poisoning, Memory Safety & Binary, Cloud & Deployment SSRF, Web Protocols & Auth, ReDoS, Supply Chain, and Data Isolation.
+* **Zero-Dependency Validators Included**: Bundled with deterministic Node.js verification harnesses (`validate-coverage-ledger.cjs` & `validate-findings.cjs`, passing all 65 test suites).
+
+```bash
+# Inspect the skill or use convenient aliases:
+./vas show cloudflare-security-audit
+./vas show security-audit-skill
+
+# Install into your preferred AI agent:
+./vas install cloudflare-security-audit --target antigravity --mode link
+./vas install cloudflare-security-audit --target all
+```
 
 ### 9. Frequently Asked Questions (FAQ)
 
