@@ -7,7 +7,7 @@ const catalog = require('../docs/catalog.js');
 const skills = require('../docs/skills.min.json');
 const root = path.resolve(__dirname, '..');
 
-test('all 2,921 real skills remain discoverable without filters', () => {
+test('all real skills remain discoverable without filters', () => {
   assert.equal(catalog.filterSkills(skills).length, skills.length);
   assert.equal(new Set(catalog.filterSkills(skills).map(skill => skill.id)).size, skills.length);
 });
@@ -192,7 +192,7 @@ test('an initial HTTP failure shows an explicit error and retry recovers', async
   assert.equal(runtime.errors.length, 1);
   await runtime.elements.get('retry-load').listeners.get('click')();
   assert.equal(runtime.elements.get('error-state').hidden, true);
-  assert.ok(runtime.elements.get('results-status').textContent.includes('2,921'));
+  assert.ok(runtime.elements.get('results-status').textContent.includes(skills.length.toLocaleString('en-US')));
 });
 
 test('search typed while loading is applied once the catalog arrives', async () => {

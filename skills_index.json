@@ -39427,6 +39427,26 @@
     "source": "community"
   },
   {
+    "id": "skills-manager",
+    "canonical_id": "skills-manager",
+    "name": "skills-manager",
+    "path": "skills/skills-manager",
+    "description": "Manage the user's shared agent-skill library via Skills Manager desktop app and skills-manager-cli — install, update, remove, deploy or undeploy skills per agent, manage presets, organize tags, search, and adopt existing skills across Claude Code, Codex, Cursor, Windsurf, Antigravity, and other agents.",
+    "category": "workflow-automation",
+    "tags": [
+      "skills-manager",
+      "agent-skills",
+      "skill-management",
+      "cli",
+      "presets",
+      "deployment",
+      "sync"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "skills-manager"
+  },
+  {
     "id": "skin-health-analyzer",
     "canonical_id": "skin-health-analyzer",
     "name": "skin-health-analyzer",

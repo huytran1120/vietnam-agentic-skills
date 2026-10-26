@@ -285,6 +285,8 @@
     "alphafold-fetch": "alphafold-database-fetch-and-analyze",
     "security-audit-skill": "cloudflare-security-audit",
     "cloudflare-security": "cloudflare-security-audit",
-    "cf-security-audit": "cloudflare-security-audit"
+    "cf-security-audit": "cloudflare-security-audit",
+    "skills-manager-cli": "skills-manager",
+    "skillsmanager": "skills-manager"
   }
 }

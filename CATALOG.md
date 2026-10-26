@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,921** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** danh mục chuyên biệt.
+Tổng hợp **2,922** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -119,6 +119,7 @@ Tổng hợp **2,921** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | **web** | 1 skills | `./vas install --category web --target codex` |
 | **web-development** | 67 skills | `./vas install --category web-development --target codex` |
 | **workflow** | 72 skills | `./vas install --category workflow --target codex` |
+| **workflow-automation** | 1 skills | `./vas install --category workflow-automation --target codex` |
 | **workflow-bundle** | 9 skills | `./vas install --category workflow-bundle --target codex` |
 | **writing** | 5 skills | `./vas install --category writing --target codex` |
 
@@ -3607,6 +3608,12 @@ Tổng hợp **2,921** kỹ năng Agentic tiêu chuẩn hóa, chia theo **117** 
 | `workflow-automation` | `critical` | Workflow automation is the infrastructure that makes AI agents |
 | `workflow-orchestration-patterns` | `none` | Master workflow orchestration architecture with Temporal, covering fundamenta... |
 | `workflow-patterns` | `safe` | Use this skill when implementing tasks according to Conductor's TDD workflow,... |
+
+### WORKFLOW-AUTOMATION (1 skills)
+
+| Skill ID | Rủi ro | Mô tả tóm tắt |
+| :--- | :---: | :--- |
+| `skills-manager` | `safe` | Manage the user's shared agent-skill library via Skills Manager desktop app a... |
 
 ### WORKFLOW-BUNDLE (9 skills)
 

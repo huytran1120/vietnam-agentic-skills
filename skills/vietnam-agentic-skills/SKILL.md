@@ -16,7 +16,7 @@ description: >-
 
 # Vietnam Agentic Skills (VAS) for Google Antigravity
 
-Vietnam Agentic Skills provides 2,921+ modular playbooks (`SKILL.md`) ready to be discovered and loaded by Google Antigravity.
+Vietnam Agentic Skills provides 2,922+ modular playbooks (`SKILL.md`) ready to be discovered and loaded by Google Antigravity.
 
 ## When to Use This Skill
 
