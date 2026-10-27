@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,935** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -48,7 +48,7 @@ Tổng hợp **2,935** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **database-processing** | 6 skills | `./vas install --category database-processing --target codex` |
 | **databases** | 3 skills | `./vas install --category databases --target codex` |
 | **debugging** | 4 skills | `./vas install --category debugging --target codex` |
-| **design** | 48 skills | `./vas install --category design --target codex` |
+| **design** | 49 skills | `./vas install --category design --target codex` |
 | **design-it** | 48 skills | `./vas install --category design-it --target codex` |
 | **developer-tools** | 9 skills | `./vas install --category developer-tools --target codex` |
 | **development** | 230 skills | `./vas install --category development --target codex` |
@@ -1412,7 +1412,7 @@ Tổng hợp **2,935** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `logic-locate` | `safe` | Locate the root cause of a CONFIRMED failure via backward-then-forward semi-f... |
 | `phase-gated-debugging` | `safe` | Use when debugging any bug. Enforces a 5-phase protocol where code edits are ... |
 
-### DESIGN (48 skills)
+### DESIGN (49 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1431,6 +1431,7 @@ Tổng hợp **2,935** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `design-spatial` | `critical` | Design — spatial composition |
 | `design-spells` | `safe` | Curated micro-interactions and design details that add "magic" and personalit... |
 | `design-thinking` | `critical` | Direction and intent for frontend design. Use with design when defining purpo... |
+| `design-to-motion` | `safe` | Turns a static design (a Figma frame, dashboard, card set, app screen, or a U... |
 | `deterministic-design` | `safe` | Measure rendered UI layout with reproducible spatial metrics and a separately... |
 | `diagram-generator` | `safe` | Generate, refine, validate, and render diagrams from natural language, notes,... |
 | `favicon` | `critical` | Generate favicons from a source image |
