@@ -1,22 +1,30 @@
 ---
 name: idea-refine
-description: "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one."
+description: "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers on "ideate", "refine this idea", or "stress-test my plan"."
+category: planning
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/idea-refine
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["idea", "refine"]
 ---
 
 # Idea Refine
-## When to Use
 
-Use when the user wants to refine a vague idea, explore alternatives or stress-test assumptions before planning implementation.
-
+## Overview
 
 Refines raw ideas into sharp, actionable concepts worth building through structured divergent and convergent thinking.
+
+## When to Use
+
+- Use when an idea is still vague and needs shaping before it can become a plan
+- Use when you need to stress-test assumptions before committing to a direction
+- Use when you want to expand options before converging on one
+- Trigger phrases: "Help me refine this idea", "Ideate on [concept]", "Stress-test my plan"
+- Not for: a user who is unsure what they want at all (use `interview-me`), or a direction already chosen that needs a spec (use `spec-driven-development`)
 
 ## How It Works
 
@@ -32,11 +40,6 @@ This skill is primarily an interactive dialogue. Invoke it with an idea, and the
 # Optional: Initialize the ideas directory
 bash skills/idea-refine/scripts/idea-refine.sh
 ```
-
-**Trigger Phrases:**
-- "Help me refine this idea"
-- "Ideate on [concept]"
-- "Stress-test my plan"
 
 ## Output
 
@@ -77,7 +80,7 @@ When the user invokes this skill with an idea (`$ARGUMENTS`), guide them through
    - What's been tried before?
    - Why now?
 
-   Use the available user-question tool, or ask briefly in chat if that tool is unavailable. Do NOT proceed until you understand who this is for and what success looks like.
+   Use the `AskUserQuestion` tool to gather this input. Do NOT proceed until you understand who this is for and what success looks like.
 
 3. **Generate 5-8 idea variations** using these lenses:
    - **Inversion:** "What if we did the opposite?"
@@ -88,7 +91,7 @@ When the user invokes this skill with an idea (`$ARGUMENTS`), guide them through
    - **10x version:** "What would this look like at massive scale?"
    - **Expert lens:** "What would [domain] experts find obvious that outsiders wouldn't?"
 
-   Explore adjacent options within the user's stated scope. Treat imagined needs as hypotheses, not evidence.
+   Push beyond what the user initially asked for. Create products people don't know they need yet.
 
 **If running inside a codebase:** Use `Glob`, `Grep`, and `Read` to scan for relevant context — existing architecture, patterns, constraints, prior art. Ground your variations in what actually exists. Reference specific files and patterns when relevant.
 
@@ -166,6 +169,16 @@ Direct, thoughtful, slightly provocative. You're a sharp thinking partner, not a
 
 Read `examples.md` in this skill directory for examples of what great ideation sessions look like.
 
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| I'll generate 20+ ideas to cover all bases | 5-8 well-considered variations beat 20 shallow ones. Quality over quantity. |
+| The user just needs encouragement, not critique | A yes-machine produces weak ideas. Push back with specificity and kindness. |
+| Who this is for is obvious — no need to ask | Every good idea starts with a person and their problem. Skipping it means designing for nobody. |
+| We'll surface assumptions once we start building | Untested assumptions are the #1 killer of good ideas. Surface them before committing. |
+| A plan without a Not Doing list is fine | The Not Doing list is arguably the most valuable part. Make trade-offs explicit. |
+
 ## Red Flags
 
 - Generating 20+ shallow variations instead of 5-8 considered ones
@@ -187,9 +200,3 @@ After completing an ideation session:
 - [ ] A "Not Doing" list makes trade-offs explicit
 - [ ] The output is a concrete artifact (markdown one-pager), not just conversation
 - [ ] The user confirmed the final direction before any implementation work
-
-## Limitations
-
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.

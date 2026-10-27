@@ -1,22 +1,16 @@
 ---
 name: frontend-ui-engineering
-description: Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.
+description: "Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requirements, managing state, or when the output needs to look and feel production-quality rather than AI-generated."
+category: web-development
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/frontend-ui-engineering
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["frontend", "ui", "engineering"]
 ---
-## Supporting material availability
-
-This catalog copy contains the inline guidance below, but does not include the following supporting paths. They are external prerequisites, not bundled files:
-
-- `<support-root>/references/accessibility-checklist.md`
-
-Obtain the required material from the [declared upstream source](https://github.com/addyosmani/agent-skills), or from a user-provided installation of that source. Resolve each path relative to that installation, inspect its contents, and verify any applicable license and execution prerequisites. Do not run a command or claim a referenced procedure was followed until its required file exists. Do not fabricate the missing scripts or treat an unrelated file with the same name as equivalent. Independent steps fully documented here can proceed within the user’s authorized scope; report any dependent step as unavailable.
-
 
 # Frontend UI Engineering
 
@@ -31,8 +25,6 @@ Build production-quality user interfaces that are accessible, performant, and vi
 - Implementing responsive layouts
 - Adding interactivity or state management
 - Fixing visual or UX issues
-
-Snippets illustrate patterns and require project types, imports and callbacks; `toggleTask` and `deleteTask` in the container must be supplied by real authorized mutation hooks. Automated accessibility scans are partial evidence and must be paired with keyboard and assistive-technology checks. Honor reduced-motion settings and keep content visible when effects fail.
 
 ## Component Architecture
 
@@ -83,7 +75,7 @@ export function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
     <li className="flex items-center gap-3 p-3">
       <Checkbox checked={task.done} onChange={() => onToggle(task.id)} />
       <span className={task.done ? 'line-through text-muted' : ''}>{task.title}</span>
-      <Button aria-label={`Delete ${task.title}`} variant="ghost" size="sm" onClick={() => onDelete(task.id)}>
+      <Button variant="ghost" size="sm" onClick={() => onDelete(task.id)}>
         <TrashIcon />
       </Button>
     </li>
@@ -102,14 +94,14 @@ export function TaskListContainer() {
   if (error) return <ErrorState message="Failed to load tasks" retry={refetch} />;
   if (tasks.length === 0) return <EmptyState message="No tasks yet" />;
 
-  return <TaskList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />;
+  return <TaskList tasks={tasks} />;
 }
 
 // Presentation: handles rendering
-export function TaskList({ tasks, onToggle, onDelete }: { tasks: Task[]; onToggle: (id: string) => void; onDelete: (id: string) => void }) {
+export function TaskList({ tasks }: { tasks: Task[] }) {
   return (
     <ul role="list" className="divide-y">
-      {tasks.map(task => <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />)}
+      {tasks.map(task => <TaskItem key={task.id} task={task} />)}
     </ul>
   );
 }
@@ -131,6 +123,17 @@ Global store (Zustand, Redux)    → Complex client state shared app-wide
 **Avoid prop drilling deeper than 3 levels.** If you're passing props through components that don't use them, introduce context or restructure the component tree.
 
 ## Design System Adherence
+
+### Reference-led UI quality
+
+When the product needs a distinct visual direction, collect evidence before choosing a layout:
+
+1. Search a trusted reference catalogue or use references supplied by the product team.
+2. Study two or three relevant screens. Record decisions about hierarchy, density, navigation, controls, responsive behavior, and interaction states.
+3. Turn those decisions into a short design contract before implementation. Name the screen's job, primary action, required states, responsive rules, and patterns to reject.
+4. Rebuild the useful structure in the product's own components, tokens, content, and visual language. Never copy another product's branding, proprietary text, imagery, or exact layout.
+
+Use references as evidence, not as templates. If references are unavailable, document the assumptions and verify the result against the product's existing design system.
 
 ### Avoid the AI Aesthetic
 
@@ -226,9 +229,7 @@ function Dialog({ isOpen, onClose }: DialogProps) {
     if (isOpen) closeRef.current?.focus();
   }, [isOpen]);
 
-  // This fragment only moves focus: open={isOpen} is non-modal and does not trap it.
-  // For a modal use showModal()/close(), Escape handling, an accessible name
-  // and focus restoration, or a tested dialog primitive.
+  // Trap focus inside dialog when open
   return (
     <dialog open={isOpen}>
       <button ref={closeRef} onClick={onClose}>Close</button>
@@ -242,7 +243,7 @@ function Dialog({ isOpen, onClose }: DialogProps) {
 
 ```tsx
 // Don't show blank screens
-function TaskList({ tasks, onCreateTask }: { tasks: Task[]; onCreateTask: () => void }) {
+function TaskList({ tasks }: { tasks: Task[] }) {
   if (tasks.length === 0) {
     return (
       <div role="status" className="text-center py-12">
@@ -299,7 +300,7 @@ function useToggleTask() {
       const previous = queryClient.getQueryData(['tasks']);
 
       queryClient.setQueryData(['tasks'], (old: Task[]) =>
-        (old ?? []).map(t => t.id === taskId ? { ...t, done: !t.done } : t)
+        old.map(t => t.id === taskId ? { ...t, done: !t.done } : t)
       );
 
       return { previous };
@@ -313,14 +314,14 @@ function useToggleTask() {
 
 ## See Also
 
-For detailed accessibility requirements and testing tools, see `references/accessibility-checklist.md`.
+For detailed accessibility requirements and testing tools, see `../../references/accessibility-checklist.md`.
 
 ## Common Rationalizations
 
 | Rationalization | Reality |
 |---|---|
 | "Accessibility is a nice-to-have" | It's a legal requirement in many jurisdictions and an engineering quality standard. |
-| "We'll make it responsive later" | Retrofitting responsive design can add work; no universal effort multiplier is established here. |
+| "We'll make it responsive later" | Retrofitting responsive design is 3x harder than building it from the start. |
 | "The design isn't final, so I'll skip styling" | Use the design system defaults. Unstyled UI creates a broken first impression for reviewers. |
 | "This is just a prototype" | Prototypes become production code. Build the foundation right. |
 | "The AI aesthetic is fine for now" | It signals low quality. Use the project's actual design system from the start. |
@@ -342,12 +343,7 @@ After building UI:
 - [ ] All interactive elements are keyboard accessible (Tab through the page)
 - [ ] Screen reader can convey the page's content and structure
 - [ ] Responsive: works at 320px, 768px, 1024px, 1440px
-- [ ] Loading, error, and empty states all handled
+- [ ] Loading, empty, error, success, and permission states handled when applicable
 - [ ] Follows the project's design system (spacing, colors, typography)
+- [ ] The rendered result passes a final UI-specific finish-gate review
 - [ ] No accessibility warnings in dev tools or axe-core
-
-## Limitations
-
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.

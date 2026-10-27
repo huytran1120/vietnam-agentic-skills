@@ -1,22 +1,16 @@
 ---
 name: incremental-implementation
-description: Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.
+description: "Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than one file, or when picking up the next task from a plan. Use when rolling a change out behind a feature flag, when you're about to write a large amount of code at once, or when a task feels too big to land in one step."
+category: development
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/incremental-implementation
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["incremental"]
 ---
-## Supporting material availability
-
-This catalog copy contains the inline guidance below, but does not include the following supporting paths. They are external prerequisites, not bundled files:
-
-- `<support-root>/references/definition-of-done.md`
-
-Obtain the required material from the [declared upstream source](https://github.com/addyosmani/agent-skills), or from a user-provided installation of that source. Resolve each path relative to that installation, inspect its contents, and verify any applicable license and execution prerequisites. Do not run a command or claim a referenced procedure was followed until its required file exists. Do not fabricate the missing scripts or treat an unrelated file with the same name as equivalent. Independent steps fully documented here can proceed within the user’s authorized scope; report any dependent step as unavailable.
-
 
 # Incremental Implementation
 
@@ -32,8 +26,6 @@ Build in thin vertical slices — implement one piece, test it, verify it, then 
 - Any time you're tempted to write more than ~100 lines before testing
 
 **When NOT to use:** Single-file, single-function changes where the scope is already minimal.
-
-Apply the project's actual available commands and commit policy; npm test/build/tsc/lint below are examples. A feature flag must guard backend permissions and effects as well as UI. Database rollback may require forward repair, data recovery and compatibility staging rather than a reversible down migration. Keep removal/replacement slices compatible so separated commits do not leave a broken intermediate state. Report skipped/unavailable checks; passing tests support bounded claims, not proof of correctness.
 
 ## The Increment Cycle
 
@@ -207,21 +199,21 @@ When directing an agent to implement incrementally:
 Start with just the database schema change and the API endpoint.
 Don't touch the UI yet — we'll do that in the next increment.
 
-After implementing, run `npm test` and `npm run build` to verify
-nothing is broken."
+After implementing, run the repository's test and build commands to
+verify nothing is broken."
 ```
 
 Be explicit about what's in scope and what's NOT in scope for each increment.
 
 ## Increment Checklist
 
-After each increment, verify:
+After each increment, verify with the repository's own commands (see the test-driven-development skill's Discover the Stack First section):
 
 - [ ] The change does one thing and does it completely
-- [ ] All existing tests still pass (`npm test`)
-- [ ] The build succeeds (`npm run build`)
-- [ ] Type checking passes (`npx tsc --noEmit`)
-- [ ] Linting passes (`npm run lint`)
+- [ ] All existing tests still pass (the repository's test command: `npm test`, `./gradlew test`, `pytest`, ...)
+- [ ] The build succeeds (the repository's build command)
+- [ ] Type checking passes, where the stack has one (`./node_modules/.bin/tsc --noEmit`, `mypy`, ...)
+- [ ] Linting passes (the repository's lint command)
 - [ ] The new functionality works as expected
 - [ ] The change is committed with a descriptive message
 
@@ -263,10 +255,4 @@ After completing all increments for a task:
 
 ## See Also
 
-Per-increment verification is the local check. Before declaring a task done, apply the project-wide Definition of Done as the final gate, the standing bar every increment clears regardless of the task. See `references/definition-of-done.md`.
-
-## Limitations
-
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+Per-increment verification is the local check. Before declaring a task done, apply the project-wide Definition of Done as the final gate, the standing bar every increment clears regardless of the task. See `../../references/definition-of-done.md`.

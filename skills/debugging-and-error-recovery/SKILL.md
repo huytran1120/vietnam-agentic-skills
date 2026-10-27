@@ -1,13 +1,15 @@
 ---
 name: debugging-and-error-recovery
-description: Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.
+description: "Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need to figure out what broke and why — a systematic approach to finding and fixing the root cause rather than guessing."
+category: development
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/debugging-and-error-recovery
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["debugging", "and", "error", "recovery"]
 ---
 
 # Debugging and Error Recovery
@@ -79,7 +81,7 @@ Cannot reproduce on demand:
     └── Document the conditions observed and revisit when it recurs
 ```
 
-For test failures:
+For test failures (npm shown — substitute the repository's own test command, per the test-driven-development skill's Discover the Stack First section):
 ```bash
 # Run the specific failing test
 npm test -- --grep "test name"
@@ -112,7 +114,7 @@ git bisect start
 git bisect bad                    # Current commit is broken
 git bisect good <known-good-sha> # This commit worked
 # Git will checkout midpoint commits; run your test at each
-git bisect run npm test -- --grep "failing test"
+git bisect run npm test -- --grep "failing test"  # substitute the repository's focused-test command
 ```
 
 ### Step 3: Reduce
@@ -160,7 +162,7 @@ This test will prevent the same bug from recurring. It should fail without the f
 
 ### Step 6: Verify End-to-End
 
-After fixing, verify the complete scenario:
+After fixing, verify the complete scenario with the repository's own commands (npm shown):
 
 ```bash
 # Run the specific test
@@ -219,8 +221,6 @@ Runtime error:
 ```
 
 ## Safe Fallback Patterns
-
-Fallbacks apply only to optional presentation/configuration. Missing authentication, authorization, encryption, billing or integrity settings must fail closed, not silently return empty/default values. The Chart try/catch example cannot catch errors thrown later when React renders children; wrap the component in an actual Error Boundary. Test-runner flags above are examples from different runners; use the project's installed runner syntax.
 
 When under time pressure, use safe fallbacks:
 
@@ -307,9 +307,3 @@ After fixing a bug:
 - [ ] All existing tests pass
 - [ ] Build succeeds
 - [ ] The original bug scenario is verified end-to-end
-
-## Limitations
-
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.

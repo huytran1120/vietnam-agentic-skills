@@ -1,13 +1,15 @@
 ---
 name: code-simplification
-description: Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.
+description: "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity."
+category: development
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/code-simplification
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["code", "simplification"]
 ---
 
 # Code Simplification
@@ -90,11 +92,10 @@ const result = items.reduce((acc, item) => ({
 }), {});
 
 // CLEAR: Named intermediate step
-const result = items.reduce((acc, item) => {
-  const count = (acc[item.id]?.count ?? 0) + 1;
-  return { ...acc, [item.id]: { ...acc[item.id], count } };
-}, {});
-// Preserve the object-of-records result; a Map<string, number> changes the API.
+const countById = new Map<string, number>();
+for (const item of items) {
+  countById.set(item.id, (countById.get(item.id) ?? 0) + 1);
+}
 ```
 
 ### 4. Maintain Balance
@@ -197,9 +198,7 @@ If the "simplified" version is harder to understand or review, revert. Not every
 ### TypeScript / JavaScript
 
 ```typescript
-// Conditional simplification: only if findById always returns a Promise and
-// never throws synchronously; otherwise removing async changes thrown errors
-// into synchronous exceptions instead of rejected Promises. Preserve async if uncertain.
+// SIMPLIFY: Unnecessary async wrapper
 // Before
 async function getUser(id: string): Promise<User> {
   return await userService.findById(id);
@@ -339,9 +338,3 @@ After completing a simplification pass:
 - [ ] No error handling was removed or weakened
 - [ ] No dead code was left behind (unused imports, unreachable branches)
 - [ ] A teammate or review agent would approve the change as a net improvement
-
-## Limitations
-
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.

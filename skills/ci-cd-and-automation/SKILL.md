@@ -1,13 +1,15 @@
 ---
 name: ci-cd-and-automation
-description: Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.
+description: "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies."
+category: devops
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["ci", "cd", "and"]
 ---
 
 # CI/CD and Automation
@@ -60,10 +62,6 @@ Pull Request Opened
 
 **No gate can be skipped.** If lint fails, fix lint — don't disable the rule. If a test fails, fix the code — don't skip the test.
 
-## Execution boundary
-
-These are separate templates for a project with the named scripts and locked CLIs already installed. Pin reviewed action revisions and use least-privilege permissions. Production and preview jobs need their own authorized identity, target and environment protections; untrusted PRs must not receive deployment secrets. Verify artifact transfer and recovery scope before applying. Auto-merge is optional and must follow the repository’s actual maintainer policy.
-
 ## GitHub Actions Configuration
 
 ### Basic CI Pipeline
@@ -96,7 +94,7 @@ jobs:
         run: npm run lint
 
       - name: Type check
-        run: npx tsc --noEmit
+        run: ./node_modules/.bin/tsc --noEmit
 
       - name: Test
         run: npm test -- --coverage
@@ -136,7 +134,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - name: Run migrations
-        run: npx prisma migrate deploy
+        run: ./node_modules/.bin/prisma migrate deploy
         env:
           DATABASE_URL: postgresql://ci_user:${{ secrets.CI_DB_PASSWORD }}@localhost:5432/testdb
       - name: Integration tests
@@ -160,11 +158,11 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - name: Install Playwright
-        run: npx playwright install --with-deps chromium
+        run: ./node_modules/.bin/playwright install --with-deps chromium
       - name: Build
         run: npm run build
       - name: Run E2E tests
-        run: npx playwright test
+        run: ./node_modules/.bin/playwright test
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
@@ -215,9 +213,7 @@ deploy-preview:
   steps:
     - uses: actions/checkout@v4
     - name: Deploy preview
-      env:
-        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      run: ./node_modules/.bin/vercel --token "$VERCEL_TOKEN"
+      run: ./node_modules/.bin/vercel --token=${{ secrets.VERCEL_TOKEN }}
 ```
 
 ### Feature Flags
@@ -276,15 +272,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Rollback deployment
-        env:
-          ROLLBACK_VERSION: ${{ inputs.version }}
         run: |
-          set -eu
-          case "$ROLLBACK_VERSION" in
-            ""|*[!a-zA-Z0-9._-]*) echo "Invalid deployment identifier" >&2; exit 1 ;;
-          esac
-          # Protected environment approval and target verification required.
-          ./node_modules/.bin/vercel rollback "$ROLLBACK_VERSION"
+          # Deploy the specified previous version
+          ./node_modules/.bin/vercel rollback ${{ inputs.version }}
 ```
 
 ## Environment Management
@@ -364,7 +354,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '22', cache: 'npm' }
       - run: npm ci
-      - run: npx tsc --noEmit
+      - run: ./node_modules/.bin/tsc --noEmit
 
   test:
     runs-on: ubuntu-latest
@@ -407,9 +397,3 @@ After setting up or modifying CI:
 - [ ] Secrets are stored in the secrets manager, not in code
 - [ ] Deployment has a rollback mechanism
 - [ ] Pipeline runs in under 10 minutes for the test suite
-
-## Limitations
-
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.

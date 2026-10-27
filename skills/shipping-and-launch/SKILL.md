@@ -1,25 +1,16 @@
 ---
 name: shipping-and-launch
-description: Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.
+description: "Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy."
+category: devops
 risk: critical
-source: https://github.com/addyosmani/agent-skills/tree/main/skills/shipping-and-launch
-source_repo: addyosmani/agent-skills
-source_type: community
-date_added: 2026-07-01
+source: community
+source_repo: "addyosmani/agent-skills"
+author: "Addy Osmani"
 license: MIT
-license_source: https://github.com/addyosmani/agent-skills/blob/main/LICENSE
+license_source: "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
+date_added: "2026-07-01"
+tags: ["shipping", "and", "launch"]
 ---
-## Supporting material availability
-
-This catalog copy contains the inline guidance below, but does not include the following supporting paths. They are external prerequisites, not bundled files:
-
-- `<support-root>/references/definition-of-done.md`
-- `<support-root>/references/security-checklist.md`
-- `<support-root>/references/performance-checklist.md`
-- `<support-root>/references/accessibility-checklist.md`
-
-Obtain the required material from the [declared upstream source](https://github.com/addyosmani/agent-skills), or from a user-provided installation of that source. Resolve each path relative to that installation, inspect its contents, and verify any applicable license and execution prerequisites. Do not run a command or claim a referenced procedure was followed until its required file exists. Do not fabricate the missing scripts or treat an unrelated file with the same name as equivalent. Independent steps fully documented here can proceed within the user’s authorized scope; report any dependent step as unavailable.
-
 
 # Shipping and Launch
 
@@ -50,7 +41,7 @@ Ship with confidence. The goal is not just to deploy — it's to deploy safely, 
 ### Security
 
 - [ ] No secrets in code or version control
-- [ ] `npm audit` shows no critical or high vulnerabilities
+- [ ] The ecosystem's dependency audit (`npm audit`, `pip-audit`, `cargo audit`, ...) shows no critical or high vulnerabilities
 - [ ] Input validation on all user-facing endpoints
 - [ ] Authentication and authorization checks in place
 - [ ] Security headers configured (CSP, HSTS, etc.)
@@ -91,8 +82,6 @@ Ship with confidence. The goal is not just to deploy — it's to deploy safely, 
 - [ ] ADRs written for any architectural decisions
 - [ ] Changelog updated
 - [ ] User-facing documentation updated (if applicable)
-
-Treat the rollout percentages, windows and response-time targets below as examples requiring workload-specific SLOs and sufficient sample sizes. Automated scanners do not establish full security or accessibility compliance. A feature flag changes exposure; it cannot undo persisted data, sent notifications or third-party effects.
 
 ## Feature Flag Strategy
 
@@ -209,12 +198,13 @@ Client metrics:
 
 ```typescript
 // Set up error boundary with reporting
-class ErrorBoundary extends React.Component<React.PropsWithChildren, { hasError: boolean }> {
+class ErrorBoundary extends React.Component {
   state = { hasError: false };
 
   static getDerivedStateFromError() {
     return { hasError: true };
   }
+
   componentDidCatch(error: Error, info: React.ErrorInfo) {
     // Report to error tracking service
     reportError(error, {
@@ -236,7 +226,7 @@ class ErrorBoundary extends React.Component<React.PropsWithChildren, { hasError:
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   reportError(err, {
     method: req.method,
-    path: req.path, // omit query parameters that may contain secrets
+    url: req.url,
     userId: req.user?.id,
   });
 
@@ -260,6 +250,19 @@ In the first hour after launch:
 6. Confirm rollback mechanism works (dry run if possible)
 ```
 
+## Error Budget Release Gate
+
+Your service's error budget — the fraction of requests or time your SLO allows to fail — determines whether it's safe to ship. Use it as an objective gate — not a negotiation:
+
+```
+Budget remaining > 20%  →  Ship normally; monitor closely
+Budget remaining 0–20%  →  Slow rollouts only; no high-risk changes
+Budget exhausted        →  Freeze feature work; focus entirely on reliability
+Budget resets           →  Resume normal pace; bake in the fix that recovered it
+```
+
+A high burn rate during a canary (consuming budget faster than the baseline pace) is a **hold** signal in the rollout thresholds table above — treat it the same as an elevated error rate.
+
 ## Rollback Strategy
 
 Every deployment needs a rollback plan before it happens:
@@ -275,12 +278,12 @@ Every deployment needs a rollback plan before it happens:
 ### Rollback Steps
 1. Disable feature flag (if applicable)
    OR
-1. Redeploy a known-good artifact through the approved deployment workflow; a Git revert alone does not deploy
+1. Deploy previous version: `git revert <commit> && git push`
 2. Verify rollback: health check, error monitoring
 3. Communicate: notify team of rollback
 
 ### Database Considerations
-- Migration [X]: document a tested compensating migration or restore plan; Prisma Migrate has no general `migrate rollback` command
+- Migration [X] has a rollback: <verified command or runbook link>
 - Data inserted by new feature: [preserved / cleaned up]
 
 ### Time to Rollback
@@ -290,10 +293,11 @@ Every deployment needs a rollback plan before it happens:
 ```
 ## See Also
 
-- For the project-wide Definition of Done that every change must clear before this checklist, see `references/definition-of-done.md`
-- For security pre-launch checks, see `references/security-checklist.md`
-- For performance pre-launch checklist, see `references/performance-checklist.md`
-- For accessibility verification before launch, see `references/accessibility-checklist.md`
+- For the project-wide Definition of Done that every change must clear before this checklist, see `../../references/definition-of-done.md`
+- For security pre-launch checks, see `../../references/security-checklist.md`
+- For performance pre-launch checklist, see `../../references/performance-checklist.md`
+- For accessibility verification before launch, see `../../references/accessibility-checklist.md`
+- For the alerting rules and SLO-tied thresholds, see `observability-and-instrumentation`
 
 ## Common Rationalizations
 
@@ -304,6 +308,7 @@ Every deployment needs a rollback plan before it happens:
 | "Monitoring is overhead" | Not having monitoring means you discover problems from user complaints instead of dashboards. |
 | "We'll add monitoring later" | Add it before launch. You can't debug what you can't see. |
 | "Rolling back is admitting failure" | Rolling back is responsible engineering. Shipping a broken feature is the failure. |
+| "The error rate looks fine, let's keep shipping" | Check the burn rate, not just the current error rate. Consuming budget faster than baseline is a hold signal even when individual thresholds are green. |
 
 ## Red Flags
 
@@ -314,6 +319,7 @@ Every deployment needs a rollback plan before it happens:
 - No one monitoring the deploy for the first hour
 - Production environment configuration done by memory, not code
 - "It's Friday afternoon, let's ship it"
+- Error budget exhausted but feature work continues unchanged
 
 ## Verification
 
@@ -334,8 +340,6 @@ After deploying:
 - [ ] Logs are flowing
 - [ ] Rollback tested or verified ready
 
-## Limitations
+For every shipped service:
 
-- Use this skill only when the task clearly matches its upstream source and local project context.
-- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.
-- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.
+- [ ] Error budget policy in place: know what action to take when budget drops below 20% and when it's exhausted

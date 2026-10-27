@@ -5025,7 +5025,8 @@
         "public",
         "creating"
       ],
-      "path": "skills/api-and-interface-design/SKILL.md"
+      "path": "skills/api-and-interface-design/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "api-contract-testing",
@@ -14597,7 +14598,8 @@
         "chrome",
         "inspecting"
       ],
-      "path": "skills/browser-testing-with-devtools/SKILL.md"
+      "path": "skills/browser-testing-with-devtools/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "buddy-program-manager",
@@ -16450,7 +16452,8 @@
         "deployment",
         "pipelines"
       ],
-      "path": "skills/ci-cd-and-automation/SKILL.md"
+      "path": "skills/ci-cd-and-automation/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "cicd-automation-workflow-automate",
@@ -18274,7 +18277,8 @@
         "change",
         "reviewing"
       ],
-      "path": "skills/code-review-and-quality/SKILL.md"
+      "path": "skills/code-review-and-quality/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "code-review-checklist",
@@ -18548,7 +18552,8 @@
         "read",
         "maintain"
       ],
-      "path": "skills/code-simplification/SKILL.md"
+      "path": "skills/code-simplification/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "code-simplifier",
@@ -19908,7 +19913,8 @@
         "agents",
         "stop"
       ],
-      "path": "skills/constraint-driven-development/SKILL.md"
+      "path": "skills/constraint-driven-development/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "container-hardening",
@@ -20246,7 +20252,8 @@
         "degrades",
         "switching"
       ],
-      "path": "skills/context-engineering/SKILL.md"
+      "path": "skills/context-engineering/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "context-fundamentals",
@@ -23474,7 +23481,8 @@
         "break",
         "behavior"
       ],
-      "path": "skills/debugging-and-error-recovery/SKILL.md"
+      "path": "skills/debugging-and-error-recovery/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "debugging-code",
@@ -24251,7 +24259,8 @@
         "one",
         "another"
       ],
-      "path": "skills/deprecation-and-migration/SKILL.md"
+      "path": "skills/deprecation-and-migration/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "design-it",
@@ -27516,7 +27525,8 @@
         "shipping",
         "features"
       ],
-      "path": "skills/documentation-and-adrs/SKILL.md"
+      "path": "skills/documentation-and-adrs/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "documentation-generation-doc-generate",
@@ -27877,7 +27887,8 @@
         "adversarial",
         "review"
       ],
-      "path": "skills/doubt-driven-development/SKILL.md"
+      "path": "skills/doubt-driven-development/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "draft-my-comments",
@@ -33619,7 +33630,8 @@
         "creating",
         "components"
       ],
-      "path": "skills/frontend-ui-engineering/SKILL.md"
+      "path": "skills/frontend-ui-engineering/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "fsi-compliance-checker",
@@ -35791,7 +35803,8 @@
         "resolving",
         "conflicts"
       ],
-      "path": "skills/git-workflow-and-versioning/SKILL.md"
+      "path": "skills/git-workflow-and-versioning/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "github",
@@ -41156,7 +41169,8 @@
         "divergent",
         "convergent"
       ],
-      "path": "skills/idea-refine/SKILL.md"
+      "path": "skills/idea-refine/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "idea-to-blueprint",
@@ -41751,7 +41765,8 @@
         "one",
         "file"
       ],
-      "path": "skills/incremental-implementation/SKILL.md"
+      "path": "skills/incremental-implementation/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "indexing-issue-auditor",
@@ -42298,7 +42313,8 @@
         "interviews",
         "until"
       ],
-      "path": "skills/interview-me/SKILL.md"
+      "path": "skills/interview-me/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "interview-style-doc-building",
@@ -53716,7 +53732,8 @@
         "logging",
         "metrics"
       ],
-      "path": "skills/observability-and-instrumentation/SKILL.md"
+      "path": "skills/observability-and-instrumentation/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "observability-cloud-planning",
@@ -57248,7 +57265,8 @@
         "vitals",
         "load"
       ],
-      "path": "skills/performance-optimization/SKILL.md"
+      "path": "skills/performance-optimization/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "performance-optimizer",
@@ -58019,7 +58037,8 @@
         "requirements",
         "break"
       ],
-      "path": "skills/planning-and-task-breakdown/SKILL.md"
+      "path": "skills/planning-and-task-breakdown/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "planning-with-files",
@@ -65602,7 +65621,8 @@
         "authentication",
         "data"
       ],
-      "path": "skills/security-and-hardening/SKILL.md"
+      "path": "skills/security-and-hardening/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "security-arsenal",
@@ -68143,7 +68163,8 @@
         "up",
         "monitoring"
       ],
-      "path": "skills/shipping-and-launch/SKILL.md"
+      "path": "skills/shipping-and-launch/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "shipvela-publish",
@@ -70228,7 +70249,8 @@
         "cited",
         "code"
       ],
-      "path": "skills/source-driven-development/SKILL.md"
+      "path": "skills/source-driven-development/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "spark-optimization",
@@ -70288,7 +70310,8 @@
         "significant",
         "change"
       ],
-      "path": "skills/spec-driven-development/SKILL.md"
+      "path": "skills/spec-driven-development/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "spec-driven-loop",
@@ -74210,7 +74233,11 @@
         "relevant",
         "regression"
       ],
-      "path": "skills/test-driven-development/SKILL.md"
+      "path": "skills/test-driven-development/SKILL.md",
+      "author": "Addy Osmani",
+      "source_repo": "addyosmani/agent-skills",
+      "license": "MIT",
+      "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
     },
     {
       "id": "test-fixing",
@@ -77954,7 +77981,8 @@
         "applied",
         "session"
       ],
-      "path": "skills/using-agent-skills/SKILL.md"
+      "path": "skills/using-agent-skills/SKILL.md",
+      "author": "Addy Osmani"
     },
     {
       "id": "using-git-worktrees",
