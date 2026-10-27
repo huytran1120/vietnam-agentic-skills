@@ -1102,7 +1102,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `complexity-cuts` | `safe` | Lower Big-O on existing code via a one-transformation-at-a-time playbook with... |
 | `comprehensive-review-full-review` | `critical` | Use when working with comprehensive review full review |
 | `comprehensive-review-pr-enhance` | `critical` | Generate structured PR descriptions from diffs, add review checklists, risk a... |
-| `constraint-driven-development` | `safe` | Write the project quality bar as enforced CONSTRAINTS.md so agents stop |
+| `constraint-driven-development` | `safe` | Establishes a project's quality bar as a written contract and stops agents qu... |
 | `debate-review` | `critical` | Two-model debate review of a GitHub PR, GitLab MR, Azure DevOps PR, or |
 | `doubt-driven-development` | `critical` | Subjects every non-trivial decision to a fresh-context adversarial review bef... |
 | `find-bugs` | `critical` | Find bugs, security vulnerabilities, and code quality issues in local branch ... |
@@ -1181,7 +1181,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `devrel-content` | `critical` | When the user wants to create technical content for developers including blog... |
 | `docs-generator` | `critical` | Generate technical deliverables from completed analysis: reverse-engineering ... |
 | `docs-guard` | `critical` | Review generated or changed documentation before it ships, including READMEs,... |
-| `documentation-and-adrs` | `critical` | Records decisions and documentation. Use when making architectural decisions,... |
+| `documentation-and-adrs` | `critical` | Records decisions and documentation. Use when you need to document an archite... |
 | `documentation-generation-doc-generate` | `safe` | You are a documentation expert specializing in creating comprehensive, mainta... |
 | `documentation-templates` | `safe` | Documentation templates and structure guidelines. README, API docs, code comm... |
 | `emotional-arc-designer` | `safe` | Map the emotional progression of a narrative, page, or campaign when content ... |
@@ -1589,7 +1589,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `dbos-golang` | `critical` | Guide for building reliable, fault-tolerant Go applications with DBOS durable... |
 | `dbos-python` | `critical` | Guide for building reliable, fault-tolerant Python applications with DBOS dur... |
 | `dbos-typescript` | `critical` | Guide for building reliable, fault-tolerant TypeScript applications with DBOS... |
-| `debugging-and-error-recovery` | `critical` | Guides systematic root-cause debugging. Use when tests fail, builds break, be... |
+| `debugging-and-error-recovery` | `critical` | Guides systematic root-cause debugging. Use when tests fail, builds break, so... |
 | `debugging-code` | `critical` | Interactively debug source code — set breakpoints, step through execution lin... |
 | `debugging-toolkit` | `critical` | Use when working with debugging toolkit smart debug (Alias for debugging-tool... |
 | `debugging-toolkit-smart-debug` | `critical` | Diagnose failures from reproduction steps, traces, logs and code; test hypoth... |
@@ -1660,7 +1660,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `implement` | `critical` | Implement a piece of work based on a PRD or set of issues. |
 | `implement-spec` | `critical` | Implement the result of /to-spec and /to-tickets in code. |
 | `improve-codebase-architecture` | `safe` | Scan a codebase for deepening opportunities, present them as a visual HTML re... |
-| `incremental-implementation` | `critical` | Delivers changes incrementally. Use when implementing any feature or change t... |
+| `incremental-implementation` | `critical` | Delivers changes incrementally in thin, verifiable slices. Use when implement... |
 | `instructree` | `safe` | Map, explain, and lint repository-scoped coding-agent instructions before cha... |
 | `javascript-mastery` | `critical` | 33+ essential JavaScript concepts every developer should know, inspired by [3... |
 | `javascript-testing-patterns` | `safe` | Comprehensive guide for implementing robust testing strategies in JavaScript/... |
@@ -1709,7 +1709,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `openhook` | `critical` | Creates private callback inboxes with Openhook. Use when an agent needs to wa... |
 | `orca-replay` | `critical` | Answers questions about a past agent run from its recording rather than from ... |
 | `performance-engineer` | `critical` | Diagnose performance bottlenecks using profiling, traces, load tests, and obs... |
-| `performance-optimization` | `critical` | Optimizes application performance. Use when performance requirements exist, w... |
+| `performance-optimization` | `critical` | Optimizes application performance across frontend, backend, queries, and data... |
 | `performance-optimizer` | `safe` | Identifies and fixes performance bottlenecks in code, databases, and APIs. Me... |
 | `performance-profiling` | `critical` | Performance profiling principles. Measurement, analysis, and optimization tec... |
 | `performance-testing-review-ai-review` | `critical` | Review performance-sensitive code changes with reproducible baselines, worklo... |
@@ -1928,7 +1928,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `service-mesh` | `critical` | Implement Istio and Linkerd service meshes. Configure mTLS, traffic management, |
 | `service-mesh-observability` | `critical` | Complete guide to observability patterns for Istio, Linkerd, and service mesh... |
 | `setup-pre-commit` | `critical` | Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and... |
-| `shipping-and-launch` | `critical` | Prepares production launches. Use when preparing to deploy to production. Use... |
+| `shipping-and-launch` | `critical` | Prepares production launches. Use when preparing to deploy to production, or ... |
 | `solidping` | `critical` | Run SolidPing uptime monitoring through its hosted MCP server: list and diagn... |
 | `sre-dashboards` | `critical` | Design and operationalize SRE dashboards that surface reliability, latency, |
 | `ssh-configuration` | `critical` | Configure SSH servers and clients securely. Manage keys, tunnels, and |
@@ -2614,7 +2614,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `skill-suggester` | `safe` | Scan prompt history for recurring patterns and unmet needs, then propose new ... |
 | `skill-writer` | `critical` | Create and improve agent skills following the Agent Skills specification. Use... |
 | `the-honoured-one` | `safe` | Forces the AI to fully load context and read relevant files before performing... |
-| `using-agent-skills` | `safe` | Meta-skill for discovering and invoking the right agent skill for the |
+| `using-agent-skills` | `safe` | Discovers and invokes agent skills. Use when starting a session, or when you ... |
 | `using-superpowers` | `critical` | Use when choosing relevant skills for a task and establishing a skill-selecti... |
 | `wgm` | `safe` | Turns a rough request into working software via a governed build loop: align ... |
 | `writing-skills` | `critical` | Use when creating, updating, or improving agent skills. |
@@ -2792,7 +2792,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `handoff` | `safe` | Compact the current conversation into a handoff document for another agent to... |
 | `i-have-adhd` | `safe` | Shape output for ADHD readers: next action first, numbered steps, restated |
 | `interview-coach` | `safe` | Full job search coaching system — JD decoding, resume, storybank, mock interv... |
-| `interview-me` | `safe` | Draw out what the user actually wants with one-question-at-a-time interviews |
+| `interview-me` | `safe` | Extracts what the user actually wants instead of what they think they should ... |
 | `interview-style-doc-building` | `critical` | Build structured strategy documents by asking one question at a time and patc... |
 | `jobgpt` | `critical` | Job search automation, auto apply, resume generation, application tracking, s... |
 | `json-canvas` | `critical` | Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and co... |
@@ -3214,7 +3214,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `sbom-supply-chain` | `critical` | Generate, sign, and verify SBOMs and provenance attestations to secure |
 | `scanning-tools` | `offensive` | Master essential security scanning tools for network discovery, vulnerability... |
 | `secrets-management` | `critical` | Secure secrets management practices for CI/CD pipelines using Vault, AWS Secr... |
-| `security-and-hardening` | `critical` | Hardens code against vulnerabilities. Use when handling user input, authentic... |
+| `security-and-hardening` | `critical` | Hardens code against vulnerabilities. Use when auditing an input handler for ... |
 | `security-arsenal` | `offensive` | Security payloads, bypass tables, wordlists, gf pattern names, always-rejected |
 | `security-auditor` | `critical` | Expert security auditor specializing in DevSecOps, comprehensive cybersecurit... |
 | `security-automation` | `critical` | Automate security workflows and remediation. Build security pipelines, |
@@ -3390,7 +3390,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `assay` | `safe` | Run assay on a web page you just wrote or changed. It opens the page in a rea... |
 | `bats-testing-patterns` | `critical` | Master Bash Automated Testing System (Bats) for comprehensive shell script te... |
 | `brooks-test` | `safe` | Review test-suite quality using established testing literature; identify brit... |
-| `browser-testing-with-devtools` | `critical` | Test browser apps with Chrome DevTools MCP by inspecting live DOM, console lo... |
+| `browser-testing-with-devtools` | `critical` | Tests in real browsers via Chrome DevTools MCP. Use when building or debuggin... |
 | `cucumber-skill` | `critical` | Generates Cucumber BDD tests with Gherkin feature files and step definitions ... |
 | `cypress-skill` | `critical` | Generates production-grade Cypress E2E and component tests in JavaScript or T... |
 | `electron-drive-skill` | `critical` | Launch the project's Electron app on a scratch profile and drive it: click, t... |
@@ -3420,7 +3420,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `tdd-workflows-tdd-red` | `critical` | Generate failing tests for the TDD red phase to define expected behavior and ... |
 | `tdd-workflows-tdd-refactor` | `critical` | Use when working with tdd workflows tdd refactor |
 | `temporal-python-testing` | `critical` | Comprehensive testing approaches for Temporal workflows using pytest, progres... |
-| `test-driven-development` | `critical` | Use a failing behavioral test to guide a feature or bug fix, then implement a... |
+| `test-driven-development` | `critical` | Drives development with tests using the red-green-refactor loop. Use when imp... |
 | `test-framework-migration-skill` | `critical` | Migrates and converts test automation scripts between Selenium, Playwright, P... |
 | `test-guard` | `critical` | Review generated or changed test code against universal testing rules before ... |
 | `testdriver-e2e-testing` | `critical` | Build E2E tests with TestDriver.ai, the AI code reviewer that runs every pull... |
@@ -3516,7 +3516,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `frontend-seo` | `critical` | A portable, framework-agnostic SEO system for any React or React Native-for-w... |
 | `frontend-slides-frontend-slides` | `critical` | Create stunning, animation-rich HTML presentations from scratch or by convert... |
 | `frontend-ui-dark-ts` | `critical` | A modern dark-themed React UI system using Tailwind CSS and Framer Motion. De... |
-| `frontend-ui-engineering` | `critical` | Builds production-quality UIs. Use when building or modifying user-facing int... |
+| `frontend-ui-engineering` | `critical` | Builds production-quality, accessible, responsive user-facing UIs. Use when b... |
 | `iconsax-library` | `safe` | Extensive icon library and AI-driven icon generation skill for premium UI/UX ... |
 | `jest-skill` | `critical` | Generates Jest unit and integration tests in JavaScript or TypeScript. Covers... |
 | `magic-ui-generator` | `safe` | Utilizes Magic by 21st.dev to generate, compare, and integrate multiple produ... |

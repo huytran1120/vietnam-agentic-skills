@@ -2771,8 +2771,9 @@
       "interface"
     ],
     "risk": "none",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/api-and-interface-design",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -8053,7 +8054,7 @@
     "canonical_id": "browser-testing-with-devtools",
     "name": "browser-testing-with-devtools",
     "path": "skills/browser-testing-with-devtools",
-    "description": "Test browser apps with Chrome DevTools MCP by inspecting live DOM, console logs, network traffic, screenshots, accessibility, and performance traces.",
+    "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.",
     "category": "testing",
     "tags": [
       "browser-testing",
@@ -8065,9 +8066,9 @@
     "risk": "critical",
     "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
-    "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
-    "author": "Addy Osmani"
+    "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
   {
     "id": "buddy-program-manager",
@@ -9171,8 +9172,9 @@
       "and"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -10177,7 +10179,7 @@
     "canonical_id": "code-review-and-quality",
     "name": "code-review-and-quality",
     "path": "skills/code-review-and-quality",
-    "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
+    "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch. Use when asked to review a diff or a pull request, even when the diff is pasted inline.",
     "category": "development",
     "tags": [
       "code",
@@ -10185,8 +10187,9 @@
       "quality"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/code-review-and-quality",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -10330,8 +10333,9 @@
       "simplification"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/code-simplification",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -11073,15 +11077,16 @@
     "canonical_id": "constraint-driven-development",
     "name": "constraint-driven-development",
     "path": "skills/constraint-driven-development",
-    "description": "Write the project quality bar as enforced CONSTRAINTS.md so agents stop",
+    "description": "Establishes a project's quality bar as a written contract and stops agents quietly lowering it. Interviews the user on which dimensions matter, supplies sane default thresholds when they have no number in mind, records everything in CONSTRAINTS.md, and watches the diff for a weakened bar — new @ts-ignore or eslint-disable suppressions, skipped or deleted tests, assertions stripped out, unimplemented stubs, thresholds edited down. Use when no quality bar is written down, when the user says \"set up constraints\" or \"define our standards\", when the user wants dimensions they care about — accessibility, web performance, coverage — set up as enforced constraints, when an agent keeps silencing checks or skipping tests to get to green, when you need a coverage or performance threshold and don't know what number to pick, or when an agent writes more code than anyone will read.",
     "category": "code-quality",
     "tags": [
       "constraint",
       "driven"
     ],
     "risk": "safe",
-    "source": "https://github.com/addyosmani/agent-skills",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -11254,8 +11259,9 @@
       "engineering"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/context-engineering",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -13266,7 +13272,7 @@
     "canonical_id": "debugging-and-error-recovery",
     "name": "debugging-and-error-recovery",
     "path": "skills/debugging-and-error-recovery",
-    "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need a systematic approach to finding and fixing the root cause rather than guessing.",
+    "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need to figure out what broke and why — a systematic approach to finding and fixing the root cause rather than guessing.",
     "category": "development",
     "tags": [
       "debugging",
@@ -13275,8 +13281,9 @@
       "recovery"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/debugging-and-error-recovery",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -13694,7 +13701,7 @@
     "canonical_id": "deprecation-and-migration",
     "name": "deprecation-and-migration",
     "path": "skills/deprecation-and-migration",
-    "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
+    "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when migrating a database schema in production, such as renaming or dropping a column without downtime (expand/contract). Use when deciding whether to maintain or sunset existing code.",
     "category": "workflow",
     "tags": [
       "deprecation",
@@ -13702,8 +13709,9 @@
       "migration"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/deprecation-and-migration",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -15436,7 +15444,7 @@
     "canonical_id": "documentation-and-adrs",
     "name": "documentation-and-adrs",
     "path": "skills/documentation-and-adrs",
-    "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
+    "description": "Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice, when changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
     "category": "content",
     "tags": [
       "documentation",
@@ -15444,8 +15452,9 @@
       "adrs"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/documentation-and-adrs",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -15638,15 +15647,16 @@
     "canonical_id": "doubt-driven-development",
     "name": "doubt-driven-development",
     "path": "skills/doubt-driven-development",
-    "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands.",
+    "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when you want every assumption cross-examined before proceeding, when stress-testing a plan for hidden failure modes, when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production auth, security-sensitive logic, a high-stakes migration, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.",
     "category": "code-quality",
     "tags": [
       "doubt",
       "driven"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/doubt-driven-development",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -19070,7 +19080,7 @@
     "canonical_id": "frontend-ui-engineering",
     "name": "frontend-ui-engineering",
     "path": "skills/frontend-ui-engineering",
-    "description": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
+    "description": "Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requirements, managing state, or when the output needs to look and feel production-quality rather than AI-generated.",
     "category": "web-development",
     "tags": [
       "frontend",
@@ -19078,8 +19088,9 @@
       "engineering"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/frontend-ui-engineering",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -20329,7 +20340,7 @@
     "canonical_id": "git-workflow-and-versioning",
     "name": "git-workflow-and-versioning",
     "path": "skills/git-workflow-and-versioning",
-    "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
+    "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncommitted work in a messy working tree into clean atomic commits, opening or reviewing a pull request (PR), pushing to a remote, or when you need to organize work across multiple parallel streams. Use when cutting a release, choosing a semantic version bump, tagging, or writing a changelog.",
     "category": "workflow",
     "tags": [
       "git",
@@ -20337,8 +20348,9 @@
       "versioning"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/git-workflow-and-versioning",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -23616,15 +23628,16 @@
     "canonical_id": "idea-refine",
     "name": "idea-refine",
     "path": "skills/idea-refine",
-    "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one.",
+    "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers on \"ideate\", \"refine this idea\", or \"stress-test my plan\".",
     "category": "planning",
     "tags": [
       "idea",
       "refine"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/idea-refine",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -23969,14 +23982,15 @@
     "canonical_id": "incremental-implementation",
     "name": "incremental-implementation",
     "path": "skills/incremental-implementation",
-    "description": "Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
+    "description": "Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than one file, or when picking up the next task from a plan. Use when rolling a change out behind a feature flag, when you're about to write a large amount of code at once, or when a task feels too big to land in one step.",
     "category": "development",
     "tags": [
       "incremental"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/incremental-implementation",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -24268,15 +24282,16 @@
     "canonical_id": "interview-me",
     "name": "interview-me",
     "path": "skills/interview-me",
-    "description": "Draw out what the user actually wants with one-question-at-a-time interviews",
+    "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when the user explicitly invokes (\"interview me\", \"grill me\", \"are we sure?\", \"stress-test my thinking\"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.",
     "category": "productivity",
     "tags": [
       "interview",
       "me"
     ],
     "risk": "safe",
-    "source": "https://github.com/addyosmani/agent-skills",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -30820,7 +30835,7 @@
     "canonical_id": "observability-and-instrumentation",
     "name": "observability-and-instrumentation",
     "path": "skills/observability-and-instrumentation",
-    "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works.",
+    "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are reported but you can't tell what happened from the available data.",
     "category": "devops",
     "tags": [
       "observability",
@@ -30828,8 +30843,9 @@
       "instrumentation"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/observability-and-instrumentation",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -33092,15 +33108,16 @@
     "canonical_id": "performance-optimization",
     "name": "performance-optimization",
     "path": "skills/performance-optimization",
-    "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
+    "description": "Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load times need improvement, when N+1 query patterns need fixing, or when profiling reveals bottlenecks.",
     "category": "development",
     "tags": [
       "performance",
       "optimization"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/performance-optimization",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -33554,8 +33571,9 @@
       "breakdown"
     ],
     "risk": "none",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -38055,7 +38073,7 @@
     "canonical_id": "security-and-hardening",
     "name": "security-and-hardening",
     "path": "skills/security-and-hardening",
-    "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
+    "description": "Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, data storage, or external integrations, or when checking a login flow is safe against the OWASP Top Ten. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services. Use when auditing dependencies for known vulnerabilities, triaging package-manager audit findings, or assessing supply-chain risk in a new package. Use when personal data or privacy compliance (GDPR, CCPA) is involved.",
     "category": "security",
     "tags": [
       "security",
@@ -38063,8 +38081,9 @@
       "hardening"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/security-and-hardening",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -39353,7 +39372,7 @@
     "canonical_id": "shipping-and-launch",
     "name": "shipping-and-launch",
     "path": "skills/shipping-and-launch",
-    "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
+    "description": "Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
     "category": "devops",
     "tags": [
       "shipping",
@@ -39361,8 +39380,9 @@
       "launch"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/shipping-and-launch",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -40571,15 +40591,16 @@
     "canonical_id": "source-driven-development",
     "name": "source-driven-development",
     "path": "skills/source-driven-development",
-    "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
+    "description": "Grounds every implementation decision in official documentation. Use when you want to verify an approach against the official docs before implementing it, or when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
     "category": "development",
     "tags": [
       "source",
       "driven"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/source-driven-development",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -40602,15 +40623,16 @@
     "canonical_id": "spec-driven-development",
     "name": "spec-driven-development",
     "path": "skills/spec-driven-development",
-    "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
+    "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when drafting a PRD or requirements document with objectives and scope, or when requirements are unclear, ambiguous, or only exist as a vague idea. Use when a single requirement spans several independently testable capabilities and needs decomposing into a capability map of modules before specifying.",
     "category": "planning",
     "tags": [
       "spec",
       "driven"
     ],
     "risk": "critical",
-    "source": "https://github.com/addyosmani/agent-skills/tree/main/skills/spec-driven-development",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
@@ -42811,13 +42833,17 @@
     "canonical_id": "test-driven-development",
     "name": "test-driven-development",
     "path": "skills/test-driven-development",
-    "description": "Use a failing behavioral test to guide a feature or bug fix, then implement and refactor with relevant regression checks.",
+    "description": "Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality. Use when asked to add tests to a function, fix a bug in it or change its behavior, even when the code is pasted inline and the request does not mention tests.",
     "category": "testing",
     "tags": [
       "driven"
     ],
     "risk": "critical",
-    "source": "community"
+    "source": "community",
+    "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
+    "license": "MIT",
+    "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
   {
     "id": "test-fixing",
@@ -45005,7 +45031,7 @@
     "canonical_id": "using-agent-skills",
     "name": "using-agent-skills",
     "path": "skills/using-agent-skills",
-    "description": "Meta-skill for discovering and invoking the right agent skill for the",
+    "description": "Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece of work at hand. This is the meta-skill that governs how all other skills are discovered and invoked.",
     "category": "meta",
     "tags": [
       "using",
@@ -45013,8 +45039,9 @@
       "skills"
     ],
     "risk": "safe",
-    "source": "https://github.com/addyosmani/agent-skills",
+    "source": "community",
     "source_repo": "addyosmani/agent-skills",
+    "author": "Addy Osmani",
     "license": "MIT",
     "license_source": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE"
   },
