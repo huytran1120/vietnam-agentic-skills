@@ -177,17 +177,43 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
     </section>
 
     <section id="showcase" class="support-section" aria-labelledby="showcase-title">
-      <div class="section-heading"><div><h2 id="showcase-title">10 Thẻ Demo Đồ Họa Cao Cấp</h2><p>Trưng bày đầy đủ các kỹ năng: Landing Page, UI/UX, Anti-Slop, 3D, Video, Sơ đồ, Cloud &amp; Khoa học dữ liệu.</p></div><button class="text-button" id="matt-collection">Khám phá bộ Matt Pocock <span aria-hidden="true">↗</span></button></div>
+      <div class="section-heading">
+        <div>
+          <h2 id="showcase-title">10 Thẻ Demo Đồ Họa Cao Cấp &amp; Bộ Sưu Tập Tuyển Chọn</h2>
+          <p>Trưng bày các kỹ năng nổi bật: Landing Page, UI/UX, Anti-Slop, 3D, Video, Sơ đồ, Cloud, Data &amp; Quy trình SDLC.</p>
+        </div>
+        <div class="collection-actions">
+          <button class="text-button" id="addy-collection">Bộ 25 Kỹ năng Addy Osmani <span aria-hidden="true">↗</span></button>
+          <button class="text-button" id="matt-collection">Bộ 35 Kỹ năng Matt Pocock <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
       <div id="showcase-filters" class="quick-filters" role="group" aria-label="Lọc bộ sưu tập"><button data-showcase="all" aria-pressed="true">Tất cả (10 Thẻ)</button><button data-showcase="design" aria-pressed="false">UI/UX &amp; Design</button><button data-showcase="3d" aria-pressed="false">3D &amp; Three.js</button><button data-showcase="video" aria-pressed="false">Video</button><button data-showcase="cloud" aria-pressed="false">Cloud &amp; dữ liệu</button></div>
       <div id="showcase-grid" class="showcase-grid"></div>
     </section>
 
     <section id="how-it-works" class="support-section" aria-labelledby="how-title">
-      <div class="section-heading"><div><h2 id="how-title">Một kỹ năng nhỏ. Một quy trình rõ ràng.</h2><p>Skill là playbook trong file SKILL.md, kèm tài liệu hoặc script khi cần. Bạn kiểm soát kỹ năng nào được cài vào workspace.</p></div></div>
+      <div class="section-heading">
+        <div>
+          <h2 id="how-title">Vòng đời phát triển phần mềm chuẩn mực cho AI Agents</h2>
+          <p>Skill không phải lời khuyên chung chung. Skill là runbook có quy trình, trạm kiểm soát (checkpoints), bảng chặn ngụy biện và yêu cầu bằng chứng thực nghiệm.</p>
+        </div>
+      </div>
+
+      <div class="lifecycle-banner" aria-label="6 Giai đoạn vòng đời phát triển">
+        <div class="lifecycle-track">
+          <div class="lifecycle-step"><strong>1. DEFINE</strong><span>/spec · Định nghĩa &amp; PRD</span></div>
+          <div class="lifecycle-step"><strong>2. PLAN</strong><span>/plan · Chia nhỏ task nguyên tử</span></div>
+          <div class="lifecycle-step"><strong>3. BUILD</strong><span>/build · TDD &amp; Từng lát mỏng</span></div>
+          <div class="lifecycle-step"><strong>4. VERIFY</strong><span>/test · DevTools &amp; Chứng minh</span></div>
+          <div class="lifecycle-step"><strong>5. REVIEW</strong><span>/review · Thẩm định 5 trục &amp; OWASP</span></div>
+          <div class="lifecycle-step"><strong>6. SHIP</strong><span>/ship · Trực ban &amp; Triển khai</span></div>
+        </div>
+      </div>
+
       <ol class="steps">
-        <li><span>1</span><h3>Tìm đúng kỹ năng</h3><p>Tìm theo công nghệ, công việc, tác giả hoặc nguồn. Đọc mô tả và kiểm tra runbook trước khi sử dụng.</p><code>./vas search docker</code></li>
-        <li><span>2</span><h3>Cài vào workspace</h3><p>Chọn agent và sao chép lệnh. Chạy trong terminal tại thư mục kho VAS đã clone; web không tự cài trên máy bạn.</p><code>./vas install &lt;id&gt; --mode link</code></li>
-        <li><span>3</span><h3>Để agent đọc khi cần</h3><p>Progressive Disclosure cho phép agent đọc tên và mô tả trước, rồi nạp hướng dẫn đầy đủ khi tác vụ phù hợp.</p><code>./vas show &lt;id&gt;</code></li>
+        <li><span>1</span><h3>Quy trình, không phải văn phong</h3><p>Mỗi skill là một cẩm nang có cấu trúc: quy trình từng bước, điều kiện dừng và tiêu chuẩn đầu ra rõ ràng thay vì prompt mơ hồ.</p><code>Process over Prose</code></li>
+        <li><span>2</span><h3>Chặn ngụy biện &amp; Cảnh báo rủi ro</h3><p>Mọi kỹ năng đều trang bị bảng phản bác cái cớ AI thường dùng để trốn việc, kèm danh sách dấu hiệu cảnh báo (Red Flags).</p><code>Anti-Rationalization</code></li>
+        <li><span>3</span><h3>Bằng chứng thực nghiệm định lượng</h3><p>Đòi hỏi kết quả chạy test pass, log trace, DOM thực tế hoặc profiling hiệu năng. “Trông có vẻ đúng” không được chấp nhận.</p><code>Evidence, not “seems right”</code></li>
       </ol>
     </section>
 
@@ -203,6 +229,7 @@ FORM: User-provided light Skill Atlas reference; list-first with an optional gri
     <section id="faq" class="support-section faq" aria-labelledby="faq-title">
       <div><h2 id="faq-title">Những điều cần biết.</h2><p>Ít thiết lập hơn. Hiểu rõ hơn trước khi cài.</p></div>
       <div>
+        <details><summary>Vì sao AI Coding Agent cần kỹ năng có kỷ luật kỹ thuật (như bộ 25 kỹ năng Addy Osmani)?</summary><p>AI Agent mặc định thường chọn con đường ngắn nhất: bỏ qua spec, không viết test trước, bỏ qua rà soát OWASP và tự suy diễn 'trông có vẻ ổn'. Bộ kỹ năng kỹ sư cấp cao đóng đường tắt đó bằng quy trình vòng đời 6 bước (Define → Plan → Build → Verify → Review → Ship), trạm kiểm soát bắt buộc, bảng chặn ngụy biện và yêu cầu bằng chứng thực nghiệm (test pass, log trace) trước khi triển khai.</p></details>
         <details><summary>VAS hỗ trợ những AI agent nào?</summary><p>Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf, Cline / Roo Code và GitHub Copilot CLI. Chọn agent trong danh mục để nhận đúng lệnh cài; <code>--target all</code> cài cho tất cả agent được CLI hỗ trợ.</p></details>
         <details><summary>Có cần Node.js hay NPX để cài skill không?</summary><p>Không. CLI quản lý VAS chạy bằng Python 3. Sau khi tải kho về, bạn có thể tìm và cài offline. Công cụ thực thi của từng skill có thể có yêu cầu riêng, được ghi trong runbook.</p></details>
         <details><summary>Link và copy khác nhau thế nào?</summary><p><code>--mode link</code> tạo symlink đến skill trong kho VAS, nên cần giữ nguyên thư mục nguồn. <code>--mode copy</code> tạo bản sao độc lập; những lần cập nhật kho sau đó không tự cập nhật bản sao.</p></details>

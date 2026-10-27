@@ -411,6 +411,14 @@
     const nextButton = byId('skills-results').querySelectorAll('.skill-name')[firstNew];
     if (nextButton) nextButton.focus({ preventScroll: true });
   });
+  byId('addy-collection')?.addEventListener('click', () => {
+    state.query = 'Addy Osmani';
+    state.group = 'all';
+    state.category = 'all';
+    byId('search-input').value = state.query;
+    applyFilters();
+    focusSearch();
+  });
   byId('matt-collection').addEventListener('click', () => {
     state.query = 'mattpocock/skills';
     state.group = 'all';

@@ -44,9 +44,12 @@ Giao diện web ưu tiên danh mục: tìm theo từ khóa/tác giả/nguồn, l
 - [5. Hướng Dẫn Từng AI Agent](#5-hướng-dẫn-từng-ai-agent)
 - [6. Cẩm Nang Lệnh CLI (`./vas`)](#6-cẩm-nang-lệnh-cli-vas)
 - [7. Cấu Trúc Chuẩn Của Một Skill](#7-cấu-trúc-chuẩn-của-một-skill)
-- [8. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật](#8-danh-mục--top-20-siêu-kỹ-năng-nổi-bật)
-- [9. Câu Hỏi Thường Gặp (FAQ)](#9-câu-hỏi-thường-gặp-faq)
-- [10. Tác Giả & Giấy Phép](#10-tác-giả--giấy-phép)
+- [8. Vòng Đời Kỹ Thuật Chuẩn Cấp Cao & Bộ 25 Kỹ Năng Addy Osmani](#8-vòng-đời-kỹ-thuật-chuẩn-cấp-cao--bộ-25-kỹ-năng-addy-osmani)
+- [9. Hệ Thống 7 Checklist Kỹ Thuật & Hội Đồng Thẩm Định Personas](#9-hệ-thống-7-checklist-kỹ-thuật--hội-đồng-thẩm-định-personas)
+- [10. Bảng So Sánh Chi Tiết (How VAS Compares)](#10-bảng-so-sánh-chi-tiết-how-vas-compares)
+- [11. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật](#11-danh-mục--top-20-siêu-kỹ-năng-nổi-bật)
+- [12. Câu Hỏi Thường Gặp (FAQ)](#12-câu-hỏi-thường-gặp-faq)
+- [13. Tác Giả & Giấy Phép](#13-tác-giả--giấy-phép)
 
 ---
 
@@ -221,7 +224,130 @@ description: >-
 
 ---
 
-### 8. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật
+### 8. Vòng Đời Kỹ Thuật Chuẩn Cấp Cao & Bộ 25 Kỹ Năng Addy Osmani
+
+Mặc định, các AI Coding Agent thường chọn con đường tắt có điện trở thấp nhất: nhảy vào viết code ngay mà không có bản đặc tả (spec), bỏ qua việc viết test trước, không tự đánh giá ranh giới bảo mật hay hiệu năng, và dễ dàng tự ngụy biện rằng *"chắc là code chạy được rồi"*.
+
+Lấy cảm hứng và đồng bộ trực tiếp từ bộ kỹ năng tiêu chuẩn **v0.6.13 của Addy Osmani** ([addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) & [skills.addy.ie](https://skills.addy.ie/)), VAS tích hợp toàn bộ **25 kỹ năng kỹ sư cấp cao** được ánh xạ 1:1 vào **6 giai đoạn của vòng đời phát triển phần mềm (SDLC)**:
+
+```text
+  ĐỊNH NGHĨA        KẾ HOẠCH        XÂY DỰNG        KIỂM THỬ        ĐÁNH GIÁ        TRIỂN KHAI
+   DEFINE            PLAN            BUILD           VERIFY          REVIEW           SHIP
+  ┌────────┐      ┌────────┐      ┌────────┐      ┌────────┐      ┌────────┐      ┌────────┐
+  │  Idea  │ ───▶ │  Spec  │ ───▶ │  Code  │ ───▶ │  Test  │ ───▶ │   QA   │ ───▶ │   Go   │
+  │ Refine │      │  PRD   │      │  Impl  │      │ Debug  │      │  Gate  │      │  Live  │
+  └────────┘      └────────┘      └────────┘      └────────┘      └────────┘      └────────┘
+   /spec           /plan           /build          /test          /review          /ship
+```
+
+#### 🛡️ 4 Nguyên Tắc Vàng Kỷ Luật Kỹ Thuật (Senior Engineering Discipline)
+1. **Quy trình thay vì văn phong (Process, not prose)**: Kỹ năng không phải prompt chung chung hay lời khuyên trừu tượng. Mỗi skill là một cẩm nang hành động có các bước thực hiện rõ ràng, các trạm kiểm soát (checkpoints) và điều kiện nghiệm thu nghiêm ngặt.
+2. **Chặn ngụy biện của AI (Anti-rationalization)**: Mọi kỹ năng đều trang bị bảng *Common Rationalizations* — vạch trần mọi cái cớ phổ biến mà AI thường đưa ra để trốn tránh công việc (như *"Tôi sẽ bổ sung test sau"*, *"Thay đổi này nhỏ nên không cần kiểm tra bảo mật"*,...) cùng lời bác bỏ đanh thép và danh sách dấu hiệu cảnh báo (*Red Flags*).
+3. **Bằng chứng thực nghiệm (Verification is non-negotiable)**: Yêu cầu bằng chứng định lượng rõ ràng trước khi coi là hoàn thành (test chạy qua, log trace, DOM thực tế, heap snapshot). Tuyên bố *"Trông có vẻ đúng"* bị nghiêm cấm hoàn toàn.
+4. **Tiết lộ lũy tiến (Progressive disclosure)**: File `SKILL.md` đóng vai trò là cửa ngõ tinh gọn (< 150 tokens metadata). Các tài liệu kỹ thuật chuyên sâu chỉ được nạp vào ngữ cảnh khi thật sự có tác vụ tương ứng.
+
+#### 📋 Danh Sách 25 Kỹ Năng Addy Osmani Phân Theo Giai Đoạn
+
+##### 🧭 Meta - Điều phối & Định tuyến Kỹ Năng
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`using-agent-skills`](skills/using-agent-skills/SKILL.md) | Phân tích yêu cầu và định tuyến tác vụ đến đúng skill phù hợp nhất | Bắt đầu phiên làm việc hoặc xác định quy trình áp dụng |
+
+##### 🎯 1. Define - Làm Rõ & Định Nghĩa Yêu Cầu
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`interview-me`](skills/interview-me/SKILL.md) | Phỏng vấn người dùng từng câu một (one-question-at-a-time) bóc tách mong muốn thực sự đạt độ tin cậy ~95% | Yêu cầu còn mơ hồ, hoặc khi người dùng gõ lệnh "interview me" / "grill me" |
+| [`idea-refine`](skills/idea-refine/SKILL.md) | Tư duy phân kỳ / hội tụ có cấu trúc biến ý tưởng sơ khai thành đề xuất kỹ thuật cụ thể | Có ý tưởng thô cần khám phá và xác định phạm vi |
+| [`spec-driven-development`](skills/spec-driven-development/SKILL.md) | Viết PRD chi tiết gồm mục tiêu, lệnh, cấu trúc thư mục, code style, chiến lược test và ranh giới trước khi gõ code | Bắt đầu dự án mới, tính năng lớn hoặc thay đổi trọng yếu |
+| [`constraint-driven-development`](skills/constraint-driven-development/SKILL.md) | Thiết lập hợp đồng chất lượng bằng văn bản `CONSTRAINTS.md`, ngăn agent tự ý hạ chuẩn hoặc bỏ qua bài test | Dự án chưa có chuẩn mực rõ ràng, hoặc agent sinh code ồ ạt |
+
+##### 🗺️ 2. Plan - Lập Kế Hoạch & Chia Nhỏ Tác Vụ
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`planning-and-task-breakdown`](skills/planning-and-task-breakdown/SKILL.md) | Tách PRD thành các tác vụ nhỏ nguyên tử, có tiêu chí nghiệm thu (acceptance criteria) và thứ tự phụ thuộc | Đã có đặc tả kỹ thuật và cần chia thành các đơn vị thực thi độc lập |
+
+##### 🔨 3. Build - Xây Dựng & Lập Trình
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`incremental-implementation`](skills/incremental-implementation/SKILL.md) | Triển khai theo từng lát cắt dọc mỏng: Triển khai → Kiểm thử → Xác thực → Commit. Hỗ trợ feature flag và rollback an toàn | Bất kỳ thay đổi nào tác động từ 2 file trở lên |
+| [`test-driven-development`](skills/test-driven-development/SKILL.md) | Red-Green-Refactor, kim tự tháp kiểm thử 80/15/5, DAMP hơn DRY, nguyên tắc Beyonce, kiểm thử runtime trình duyệt | Xây dựng logic mới, sửa lỗi phần mềm hoặc thay đổi hành vi code |
+| [`context-engineering`](skills/context-engineering/SKILL.md) | Nạp đúng thông tin vào đúng thời điểm: rules files, context packing, MCP tool scoping | Bắt đầu phiên làm việc, chuyển đổi tác vụ, hoặc khi chất lượng output giảm sút |
+| [`source-driven-development`](skills/source-driven-development/SKILL.md) | Căn cứ mọi quyết định framework trên tài liệu chính thức (official docs), dẫn nguồn đầy đủ, cảnh báo pattern lỗi thời | Cần code chính xác tuyệt đối, tránh pattern bị deprecated |
+| [`doubt-driven-development`](skills/doubt-driven-development/SKILL.md) | Đánh giá nghịch đảo trong ngữ cảnh tươi mới: YÊU CẦU → TRÍCH XUẤT → HOÀI NGHI → ĐỐI CHIẾU → DỪNG LẠI | Mã nguồn ở hệ thống trọng yếu (production, security), hoặc code lạ |
+| [`frontend-ui-engineering`](skills/frontend-ui-engineering/SKILL.md) | Kiến trúc component, quản lý state, responsive design, tiêu chuẩn tiếp cận tiếp cận WCAG 2.1 AA | Xây dựng hoặc tinh chỉnh giao diện người dùng frontend |
+| [`api-and-interface-design`](skills/api-and-interface-design/SKILL.md) | Thiết kế Contract-first, định luật Hyrum, One-Version Rule, ngữ nghĩa mã lỗi, kiểm tra ranh giới dữ liệu | Thiết kế API endpoint, ranh giới module hoặc public interface |
+
+##### 🔍 4. Verify - Kiểm Chứng & Gỡ Lỗi
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`browser-testing-with-devtools`](skills/browser-testing-with-devtools/SKILL.md) | Kết nối Chrome DevTools MCP thu thập dữ liệu runtime trực tiếp: DOM, console log, network traces, profiling hiệu năng | Xây dựng hoặc gỡ lỗi bất kỳ ứng dụng nào chạy trên trình duyệt |
+| [`debugging-and-error-recovery`](skills/debugging-and-error-recovery/SKILL.md) | Quy trình 5 bước: Tái lập → Khoanh vùng → Tối giản → Khắc phục → Thiết lập phòng thủ. Nguyên tắc Stop-the-line | Bài test thất bại, build bị lỗi, hoặc phần mềm có hành vi bất thường |
+
+##### ⚖️ 5. Review - Cổng Chất Lượng Trước Khi Merge
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`code-review-and-quality`](skills/code-review-and-quality/SKILL.md) | Rà soát code 5 trục chất lượng, chia nhỏ thay đổi ~100 dòng, gắn nhãn mức độ nghiêm trọng (Nit/Optional/FYI) | Trước khi hợp nhất (merge) bất kỳ pull request nào |
+| [`code-simplification`](skills/code-simplification/SKILL.md) | Áp dụng Chesterton's Fence & Rule of 500: loại bỏ phức tạp không cần thiết, tối ưu độ đọc hiểu mà giữ nguyên 100% logic | Code đã chạy đúng nhưng khó đọc hoặc bảo trì phức tạp |
+| [`security-and-hardening`](skills/security-and-hardening/SKILL.md) | Phòng thủ OWASP Top 10, quản lý bí mật, kiểm toán rủi ro chuỗi cung ứng dependency, mô hình 3 ranh giới tin cậy | Tiếp nhận dữ liệu người dùng, xác thực, lưu trữ dữ liệu hoặc gọi API bên thứ ba |
+| [`performance-optimization`](skills/performance-optimization/SKILL.md) | Phương pháp đo trước tối ưu sau: chỉ số Core Web Vitals (LCP, INP, CLS), profiling CPU/RAM, phân tích bundle size | Dự án có yêu cầu hiệu năng cao hoặc nghi ngờ có suy giảm tốc độ |
+
+##### 🚀 6. Ship - Phát Hành Đáng Tin Cậy
+| Kỹ Năng | Năng Lực Trọng Tâm | Khi Nào Sử Dụng |
+| :--- | :--- | :--- |
+| [`git-workflow-and-versioning`](skills/git-workflow-and-versioning/SKILL.md) | Trunk-based development, atomic commits, commit như một điểm lưu trạng thái (commit-as-save-point) | Luôn luôn áp dụng khi thực hiện bất kỳ thay đổi mã nguồn nào |
+| [`ci-cd-and-automation`](skills/ci-cd-and-automation/SKILL.md) | Shift Left, nguyên tắc Faster is Safer, đường ống kiểm duyệt chất lượng, tính năng feature flag | Thiết lập hoặc tối ưu đường ống build và deploy tự động |
+| [`deprecation-and-migration`](skills/deprecation-and-migration/SKILL.md) | Xem code như nợ kỹ thuật (code-as-liability), loại bỏ zombie code, quản lý chiến lược di chuyển người dùng | Dọn dẹp hệ thống cũ, di chuyển API hoặc gỡ bỏ tính năng |
+| [`documentation-and-adrs`](skills/documentation-and-adrs/SKILL.md) | Lưu trữ quyết định kiến trúc (Architecture Decision Records - ADRs), tài liệu hóa lý do *Tại sao* đưa ra quyết định | Đưa ra quyết định kiến trúc, thay đổi API hoặc ra mắt tính năng mới |
+| [`observability-and-instrumentation`](skills/observability-and-instrumentation/SKILL.md) | Structured logging, RED/USE metrics, OpenTelemetry tracing, cảnh báo dựa trên triệu chứng (symptom alerting) | Bổ sung hệ thống giám sát hoặc chuẩn bị đưa code lên production |
+| [`shipping-and-launch`](skills/shipping-and-launch/SKILL.md) | Checklist trước giờ G, phát hành theo giai đoạn (staged rollouts), kịch bản rollback tức thì | Chuẩn bị triển khai hệ thống lên môi trường production |
+
+```bash
+# Cài đặt trọn bộ 25 kỹ năng Addy Osmani vào dự án của bạn:
+./vas install test-driven-development debugging-and-error-recovery security-and-hardening performance-optimization code-review-and-quality --target all
+```
+
+---
+
+### 9. Hệ Thống 7 Checklist Kỹ Thuật & Hội Đồng Thẩm Định Personas
+
+#### 📚 Hệ Thống 7 Checklist Kỹ Thuật Chuẩn Doanh Nghiệp (`references/`)
+Các kỹ năng trong VAS tự động liên kết và nạp theo nhu cầu 7 checklist kỹ thuật chuyên sâu tại thư mục `references/`:
+
+| Tài Liệu Tham Khảo | Trọng Tâm Chuyên Sâu |
+| :--- | :--- |
+| [`references/definition-of-done.md`](references/definition-of-done.md) | Chuẩn mực hoàn thành (DoD) chung cho toàn bộ dự án mà mọi thay đổi code bắt buộc phải vượt qua |
+| [`references/testing-patterns.md`](references/testing-patterns.md) | Cấu trúc test, quy ước đặt tên, chiến lược mock, mẫu test React/API/E2E và các anti-patterns cần tránh |
+| [`references/security-checklist.md`](references/security-checklist.md) | Danh mục kiểm tra trước commit, xác thực, phân quyền, CSP headers, CORS, phòng ngừa OWASP Top 10 |
+| [`references/performance-checklist.md`](references/performance-checklist.md) | Ngưỡng chỉ số Core Web Vitals, checklist tối ưu frontend/backend, các lệnh đo đạc định lượng |
+| [`references/accessibility-checklist.md`](references/accessibility-checklist.md) | Điều hướng bàn phím, tương thích screen reader, độ tương phản thị giác, thuộc tính ARIA chuẩn WCAG 2.1 AA |
+| [`references/observability-checklist.md`](references/observability-checklist.md) | Câu hỏi trực ban on-call, structured logging, RED/USE metrics, phân tán tracing và cảnh báo triệu chứng |
+| [`references/orchestration-patterns.md`](references/orchestration-patterns.md) | Các mẫu điều phối đa agent được khuyến nghị, nguyên tắc "chuyên gia không tự gọi chuyên gia" tránh vòng lặp vô tận |
+
+#### 👥 Hội Đồng Thẩm Định Chuyên Gia (Specialist Reviewer Personas)
+Trước khi ra mắt sản phẩm (`/ship`), hệ thống hỗ trợ kích hoạt song song 4 vai trò chuyên gia độc lập để đánh giá toàn diện:
+* 👨‍💻 **Code Reviewer (Staff Engineer)**: Đánh giá chất lượng 5 trục với tiêu chuẩn *"Liệu một Staff Engineer có chấp thuận PR này không?"*.
+* 🧪 **Test Engineer (QA Specialist)**: Phân tích độ bao phủ kiểm thử, cấu trúc kim tự tháp test và nguyên tắc Prove-It.
+* 🛡️ **Security Auditor (Security Specialist)**: Rà soát mô hình đe dọa STRIDE, ranh giới dữ liệu và phát hiện lỗ hổng OWASP.
+* ⚡ **Web Performance Auditor (Performance Specialist)**: Kiểm toán chỉ số Core Web Vitals ở 2 chế độ Quick/Deep với nguyên tắc trung thực số liệu.
+
+---
+
+### 10. Bảng So Sánh Chi Tiết (How VAS Compares)
+
+| Tiêu Chí Đánh Giá | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
+| :--- | :--- | :--- | :--- | :--- |
+| **Quy mô Catalog** | **2,951+ Kỹ năng** (Toàn diện nhất thế giới) | 25 Kỹ năng cốt lõi | ~14 Kỹ năng | ~30 Kỹ năng |
+| **Công cụ Quản trị** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugin | Git Worktrees / Scripts | Claude Code / `npx skills` |
+| **Phụ thuộc Mạng & NPX**| **100% Offline & Không cần Node/NPX** | Cần Node & npx khi cài | Cần clone & setup | Cần Node & npx khi cài |
+| **Hỗ trợ Đa Agent** | **7+ AI Agents** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code ưu tiên |
+| **Bao phủ Vòng đời SDLC**| **Toàn diện 6 pha**: Define ➔ Plan ➔ Build ➔ Verify ➔ Review ➔ Ship | Toàn diện 6 pha | Trọng tâm vòng lặp Build/Plan | Trọng tâm Grilling & TDD |
+| **Chặn ngụy biện của AI** | **Có bảng Anti-Rationalization & Red Flags** | Có trong cả 25 kỹ năng | Có quy trình task reviewer | Không có bảng riêng |
+| **Kiểm định Chất lượng** | **95 Bài test tự động (Python, Node, Cloudflare Security)** | Framework Evals 3 tầng | TDD cho tài liệu | Không tích hợp test trong repo |
+| **Bảo toàn Ngữ cảnh** | **Strict Progressive Disclosure** (< 150 token metadata ban đầu) | Progressive Disclosure | Subagent Context Handoff | Split User/Model Invoked |
+
+---
+
+### 11. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật
 
 Kho lưu trữ gồm **2,951+ skills** chia theo **118 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
 
@@ -544,7 +670,10 @@ Bộ công cụ 42 kịch bản tự động hóa xử lý âm thanh và video b
 ./vas install ffmpeg-skill --target all
 ```
 
-### 9. Câu Hỏi Thường Gặp (FAQ)
+### 12. Câu Hỏi Thường Gặp (FAQ)
+
+**Q: Bộ 25 kỹ năng kỹ sư cấp cao của Addy Osmani mang lại giá trị gì cho AI Agent?**  
+AI coding agent mặc định thường chọn con đường tắt có điện trở thấp nhất: bỏ qua PRD/spec, nhảy vào viết code ngay mà không viết test, bỏ qua rà soát bảo mật OWASP, hoặc ngụy biện rằng "chắc là code chạy được". Bộ 25 kỹ năng cung cấp quy trình chặt chẽ (SDLC), trạm kiểm soát bắt buộc (checkpoints), bảng phản bác ngụy biện (Anti-Rationalization) và yêu cầu cung cấp bằng chứng định lượng (test pass, log trace, DOM thực tế) trước khi chuyển bước.
 
 **Q: Tôi dùng OpenAI Codex thì có cần cấu hình gì thêm không?**  
 *Không cần.* Bạn chỉ cần chạy `./vas install <skill_id> --target codex`. Codex có khả năng đọc Markdown và gọi các script thực thi trực tiếp trong môi trường của bạn.
@@ -560,7 +689,7 @@ Dù bạn cài hàng trăm kỹ năng, AI agent chỉ quét phần tóm tắt ng
 
 ---
 
-### 10. Tác Giả & Giấy Phép
+### 13. Tác Giả & Giấy Phép
 
 * **Tác giả & Duy trì**: **Huy Tran** ([@huytran1120](https://github.com/huytran1120))
 * **Email**: `66549585+huytran1120@users.noreply.github.com`
@@ -581,9 +710,12 @@ Dù bạn cài hàng trăm kỹ năng, AI agent chỉ quét phần tóm tắt ng
 - [5. Agent-Specific Setup Guides](#5-agent-specific-setup-guides)
 - [6. CLI Reference (`./vas`)](#6-cli-reference-vas)
 - [7. Open Skill Specification (`SKILL.md`)](#7-open-skill-specification-skillmd)
-- [8. Featured & Viral Skills Showcase (Top 20)](#8-featured--viral-skills-showcase-top-20)
-- [9. Frequently Asked Questions (FAQ)](#9-frequently-asked-questions-faq)
-- [10. Author & License](#10-author--license)
+- [8. Senior Engineering SDLC & 25 Addy Osmani Skills](#8-senior-engineering-sdlc--25-addy-osmani-skills)
+- [9. 7 Technical Checklists & Reviewer Personas](#9-7-technical-checklists--reviewer-personas)
+- [10. Honest Comparison Matrix (How VAS Compares)](#10-honest-comparison-matrix-how-vas-compares)
+- [11. Featured & Viral Skills Showcase (Top 20)](#11-featured--viral-skills-showcase-top-20)
+- [12. Frequently Asked Questions (FAQ)](#12-frequently-asked-questions-faq)
+- [13. Author & License](#13-author--license)
 
 ---
 
@@ -758,7 +890,129 @@ description: >-
 
 ---
 
-### 8. Featured & Viral Skills Showcase (Top 20)
+### 8. Senior Engineering SDLC & 25 Addy Osmani Skills
+
+By default, AI coding agents follow the path of least resistance: jumping directly into code without a specification, bypassing test-driven development, skipping security or performance threat modeling, and self-rationalizing that *"it seems right"*.
+
+Inspired by and directly synchronized with the official **v0.6.13 release of Addy Osmani's agent skills** ([addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) & [skills.addy.ie](https://skills.addy.ie/)), VAS integrates all **25 production-grade skills** mapped 1:1 across **6 phases of the software development lifecycle (SDLC)**:
+
+```text
+   DEFINE           PLAN            BUILD           VERIFY          REVIEW           SHIP
+  ┌────────┐      ┌────────┐      ┌────────┐      ┌────────┐      ┌────────┐      ┌────────┐
+  │  Idea  │ ───▶ │  Spec  │ ───▶ │  Code  │ ───▶ │  Test  │ ───▶ │   QA   │ ───▶ │   Go   │
+  │ Refine │      │  PRD   │      │  Impl  │      │ Debug  │      │  Gate  │      │  Live  │
+  └────────┘      └────────┘      └────────┘      └────────┘      └────────┘      └────────┘
+   /spec           /plan           /build          /test          /review          /ship
+```
+
+#### 🛡️ The 4 Pillars of Senior Engineering Discipline
+1. **Process, not prose**: Skills are actionable execution workflows with discrete steps, checkpoints, and strict exit criteria—not generic prompt advice.
+2. **Anti-rationalization**: Every skill includes a *Common Rationalizations* table dismantling typical agent excuses (*"I'll write tests later"*, *"This is too trivial for security review"*), paired with actionable *Red Flags*.
+3. **Verification is non-negotiable**: Agents must prove claims with reproducible evidence (passing test suites, runtime logs, DOM inspection, heap snapshots). "Seems right" is never accepted.
+4. **Progressive disclosure**: `SKILL.md` serves as a lightweight entry point (< 150 prompt tokens initially). Supplementary in-depth guides load strictly on demand.
+
+#### 📋 Complete Catalog of 25 Addy Osmani Skills by Phase
+
+##### 🧭 Meta - Workflow Routing
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`using-agent-skills`](skills/using-agent-skills/SKILL.md) | Maps incoming work to the appropriate skill workflow and defines shared operating boundaries | Starting a session or deciding which workflow applies |
+
+##### 🎯 1. Define - Clarify What to Build
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`interview-me`](skills/interview-me/SKILL.md) | Interrogates requirements one question at a time until reaching ~95% confidence on user intent | Requirements are ambiguous or user invokes "interview me" / "grill me" |
+| [`idea-refine`](skills/idea-refine/SKILL.md) | Structured divergent/convergent thinking transforming raw ideas into concrete technical proposals | Exploring or scoping a rough early concept |
+| [`spec-driven-development`](skills/spec-driven-development/SKILL.md) | Authors detailed PRDs covering objectives, CLI commands, architecture, code style, and testing gates before code | Starting a greenfield project, new feature, or major refactor |
+| [`constraint-driven-development`](skills/constraint-driven-development/SKILL.md) | Establishes an enforceable quality bar in `CONSTRAINTS.md`, preventing agents from lowering thresholds | Team standards lack enforcement or an agent writes excessive unchecked code |
+
+##### 🗺️ 2. Plan - Deconstruct & Sequence
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`planning-and-task-breakdown`](skills/planning-and-task-breakdown/SKILL.md) | Decomposes specs into atomic, testable units with explicit acceptance criteria and topological ordering | A spec exists and needs implementation-ready task slices |
+
+##### 🔨 3. Build - Implement with Rigor
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`incremental-implementation`](skills/incremental-implementation/SKILL.md) | Delivers thin vertical slices: Implement → Test → Verify → Commit. Features safe defaults & rollback safety | Any code change touching more than one file |
+| [`test-driven-development`](skills/test-driven-development/SKILL.md) | Red-Green-Refactor, 80/15/5 test pyramid, DAMP over DRY, Beyonce Rule, runtime browser verification | Writing new logic, fixing bugs, or changing system behavior |
+| [`context-engineering`](skills/context-engineering/SKILL.md) | Feeds agents optimal context: rules configuration, context packing, MCP tool scoping | Starting a session, context switching, or when response quality degrades |
+| [`source-driven-development`](skills/source-driven-development/SKILL.md) | Anchors framework decisions in official upstream documentation, citing sources and flagging deprecated APIs | High-correctness implementations requiring verified modern patterns |
+| [`doubt-driven-development`](skills/doubt-driven-development/SKILL.md) | Fresh-context adversarial review of high-stakes decisions: CLAIM → EXTRACT → DOUBT → RECONCILE → STOP | High-risk changes (production, auth, finance), or unfamiliar codebases |
+| [`frontend-ui-engineering`](skills/frontend-ui-engineering/SKILL.md) | Component architecture, state machines, responsive typography, and WCAG 2.1 AA accessibility | Designing or implementing client-facing web interfaces |
+| [`api-and-interface-design`](skills/api-and-interface-design/SKILL.md) | Contract-first API design, Hyrum's Law, One-Version Rule, robust error semantics, input boundary validation | Authoring public APIs, microservice contracts, or module boundaries |
+
+##### 🔍 4. Verify - Prove Correctness
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`browser-testing-with-devtools`](skills/browser-testing-with-devtools/SKILL.md) | Leverages Chrome DevTools MCP for live runtime telemetry: DOM tree, console logs, network waterfalls, profiling | Building or troubleshooting browser-executed applications |
+| [`debugging-and-error-recovery`](skills/debugging-and-error-recovery/SKILL.md) | 5-step triage: Reproduce → Localize → Reduce → Fix → Guard. Stop-the-line protocol and safe fallbacks | Failing test suites, broken builds, or unexpected runtime faults |
+
+##### ⚖️ 5. Review - Pre-Merge Quality Gates
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`code-review-and-quality`](skills/code-review-and-quality/SKILL.md) | Multi-axis review, ~100-line change sizing, explicit severity labels (Nit/Optional/FYI), review speed norms | Prior to merging any Pull Request |
+| [`code-simplification`](skills/code-simplification/SKILL.md) | Chesterton's Fence, Rule of 500, dead code removal, minimizing cognitive complexity while preserving behavior | Functional code that suffers from excessive indirection or bloat |
+| [`security-and-hardening`](skills/security-and-hardening/SKILL.md) | OWASP Top 10 mitigation, secrets hygiene, dependency supply-chain auditing, 3-tier trust boundary model | Handling untrusted input, user authentication, storage, or external APIs |
+| [`performance-optimization`](skills/performance-optimization/SKILL.md) | Measurement-driven performance: Core Web Vitals (LCP, INP, CLS), CPU/RAM profiling, bundle budgeting | Strict performance SLAs exist or regression is suspected |
+
+##### 🚀 6. Ship - Deploy with High Confidence
+| Skill | Core Capability | Trigger Condition |
+| :--- | :--- | :--- |
+| [`git-workflow-and-versioning`](skills/git-workflow-and-versioning/SKILL.md) | Trunk-based development, atomic commits, and the commit-as-save-point pattern | Making any code modification in version control |
+| [`ci-cd-and-automation`](skills/ci-cd-and-automation/SKILL.md) | Shift Left testing, Faster is Safer principle, quality gate pipelines, failure feedback loops | Establishing or optimizing automated build and deployment pipelines |
+| [`deprecation-and-migration`](skills/deprecation-and-migration/SKILL.md) | Treating code as a liability, sunsetting zombie code, managing structured data & user migration paths | Sunsetting legacy services, deprecating endpoints, or refactoring schemas |
+| [`documentation-and-adrs`](skills/documentation-and-adrs/SKILL.md) | Architecture Decision Records (ADRs), API references, documenting the *Why* behind engineering choices | Making architectural choices, public interface changes, or shipping milestones |
+| [`observability-and-instrumentation`](skills/observability-and-instrumentation/SKILL.md) | Structured JSON logging, RED/USE metrics, OpenTelemetry distributed tracing, symptom-based alerting | Instrumenting telemetry or preparing services for production operations |
+| [`shipping-and-launch`](skills/shipping-and-launch/SKILL.md) | Pre-flight checklists, staged canary rollouts, instant rollback procedures, active monitoring watch | Pre-release production deployments |
+
+```bash
+# Install the entire Addy Osmani Engineering Suite into your workspace:
+./vas install test-driven-development debugging-and-error-recovery security-and-hardening performance-optimization code-review-and-quality --target all
+```
+
+---
+
+### 9. 7 Technical Checklists & Reviewer Personas
+
+#### 📚 Enterprise-Grade Reference Checklists (`references/`)
+VAS skills dynamically load 7 comprehensive technical reference checklists housed in `references/`:
+
+| Reference Guide | Subject Matter |
+| :--- | :--- |
+| [`references/definition-of-done.md`](references/definition-of-done.md) | Global Definition of Done (DoD) contract that every PR and task slice must satisfy |
+| [`references/testing-patterns.md`](references/testing-patterns.md) | Production test layouts, naming semantics, mocking boundaries, React/API/E2E patterns, and anti-patterns |
+| [`references/security-checklist.md`](references/security-checklist.md) | Pre-commit sanity checks, authz/authn, CSP headers, CORS policies, OWASP Top 10 mitigations |
+| [`references/performance-checklist.md`](references/performance-checklist.md) | Core Web Vitals thresholds, frontend/backend optimization checklists, quantitative profiling commands |
+| [`references/accessibility-checklist.md`](references/accessibility-checklist.md) | Keyboard navigation, screen reader compatibility, color contrast ratios, WCAG 2.1 AA ARIA rules |
+| [`references/observability-checklist.md`](references/observability-checklist.md) | 2 AM on-call operational checks, structured logging standards, RED/USE metrics, distributed traces |
+| [`references/orchestration-patterns.md`](references/orchestration-patterns.md) | Approved multi-agent orchestration designs, with the rule that personas cannot recursively invoke personas |
+
+#### 👥 Specialist Reviewer Personas
+During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned out in parallel for multi-perspective validation:
+* 👨‍💻 **Code Reviewer (Staff Engineer)**: 5-axis review upholding the standard *"Would a Staff Engineer approve this PR?"*.
+* 🧪 **Test Engineer (QA Specialist)**: Evaluates test pyramid distribution, boundary conditions, and the Prove-It pattern.
+* 🛡️ **Security Auditor (Security Specialist)**: Audits STRIDE threat boundaries, privilege escalation, and OWASP vulnerabilities.
+* ⚡ **Web Performance Auditor (Performance Specialist)**: Enforces Core Web Vitals metrics honesty with Quick/Deep audit passes.
+
+---
+
+### 10. Honest Comparison Matrix (How VAS Compares)
+
+| Dimension | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
+| :--- | :--- | :--- | :--- | :--- |
+| **Catalog Scale** | **2,951+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
+| **Tooling & Engine** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugins | Git Worktrees / Shell scripts | Claude Code / `npx skills` |
+| **Dependencies & Offline**| **100% Offline, Zero external dependencies** | Requires Node & remote NPX | Requires clone & git setup | Requires Node & remote NPX |
+| **Agent Support** | **7+ AI Coding Assistants** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code primary |
+| **SDLC Lifecycle Depth**| **Complete 6-Phase Lifecycle**: Define ➔ Plan ➔ Build ➔ Verify ➔ Review ➔ Ship | Complete 6-Phase Lifecycle | Focused on Build/Plan loop | Focused on Grilling & TDD |
+| **Anti-Rationalization**| **Common Rationalizations & Red Flags in skills** | Built into all 25 skills | Task reviewer sign-off gate | None explicit |
+| **Quality & Regression**| **95 Automated Tests (Python, Node, Cloudflare Security)** | 3-tier eval framework | TDD for documentation | No in-repo tests |
+| **Context Optimization**| **Strict Progressive Disclosure** (< 150 prompt tokens initially) | Progressive Disclosure | Subagent Context Handoff | Split User/Model Invoked |
+
+---
+
+### 11. Featured & Viral Skills Showcase (Top 20)
 
 VAS includes **2,951+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
@@ -1080,7 +1334,10 @@ A comprehensive 42-script automation toolkit for pure Python local video and aud
 ./vas install ffmpeg-skill --target all
 ```
 
-### 9. Frequently Asked Questions (FAQ)
+### 12. Frequently Asked Questions (FAQ)
+
+**Q: What value does the 25 Addy Osmani Senior Engineering skills suite bring to AI coding agents?**  
+AI coding agents default to the path of least resistance: bypassing specs, jumping straight to code without test coverage, ignoring OWASP threat boundaries, and rationalizing that "it seems to work". The 25 production-grade skills enforce a disciplined 6-phase SDLC (Define → Plan → Build → Verify → Review → Ship) with anti-rationalization tables and strict evidence requirements before code can ship.
 
 **Q: Do I need any special setup for OpenAI Codex / OpenCode?**  
 *No.* Simply run `./vas install <skill_id> --target codex`. Codex parses markdown instructions natively and executes companion scripts directly in your shell environment.
@@ -1096,7 +1353,7 @@ Even with hundreds of skills installed, AI agents initially only load the short 
 
 ---
 
-### 10. Author & License
+### 13. Author & License
 
 * **Curator & Maintainer**: **Huy Tran** ([@huytran1120](https://github.com/huytran1120))
 * **Email**: `66549585+huytran1120@users.noreply.github.com`
