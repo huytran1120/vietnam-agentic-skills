@@ -9036,6 +9036,29 @@
     "author": "wwewtech"
   },
   {
+    "id": "chatterbox",
+    "canonical_id": "chatterbox",
+    "name": "chatterbox",
+    "path": "skills/chatterbox",
+    "description": "Open-source neural voiceover and voice cloning synthesis by Resemble AI. Covers Chatterbox local TTS pipelines, zero-shot voice cloning from reference audio clips, emotional expressiveness conditioning, phoneme timestamp alignment, audio chunk streaming, batch narration generation, and seamless audio track export for AI video creation pipelines (Remotion, FFmpeg).",
+    "category": "voice-agents",
+    "tags": [
+      "chatterbox",
+      "voiceover",
+      "text-to-speech",
+      "voice-cloning",
+      "tts",
+      "neural-audio",
+      "audio-generation",
+      "voice-agents",
+      "resemble-ai"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "resemble-ai/chatterbox",
+    "author": "resemble-ai"
+  },
+  {
     "id": "check-identity-pack",
     "canonical_id": "check-identity-pack",
     "name": "check-identity-pack",
@@ -17500,6 +17523,30 @@
     "source": "community"
   },
   {
+    "id": "faster-whisper",
+    "canonical_id": "faster-whisper",
+    "name": "faster-whisper",
+    "path": "skills/faster-whisper",
+    "description": "High-performance speech-to-text transcription and subtitle generation using faster-whisper (CTranslate2). Up to 4x faster than OpenAI Whisper with lower VRAM consumption. Covers model selection (tiny, base, small, medium, large-v3), Silero VAD speech filtering, word-level timestamps (word_timestamps=True), automated SRT/VTT subtitle export, multi-language translation, and batch audio/video transcription pipelines.",
+    "category": "voice-agents",
+    "tags": [
+      "faster-whisper",
+      "whisper",
+      "speech-to-text",
+      "transcription",
+      "ctranslate2",
+      "subtitles",
+      "captions",
+      "srt",
+      "vtt",
+      "voice-agents"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "SYSTRAN/faster-whisper",
+    "author": "SYSTRAN"
+  },
+  {
     "id": "favicon",
     "canonical_id": "favicon",
     "name": "favicon",
@@ -20488,6 +20535,28 @@
     "source": "community"
   },
   {
+    "id": "gl-transitions",
+    "canonical_id": "gl-transitions",
+    "name": "gl-transitions",
+    "path": "skills/gl-transitions",
+    "description": "Open-source GLSL shader transitions for web video, HTML5 Canvas, Remotion (@remotion/gl-transitions), and creative coding. Covers standard GLSL transition signature (vec4 transition(vec2 uv)), texture sampling (getFromColor, getToColor, progress, ratio), custom uniform parameters, 50+ transition types (crossfade, wipe, cube, directional warp, ripple, kaleidoscope, glitch, morph), and WebGL render pipelines.",
+    "category": "graphics-processing",
+    "tags": [
+      "gl-transitions",
+      "glsl",
+      "shaders",
+      "video-transitions",
+      "webgl",
+      "remotion-transitions",
+      "canvas-transitions",
+      "graphics-processing"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "gl-transitions/gl-transitions",
+    "author": "gl-transitions"
+  },
+  {
     "id": "glasser",
     "canonical_id": "glasser",
     "name": "glasser",
@@ -20526,6 +20595,30 @@
     "source": "community",
     "source_repo": "pumanitro/global-chat",
     "author": "pumanitro"
+  },
+  {
+    "id": "gltf-transform",
+    "canonical_id": "gltf-transform",
+    "name": "gltf-transform",
+    "path": "skills/gltf-transform",
+    "description": "CLI and TypeScript SDK for 3D glTF/GLB asset optimization, compression, and automated processing pipelines. Covers gltf-transform CLI commands (optimize, draco, meshopt, webp, ktx2, prune, dedup, flatten, weld, simplify), programmatic Document API, DRACO geometry compression, Meshopt decoding, Basis Universal / KTX2 GPU texture compression, LOD simplification, and glTF 2.0 validation.",
+    "category": "graphics-processing",
+    "tags": [
+      "gltf-transform",
+      "gltf",
+      "glb",
+      "3d-optimization",
+      "draco-compression",
+      "meshopt",
+      "ktx2",
+      "textures",
+      "webgl",
+      "graphics-processing"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "donmccurdy/glTF-Transform",
+    "author": "donmccurdy"
   },
   {
     "id": "gmail-automation",
@@ -28107,6 +28200,28 @@
     "license_source": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/0936740e52033a6256085be5fc81e5e56d606110/LICENSE.md"
   },
   {
+    "id": "matterjs",
+    "canonical_id": "matterjs",
+    "name": "matterjs",
+    "path": "skills/matterjs",
+    "description": "2D rigid body physics simulation with Matter.js. Covers Engine, World, Bodies (rectangle, circle, polygon, fromVertices), Composite hierarchies, Constraints (springs, distance joints, elastic cords), MouseConstraint interactions, collision filtering (category, mask, group), collision events (collisionStart, collisionActive), restitution/friction/density physics tuning, sleep states, and headless simulation decoupled from custom Canvas/Pixi/Three.js renderers.",
+    "category": "game-development",
+    "tags": [
+      "matterjs",
+      "physics-engine",
+      "2d-physics",
+      "rigid-body",
+      "collision-detection",
+      "canvas-physics",
+      "simulation",
+      "game-development"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "liabru/matter-js",
+    "author": "liabru"
+  },
+  {
     "id": "maxia",
     "canonical_id": "maxia",
     "name": "maxia",
@@ -30680,6 +30795,27 @@
     "source": "community"
   },
   {
+    "id": "obs-studio",
+    "canonical_id": "obs-studio",
+    "name": "obs-studio",
+    "path": "skills/obs-studio",
+    "description": "OBS Studio automation, programmatic screen capture, and recording pipelines via OBS WebSocket v5 and CLI. Covers obs-websocket-js API client, automated scene switching, source configuration (window capture, display capture, browser source, audio input/output), recording lifecycle (start/stop/pause recording, replay buffer), virtual camera streaming, headless video capture, and automated software walkthrough demos for AI coding agents.",
+    "category": "media",
+    "tags": [
+      "obs-studio",
+      "screen-capture",
+      "obs-websocket",
+      "video-recording",
+      "streaming",
+      "automation",
+      "media"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "obsproject/obs-studio",
+    "author": "obsproject"
+  },
+  {
     "id": "observability-and-instrumentation",
     "canonical_id": "observability-and-instrumentation",
     "name": "observability-and-instrumentation",
@@ -31346,6 +31482,28 @@
     "source": "personal"
   },
   {
+    "id": "ogl",
+    "canonical_id": "ogl",
+    "name": "ogl",
+    "path": "skills/ogl",
+    "description": "Minimal, lightweight WebGL library (~10KB gzipped) by oframe for high-performance custom GLSL shaders, fullscreen post-processing, particles, and low-level WebGL graphics. Covers Renderer, Camera, Transform, Program (GLSL uniform and attribute binding), Mesh, Geometry, Texture, RenderTarget, Post post-processing pipelines, instanced rendering, and zero-overhead GPU computing.",
+    "category": "graphics-processing",
+    "tags": [
+      "ogl",
+      "webgl",
+      "custom-shaders",
+      "glsl",
+      "post-processing",
+      "minimal-webgl",
+      "render-targets",
+      "graphics-processing"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "oframe/ogl",
+    "author": "oframe"
+  },
+  {
     "id": "okr-system",
     "canonical_id": "okr-system",
     "name": "okr-system",
@@ -31746,6 +31904,27 @@
     "license_source": "https://github.com/amElnagdy/delegate-skills/blob/master/LICENSE"
   },
   {
+    "id": "opencut",
+    "canonical_id": "opencut",
+    "name": "opencut",
+    "path": "skills/opencut",
+    "description": "Open-source programmatic video editing and timeline composition with OpenCut. Covers timeline data models (tracks, clips, transitions, keyframes, effects, audio waveforms), WebCodecs hardware-accelerated video decoding/encoding, non-destructive editing, timeline serialization (JSON EDL / OpenTimelineIO), project file parsing, asset management, and browser-based rendering pipelines.",
+    "category": "video",
+    "tags": [
+      "opencut",
+      "video-editor",
+      "timeline-editing",
+      "webcodecs",
+      "video-pipeline",
+      "clip-composition",
+      "video"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "OpenCut-app/OpenCut",
+    "author": "OpenCut-app"
+  },
+  {
     "id": "openfda-database",
     "canonical_id": "openfda-database",
     "name": "openfda-database",
@@ -32125,6 +32304,28 @@
     "risk": "safe"
   },
   {
+    "id": "p5js",
+    "canonical_id": "p5js",
+    "name": "p5js",
+    "path": "skills/p5js",
+    "description": "Generative visuals, algorithmic art, and creative coding with p5.js. Covers setup/draw life cycle, vector math (p5.Vector), Perlin noise, trigonometric wave synthesis, flow fields, cellular automata, generative typography, procedural textures, WebGL 3D mode in p5, instance mode encapsulation for React/Vue, and lossless video/canvas recording (saveCanvas, WebM/GIF).",
+    "category": "creative",
+    "tags": [
+      "p5js",
+      "creative-coding",
+      "generative-art",
+      "canvas",
+      "algorithmic-art",
+      "perlin-noise",
+      "visuals",
+      "processing"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "processing/p5.js",
+    "author": "processing"
+  },
+  {
     "id": "page-cro",
     "canonical_id": "page-cro",
     "name": "page-cro",
@@ -32221,6 +32422,28 @@
     "source_repo": "Pangolin-spg/openclaw-skills",
     "license": "MIT",
     "author": "Pangolinfo"
+  },
+  {
+    "id": "paperjs",
+    "canonical_id": "paperjs",
+    "name": "paperjs",
+    "path": "skills/paperjs",
+    "description": "Vector graphics scripting, Bézier curve math, and SVG manipulation with Paper.js on HTML5 Canvas. Covers Scene Graph (Project, Layer, Item, Path, CompoundPath), Bézier handles and curve geometry, boolean path operations (unite, intersect, subtract, exclude), path smoothing and simplify, vector arithmetic, interactive tool event loops, SVG import/export, and raster pixel sampling.",
+    "category": "graphics-processing",
+    "tags": [
+      "paperjs",
+      "vector-graphics",
+      "bezier-curves",
+      "canvas",
+      "svg",
+      "path-math",
+      "boolean-operations",
+      "graphics-processing"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "paperjs/paper.js",
+    "author": "paperjs"
   },
   {
     "id": "papers-skill",
@@ -33207,6 +33430,29 @@
     "license": "Apache-2.0",
     "license_source": "https://github.com/pixeltable/pixeltable-skill/blob/main/LICENSE",
     "author": "pierrebrunelle"
+  },
+  {
+    "id": "pixijs",
+    "canonical_id": "pixijs",
+    "name": "pixijs",
+    "path": "skills/pixijs",
+    "description": "High-performance 2D WebGL/WebGPU graphics rendering with PixiJS (v8+). Covers Application setup, Scene Graph (Container, Sprite, Graphics, Text, Mesh), Assets loading, Ticker animation loops, custom GLSL filters/shaders, particle systems, sprite sheets/atlases, blend modes, batching, draw call minimization, and interactive pointer events for web, games, and creative coding.",
+    "category": "graphics-processing",
+    "tags": [
+      "pixijs",
+      "webgl",
+      "webgpu",
+      "2d-engine",
+      "canvas-rendering",
+      "sprites",
+      "shaders",
+      "graphics-processing",
+      "creative-coding"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "pixijs/pixijs",
+    "author": "pixijs"
   },
   {
     "id": "placecall",
@@ -35431,6 +35677,29 @@
     "license_source": "https://github.com/yylo-dev/yylo-skills/blob/main/LICENSE"
   },
   {
+    "id": "rapier",
+    "canonical_id": "rapier",
+    "name": "rapier",
+    "path": "skills/rapier",
+    "description": "Cross-platform 2D and 3D physics engine written in Rust with fast WebAssembly bindings (@dimforge/rapier2d, @dimforge/rapier3d, @react-three/rapier). Covers World simulation, RigidBody types (dynamic, fixed, kinematicPositionBased, kinematicVelocityBased), Collider geometries (cuboid, ball, cylinder, capsule, trimesh, convex hull), Joints (revolute, prismatic, fixed, spherical), Raycasting, Contact manifolds, KinematicCharacterController, and integration with Three.js and React Three Fiber.",
+    "category": "game-development",
+    "tags": [
+      "rapier",
+      "rapier-physics",
+      "webassembly",
+      "3d-physics",
+      "2d-physics",
+      "collision-detection",
+      "rust-physics",
+      "threejs",
+      "game-development"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "dimforge/rapier",
+    "author": "dimforge"
+  },
+  {
     "id": "rayden-code",
     "canonical_id": "rayden-code",
     "name": "rayden-code",
@@ -35615,6 +35884,27 @@
     ],
     "risk": "safe",
     "source": "community"
+  },
+  {
+    "id": "react-spring",
+    "canonical_id": "react-spring",
+    "name": "react-spring",
+    "path": "skills/react-spring",
+    "description": "Master physics-based spring animations in React, Three.js (@react-spring/three), Web, and Canvas. Covers useSpring, useSprings, useTrail, useTransition, useChain, spring physics configuration (mass, tension, friction, velocity, clamp, bounce), fluid fluid gesture gestures with @use-gesture/react, imperative controllers, SVG morphing, and performant 60/120fps UI animations. Use when building physical, natural UI transitions, drag-and-drop interactions, staggering list reveals, page transitions, or 3D spring dynamics.",
+    "category": "frontend",
+    "tags": [
+      "react-spring",
+      "spring-physics",
+      "react-animation",
+      "physics-based-animation",
+      "web-animation",
+      "pmndrs",
+      "react"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "pmndrs/react-spring",
+    "author": "pmndrs"
   },
   {
     "id": "react-state-management",
@@ -43161,6 +43451,28 @@
     "author": "CodeShuX"
   },
   {
+    "id": "tonejs",
+    "canonical_id": "tonejs",
+    "name": "tonejs",
+    "path": "skills/tonejs",
+    "description": "Interactive Web Audio framework for audio synthesis, sound effects, music scheduling, and offline stem rendering with Tone.js. Covers Tone.Synth, Tone.PolySynth, Tone.Sampler, Tone.Transport (BPM, timeline ticks, loops), audio effects (Reverb, FeedbackDelay, Distortion, Filter, Limiter), signal routing (connect, chain, fan), user gesture audio context unlocking, and Tone.Offline export for video sound tracks.",
+    "category": "media",
+    "tags": [
+      "tonejs",
+      "web-audio",
+      "synthesizer",
+      "audio-synthesis",
+      "sound-effects",
+      "generative-audio",
+      "music-computation",
+      "media"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "Tonejs/Tone.js",
+    "author": "Tonejs"
+  },
+  {
     "id": "tool-design",
     "canonical_id": "tool-design",
     "name": "tool-design",
@@ -43625,6 +43937,28 @@
     ],
     "risk": "safe",
     "source": "community"
+  },
+  {
+    "id": "tsparticles",
+    "canonical_id": "tsparticles",
+    "name": "tsparticles",
+    "path": "skills/tsparticles",
+    "description": "Lightweight, highly customizable particle animations, interactive canvas backgrounds, confetti, and visual effects with tsParticles. Covers Engine architecture (init, load, presets), interactive modes (hover repulse/grab/bubble, click push), physics trails, polygon masks, confetti bursts, custom shapes, React/Vue integration (@tsparticles/react), and battery/GPU performance optimization.",
+    "category": "frontend",
+    "tags": [
+      "tsparticles",
+      "particle-effects",
+      "confetti",
+      "interactive-particles",
+      "canvas-background",
+      "react-tsparticles",
+      "web-animation",
+      "frontend"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "tsparticles/tsparticles",
+    "author": "tsparticles"
   },
   {
     "id": "tune-monitor",

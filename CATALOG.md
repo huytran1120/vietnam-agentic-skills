@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -39,7 +39,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **content-writing** | 1 skills | `./vas install --category content-writing --target codex` |
 | **context-optimization** | 1 skills | `./vas install --category context-optimization --target codex` |
 | **core-dev** | 1 skills | `./vas install --category core-dev --target codex` |
-| **creative** | 3 skills | `./vas install --category creative --target codex` |
+| **creative** | 4 skills | `./vas install --category creative --target codex` |
 | **data** | 56 skills | `./vas install --category data --target codex` |
 | **data-ai** | 14 skills | `./vas install --category data-ai --target codex` |
 | **data-engineering** | 1 skills | `./vas install --category data-engineering --target codex` |
@@ -63,12 +63,12 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **finance** | 33 skills | `./vas install --category finance --target codex` |
 | **framework** | 13 skills | `./vas install --category framework --target codex` |
 | **front-end** | 14 skills | `./vas install --category front-end --target codex` |
-| **frontend** | 45 skills | `./vas install --category frontend --target codex` |
+| **frontend** | 47 skills | `./vas install --category frontend --target codex` |
 | **fullstack** | 1 skills | `./vas install --category fullstack --target codex` |
-| **game-development** | 20 skills | `./vas install --category game-development --target codex` |
+| **game-development** | 22 skills | `./vas install --category game-development --target codex` |
 | **general** | 65 skills | `./vas install --category general --target codex` |
 | **granular-workflow-bundle** | 16 skills | `./vas install --category granular-workflow-bundle --target codex` |
-| **graphics-processing** | 5 skills | `./vas install --category graphics-processing --target codex` |
+| **graphics-processing** | 10 skills | `./vas install --category graphics-processing --target codex` |
 | **growth** | 3 skills | `./vas install --category growth --target codex` |
 | **health** | 18 skills | `./vas install --category health --target codex` |
 | **knowledge-management** | 2 skills | `./vas install --category knowledge-management --target codex` |
@@ -77,7 +77,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **lifestyle** | 1 skills | `./vas install --category lifestyle --target codex` |
 | **marketing** | 115 skills | `./vas install --category marketing --target codex` |
 | **mcp** | 8 skills | `./vas install --category mcp --target codex` |
-| **media** | 51 skills | `./vas install --category media --target codex` |
+| **media** | 53 skills | `./vas install --category media --target codex` |
 | **media-processing** | 1 skills | `./vas install --category media-processing --target codex` |
 | **memory** | 7 skills | `./vas install --category memory --target codex` |
 | **meta** | 38 skills | `./vas install --category meta --target codex` |
@@ -114,8 +114,8 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **tools** | 1 skills | `./vas install --category tools --target codex` |
 | **travel** | 1 skills | `./vas install --category travel --target codex` |
 | **uncategorized** | 9 skills | `./vas install --category uncategorized --target codex` |
-| **video** | 1 skills | `./vas install --category video --target codex` |
-| **voice-agents** | 5 skills | `./vas install --category voice-agents --target codex` |
+| **video** | 2 skills | `./vas install --category video --target codex` |
+| **voice-agents** | 7 skills | `./vas install --category voice-agents --target codex` |
 | **web** | 1 skills | `./vas install --category web --target codex` |
 | **web-development** | 67 skills | `./vas install --category web-development --target codex` |
 | **workflow** | 72 skills | `./vas install --category workflow --target codex` |
@@ -1254,13 +1254,14 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | :--- | :---: | :--- |
 | `vscode-extension-guide-en` | `safe` | Guide for VS Code extension development from scaffolding to Marketplace publi... |
 
-### CREATIVE (3 skills)
+### CREATIVE (4 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
 | `article-illustrations` | `safe` | Generate hand-drawn 16:9 article illustrations with the Grav character IP, sp... |
 | `liuguang-banlan-ui` | `critical` | Builds two parameterized UI modes—流光溢彩白 (iridescent white) and 五彩斑斓黑 (colorfu... |
 | `modellix` | `critical` | Integrate the Modellix API/CLI for async AI image, video, and speech generati... |
+| `p5js` | `safe` | Generative visuals, algorithmic art, and creative coding with p5.js. Covers s... |
 
 ### DATA (56 skills)
 
@@ -2106,7 +2107,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `ui-ux-pro-max` | `critical` | UI/UX design intelligence for web, mobile, and desktop. This skill should be ... |
 | `web-performance-optimization` | `critical` | Optimize website and web application performance including loading speed, Cor... |
 
-### FRONTEND (45 skills)
+### FRONTEND (47 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2144,12 +2145,14 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `nextjs-best-practices` | `critical` | Next.js App Router principles. Server Components, data fetching, routing patt... |
 | `premium-3d-website` | `safe` | Guidelines for building premium 3D websites, focusing on custom WebGL shaders... |
 | `react-patterns` | `safe` | Modern React patterns and principles. Hooks, composition, performance, TypeSc... |
+| `react-spring` | `safe` | Master physics-based spring animations in React, Three.js (@react-spring/thre... |
 | `redesign-existing-projects` | `safe` | Use when upgrading existing websites or apps by auditing generic UI patterns ... |
 | `review-animations` | `safe` | Use when reviewing animation and motion code against a strict craft, performa... |
 | `stitch-design-taste` | `safe` | Use when generating Google Stitch DESIGN.md systems for premium typography, c... |
 | `sveltekit` | `safe` | Build full-stack web applications with SvelteKit — file-based routing, SSR, S... |
 | `tailwind-patterns` | `none` | Tailwind CSS v4 principles. CSS-first configuration, container queries, moder... |
 | `tastegate` | `safe` | Build or fix a frontend so it looks designed, not AI-generated, then prove it... |
+| `tsparticles` | `safe` | Lightweight, highly customizable particle animations, interactive canvas back... |
 | `ui-from-screenshot` | `safe` | Turn a screenshot or mockup into matching UI with the project's own component... |
 | `ui-states` | `safe` | Design and build the UI states agents forget: first use, empty, loading, erro... |
 | `uxkin-research` | `safe` | Research how real products handle a screen, flow or visual style before desig... |
@@ -2162,7 +2165,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | :--- | :---: | :--- |
 | `vibe-code-cleanup` | `safe` | Safe production cleanup and hardening for vibe-coded fullstack apps (Next.js,... |
 
-### GAME-DEVELOPMENT (20 skills)
+### GAME-DEVELOPMENT (22 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2181,7 +2184,9 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `game-development/web-games` | `none` | Web browser game development. Framework selection (Phaser, PixiJS, Kaplay, Ca... |
 | `godot-4-migration` | `safe` | Specialized guide for migrating Godot 3.x projects to Godot 4 (GDScript 2.0),... |
 | `godot-gdscript-patterns` | `safe` | Master Godot 4 GDScript patterns including signals, scenes, state machines, a... |
+| `matterjs` | `safe` | 2D rigid body physics simulation with Matter.js. Covers Engine, World, Bodies... |
 | `minecraft-bukkit-pro` | `safe` | Master Minecraft server plugin development with Bukkit, Spigot, and Paper APIs. |
+| `rapier` | `safe` | Cross-platform 2D and 3D physics engine written in Rust with fast WebAssembly... |
 | `shader-programming-glsl` | `safe` | Expert guide for writing efficient GLSL shaders (Vertex/Fragment) for web and... |
 | `unity-ai-game-creator` | `safe` | Transform raw game ideas into complete Unity projects with AI-powered asset g... |
 | `unity-developer` | `critical` | Build Unity games with optimized C# scripts, efficient rendering, and proper ... |
@@ -2278,15 +2283,20 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `wordpress-theme-development` | `safe` | WordPress theme development workflow covering theme architecture, template hi... |
 | `wordpress-woocommerce-development` | `critical` | WooCommerce store development workflow covering store setup, payment integrat... |
 
-### GRAPHICS-PROCESSING (5 skills)
+### GRAPHICS-PROCESSING (10 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
 | `algorithmic-art` | `critical` | Creating algorithmic art using p5.js with seeded randomness and interactive p... |
 | `canvas-design` | `critical` | Create beautiful visual art in .png and .pdf documents using design philosoph... |
+| `gl-transitions` | `safe` | Open-source GLSL shader transitions for web video, HTML5 Canvas, Remotion (@r... |
+| `gltf-transform` | `safe` | CLI and TypeScript SDK for 3D glTF/GLB asset optimization, compression, and a... |
 | `image-studio` | `safe` | Studio de geracao de imagens inteligente — roteamento automatico entre ai-stu... |
 | `imagen` | `critical` | AI image generation skill powered by Google Gemini, enabling seamless visual ... |
 | `libreoffice/draw` | `safe` | Vector graphics and diagram creation, format conversion (ODG/SVG/PDF) with Li... |
+| `ogl` | `safe` | Minimal, lightweight WebGL library (~10KB gzipped) by oframe for high-perform... |
+| `paperjs` | `safe` | Vector graphics scripting, Bézier curve math, and SVG manipulation with Paper... |
+| `pixijs` | `safe` | High-performance 2D WebGL/WebGPU graphics rendering with PixiJS (v8+). Covers... |
 
 ### GROWTH (3 skills)
 
@@ -2490,7 +2500,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `protect-mcp-governance` | `critical` | Agent governance skill for MCP tool calls — Cedar policy authoring, shadow-to... |
 | `serply-search-mcp` | `safe` | Search Google, Bing, Google News and Google Scholar, and read public pages, w... |
 
-### MEDIA (51 skills)
+### MEDIA (53 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2520,6 +2530,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `muapi-media` | `critical` | Generate images and videos with MuAPI's schema-driven asynchronous media API ... |
 | `music-generation-studio` | `critical` | Install and use the official AI Music Generator package, pinned by digest, fo... |
 | `nsfw-ai-spicyapi` | `critical` | Generate adult (18+) images, image-to-video clips and image edits through the... |
+| `obs-studio` | `safe` | OBS Studio automation, programmatic screen capture, and recording pipelines v... |
 | `podcast-generation` | `critical` | Generate real audio narratives from text content using Azure OpenAI's Realtim... |
 | `poster-design-studio` | `critical` | Install and use the official AI Poster Maker package, pinned by digest, for p... |
 | `product-photo-studio` | `critical` | Install and use the official AI Product Photography package, pinned by digest... |
@@ -2535,6 +2546,7 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `stability-ai` | `critical` | Geracao de imagens via Stability AI (SD3.5, Ultra, Core). Text-to-image, img2... |
 | `suno-lyrics-to-song` | `critical` | Install and use the official Lyrics to Song package, pinned by digest, for pa... |
 | `talking-avatar-video` | `critical` | Install and use the official Talking Avatar Video package, pinned by digest, ... |
+| `tonejs` | `safe` | Interactive Web Audio framework for audio synthesis, sound effects, music sch... |
 | `video-router` | `none` | Route a video-production brief to generation, deterministic composition, supp... |
 | `videodb` | `critical` | Video and audio perception, indexing, and editing. Ingest files/URLs/live str... |
 | `videodb-skills` | `critical` | Upload, stream, search, edit, transcribe, and generate AI video and audio usi... |
@@ -3452,19 +3464,22 @@ Tổng hợp **2,936** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `sam-altman` | `safe` | Persona fictícia inspirada em temas públicos associados a Sam Altman; sem rep... |
 | `user-thoughts` | `critical` | Persist user decisions and project constraints to mdbase across sessions. Use... |
 
-### VIDEO (1 skills)
+### VIDEO (2 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
+| `opencut` | `safe` | Open-source programmatic video editing and timeline composition with OpenCut.... |
 | `youtube-notetaker` | `critical` | Turn YouTube talks into local study notes with slides, transcripts, editable ... |
 
-### VOICE-AGENTS (5 skills)
+### VOICE-AGENTS (7 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
 | `audio-transcriber` | `critical` | Transform audio recordings into professional Markdown documentation with inte... |
 | `auri-core` | `critical` | Auri: assistente de voz inteligente (Alexa + modelo Claude configurado e veri... |
+| `chatterbox` | `safe` | Open-source neural voiceover and voice cloning synthesis by Resemble AI. Cove... |
 | `fal-audio` | `critical` | Text-to-speech and speech-to-text using fal.ai audio models |
+| `faster-whisper` | `safe` | High-performance speech-to-text transcription and subtitle generation using f... |
 | `pipecat-friday-agent` | `critical` | Build a low-latency, Iron Man-inspired tactical voice assistant (F.R.I.D.A.Y.... |
 | `voice-ai-development` | `critical` | Expert in building voice AI applications - from real-time voice |
 
