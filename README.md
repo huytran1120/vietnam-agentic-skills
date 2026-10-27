@@ -44,7 +44,7 @@ Giao diện web ưu tiên danh mục: tìm theo từ khóa/tác giả/nguồn, l
 - [5. Hướng Dẫn Từng AI Agent](#5-hướng-dẫn-từng-ai-agent)
 - [6. Cẩm Nang Lệnh CLI (`./vas`)](#6-cẩm-nang-lệnh-cli-vas)
 - [7. Cấu Trúc Chuẩn Của Một Skill](#7-cấu-trúc-chuẩn-của-một-skill)
-- [8. Danh Mục & Top 10 Siêu Kỹ Năng Mới Nhất](#8-danh-mục--top-10-siêu-kỹ-năng-mới-nhất)
+- [8. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật](#8-danh-mục--top-20-siêu-kỹ-năng-nổi-bật)
 - [9. Câu Hỏi Thường Gặp (FAQ)](#9-câu-hỏi-thường-gặp-faq)
 - [10. Tác Giả & Giấy Phép](#10-tác-giả--giấy-phép)
 
@@ -221,7 +221,7 @@ description: >-
 
 ---
 
-### 8. Danh Mục & Top 10 Siêu Kỹ Năng Mới Nhất
+### 8. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật
 
 Kho lưu trữ gồm **2,951+ skills** chia theo **118 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
 
@@ -240,6 +240,13 @@ Kho lưu trữ gồm **2,951+ skills** chia theo **118 danh mục**. Xem chi ti�
 | 11 | `landing-page-design` | ⭐ Hot | Hệ thống thiết kế landing page chuyển đổi cao từ A-Z (intake, layout, copy, visual system, fluid island nav, fluid motion) | `./vas install landing-page-design --target all` |
 | 12 | `day-trader-skill` | ⭐ Hot | Bộ 11 kỹ năng Day Trading chứng khoán Mỹ (quét chart, tin SEC 8-K, time entry/exit, mô phỏng Monte Carlo Time Machine, quản lý rủi ro & lệnh Alpaca) | `./vas install day-trader-skill --target all` |
 | 13 | `ffmpeg-skill` | ⭐ Hot | Bộ công cụ 42 script FFmpeg tự động hoá chỉnh sửa video/audio (cắt ghép, 9:16 reframe, phụ đề karaoke, lọc khoảng lặng, ducking âm thanh, HDR sang SDR) | `./vas install ffmpeg-skill --target all` |
+| 14 | `design-to-motion` | ⭐ Hot | Chuyển đổi thiết kế tĩnh (Figma frame, dashboard, UI card) thành HTML động, MP4 cho X và GIF 800×500 lặp mượt mà | `./vas install design-to-motion --target all` |
+| 15 | `skills-manager` | ⭐ Hot | Điều phối, sao lưu và đồng bộ thư viện skills cho Claude Code, Antigravity, Cursor, Windsurf, Codex | `./vas install skills-manager --target all` |
+| 16 | `react-spring` | ⭐ 28K | Động cơ animation vật lý đàn hồi (spring physics) tự nhiên cho React, Three.js & Canvas | `./vas install react-spring --target all` |
+| 17 | `pixijs` | ⭐ 43K | Động cơ đồ họa 2D WebGL/WebGPU 60-120fps cho canvas tương tác, hạt và hiệu ứng thị giác | `./vas install pixijs --target all` |
+| 18 | `rapier` | ⭐ 6.8K | Động cơ vật lý 2D & 3D WebAssembly viết bằng Rust siêu tốc cho Three.js & React Three Fiber | `./vas install rapier --target all` |
+| 19 | `faster-whisper` | ⭐ 17K | Phiên âm giọng nói đa ngôn ngữ siêu tốc bằng CTranslate2, trích xuất phụ đề SRT/VTT theo từng từ | `./vas install faster-whisper --target all` |
+| 20 | `obs-studio` | ⭐ 60K | Tự động hóa quay màn hình, chuyển cảnh và ghi video phần mềm chất lượng cao qua OBS WebSocket v5 | `./vas install obs-studio --target all` |
 
 ```text
 📊 PHÂN BỔ CÁC DANH MỤC HÀNG ĐẦU:
@@ -444,6 +451,99 @@ Tích hợp trực tiếp từ repo mã nguồn mở chính thức của Cloudfl
 ./vas install cloudflare-security-audit --target all
 ```
 
+---
+
+#### 🎬 Siêu Bộ 20 Kỹ Năng Creative Coding, Motion Design & Lập Trình Video
+
+VAS tích hợp trọn bộ 20 công cụ tiêu chuẩn hàng đầu cho AI Agent trong lĩnh vực đồ họa, animation, mô phỏng vật lý 2D/3D, audio và kết xuất video thuần code:
+
+| STT | Công Cụ | Kỹ Năng / Alias | Lĩnh Vực Chuyên Sâu | Lệnh Cài Đặt Nhanh |
+| :-: | :--- | :--- | :--- | :--- |
+| 01 | **Remotion** | `remotion` | React Video Engine lập trình video bằng React | `./vas install remotion --target all` |
+| 02 | **HyperFrames** | `hyperframes` | HTML-to-video render pipeline cho AI Agent | `./vas install hyperframes --target all` |
+| 03 | **Anime.js** | `animejs` / `anime.js` | Điều phối timeline, SVG morphing, CSS animation | `./vas install animejs --target all` |
+| 04 | **React Spring** | `react-spring` | Animation dựa trên vật lý đàn hồi cho React & 3D | `./vas install react-spring --target all` |
+| 05 | **PixiJS** | `pixijs` / `pixi` | Engine đồ họa 2D WebGL/WebGPU 60-120fps | `./vas install pixijs --target all` |
+| 06 | **p5.js** | `p5js` / `p5` | Nghệ thuật sinh học (generative art) & creative coding | `./vas install p5js --target all` |
+| 07 | **Paper.js** | `paperjs` / `paper` | Xử lý vector, đường cong Bézier & phép toán boolean SVG | `./vas install paperjs --target all` |
+| 08 | **Matter.js** | `matterjs` / `matter` | Mô phỏng vật lý vật thể rắn 2D (rigid body dynamics) | `./vas install matterjs --target all` |
+| 09 | **Three.js** | `threejs` / `three` | Dựng cảnh 3D không gian, vật liệu & ánh sáng WebGL | `./vas install threejs --target all` |
+| 10 | **Rapier** | `rapier` / `rapier3d` | Động cơ vật lý 2D/3D bằng Rust & WebAssembly siêu tốc | `./vas install rapier --target all` |
+| 11 | **OGL** | `ogl` / `ogl-webgl` | Thư viện WebGL tối giản (~10KB) viết custom GLSL shader | `./vas install ogl --target all` |
+| 12 | **tsParticles** | `tsparticles` | Hiệu ứng hạt tương tác, mạng lưới kết nối & confetti | `./vas install tsparticles --target all` |
+| 13 | **glTF Transform**| `gltf-transform` / `gltf` | Tối ưu hóa 3D glTF/GLB, nén DRACO, Meshopt & KTX2 | `./vas install gltf-transform --target all` |
+| 14 | **GL Transitions**| `gl-transitions` | 50+ hiệu ứng chuyển cảnh GLSL shader cho canvas/video | `./vas install gl-transitions --target all` |
+| 15 | **OBS Studio** | `obs-studio` / `obs` | Tự động hóa quay màn hình & stream qua OBS WebSocket v5 | `./vas install obs-studio --target all` |
+| 16 | **Chatterbox** | `chatterbox` | Lồng tiếng AI & nhân bản giọng nói nơ-ron (Resemble AI) | `./vas install chatterbox --target all` |
+| 17 | **Tone.js** | `tonejs` / `tone` | Tổng hợp âm thanh, synthesizer, SFX & Web Audio API | `./vas install tonejs --target all` |
+| 18 | **faster-whisper**| `faster-whisper` / `whisper` | Phiên âm giọng nói siêu tốc & tự động tạo phụ đề SRT/VTT | `./vas install faster-whisper --target all` |
+| 19 | **OpenCut** | `opencut` / `video-editor` | Dựng video dòng thời gian (timeline editing) bằng code | `./vas install opencut --target all` |
+| 20 | **FFmpeg** | `ffmpeg` / `ffmpeg-skill` | 42 kịch bản encode, cắt ghép, xử lý LUFS & xuất nền tảng | `./vas install ffmpeg --target all` |
+
+---
+
+#### 📈 Bộ Kỹ Năng Giao Dịch Chứng Khoán Tự Động (`day-trader-skill` Suite)
+
+Bộ 11 kỹ năng chuyên sâu hỗ trợ AI Agent phân tích, quét thị trường và lập kế hoạch giao dịch chứng khoán Mỹ (US Equities):
+* **Hệ thống 11 modules chuyên biệt**:
+  - `trader-scanner`: Quét cổ phiếu biến động, momentum & khối lượng bất thường.
+  - `trader-news`: Phân tích tin tức thời gian thực & tâm lý thị trường (sentiment analysis).
+  - `trader-entry` & `trader-exit`: Xác định điểm vào/ra lệnh kỹ thuật theo tỷ lệ R:R.
+  - `trader-risk` & `trader-budget`: Quản trị vốn, tỷ lệ đòn bẩy và ngưỡng cắt lỗ an toàn.
+  - `trader-broker`: Kết nối API môi giới (Alpaca, Interactive Brokers) đặt lệnh tự động.
+  - `trader-timemachine`: Backtest chiến lược giao dịch trên dữ liệu nến lịch sử.
+  - `trader-alerts`: Thiết lập cảnh báo biến động đa kênh (Telegram, Discord, Webhook).
+  - `trader-analyst`: Phân tích cơ bản báo cáo tài chính & chỉ số định giá.
+  - `trader-pelosi`: Theo dõi giao dịch cổ phiếu công khai của các nhà lập pháp Quốc hội Mỹ.
+
+```bash
+# Cài đặt trọn bộ giao dịch cho AI Agent:
+./vas install day-trader-skill --target all
+
+# Hoặc cài đặt từng module lẻ:
+./vas install trader-scanner trader-risk trader-entry --target antigravity
+```
+
+---
+
+#### 🗂️ Quản Lý & Điều Phối Thư Viện Kỹ Năng Đa Agent (`skills-manager`)
+
+Kỹ năng điều phối và đồng bộ hóa thư viện skills trên mọi môi trường lập trình của AI Agent:
+* **Hỗ trợ toàn diện**: Quản lý skills đồng thời cho Claude Code, Google Antigravity, Cursor, Windsurf, Codex, Cline và Copilot CLI.
+* **Tính năng chính**: Tự động phát hiện cấu hình cài đặt, sao lưu thư viện, kiểm tra tính toàn vẹn (integrity audit) và kích hoạt chế độ đồng bộ symlink không trùng lặp tài nguyên.
+
+```bash
+./vas show skills-manager
+./vas install skills-manager --target all
+```
+
+---
+
+#### 🎨 Chuyển Đổi Thiết Kế Thành Motion Động (`design-to-motion`)
+
+Kỹ năng 3 giai đoạn giúp AI coding agent chuyển đổi thiết kế tĩnh (Figma frame, UI card, dashboard, app screen...) thành trang HTML động pixel-perfect có animation lặp mượt mà:
+* **Part A (Tái tạo chính xác)**: Dựng lại layout 1:1 từ bản thiết kế hoặc Figma screenshot.
+* **Part B (Hệ thống chuyển động)**: Thiết lập timeline chuyển động tự nhiên từ trạng thái rỗng (empty state) đến khi dữ liệu hiển thị.
+* **Part C (Xuất bản đa định dạng)**: Hỗ trợ render video MP4 cho X/Twitter, GIF chất lượng cao cho website hoặc ảnh động kích thước chuẩn 800×500.
+
+```bash
+./vas show design-to-motion
+./vas install design-to-motion --target all
+```
+
+---
+
+#### 🎞️ Bộ Công Cụ FFmpeg Toàn Năng Cho Video & Audio (`ffmpeg-skill`)
+
+Bộ công cụ 42 kịch bản tự động hóa xử lý âm thanh và video bằng Python thuần (không cần thư viện bên ngoài):
+* **Xử lý video chuyên nghiệp**: Cắt ghép lossless không encode lại, reframe sang tỉ lệ dọc 9:16 (TikTok/Reels), phát hiện cảnh chuyển đổi và tạo contact sheet.
+* **Xử lý âm thanh & Phụ đề**: Chuẩn hóa âm lượng EBU R128 (-14 LUFS), tự động ducking nhạc nền khi có giọng nói, trích xuất phụ đề karaoke chuẩn xác từng từ.
+
+```bash
+./vas show ffmpeg-skill
+./vas install ffmpeg-skill --target all
+```
+
 ### 9. Câu Hỏi Thường Gặp (FAQ)
 
 **Q: Tôi dùng OpenAI Codex thì có cần cấu hình gì thêm không?**  
@@ -481,7 +581,7 @@ Dù bạn cài hàng trăm kỹ năng, AI agent chỉ quét phần tóm tắt ng
 - [5. Agent-Specific Setup Guides](#5-agent-specific-setup-guides)
 - [6. CLI Reference (`./vas`)](#6-cli-reference-vas)
 - [7. Open Skill Specification (`SKILL.md`)](#7-open-skill-specification-skillmd)
-- [8. Featured & Viral Skills Showcase](#8-featured--viral-skills-showcase)
+- [8. Featured & Viral Skills Showcase (Top 20)](#8-featured--viral-skills-showcase-top-20)
 - [9. Frequently Asked Questions (FAQ)](#9-frequently-asked-questions-faq)
 - [10. Author & License](#10-author--license)
 
@@ -658,7 +758,7 @@ description: >-
 
 ---
 
-### 8. Featured & Viral Skills Showcase
+### 8. Featured & Viral Skills Showcase (Top 20)
 
 VAS includes **2,951+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
@@ -677,6 +777,13 @@ VAS includes **2,951+ skills** across **118 specialized categories**. Browse the
 | 11 | `landing-page-design` | ⭐ Hot | Complete system for building high-converting landing pages (intake, layout, copy, visual system, fluid island nav, fluid motion) | `./vas install landing-page-design --target all` |
 | 12 | `day-trader-skill` | ⭐ Hot | 11-skill Day Trading suite for US equities: chart scanning, SEC EDGAR news, entry/exit timing, Monte Carlo Time Machine, risk management & broker orders | `./vas install day-trader-skill --target all` |
 | 13 | `ffmpeg-skill` | ⭐ Hot | 42-script local FFmpeg automation suite: lossless cutting, 9:16 reframe, karaoke subtitles, silence removal, ducking & compliance exports | `./vas install ffmpeg-skill --target all` |
+| 14 | `design-to-motion` | ⭐ Hot | Converts static designs (Figma frames, dashboards, UI cards) into animated HTML, MP4 for X, and seamless 800×500 GIFs | `./vas install design-to-motion --target all` |
+| 15 | `skills-manager` | ⭐ Hot | Orchestrates, syncs, backs up, and audits skills across Claude Code, Antigravity, Cursor, Windsurf, Codex | `./vas install skills-manager --target all` |
+| 16 | `react-spring` | ⭐ 28K | Physics-based spring animation engine for natural, fluid UI motion in React, Three.js & Canvas | `./vas install react-spring --target all` |
+| 17 | `pixijs` | ⭐ 43K | High-performance 2D WebGL/WebGPU graphics rendering engine for interactive canvases, particles & visual effects | `./vas install pixijs --target all` |
+| 18 | `rapier` | ⭐ 6.8K | Fast 2D & 3D WebAssembly physics engine written in Rust for Three.js, React Three Fiber & game simulations | `./vas install rapier --target all` |
+| 19 | `faster-whisper` | ⭐ 17K | Up to 4x faster speech-to-text transcription via CTranslate2 with word-level timestamps & SRT/VTT export | `./vas install faster-whisper --target all` |
+| 20 | `obs-studio` | ⭐ 60K | Programmatic screen capture, scene automation, and high-bitrate recording pipelines via OBS WebSocket v5 | `./vas install obs-studio --target all` |
 
 ```text
 📊 TOP CATEGORY DISTRIBUTION:
@@ -878,6 +985,99 @@ Enterprise-grade security guidance and adversarial vulnerability review pipeline
 # Install into your preferred AI agent:
 ./vas install cloudflare-security-audit --target antigravity --mode link
 ./vas install cloudflare-security-audit --target all
+```
+
+---
+
+#### 🎬 The 20 Creative Coding, Motion & Programmatic Video Stack
+
+VAS integrates the comprehensive modern stack of 20 creative coding, animation, 2D/3D physics, audio, and programmatic video rendering tools for AI agents:
+
+| # | Tool | Skill / Alias | Core Focus & Domain | Quick Install Command |
+| :-: | :--- | :--- | :--- | :--- |
+| 01 | **Remotion** | `remotion` | React Video Engine for code-driven video | `./vas install remotion --target all` |
+| 02 | **HyperFrames** | `hyperframes` | High-fidelity HTML-to-video rendering pipeline | `./vas install hyperframes --target all` |
+| 03 | **Anime.js** | `animejs` / `anime.js` | Timeline choreography, SVG morphing & CSS animations | `./vas install animejs --target all` |
+| 04 | **React Spring** | `react-spring` | Physics-based spring animation engine for React & 3D | `./vas install react-spring --target all` |
+| 05 | **PixiJS** | `pixijs` / `pixi` | High-performance 2D WebGL/WebGPU graphics rendering | `./vas install pixijs --target all` |
+| 06 | **p5.js** | `p5js` / `p5` | Generative art, algorithmic visuals & creative coding | `./vas install p5js --target all` |
+| 07 | **Paper.js** | `paperjs` / `paper` | Vector graphics, Bézier math & boolean path operations | `./vas install paperjs --target all` |
+| 08 | **Matter.js** | `matterjs` / `matter` | 2D rigid body dynamics & collision simulation | `./vas install matterjs --target all` |
+| 09 | **Three.js** | `threejs` / `three` | 3D scenes, WebGL geometry, materials & lighting | `./vas install threejs --target all` |
+| 10 | **Rapier** | `rapier` / `rapier3d` | Ultra-fast 2D & 3D physics in Rust & WebAssembly | `./vas install rapier --target all` |
+| 11 | **OGL** | `ogl` / `ogl-webgl` | Minimal (~10KB) WebGL library for custom GLSL shaders | `./vas install ogl --target all` |
+| 12 | **tsParticles** | `tsparticles` | Interactive particle nodes, canvas backgrounds & confetti | `./vas install tsparticles --target all` |
+| 13 | **glTF Transform**| `gltf-transform` / `gltf` | 3D glTF/GLB optimization, DRACO, Meshopt & KTX2 | `./vas install gltf-transform --target all` |
+| 14 | **GL Transitions**| `gl-transitions` | 50+ GLSL shader transitions for web canvas & video | `./vas install gl-transitions --target all` |
+| 15 | **OBS Studio** | `obs-studio` / `obs` | Programmatic screen capture & OBS WebSocket v5 | `./vas install obs-studio --target all` |
+| 16 | **Chatterbox** | `chatterbox` | Neural AI voiceover & voice cloning (Resemble AI) | `./vas install chatterbox --target all` |
+| 17 | **Tone.js** | `tonejs` / `tone` | Web Audio framework for synths, SFX & audio scheduling | `./vas install tonejs --target all` |
+| 18 | **faster-whisper**| `faster-whisper` / `whisper` | Fast speech-to-text transcription & SRT/VTT captions | `./vas install faster-whisper --target all` |
+| 19 | **OpenCut** | `opencut` / `video-editor` | Timeline-based video composition & editing via code | `./vas install opencut --target all` |
+| 20 | **FFmpeg** | `ffmpeg` / `ffmpeg-skill` | 42 local scripts for cutting, LUFS, subtitles & exports | `./vas install ffmpeg --target all` |
+
+---
+
+#### 📈 Automated US Equities Day Trading Suite (`day-trader-skill` - 11 Modules)
+
+A modular 11-skill trading pipeline equipping AI agents to analyze, screen, and execute US equity trades:
+* **The 11 Dedicated Modules**:
+  - `trader-scanner`: Momentum, relative volume & volatility breakout screener.
+  - `trader-news`: Real-time financial headlines & sentiment extraction.
+  - `trader-entry` & `trader-exit`: Precise technical entry/exit triggers based on Risk-to-Reward.
+  - `trader-risk` & `trader-budget`: Capital allocation, position sizing, and stop-loss enforcement.
+  - `trader-broker`: Brokerage execution API connector (Alpaca, Interactive Brokers).
+  - `trader-timemachine`: Strategy backtesting over historical tick and bar data.
+  - `trader-alerts`: Multi-channel notification pipeline (Telegram, Discord, Webhooks).
+  - `trader-analyst`: Fundamental balance sheet & valuation metrics analysis.
+  - `trader-pelosi`: Real-time tracking of congressional stock trade disclosures.
+
+```bash
+# Install the complete suite:
+./vas install day-trader-skill --target all
+
+# Or install individual modules:
+./vas install trader-scanner trader-risk trader-entry --target antigravity
+```
+
+---
+
+#### 🗂️ Multi-Agent Skills Library Orchestrator (`skills-manager`)
+
+Orchestrates, syncs, backs up, and audits skill configurations across modern AI coding assistants:
+* **Cross-Agent Support**: Native coordination for Claude Code, Google Antigravity, Cursor, Windsurf, Codex, Cline, and Copilot CLI.
+* **Core Capabilities**: Automatic discovery of installed skill directories, zero-copy symlink distribution, and configuration integrity audits.
+
+```bash
+./vas show skills-manager
+./vas install skills-manager --target all
+```
+
+---
+
+#### 🎨 Static Design to Fluid Motion & Video (`design-to-motion`)
+
+A structured 3-phase methodology converting static designs (Figma frames, UI cards, dashboards) into living, interactive animated HTML, MP4 video for X, and seamless 800×500 showcase GIFs:
+* **Part A (Pixel-Exact Recreation)**: 1:1 fidelity reconstruction of the design without arbitrary styling divergence.
+* **Part B (Motion Choreography)**: Natural enter transitions from empty states into perpetual narrative loops.
+* **Part C (Multi-Format Delivery)**: Automated video and GIF encoding for social sharing and web embedding.
+
+```bash
+./vas show design-to-motion
+./vas install design-to-motion --target all
+```
+
+---
+
+#### 🎞️ Automated Local Video & Audio Suite (`ffmpeg-skill`)
+
+A comprehensive 42-script automation toolkit for pure Python local video and audio workflows:
+* **Lossless Editing**: Keyframe-exact cuts, 9:16 vertical reframing for Reels/TikTok, scene detection, and visual contact sheets.
+* **Audio & Subtitle Processing**: EBU R128 loudness normalization (-14 LUFS), automatic speech ducking, and word-accurate animated subtitles.
+
+```bash
+./vas show ffmpeg-skill
+./vas install ffmpeg-skill --target all
 ```
 
 ### 9. Frequently Asked Questions (FAQ)
