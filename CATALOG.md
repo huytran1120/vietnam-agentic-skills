@@ -48,7 +48,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **database-processing** | 6 skills | `./vas install --category database-processing --target codex` |
 | **databases** | 3 skills | `./vas install --category databases --target codex` |
 | **debugging** | 4 skills | `./vas install --category debugging --target codex` |
-| **design** | 143 skills | `./vas install --category design --target codex` |
+| **design** | 144 skills | `./vas install --category design --target codex` |
 | **design-it** | 48 skills | `./vas install --category design-it --target codex` |
 | **developer-tools** | 9 skills | `./vas install --category developer-tools --target codex` |
 | **development** | 230 skills | `./vas install --category development --target codex` |
@@ -66,7 +66,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **frontend** | 47 skills | `./vas install --category frontend --target codex` |
 | **fullstack** | 1 skills | `./vas install --category fullstack --target codex` |
 | **game-development** | 22 skills | `./vas install --category game-development --target codex` |
-| **general** | 65 skills | `./vas install --category general --target codex` |
+| **general** | 64 skills | `./vas install --category general --target codex` |
 | **granular-workflow-bundle** | 16 skills | `./vas install --category granular-workflow-bundle --target codex` |
 | **graphics-processing** | 10 skills | `./vas install --category graphics-processing --target codex` |
 | **growth** | 3 skills | `./vas install --category growth --target codex` |
@@ -1413,7 +1413,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `logic-locate` | `safe` | Locate the root cause of a CONFIRMED failure via backward-then-forward semi-f... |
 | `phase-gated-debugging` | `safe` | Use when debugging any bug. Enforces a 5-phase protocol where code edits are ... |
 
-### DESIGN (143 skills)
+### DESIGN (144 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1491,6 +1491,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `hd-2d-style` | `safe` | HD-2D art direction combining pixel characters/sprites with 3D environments, ... |
 | `historical-worlds` | `safe` | Historical and period world art direction for Blender including Western, pira... |
 | `horror-style` | `safe` | Psychological horror art direction for Blender assets inspired by Silent Hill... |
+| `impeccable` | `safe` | Use when the user wants to design, redesign, shape, critique, audit, polish, ... |
 | `indie-horror-aesthetics` | `safe` | Indie horror aesthetic pack for Blender covering Silent Hill, Fear to Fathom,... |
 | `isometric-style` | `safe` | Isometric and strategy-game art direction for Blender including diorama frami... |
 | `landing-page-design` | `safe` | Complete system for building high converting landing pages: intake questions,... |
@@ -2286,7 +2287,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `unity-developer` | `critical` | Build Unity games with optimized C# scripts, efficient rendering, and proper ... |
 | `unity-ecs-patterns` | `safe` | Production patterns for Unity's Data-Oriented Technology Stack (DOTS) includi... |
 
-### GENERAL (65 skills)
+### GENERAL (64 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2319,7 +2320,6 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `hyperframes-figma` | `safe` | Bring Figma into a HyperFrames video - rendered assets, brand tokens, compone... |
 | `hyperframes-registry` | `safe` | About 450 ready-made HyperFrames blocks and components installed as editable ... |
 | `img2threejs` | `safe` | Turn an object or character reference image into a quality-gated, animation-r... |
-| `impeccable` | `safe` | Use when the user wants to design, redesign, shape, critique, audit, polish, ... |
 | `lemo-opuscar` | `safe` | Direct and produce a short film made entirely in code, in one of the styles o... |
 | `media-use` | `safe` | Get or make any media for a HyperFrames video - music, sound effects, images,... |
 | `motion-doctrine` | `safe` | GATEWAY — load FIRST before composing any HyperFrames animation or video. The... |

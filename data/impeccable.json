@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/pbakaus/impeccable",
+  "revision": "7510e233b228864606888d252abacf5e7148bf87",
+  "version": "4.8.0",
+  "engineVersion": "0.1.18",
+  "author": "Paul Bakaus",
+  "license": "Apache-2.0",
+  "category": "design",
+  "description": "Design skills, commands, and anti-pattern detection for AI coding agents",
+  "commandsCount": 24,
+  "rulesCount": 62,
+  "policy": "Synchronized with pbakaus/impeccable v4.8.0, engine v0.1.18, with cryptographic engine verification via engine-checksums.txt."
+}
