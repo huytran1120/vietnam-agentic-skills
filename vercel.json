@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "web": {
+      "root": "docs"
+    },
+    "instagram-api": {
+      "root": "skills/instagram/scripts",
+      "framework": "fastapi",
+      "entrypoint": "serve_api.py"
+    },
+    "junta-leiloeiros-api": {
+      "root": "skills/junta-leiloeiros/scripts",
+      "framework": "fastapi",
+      "entrypoint": "serve_api.py"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/instagram/(.*)",
+      "destination": {
+        "service": "instagram-api"
+      }
+    },
+    {
+      "source": "/api/junta-leiloeiros/(.*)",
+      "destination": {
+        "service": "junta-leiloeiros-api"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "web"
+      }
+    }
+  ]
+}
