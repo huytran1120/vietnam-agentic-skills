@@ -342,6 +342,18 @@
     "tone.js": "tonejs",
     "whisper": "faster-whisper",
     "whisper-transcription": "faster-whisper",
-    "video-editor": "opencut"
+    "video-editor": "opencut",
+    "youtube-agent": "yt-audit",
+    "youtube-audit": "yt-audit",
+    "youtube-script": "yt-script",
+    "youtube-package": "yt-package",
+    "youtube-chapters": "yt-chapters",
+    "youtube-retention": "yt-retention",
+    "youtube-edit": "yt-edit",
+    "youtube-shorts": "yt-shorts",
+    "youtube-viral": "yt-viral",
+    "youtube-plan": "yt-plan",
+    "youtube-comment": "yt-comment",
+    "youtube-seo": "yt-seo"
   }
 }

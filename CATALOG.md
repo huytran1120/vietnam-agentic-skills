@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **3,045** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -114,7 +114,7 @@ Tổng hợp **3,045** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **tools** | 1 skills | `./vas install --category tools --target codex` |
 | **travel** | 1 skills | `./vas install --category travel --target codex` |
 | **uncategorized** | 9 skills | `./vas install --category uncategorized --target codex` |
-| **video** | 2 skills | `./vas install --category video --target codex` |
+| **video** | 13 skills | `./vas install --category video --target codex` |
 | **voice-agents** | 7 skills | `./vas install --category voice-agents --target codex` |
 | **web** | 1 skills | `./vas install --category web --target codex` |
 | **web-development** | 67 skills | `./vas install --category web-development --target codex` |
@@ -3558,12 +3558,23 @@ Tổng hợp **3,045** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `sam-altman` | `safe` | Persona fictícia inspirada em temas públicos associados a Sam Altman; sem rep... |
 | `user-thoughts` | `critical` | Persist user decisions and project constraints to mdbase across sessions. Use... |
 
-### VIDEO (2 skills)
+### VIDEO (13 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
 | `opencut` | `safe` | Open-source programmatic video editing and timeline composition with OpenCut.... |
 | `youtube-notetaker` | `critical` | Turn YouTube talks into local study notes with slides, transcripts, editable ... |
+| `yt-audit` | `safe` | Audit a YouTube channel end to end - packaging, consistency, the first fiftee... |
+| `yt-chapters` | `safe` | Write YouTube chapters from a transcript, validated against YouTube's own rul... |
+| `yt-comment` | `safe` | Draft replies to YouTube comments in the creator's voice, triaged by which on... |
+| `yt-edit` | `safe` | Turn a raw recording's transcript into an edit decision list - dead air, fill... |
+| `yt-package` | `safe` | Write and lint the title and thumbnail for a YouTube video as one pairing, ch... |
+| `yt-plan` | `safe` | Plan a week or a month of YouTube uploads - what to post, when, and in what o... |
+| `yt-retention` | `safe` | Read a YouTube Studio audience-retention export and find where viewers actual... |
+| `yt-script` | `safe` | Write a YouTube video script from a raw idea - hook options off 21 formulas, ... |
+| `yt-seo` | `safe` | Write the description, tags and search-facing text for a YouTube video, aimed... |
+| `yt-shorts` | `safe` | Find the Shorts hiding inside a long video and write them, using the transcri... |
+| `yt-viral` | `safe` | Find what is actually working in the user's niche on YouTube and rank it by h... |
 
 ### VOICE-AGENTS (7 skills)
 

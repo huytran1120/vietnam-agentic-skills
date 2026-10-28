@@ -21,7 +21,7 @@
 <p align="center">
   <a href="https://github.com/huytran1120/vietnam-agentic-skills/actions/workflows/test.yml"><img src="https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status" /></a>
   <a href="https://huytran1120.github.io/vietnam-agentic-skills/"><img src="https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Catalog" /></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-3%2C045%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-3%2C056%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
   <a href="vas.py"><img src="https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge" alt="Zero NPX" /></a>
   <a href="https://github.com/huytran1120"><img src="https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github" alt="Author" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
@@ -52,7 +52,7 @@ The catalog-first website supports keyword/author/source search, category filter
 
 ### 1. Overview
 
-**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **3,045+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
+**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **3,056+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
 VAS strictly adheres to the **Open Agent Skills specification ([agentskills.io](https://agentskills.io/))** and is engineered specifically for modern AI coding agents such as **Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf (Codeium), Cline / Roo Code, and GitHub Copilot CLI**.
 
@@ -332,7 +332,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 | Dimension | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
 | :--- | :--- | :--- | :--- | :--- |
-| **Catalog Scale** | **3,045+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
+| **Catalog Scale** | **3,056+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
 | **Tooling & Engine** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugins | Git Worktrees / Shell scripts | Claude Code / `npx skills` |
 | **Dependencies & Offline**| **100% Offline, Zero external dependencies** | Requires Node & remote NPX | Requires clone & git setup | Requires Node & remote NPX |
 | **Agent Support** | **7+ AI Coding Assistants** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code primary |
@@ -345,7 +345,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 ### 11. Featured & Viral Skills Showcase (Top 20)
 
-VAS includes **3,045+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
+VAS includes **3,056+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Capability Overview | Quick Install Command |
 | :-: | :--- | :---: | :--- | :--- |
@@ -647,6 +647,33 @@ A modular 11-skill trading pipeline equipping AI agents to analyze, screen, and 
 
 # Or install individual modules:
 ./vas install trader-scanner trader-risk trader-entry --target antigravity
+```
+
+---
+
+#### 🎥 The 11 YouTube Channel Agent Suite (`Jakeschincariol/youtube-agent-skill`)
+
+VAS integrates the complete **11-skill YouTube channel operations suite** from [Jakeschincariol/youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill) by **Jake Schincariol** (MIT License), providing deterministic Python heuristics and playbooks for professional video creators:
+
+* **Scriptwriting & Quantitative Hook Scoring (`yt-script`)**: Turn ideas into complete spoken scripts with 5 hook variants evaluated across 21 formulas using `hookscore.py` (measuring Specificity, Address, Stakes, Curiosity, Brevity).
+* **Title & Thumbnail Packaging Linter (`yt-package`)**: Lint titles and thumbnail text as a unified pairing via `title.py` to prevent redundant phrasing and maximize CTR.
+* **Transcript Edit Decision Lists (`yt-edit`)**: Analyze timestamped SRT/VTT/Whisper transcripts to flag dead air, filler words, and repeated takes using `deadair.py`.
+* **Audience Retention Diagnostics (`yt-retention`)**: Ingest YouTube Studio retention CSVs via `retention.py` to isolate 30s hook leak, steep cliffs, and middle slide.
+* **Shorts Extraction & Repurposing (`yt-shorts`)**: Detect 20–55s standalone spans from long-form transcripts with fresh opening hooks and loop points.
+* **Validated Chapter Generation (`yt-chapters`)**: Generate YouTube-compliant chapter blocks (starts at 00:00, ≥3 chapters, ≥10s duration) using `chapters.py`.
+* **Outlier Virality Analysis (`yt-viral`)**: Benchmark niche videos by multiple over channel median view counts using `swipe.py`.
+* **SEO, Comments & Channel Strategy (`yt-seo`, `yt-comment`, `yt-plan`, `yt-audit`)**: Optimize metadata for real queries, triage comment responses, plan weekly output, and execute channel audits that conclude in ONE actionable priority.
+
+```bash
+# Search YouTube skills:
+./vas search youtube
+./vas search "Jake Schincariol"
+
+# Score a video hook with pure Python:
+python3 skills/yt-script/hookscore.py --hook "I spent 100 hours testing AI tools so you don't waste your money"
+
+# Install into Antigravity, Claude, or Codex:
+./vas install yt-script yt-package yt-retention yt-edit yt-shorts yt-chapters yt-audit --target antigravity --mode link
 ```
 
 ---
