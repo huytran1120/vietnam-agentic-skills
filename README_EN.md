@@ -21,7 +21,7 @@
 <p align="center">
   <a href="https://github.com/huytran1120/vietnam-agentic-skills/actions/workflows/test.yml"><img src="https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status" /></a>
   <a href="https://huytran1120.github.io/vietnam-agentic-skills/"><img src="https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Catalog" /></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-2%2C951%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-3%2C045%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
   <a href="vas.py"><img src="https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge" alt="Zero NPX" /></a>
   <a href="https://github.com/huytran1120"><img src="https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github" alt="Author" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
@@ -52,7 +52,7 @@ The catalog-first website supports keyword/author/source search, category filter
 
 ### 1. Overview
 
-**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **2,951+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
+**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **3,045+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
 VAS strictly adheres to the **Open Agent Skills specification ([agentskills.io](https://agentskills.io/))** and is engineered specifically for modern AI coding agents such as **Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf (Codeium), Cline / Roo Code, and GitHub Copilot CLI**.
 
@@ -332,7 +332,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 | Dimension | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
 | :--- | :--- | :--- | :--- | :--- |
-| **Catalog Scale** | **2,951+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
+| **Catalog Scale** | **3,045+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
 | **Tooling & Engine** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugins | Git Worktrees / Shell scripts | Claude Code / `npx skills` |
 | **Dependencies & Offline**| **100% Offline, Zero external dependencies** | Requires Node & remote NPX | Requires clone & git setup | Requires Node & remote NPX |
 | **Agent Support** | **7+ AI Coding Assistants** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code primary |
@@ -345,7 +345,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 ### 11. Featured & Viral Skills Showcase (Top 20)
 
-VAS includes **2,951+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
+VAS includes **3,045+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Capability Overview | Quick Install Command |
 | :-: | :--- | :---: | :--- | :--- |
@@ -550,6 +550,30 @@ The 7 experimental `in-progress/` skills are intentionally excluded.
 New imports retain Matt Pocock's MIT license and supporting files. Target-project prerequisites
 (such as Claude Code, Bash/jq, or Node.js) are separate from the dependency-free VAS manager.
 See the [pinned import manifest](data/mattpocock-skills.json) for provenance.
+
+---
+
+#### 🎨 94 Specialized Blender 3D Skills Suite (`arjun988/blender-skills`)
+
+Integrated the comprehensive suite of **94 specialized 3D & Blender skills** from [arjun988/blender-skills](https://github.com/arjun988/blender-skills) by **Arjun Shukla** (MIT License), transforming AI coding assistants into an end-to-end **Senior Technical Art Team**:
+
+* **Modeling & Sculpting**: `blender-modeler`, `hard-surface`, `sculpting`, `retopology`, `uv-workflow`, `procedural-modeling`, `geometry-nodes`, `cloth-sim`, `hair-groom`.
+* **Shading & Lookdev**: `materials`, `texture-workflow`, `lighting`, `blender-lookdev`, `camera-cinematography`, `rendering`, `compositing`, `vfx-fx`.
+* **Rigging & Animation**: `rigging`, `animation`, `physics-sim`.
+* **Game Engine Pipelines**: `unity-export`, `unreal-export`, `godot-export`, `export-pipeline`, `asset-optimization`, `lod-pipeline`, `collision-proxy`, `qa-review`.
+* **Art Disciplines**: `character-artist`, `creature-artist`, `environment-artist`, `prop-artist`, `vehicle-artist`, `vegetation-artist`, `archviz`.
+* **40+ Artistic Styles & Game Genres**: `psx-horror-style`, `anime-style`, `manga-style`, `pixel-art-style`, `retro-16bit-style`, `lowpoly-style`, `stylized-style`, `realistic-style`, `isometric-style`, `frutiger-aero-style`, `liminal-space-style`, `genre-rpg`, `genre-soulslike`, `genre-shooter`, `genre-survival`...
+
+```bash
+# Search Blender skills:
+./vas search "blender"
+./vas search "Arjun Shukla" --limit 20
+
+# Install core 3D technical art skills:
+./vas install blender-director blender-modeler hard-surface materials rigging --target antigravity
+```
+
+Every skill includes modular references, polycount budget specifications (`references/polycount-budgets.md`), validation checklists, and Blender MCP integration. See [data/blender-skills.json](data/blender-skills.json) for details.
 
 ---
 

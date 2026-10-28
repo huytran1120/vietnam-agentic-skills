@@ -48,6 +48,7 @@
     "azure-speech-py": "azure-speech-to-text-rest-py",
     "azure-storage-py": "azure-storage-file-datalake-py",
     "backend-development-feature": "backend-development-feature-development",
+    "blender-look-dev": "blender-lookdev",
     "browser-testing-devtools": "browser-testing-with-devtools",
     "c4-architecture": "c4-architecture-c4-architecture",
     "cc-skill-learning": "cc-skill-continuous-learning",

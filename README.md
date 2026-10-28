@@ -21,7 +21,7 @@
 <p align="center">
   <a href="https://github.com/huytran1120/vietnam-agentic-skills/actions/workflows/test.yml"><img src="https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status" /></a>
   <a href="https://huytran1120.github.io/vietnam-agentic-skills/"><img src="https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Catalog" /></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-2%2C951%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-3%2C045%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
   <a href="vas.py"><img src="https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge" alt="Zero NPX" /></a>
   <a href="https://github.com/huytran1120"><img src="https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github" alt="Author" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
@@ -57,7 +57,7 @@ Giao diện web ưu tiên danh mục: tìm theo từ khóa/tác giả/nguồn, l
 
 **Vietnam Agentic Skills (VAS)** là kho lưu trữ kỹ năng agentic mã nguồn mở tiêu chuẩn quốc tế được xây dựng và duy trì bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
-Dự án cung cấp **2,951+ playbooks (`SKILL.md`)** chuyên sâu thuộc 118 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
+Dự án cung cấp **3,045+ playbooks (`SKILL.md`)** chuyên sâu thuộc 118 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
 
 Với VAS, các AI Coding Agent không còn là lập trình viên chung chung, mà biến thành các cộng sự kỹ thuật cấp Senior thực thụ: có checklist bảo mật, quy trình kiểm thử, công thức tối ưu và kịch bản thực thi chính xác.
 
@@ -336,7 +336,7 @@ Trước khi ra mắt sản phẩm (`/ship`), hệ thống hỗ trợ kích ho�
 
 | Tiêu Chí Đánh Giá | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
 | :--- | :--- | :--- | :--- | :--- |
-| **Quy mô Catalog** | **2,951+ Kỹ năng** (Toàn diện nhất thế giới) | 25 Kỹ năng cốt lõi | ~14 Kỹ năng | ~30 Kỹ năng |
+| **Quy mô Catalog** | **3,045+ Kỹ năng** (Toàn diện nhất thế giới) | 25 Kỹ năng cốt lõi | ~14 Kỹ năng | ~30 Kỹ năng |
 | **Công cụ Quản trị** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugin | Git Worktrees / Scripts | Claude Code / `npx skills` |
 | **Phụ thuộc Mạng & NPX**| **100% Offline & Không cần Node/NPX** | Cần Node & npx khi cài | Cần clone & setup | Cần Node & npx khi cài |
 | **Hỗ trợ Đa Agent** | **7+ AI Agents** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code ưu tiên |
@@ -349,7 +349,7 @@ Trước khi ra mắt sản phẩm (`/ship`), hệ thống hỗ trợ kích ho�
 
 ### 11. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **2,951+ skills** chia theo **118 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **3,045+ skills** chia theo **118 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Mô Tả Năng Lực | Lệnh Cài Đặt Nhanh |
 | :-: | :--- | :---: | :--- | :--- |
@@ -558,6 +558,30 @@ chúng không phải phụ thuộc của CLI VAS. Xem [nguồn và bản ghi nh�
 
 ---
 
+#### 🎨 Bộ 94 Siêu Kỹ Năng Blender 3D Chuyên Sâu (`arjun988/blender-skills`)
+
+Tích hợp trọn bộ **94 kỹ năng 3D chuyên sâu** từ [arjun988/blender-skills](https://github.com/arjun988/blender-skills) (tác giả **Arjun Shukla** - MIT License), biến AI Coding Agent thành một **Senior Technical Art Team** đầy đủ mọi chuyên môn:
+
+* **Mô hình hóa & Tạo hình (Modeling & Sculpting)**: `blender-modeler`, `hard-surface`, `sculpting`, `retopology`, `uv-workflow`, `procedural-modeling`, `geometry-nodes`, `cloth-sim`, `hair-groom`.
+* **Vật liệu & Chiếu sáng (Materials & Lighting)**: `materials`, `texture-workflow`, `lighting`, `blender-lookdev`, `camera-cinematography`, `rendering`, `compositing`, `vfx-fx`.
+* **Diễn hoạt & Khung xương (Animation & Rigging)**: `rigging`, `animation`, `physics-sim`.
+* **Xuất Game Engine (Game-Ready Pipelines)**: `unity-export`, `unreal-export`, `godot-export`, `export-pipeline`, `asset-optimization`, `lod-pipeline`, `collision-proxy`, `qa-review`.
+* **Chuyên môn hóa Nghệ thuật (Discipline Artists)**: `character-artist`, `creature-artist`, `environment-artist`, `prop-artist`, `vehicle-artist`, `vegetation-artist`, `archviz`.
+* **40+ Phong cách Thị giác & Thể loại Game (Styles & Genres)**: `psx-horror-style`, `anime-style`, `manga-style`, `pixel-art-style`, `retro-16bit-style`, `lowpoly-style`, `stylized-style`, `realistic-style`, `isometric-style`, `frutiger-aero-style`, `liminal-space-style`, `genre-rpg`, `genre-soulslike`, `genre-shooter`, `genre-survival`...
+
+```bash
+# Tìm kiếm các kỹ năng Blender:
+./vas search "blender"
+./vas search "Arjun Shukla" --limit 20
+
+# Cài đặt bộ kỹ năng cốt lõi cho Antigravity / Cursor / Claude:
+./vas install blender-director blender-modeler hard-surface materials rigging --target antigravity
+```
+
+Mỗi kỹ năng đều đi kèm tài liệu kỹ thuật, bảng phân bổ polycount (`references/polycount-budgets.md`), checklist nghiệm thu và tích hợp chuẩn giao thức Blender MCP. Xem chi tiết tại [data/blender-skills.json](data/blender-skills.json).
+
+---
+
 #### 🛡️ Cloudflare Security Audit (`cloudflare-security-audit`)
 
 Tích hợp trực tiếp từ repo mã nguồn mở chính thức của Cloudflare: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill).
@@ -721,7 +745,7 @@ Dù bạn cài hàng trăm kỹ năng, AI agent chỉ quét phần tóm tắt ng
 
 ### 1. Overview
 
-**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **2,951+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
+**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **3,045+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
 VAS strictly adheres to the **Open Agent Skills specification ([agentskills.io](https://agentskills.io/))** and is engineered specifically for AI coding agents such as **Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf (Codeium), Cline / Roo Code, and GitHub Copilot CLI**.
 
@@ -1001,7 +1025,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 | Dimension | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
 | :--- | :--- | :--- | :--- | :--- |
-| **Catalog Scale** | **2,951+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
+| **Catalog Scale** | **3,045+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
 | **Tooling & Engine** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugins | Git Worktrees / Shell scripts | Claude Code / `npx skills` |
 | **Dependencies & Offline**| **100% Offline, Zero external dependencies** | Requires Node & remote NPX | Requires clone & git setup | Requires Node & remote NPX |
 | **Agent Support** | **7+ AI Coding Assistants** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code primary |
@@ -1014,7 +1038,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 ### 11. Featured & Viral Skills Showcase (Top 20)
 
-VAS includes **2,951+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
+VAS includes **3,045+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Capability Overview | Quick Install Command |
 | :-: | :--- | :---: | :--- | :--- |

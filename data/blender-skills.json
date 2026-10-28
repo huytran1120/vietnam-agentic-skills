@@ -1,0 +1,858 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/arjun988/blender-skills",
+  "revision": "8f778d2405a214b508d4c7d80742be8e43acdd52",
+  "version": "1.3.0",
+  "author": "Arjun Shukla",
+  "license": "MIT",
+  "importedCount": 94,
+  "policy": "Import all 94 specialized Blender 3D skills from arjun988/blender-skills into the design category. lookdev imported as blender-lookdev to prevent collision with lookdev-studio.",
+  "skills": [
+    {
+      "id": "analog-found-footage-horror",
+      "original_name": "analog-found-footage-horror",
+      "category": "design",
+      "description": "Analog, VHS, CRT, and found-footage horror aesthetics for Blender shots including camera imperfections and documentary framing.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "animation",
+      "original_name": "animation",
+      "category": "design",
+      "description": "Game-ready animation in Blender including walk/run/idle cycles, combat, mechanical animation, camera animation, constraints, Graph Editor, and NLA workflows via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "anime-style",
+      "original_name": "anime-style",
+      "category": "design",
+      "description": "Anime and cel-shaded art direction for Blender with hard color breaks, toon shaders, clean silhouettes, and anime proportion language.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "apocalypse-worlds",
+      "original_name": "apocalypse-worlds",
+      "category": "design",
+      "description": "Apocalyptic and dystopian world art direction for Blender including post-apocalyptic, zombie, alien invasion, post-human, dystopian, and utopian contrast sets.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "archviz",
+      "original_name": "archviz",
+      "category": "design",
+      "description": "Architectural visualization in Blender for interiors/exteriors with real-world scale, camera composition, PBR materials, and still/animation delivery via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "asset-optimization",
+      "original_name": "asset-optimization",
+      "category": "design",
+      "description": "Validates and optimizes Blender assets for polycount, topology, UV efficiency, material count, naming, collections, and game-ready performance. Use before export on all production assets via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "biome-worlds",
+      "original_name": "biome-worlds",
+      "category": "design",
+      "description": "Biome and setting art direction for Blender covering underwater, desert, arctic, jungle, underground, and floating-island environments.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "blender-director",
+      "original_name": "blender-director",
+      "category": "design",
+      "description": "Use when starting any Blender asset task, planning a production pipeline, coordinating multiple disciplines, or matching a reference photo/concept art. Invoke for game-ready assets, hard surface, environment, character, creature, export, or any multi-skill Blender workflow.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "blender-modeler",
+      "original_name": "blender-modeler",
+      "category": "design",
+      "description": "Core Blender modeling specialist for Edit Mode, modifiers, collections, precision modeling, and scene organization. Use for general 3D modeling, blockouts, cleanup, non-destructive workflows, and scene structure in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "body-horror-style",
+      "original_name": "body-horror-style",
+      "category": "design",
+      "description": "Body horror art direction for Blender focusing on flesh wrongness, mutation, fusion, and visceral material storytelling.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "brutalist-mood",
+      "original_name": "brutalist-mood",
+      "category": "design",
+      "description": "Brutalist and concrete-monument mood direction for Blender architecture and scenes with raw concrete, monumental scale, and austere composition.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "camera-cinematography",
+      "original_name": "camera-cinematography",
+      "category": "design",
+      "description": "Cinematic camera work in Blender including framing, lenses, composition, camera animation, and shot language beyond basic rendering setup via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "cartoon-style",
+      "original_name": "cartoon-style",
+      "category": "design",
+      "description": "Cartoon art direction for Blender with squash-stretch readable shapes, bold colors, and graphic silhouettes for games and animation.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "character-archetypes",
+      "original_name": "character-archetypes",
+      "category": "design",
+      "description": "Character archetype art direction for Blender covering fantasy races, horror creatures, roles (knight, assassin, detective), and body types (mecha, android, chibi, etc.).",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "character-artist",
+      "original_name": "character-artist",
+      "category": "design",
+      "description": "AAA character modeling for human anatomy, stylization, facial topology, clothing, hair, and animation-ready meshes. Use for game characters, facial expressions, and production character assets in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "chibi-style",
+      "original_name": "chibi-style",
+      "category": "design",
+      "description": "Chibi and SD proportion art direction for Blender characters with oversized heads, simplified anatomy, and cute silhouette rules.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "cloth-sim",
+      "original_name": "cloth-sim",
+      "category": "design",
+      "description": "Garment blockout, cloth simulation, pin groups, and bake to shape keys or caches for characters and props in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "collision-proxy",
+      "original_name": "collision-proxy",
+      "category": "design",
+      "description": "Collision proxy authoring for games including UCX/UHX naming, convex hulls, capsules, and simple collider meshes in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "comic-book-style",
+      "original_name": "comic-book-style",
+      "category": "design",
+      "description": "Comic book and graphic-novel art direction for Blender with ink-line emphasis, halftone cues, and high-contrast framing.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "compositing",
+      "original_name": "compositing",
+      "category": "design",
+      "description": "Blender compositor workflows for beauty stacks, render passes, color grade, glare, and delivery outputs via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "cosmic-eldritch-horror",
+      "original_name": "cosmic-eldritch-horror",
+      "category": "design",
+      "description": "Cosmic, eldritch, and Lovecraftian horror art direction for Blender with non-Euclidean cues, impossible scale, and incomprehensible forms.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "cozy-wholesome-mood",
+      "original_name": "cozy-wholesome-mood",
+      "category": "design",
+      "description": "Cozy, cute, wholesome, relaxing, and peaceful mood direction for Blender assets and scenes.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "creature-artist",
+      "original_name": "creature-artist",
+      "category": "design",
+      "description": "AAA creature modeling for fantasy, aliens, monsters, and organic creature design with believable anatomy and movement. Use for creature blockouts, muscle flow, bone structure, and animation-ready creature assets in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "dark-gritty-mood",
+      "original_name": "dark-gritty-mood",
+      "category": "design",
+      "description": "Dark, grim, gritty, rusty, abandoned, decayed, industrial, lonely, and melancholic mood direction for Blender.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "dream-surreal-mood",
+      "original_name": "dream-surreal-mood",
+      "category": "design",
+      "description": "Dreamlike, surreal, mysterious, mystical, hopeful, and chaotic mood direction for Blender scenes.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "dream-weirdcore-style",
+      "original_name": "dream-weirdcore-style",
+      "category": "design",
+      "description": "Dreamcore, weirdcore, and traumacore-inspired art direction for Blender with nostalgic wrongness, liminal nostalgia, and surreal childhood spaces.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "environment-artist",
+      "original_name": "environment-artist",
+      "category": "design",
+      "description": "AAA environment art for modular kits, buildings, terrain, vegetation, architecture, and scene composition. Use for game-optimized environments, storytelling through space, and modular asset pipelines in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "export-pipeline",
+      "original_name": "export-pipeline",
+      "category": "design",
+      "description": "Production export from Blender to FBX, GLTF, OBJ, USD, and Alembic with scale, pivot, rotation, normals, materials, animation, and collision verification via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "fantasy-worlds",
+      "original_name": "fantasy-worlds",
+      "category": "design",
+      "description": "Fantasy world-building art direction for Blender covering medieval, high fantasy, dark fantasy, and urban fantasy asset language.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "folk-horror-style",
+      "original_name": "folk-horror-style",
+      "category": "design",
+      "description": "Folk horror art direction for Blender with rural ritual uncanny, pastoral daylight dread, and community-wrongness storytelling.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "frutiger-aero-style",
+      "original_name": "frutiger-aero-style",
+      "category": "design",
+      "description": "Frutiger Aero art direction for Blender with glossy skeuomorphism, aqua UI cues, nature-tech optimism, and mid-2000s futurism.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-action-combat",
+      "original_name": "genre-action-combat",
+      "category": "design",
+      "description": "Art direction for action, hack-and-slash, beat 'em up, and fighting-game readable combat spaces and prop language in Blender.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-card-party-idle",
+      "original_name": "genre-card-party-idle",
+      "category": "design",
+      "description": "Art direction for card games, deck builders, party games, idle/incremental, educational, and rhythm game presentational spaces in Blender.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-metroidvania-roguelike",
+      "original_name": "genre-metroidvania-roguelike",
+      "category": "design",
+      "description": "Art direction for metroidvania, roguelike, and roguelite games in Blender with biome gates, room modules, and run-readable props.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-narrative-vn",
+      "original_name": "genre-narrative-vn",
+      "category": "design",
+      "description": "Art direction for visual novel, interactive movie, walking simulator, and story-driven presentation spaces in Blender.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-open-world-sandbox",
+      "original_name": "genre-open-world-sandbox",
+      "category": "design",
+      "description": "Art direction for open world and sandbox games in Blender with biome landmarks, traversable scale, and discovery props.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-puzzle-platformer",
+      "original_name": "genre-puzzle-platformer",
+      "category": "design",
+      "description": "Art direction for puzzle and platformer games in Blender with readable interactables, jump volumes, and clear hazard language.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-racing-sports",
+      "original_name": "genre-racing-sports",
+      "category": "design",
+      "description": "Art direction for racing and sports games in Blender with track landmarks, stadium kits, and high-speed readability.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-rpg",
+      "original_name": "genre-rpg",
+      "category": "design",
+      "description": "Art direction for RPG, JRPG, CRPG, ARPG, and MMORPG worlds in Blender including loot rarity reads and region identity.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-shooter",
+      "original_name": "genre-shooter",
+      "category": "design",
+      "description": "Art direction for FPS, TPS, shooter, battle royale, and extraction-shooter maps and props in Blender with sightline and cover language.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-soulslike",
+      "original_name": "genre-soulslike",
+      "category": "design",
+      "description": "Art direction for soulslike games in Blender with monumental melancholy spaces, fog gates, bonfire landmarks, and lethal readability.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-stealth",
+      "original_name": "genre-stealth",
+      "category": "design",
+      "description": "Art direction for stealth-game spaces in Blender with shadow volumes, patrol-friendly layouts, and concealment materials.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-strategy-sim",
+      "original_name": "genre-strategy-sim",
+      "category": "design",
+      "description": "Art direction for strategy, RTS, turn-based strategy, tower defense, MOBA, city builder, colony sim, and simulation games in Blender.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "genre-survival",
+      "original_name": "genre-survival",
+      "category": "design",
+      "description": "Art direction for survival and survival-horror gameplay spaces in Blender emphasizing resource props, crafting readability, and tension routes.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "geometry-nodes",
+      "original_name": "geometry-nodes",
+      "category": "design",
+      "description": "Blender Geometry Nodes for procedural modeling, scatter systems, vegetation, buildings, pipes, cables, and reusable node groups. Use for procedural asset generation and instancing pipelines via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "godot-export",
+      "original_name": "godot-export",
+      "category": "design",
+      "description": "Godot-specific Blender export favoring GLTF/GLB with correct scale, materials, animation clips, and collision shapes via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "hair-groom",
+      "original_name": "hair-groom",
+      "category": "design",
+      "description": "Hair and fur grooming in Blender using curves, particle hair, geometry nodes, and game hair-card workflows. Use for characters, creatures, and real-time hair cards via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "hand-painted-style",
+      "original_name": "hand-painted-style",
+      "category": "design",
+      "description": "Hand-painted texture art direction for Blender with brushwork albedo, soft value transitions, and stylized PBR restraint.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "hard-surface",
+      "original_name": "hard-surface",
+      "category": "design",
+      "description": "AAA hard surface modeling for sci-fi, industrial, military, vehicles, weapons, robotics, and mechanical props. Use for boolean/bevel workflows, panel lines, greebles, chamfers, and manufacturing-accurate surfaces in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "hd-2d-style",
+      "original_name": "hd-2d-style",
+      "category": "design",
+      "description": "HD-2D art direction combining pixel characters/sprites with 3D environments, depth of field, and theatrical lighting.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "historical-worlds",
+      "original_name": "historical-worlds",
+      "category": "design",
+      "description": "Historical and period world art direction for Blender including Western, pirate, samurai/ninja, Viking, ancient Egypt/Greece/Rome, Victorian, modern, and military eras.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "horror-style",
+      "original_name": "horror-style",
+      "category": "design",
+      "description": "Psychological horror art direction for Blender assets inspired by Silent Hill, Resident Evil, Chilla's Art, Fear to Fathom, and Iron Lung. Use for sparse industrial environments, analog aesthetics, and tension-driven lighting.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "indie-horror-aesthetics",
+      "original_name": "indie-horror-aesthetics",
+      "category": "design",
+      "description": "Indie horror aesthetic pack for Blender covering Silent Hill, Fear to Fathom, Puppet Combo, corporate horror, cabin/forest/hospital horror, and related looks.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "isometric-style",
+      "original_name": "isometric-style",
+      "category": "design",
+      "description": "Isometric and strategy-game art direction for Blender including diorama framing, true-iso camera setup, readable silhouettes, and tile asset rules.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "lighting",
+      "original_name": "lighting",
+      "category": "design",
+      "description": "Cinematic and game lighting in Blender including three-point lighting, HDRI, horror lighting, volumetrics, rim lighting, and mood-driven illumination. Use for look development and scene atmosphere via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "liminal-space-style",
+      "original_name": "liminal-space-style",
+      "category": "design",
+      "description": "Liminal space and Backrooms art direction for Blender with empty transitional architecture, wrong familiarity, and endless repetition.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "lod-pipeline",
+      "original_name": "lod-pipeline",
+      "category": "design",
+      "description": "Dedicated LOD generation, naming, screen-size targets, and validation for game meshes in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "blender-lookdev",
+      "original_name": "lookdev",
+      "category": "design",
+      "description": "Look development loop for Blender assets combining materials, lighting, camera, and screenshot comparison until shading reads correctly via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "lowpoly-style",
+      "original_name": "lowpoly-style",
+      "category": "design",
+      "description": "Low-poly art direction for Blender inspired by PS1/PS2, Lethal Company, Mouthwashing, and Fear to Fathom. Use for readable silhouettes, minimal polygons, simple materials, and strong atmosphere.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "manga-style",
+      "original_name": "manga-style",
+      "category": "design",
+      "description": "Manga-inspired art direction for Blender emphasizing monochrome value design, speed lines, screentone feel, and manga panel staging.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "mascot-puppet-horror",
+      "original_name": "mascot-puppet-horror",
+      "category": "design",
+      "description": "Mascot and puppet horror art direction for Blender with cheerful brand characters made wrong, felt/foam materials, and uncanny performance.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "materials",
+      "original_name": "materials",
+      "category": "design",
+      "description": "Blender PBR and stylized material creation for metal, wood, concrete, fabric, glass, dirt, rust, and procedural shaders. Use for look development, material reuse, and production shading in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "minimalist-style",
+      "original_name": "minimalist-style",
+      "category": "design",
+      "description": "Minimalist and abstract-leaning art direction for Blender with reduced forms, limited palettes, and negative space.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "neon-retrofuturism",
+      "original_name": "neon-retrofuturism",
+      "category": "design",
+      "description": "Neon, vaporwave, synthwave, and retrofuturistic mood/art direction for Blender with grid horizons, chrome, and dusk palettes.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "noir-style",
+      "original_name": "noir-style",
+      "category": "design",
+      "description": "Noir art direction for Blender with high-contrast lighting, wet streets, silhouettes, and monochrome or limited-color grading.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "painterly-style",
+      "original_name": "painterly-style",
+      "category": "design",
+      "description": "Painterly art direction spanning watercolor and oil-painting looks for Blender using soft edges, pigment texture, and illustrative lighting.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "physics-sim",
+      "original_name": "physics-sim",
+      "category": "design",
+      "description": "Rigid body, soft body, and destruction setups in Blender including constraints, cell fracture debris, and baked caches via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "pixel-art-style",
+      "original_name": "pixel-art-style",
+      "category": "design",
+      "description": "Pixel-art and texel-constrained art direction for Blender assets destined for pixel rendering, low-res textures, or HD-2D-adjacent pixel reads.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "procedural-modeling",
+      "original_name": "procedural-modeling",
+      "category": "design",
+      "description": "Procedural asset creation for rocks, buildings, vegetation, roads, terrain, pipes, cables, and sci-fi panels using Geometry Nodes and modifier-based workflows in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "prop-artist",
+      "original_name": "prop-artist",
+      "category": "design",
+      "description": "Everyday and hero prop modeling for furniture, tools, household objects, kitbash parts, and readable game props. Use when hard-surface is too sci-fi/mechanical and the asset is a grounded prop.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "psx-horror-style",
+      "original_name": "psx-horror-style",
+      "category": "design",
+      "description": "PS1/PSX-era horror art direction combining low-poly affine textures, limited color depth, fog, and psychological horror staging for Blender assets.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "qa-review",
+      "original_name": "qa-review",
+      "category": "design",
+      "description": "Production QA gate for Blender assets using viewport screenshots, validation checklists, naming audits, and ship/no-ship verdicts via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "realistic-style",
+      "original_name": "realistic-style",
+      "category": "design",
+      "description": "Photorealistic AAA art direction for Blender including photogrammetry cleanup, real-world scale, high-poly workflows, PBR accuracy, and scan optimization. Use for cinematic and AAA game realism.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "rendering",
+      "original_name": "rendering",
+      "category": "design",
+      "description": "Blender rendering with Cycles and Eevee including sampling, denoising, camera setup, render passes, color management, and render optimization. Use for final output and look validation via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "retopology",
+      "original_name": "retopology",
+      "category": "design",
+      "description": "Production retopology for animation-ready, low-poly, quad-dominant meshes with proper edge loops and efficient polygon flow. Use after sculpting or high-poly modeling before rigging and UV work in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "retro-16bit-style",
+      "original_name": "retro-16bit-style",
+      "category": "design",
+      "description": "Retro 16-bit art direction for Blender-assisted SNES/Genesis-era color richness, dither cues, and sprite-like clarity.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "retro-8bit-style",
+      "original_name": "retro-8bit-style",
+      "category": "design",
+      "description": "Retro 8-bit art direction for Blender-assisted pixel/low-res aesthetics inspired by NES-era constraints.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "rigging",
+      "original_name": "rigging",
+      "category": "design",
+      "description": "Production rigging in Blender with armatures, IK/FK, constraints, weight painting, mechanical rigs, facial rigs, and drivers. Use before animation on deforming assets via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "scene-assembly",
+      "original_name": "scene-assembly",
+      "category": "design",
+      "description": "Large scene layout in Blender with collections, linking, overrides, streaming-friendly organization, and set assembly via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "sci-fi-punk-worlds",
+      "original_name": "sci-fi-punk-worlds",
+      "category": "design",
+      "description": "Sci-fi and punk world art direction for Blender including hard sci-fi, space, cyberpunk, steampunk, dieselpunk, atompunk, solarpunk, biopunk, and clockpunk.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "sculpting",
+      "original_name": "sculpting",
+      "category": "design",
+      "description": "Blender sculpting for organic and hard surface detail using Dyntopo, multiresolution, brushes, alpha workflow, wrinkles, and damage. Use when high-frequency surface detail is needed before retopology in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "set-dressing",
+      "original_name": "set-dressing",
+      "category": "design",
+      "description": "Set dressing and environmental storytelling placement for interiors and exteriors using prop density, narrative clusters, and readability rules via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "stop-motion-craft-style",
+      "original_name": "stop-motion-craft-style",
+      "category": "design",
+      "description": "Stop-motion and craft aesthetics for Blender including claymation, paper craft, and handmade physical-material cues.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "stylized-style",
+      "original_name": "stylized-style",
+      "category": "design",
+      "description": "Stylized art direction for Blender with shape language, exaggeration, color harmony, NPR rendering, and hand-painted asset workflows. Use for non-photorealistic game and animation projects.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "texture-workflow",
+      "original_name": "texture-workflow",
+      "category": "design",
+      "description": "Production texture workflow for atlases, baking AO/curvature/normal/roughness maps, decals, and texture memory optimization. Use for game-ready texture pipelines in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "unity-export",
+      "original_name": "unity-export",
+      "category": "design",
+      "description": "Unity-specific Blender export for scale, axis, materials, humanoid/generic rigs, LODs, and collision import via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "unreal-export",
+      "original_name": "unreal-export",
+      "category": "design",
+      "description": "Unreal Engine-specific Blender export for FBX scale, LODs, UCX collision, sockets, materials, and skeletal mesh workflows via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "uv-workflow",
+      "original_name": "uv-workflow",
+      "category": "design",
+      "description": "Production UV unwrapping for seam placement, UV packing, texel density, UDIM, lightmap UVs, and modular UV layouts. Use when preparing meshes for texturing and engine export in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "vector-style",
+      "original_name": "vector-style",
+      "category": "design",
+      "description": "Vector-clean art direction for Blender with flat fills, sharp silhouettes, and UI-like graphic clarity.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "vegetation-artist",
+      "original_name": "vegetation-artist",
+      "category": "design",
+      "description": "Vegetation and foliage authoring for Blender including trees, plants, grass cards, canopy LODs, and game-friendly leaf atlases via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "vehicle-artist",
+      "original_name": "vehicle-artist",
+      "category": "design",
+      "description": "Dedicated vehicle modeling for cars, trucks, aircraft, ships, boats, mechs, and transit assets with proportion, panel flow, and game LOD awareness in Blender via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "vfx-fx",
+      "original_name": "vfx-fx",
+      "category": "design",
+      "description": "Cinematic and game VFX in Blender including smoke, fire, particles, trails, and Geometry Nodes FX setups via MCP.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "visual-console-eras",
+      "original_name": "visual-console-eras",
+      "category": "design",
+      "description": "Visual era art direction for Blender covering PS1–PS5 stylistic cues, retro arcade, DOS, CRT, VHS, and film-grain presentation.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    },
+    {
+      "id": "voxel-style",
+      "original_name": "voxel-style",
+      "category": "design",
+      "description": "Voxel and Minecraft-adjacent art direction for Blender with block grid modeling, limited palettes, and chunk-friendly assets.",
+      "author": "Arjun Shukla",
+      "license": "MIT",
+      "source_repo": "arjun988/blender-skills"
+    }
+  ]
+}

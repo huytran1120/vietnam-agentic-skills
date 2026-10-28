@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **3,045** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -48,7 +48,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **database-processing** | 6 skills | `./vas install --category database-processing --target codex` |
 | **databases** | 3 skills | `./vas install --category databases --target codex` |
 | **debugging** | 4 skills | `./vas install --category debugging --target codex` |
-| **design** | 49 skills | `./vas install --category design --target codex` |
+| **design** | 143 skills | `./vas install --category design --target codex` |
 | **design-it** | 48 skills | `./vas install --category design-it --target codex` |
 | **developer-tools** | 9 skills | `./vas install --category developer-tools --target codex` |
 | **development** | 230 skills | `./vas install --category development --target codex` |
@@ -1413,7 +1413,7 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `logic-locate` | `safe` | Locate the root cause of a CONFIRMED failure via backward-then-forward semi-f... |
 | `phase-gated-debugging` | `safe` | Use when debugging any bug. Enforces a 5-phase protocol where code edits are ... |
 
-### DESIGN (49 skills)
+### DESIGN (143 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1422,10 +1422,35 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `accesslint-diff` | `safe` | Diff a live page's accessibility violations against a baseline — by default c... |
 | `accesslint-scan` | `critical` | Audit a live page for accessibility issues, locate each WCAG violation precis... |
 | `agent-reels` | `critical` | Find animation and video references on 1human, consult a human-agent shared l... |
+| `analog-found-footage-horror` | `safe` | Analog, VHS, CRT, and found-footage horror aesthetics for Blender shots inclu... |
+| `animation` | `safe` | Game-ready animation in Blender including walk/run/idle cycles, combat, mecha... |
+| `anime-style` | `safe` | Anime and cel-shaded art direction for Blender with hard color breaks, toon s... |
 | `antigravity-design-expert` | `safe` | Core UI/UX engineering skill for building highly interactive, spatial, weight... |
+| `apocalypse-worlds` | `safe` | Apocalyptic and dystopian world art direction for Blender including post-apoc... |
+| `archviz` | `safe` | Architectural visualization in Blender for interiors/exteriors with real-worl... |
+| `asset-optimization` | `safe` | Validates and optimizes Blender assets for polycount, topology, UV efficiency... |
 | `baseline-ui` | `critical` | Quickly deslop UI code by fixing spacing, hierarchy, typography, and small la... |
+| `biome-worlds` | `safe` | Biome and setting art direction for Blender covering underwater, desert, arct... |
+| `blender-director` | `safe` | Use when starting any Blender asset task, planning a production pipeline, coo... |
+| `blender-lookdev` | `safe` | Look development loop for Blender assets combining materials, lighting, camer... |
 | `blender-mcp` | `safe` | Connect Blender 3D to any LLM via Model Context Protocol (MCP) for prompt-dri... |
+| `blender-modeler` | `safe` | Core Blender modeling specialist for Edit Mode, modifiers, collections, preci... |
+| `body-horror-style` | `safe` | Body horror art direction for Blender focusing on flesh wrongness, mutation, ... |
+| `brutalist-mood` | `safe` | Brutalist and concrete-monument mood direction for Blender architecture and s... |
+| `camera-cinematography` | `safe` | Cinematic camera work in Blender including framing, lenses, composition, came... |
 | `canva-automation` | `critical` | Automate Canva tasks via Rube MCP (Composio): designs, exports, folders, bran... |
+| `cartoon-style` | `safe` | Cartoon art direction for Blender with squash-stretch readable shapes, bold c... |
+| `character-archetypes` | `safe` | Character archetype art direction for Blender covering fantasy races, horror ... |
+| `character-artist` | `safe` | AAA character modeling for human anatomy, stylization, facial topology, cloth... |
+| `chibi-style` | `safe` | Chibi and SD proportion art direction for Blender characters with oversized h... |
+| `cloth-sim` | `safe` | Garment blockout, cloth simulation, pin groups, and bake to shape keys or cac... |
+| `collision-proxy` | `safe` | Collision proxy authoring for games including UCX/UHX naming, convex hulls, c... |
+| `comic-book-style` | `safe` | Comic book and graphic-novel art direction for Blender with ink-line emphasis... |
+| `compositing` | `safe` | Blender compositor workflows for beauty stacks, render passes, color grade, g... |
+| `cosmic-eldritch-horror` | `safe` | Cosmic, eldritch, and Lovecraftian horror art direction for Blender with non-... |
+| `cozy-wholesome-mood` | `safe` | Cozy, cute, wholesome, relaxing, and peaceful mood direction for Blender asse... |
+| `creature-artist` | `safe` | AAA creature modeling for fantasy, aliens, monsters, and organic creature des... |
+| `dark-gritty-mood` | `safe` | Dark, grim, gritty, rusty, abandoned, decayed, industrial, lonely, and melanc... |
 | `design-md` | `safe` | Analyze Stitch projects and synthesize a semantic design system into DESIGN.m... |
 | `design-orchestration` | `none` | Orchestrates design workflows by routing work through brainstorming, multi-ag... |
 | `design-philosophy` | `none` | Visual philosophy and art-direction for frontend. Use when creating high-conc... |
@@ -1435,19 +1460,79 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `design-to-motion` | `safe` | Turns a static design (a Figma frame, dashboard, card set, app screen, or a U... |
 | `deterministic-design` | `safe` | Measure rendered UI layout with reproducible spatial metrics and a separately... |
 | `diagram-generator` | `safe` | Generate, refine, validate, and render diagrams from natural language, notes,... |
+| `dream-surreal-mood` | `safe` | Dreamlike, surreal, mysterious, mystical, hopeful, and chaotic mood direction... |
+| `dream-weirdcore-style` | `safe` | Dreamcore, weirdcore, and traumacore-inspired art direction for Blender with ... |
+| `environment-artist` | `safe` | AAA environment art for modular kits, buildings, terrain, vegetation, archite... |
+| `export-pipeline` | `safe` | Production export from Blender to FBX, GLTF, OBJ, USD, and Alembic with scale... |
+| `fantasy-worlds` | `safe` | Fantasy world-building art direction for Blender covering medieval, high fant... |
 | `favicon` | `critical` | Generate favicons from a source image |
 | `figma-automation` | `critical` | Automate Figma tasks via Rube MCP (Composio): files, components, design token... |
+| `folk-horror-style` | `safe` | Folk horror art direction for Blender with rural ritual uncanny, pastoral day... |
 | `free-design-resources` | `safe` | Design resource register: resource and provider, licence type, commercial-use... |
+| `frutiger-aero-style` | `safe` | Frutiger Aero art direction for Blender with glossy skeuomorphism, aqua UI cu... |
+| `genre-action-combat` | `safe` | Art direction for action, hack-and-slash, beat 'em up, and fighting-game read... |
+| `genre-card-party-idle` | `safe` | Art direction for card games, deck builders, party games, idle/incremental, e... |
+| `genre-metroidvania-roguelike` | `safe` | Art direction for metroidvania, roguelike, and roguelite games in Blender wit... |
+| `genre-narrative-vn` | `safe` | Art direction for visual novel, interactive movie, walking simulator, and sto... |
+| `genre-open-world-sandbox` | `safe` | Art direction for open world and sandbox games in Blender with biome landmark... |
+| `genre-puzzle-platformer` | `safe` | Art direction for puzzle and platformer games in Blender with readable intera... |
+| `genre-racing-sports` | `safe` | Art direction for racing and sports games in Blender with track landmarks, st... |
+| `genre-rpg` | `safe` | Art direction for RPG, JRPG, CRPG, ARPG, and MMORPG worlds in Blender includi... |
+| `genre-shooter` | `safe` | Art direction for FPS, TPS, shooter, battle royale, and extraction-shooter ma... |
+| `genre-soulslike` | `safe` | Art direction for soulslike games in Blender with monumental melancholy space... |
+| `genre-stealth` | `safe` | Art direction for stealth-game spaces in Blender with shadow volumes, patrol-... |
+| `genre-strategy-sim` | `safe` | Art direction for strategy, RTS, turn-based strategy, tower defense, MOBA, ci... |
+| `genre-survival` | `safe` | Art direction for survival and survival-horror gameplay spaces in Blender emp... |
+| `geometry-nodes` | `safe` | Blender Geometry Nodes for procedural modeling, scatter systems, vegetation, ... |
+| `godot-export` | `safe` | Godot-specific Blender export favoring GLTF/GLB with correct scale, materials... |
+| `hair-groom` | `safe` | Hair and fur grooming in Blender using curves, particle hair, geometry nodes,... |
+| `hand-painted-style` | `safe` | Hand-painted texture art direction for Blender with brushwork albedo, soft va... |
+| `hard-surface` | `safe` | AAA hard surface modeling for sci-fi, industrial, military, vehicles, weapons... |
+| `hd-2d-style` | `safe` | HD-2D art direction combining pixel characters/sprites with 3D environments, ... |
+| `historical-worlds` | `safe` | Historical and period world art direction for Blender including Western, pira... |
+| `horror-style` | `safe` | Psychological horror art direction for Blender assets inspired by Silent Hill... |
+| `indie-horror-aesthetics` | `safe` | Indie horror aesthetic pack for Blender covering Silent Hill, Fear to Fathom,... |
+| `isometric-style` | `safe` | Isometric and strategy-game art direction for Blender including diorama frami... |
 | `landing-page-design` | `safe` | Complete system for building high converting landing pages: intake questions,... |
+| `lighting` | `safe` | Cinematic and game lighting in Blender including three-point lighting, HDRI, ... |
+| `liminal-space-style` | `safe` | Liminal space and Backrooms art direction for Blender with empty transitional... |
+| `lod-pipeline` | `safe` | Dedicated LOD generation, naming, screen-size targets, and validation for gam... |
 | `logo-to-stickers` | `safe` | Turn a brand mark or existing IP into consistent, playful paper stickers with... |
 | `lookdev` | `safe` | Human-in-the-loop web studio to tune AI-generated output by eye. Stand up a l... |
 | `lookdev-auto` | `safe` | Automated visual tuning: a vision or video model rates rendered variants in a... |
 | `loss-aversion-designer` | `safe` | Compare gain and loss framing and describe credible costs of inaction when an... |
+| `lowpoly-style` | `safe` | Low-poly art direction for Blender inspired by PS1/PS2, Lethal Company, Mouth... |
+| `manga-style` | `safe` | Manga-inspired art direction for Blender emphasizing monochrome value design,... |
+| `mascot-puppet-horror` | `safe` | Mascot and puppet horror art direction for Blender with cheerful brand charac... |
+| `materials` | `safe` | Blender PBR and stylized material creation for metal, wood, concrete, fabric,... |
+| `minimalist-style` | `safe` | Minimalist and abstract-leaning art direction for Blender with reduced forms,... |
+| `neon-retrofuturism` | `safe` | Neon, vaporwave, synthwave, and retrofuturistic mood/art direction for Blende... |
+| `noir-style` | `safe` | Noir art direction for Blender with high-contrast lighting, wet streets, silh... |
+| `painterly-style` | `safe` | Painterly art direction spanning watercolor and oil-painting looks for Blende... |
 | `penpot` | `safe` | Integrate Penpot (the open-source Figma alternative) with AI agents via the o... |
 | `penpot-mcp` | `safe` | Integrate Penpot (the open-source Figma alternative) with AI agents via the o... |
+| `physics-sim` | `safe` | Rigid body, soft body, and destruction setups in Blender including constraint... |
+| `pixel-art-style` | `safe` | Pixel-art and texel-constrained art direction for Blender assets destined for... |
+| `procedural-modeling` | `safe` | Procedural asset creation for rocks, buildings, vegetation, roads, terrain, p... |
+| `prop-artist` | `safe` | Everyday and hero prop modeling for furniture, tools, household objects, kitb... |
+| `psx-horror-style` | `safe` | PS1/PSX-era horror art direction combining low-poly affine textures, limited ... |
+| `qa-review` | `safe` | Production QA gate for Blender assets using viewport screenshots, validation ... |
 | `qrx` | `critical` | Make branded, print-ready art QR codes to validate before use with QRX (qrx.c... |
 | `rayden-use` | `safe` | Build and maintain Rayden UI components and screens in Figma via Figma MCP wi... |
+| `realistic-style` | `safe` | Photorealistic AAA art direction for Blender including photogrammetry cleanup... |
+| `rendering` | `safe` | Blender rendering with Cycles and Eevee including sampling, denoising, camera... |
+| `retopology` | `safe` | Production retopology for animation-ready, low-poly, quad-dominant meshes wit... |
+| `retro-16bit-style` | `safe` | Retro 16-bit art direction for Blender-assisted SNES/Genesis-era color richne... |
+| `retro-8bit-style` | `safe` | Retro 8-bit art direction for Blender-assisted pixel/low-res aesthetics inspi... |
+| `rigging` | `safe` | Production rigging in Blender with armatures, IK/FK, constraints, weight pain... |
+| `scene-assembly` | `safe` | Large scene layout in Blender with collections, linking, overrides, streaming... |
+| `sci-fi-punk-worlds` | `safe` | Sci-fi and punk world art direction for Blender including hard sci-fi, space,... |
+| `sculpting` | `safe` | Blender sculpting for organic and hard surface detail using Dyntopo, multires... |
+| `set-dressing` | `safe` | Set dressing and environmental storytelling placement for interiors and exter... |
 | `stitch-ui-design` | `safe` | Expert guidance for crafting effective prompts in Google Stitch, the AI-power... |
+| `stop-motion-craft-style` | `safe` | Stop-motion and craft aesthetics for Blender including claymation, paper craf... |
+| `stylized-style` | `safe` | Stylized art direction for Blender with shape language, exaggeration, color h... |
+| `texture-workflow` | `safe` | Production texture workflow for atlases, baking AO/curvature/normal/roughness... |
 | `theme-factory` | `critical` | Toolkit for styling artifacts with a theme. These artifacts can be slides, do... |
 | `ui-page` | `critical` | Scaffold a new mobile page/screen using the StyleSeed layout patterns |
 | `ui-pattern` | `critical` | Generate a composed UI pattern (card layout, list, form section, grid, etc.) ... |
@@ -1456,13 +1541,22 @@ Tổng hợp **2,951** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `ui-skills-root` | `critical` | Use before UI-related work to select the smallest useful UI Skills context th... |
 | `ui-tokens` | `critical` | View, add, or modify design tokens in the StyleSeed design system |
 | `ui-visual-validator` | `safe` | Rigorous visual validation expert specializing in UI testing, design system c... |
+| `unity-export` | `safe` | Unity-specific Blender export for scale, axis, materials, humanoid/generic ri... |
+| `unreal-export` | `safe` | Unreal Engine-specific Blender export for FBX scale, LODs, UCX collision, soc... |
+| `uv-workflow` | `safe` | Production UV unwrapping for seam placement, UV packing, texel density, UDIM,... |
 | `ux-audit` | `safe` | Audit screens for UX issues using Nielsen's heuristics and modern mobile UX b... |
 | `ux-copy` | `critical` | Generate UX microcopy (button labels, error messages, empty states, toasts) f... |
 | `ux-flow` | `critical` | Design user flows and navigation structure following proven UX patterns |
 | `ux-persuasion-engineer` | `safe` | Audit decision friction and propose clear, accessible UX flows when layout, d... |
 | `uxui-principles` | `safe` | Evaluate interfaces against 168 research-backed UX/UI principles, detect anti... |
+| `vector-style` | `safe` | Vector-clean art direction for Blender with flat fills, sharp silhouettes, an... |
+| `vegetation-artist` | `safe` | Vegetation and foliage authoring for Blender including trees, plants, grass c... |
+| `vehicle-artist` | `safe` | Dedicated vehicle modeling for cars, trucks, aircraft, ships, boats, mechs, a... |
+| `vfx-fx` | `safe` | Cinematic and game VFX in Blender including smoke, fire, particles, trails, a... |
+| `visual-console-eras` | `safe` | Visual era art direction for Blender covering PS1–PS5 stylistic cues, retro a... |
 | `visual-emotion-engineer` | `safe` | Create a visual direction brief for color, typography, imagery, and hierarchy... |
 | `vizcom` | `safe` | AI-powered product design tool for transforming sketches into full-fidelity 3... |
+| `voxel-style` | `safe` | Voxel and Minecraft-adjacent art direction for Blender with block grid modeli... |
 | `wcag-audit-patterns` | `safe` | Comprehensive guide to auditing web content against WCAG 2.2 guidelines with ... |
 | `web-design-guidelines` | `safe` | Review files for compliance with Web Interface Guidelines. |
 | `webflow-automation` | `critical` | Automate Webflow CMS collections, site publishing, page management, asset upl... |
