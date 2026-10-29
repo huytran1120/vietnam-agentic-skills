@@ -358,5 +358,11 @@
     "anti-slop": "impeccable",
     "impeccable-design": "impeccable",
     "impeccable-style": "impeccable"
-  }
+  },
+  "prototype-variants": "emil-prototype",
+  "ui-prototype": "emil-prototype",
+  "emil-animations": "emil-design-eng",
+  "sonner": "ask-sonner",
+  "swift": "write-swift",
+  "swift-concurrency": "write-swift"
 }

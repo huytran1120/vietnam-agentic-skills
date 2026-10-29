@@ -1,6 +1,6 @@
 # Vietnam Agentic Skills (VAS) - Catalog
 
-Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
+Tổng hợp **3,070** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** danh mục chuyên biệt.
 
 | Danh mục | Số lượng | Lệnh cài đặt nhanh |
 | :--- | :---: | :--- |
@@ -48,10 +48,10 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **database-processing** | 6 skills | `./vas install --category database-processing --target codex` |
 | **databases** | 3 skills | `./vas install --category databases --target codex` |
 | **debugging** | 4 skills | `./vas install --category debugging --target codex` |
-| **design** | 144 skills | `./vas install --category design --target codex` |
+| **design** | 159 skills | `./vas install --category design --target codex` |
 | **design-it** | 48 skills | `./vas install --category design-it --target codex` |
 | **developer-tools** | 9 skills | `./vas install --category developer-tools --target codex` |
-| **development** | 230 skills | `./vas install --category development --target codex` |
+| **development** | 231 skills | `./vas install --category development --target codex` |
 | **development-and-testing** | 6 skills | `./vas install --category development-and-testing --target codex` |
 | **devops** | 169 skills | `./vas install --category devops --target codex` |
 | **devtools** | 6 skills | `./vas install --category devtools --target codex` |
@@ -63,7 +63,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | **finance** | 33 skills | `./vas install --category finance --target codex` |
 | **framework** | 13 skills | `./vas install --category framework --target codex` |
 | **front-end** | 14 skills | `./vas install --category front-end --target codex` |
-| **frontend** | 47 skills | `./vas install --category frontend --target codex` |
+| **frontend** | 45 skills | `./vas install --category frontend --target codex` |
 | **fullstack** | 1 skills | `./vas install --category fullstack --target codex` |
 | **game-development** | 22 skills | `./vas install --category game-development --target codex` |
 | **general** | 64 skills | `./vas install --category general --target codex` |
@@ -1413,7 +1413,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `logic-locate` | `safe` | Locate the root cause of a CONFIRMED failure via backward-then-forward semi-f... |
 | `phase-gated-debugging` | `safe` | Use when debugging any bug. Enforces a 5-phase protocol where code edits are ... |
 
-### DESIGN (144 skills)
+### DESIGN (159 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1423,11 +1423,17 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `accesslint-scan` | `critical` | Audit a live page for accessibility issues, locate each WCAG violation precis... |
 | `agent-reels` | `critical` | Find animation and video references on 1human, consult a human-agent shared l... |
 | `analog-found-footage-horror` | `safe` | Analog, VHS, CRT, and found-footage horror aesthetics for Blender shots inclu... |
+| `animate` | `safe` | Build an animation from scratch, making the decisions in the order that deter... |
+| `animate-expo` | `safe` | Build animations in React Native and Expo, making the decisions in the order ... |
 | `animation` | `safe` | Game-ready animation in Blender including walk/run/idle cycles, combat, mecha... |
+| `animation-performance` | `safe` | Keep web animations inside the frame budget — animate composite-only properti... |
+| `animation-vocabulary` | `safe` | Reverse-lookup glossary that turns a vague description of a web animation or ... |
 | `anime-style` | `safe` | Anime and cel-shaded art direction for Blender with hard color breaks, toon s... |
 | `antigravity-design-expert` | `safe` | Core UI/UX engineering skill for building highly interactive, spatial, weight... |
 | `apocalypse-worlds` | `safe` | Apocalyptic and dystopian world art direction for Blender including post-apoc... |
+| `apple-design` | `safe` | Apple's approach to interface design and fluid, physical motion, translated f... |
 | `archviz` | `safe` | Architectural visualization in Blender for interiors/exteriors with real-worl... |
+| `ask-sonner` | `safe` | Guide to Sonner, the React toast library — install and wire up the Toaster, p... |
 | `asset-optimization` | `safe` | Validates and optimizes Blender assets for polycount, topology, UV efficiency... |
 | `baseline-ui` | `critical` | Quickly deslop UI code by fixing spacing, hierarchy, typography, and small la... |
 | `biome-worlds` | `safe` | Biome and setting art direction for Blender covering underwater, desert, arct... |
@@ -1436,6 +1442,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `blender-mcp` | `safe` | Connect Blender 3D to any LLM via Model Context Protocol (MCP) for prompt-dri... |
 | `blender-modeler` | `safe` | Core Blender modeling specialist for Edit Mode, modifiers, collections, preci... |
 | `body-horror-style` | `safe` | Body horror art direction for Blender focusing on flesh wrongness, mutation, ... |
+| `break-ui` | `safe` | Try to break a piece of UI by feeding it worst-case data — long names, unbrea... |
 | `brutalist-mood` | `safe` | Brutalist and concrete-monument mood direction for Blender architecture and s... |
 | `camera-cinematography` | `safe` | Cinematic camera work in Blender including framing, lenses, composition, came... |
 | `canva-automation` | `critical` | Automate Canva tasks via Rube MCP (Composio): designs, exports, folders, bran... |
@@ -1462,11 +1469,14 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `diagram-generator` | `safe` | Generate, refine, validate, and render diagrams from natural language, notes,... |
 | `dream-surreal-mood` | `safe` | Dreamlike, surreal, mysterious, mystical, hopeful, and chaotic mood direction... |
 | `dream-weirdcore-style` | `safe` | Dreamcore, weirdcore, and traumacore-inspired art direction for Blender with ... |
+| `emil-design-eng` | `safe` | This skill encodes Emil Kowalski's philosophy on UI polish, component design,... |
+| `emil-prototype` | `safe` | Build multiple genuinely different versions of a UI piece you describe, rende... |
 | `environment-artist` | `safe` | AAA environment art for modular kits, buildings, terrain, vegetation, archite... |
 | `export-pipeline` | `safe` | Production export from Blender to FBX, GLTF, OBJ, USD, and Alembic with scale... |
 | `fantasy-worlds` | `safe` | Fantasy world-building art direction for Blender covering medieval, high fant... |
 | `favicon` | `critical` | Generate favicons from a source image |
 | `figma-automation` | `critical` | Automate Figma tasks via Rube MCP (Composio): files, components, design token... |
+| `find-animation-opportunities` | `safe` | Search a codebase or UI for places that don't animate but should, and reject ... |
 | `folk-horror-style` | `safe` | Folk horror art direction for Blender with rural ritual uncanny, pastoral day... |
 | `free-design-resources` | `safe` | Design resource register: resource and provider, licence type, commercial-use... |
 | `frutiger-aero-style` | `safe` | Frutiger Aero art direction for Blender with glossy skeuomorphism, aqua UI cu... |
@@ -1492,6 +1502,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `historical-worlds` | `safe` | Historical and period world art direction for Blender including Western, pira... |
 | `horror-style` | `safe` | Psychological horror art direction for Blender assets inspired by Silent Hill... |
 | `impeccable` | `safe` | Use when the user wants to design, redesign, shape, critique, audit, polish, ... |
+| `improve-animations` | `safe` | Survey a codebase's animation and motion code as a senior motion advisor, the... |
 | `indie-horror-aesthetics` | `safe` | Indie horror aesthetic pack for Blender covering Silent Hill, Fear to Fathom,... |
 | `isometric-style` | `safe` | Isometric and strategy-game art direction for Blender including diorama frami... |
 | `landing-page-design` | `safe` | Complete system for building high converting landing pages: intake questions,... |
@@ -1507,12 +1518,14 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `mascot-puppet-horror` | `safe` | Mascot and puppet horror art direction for Blender with cheerful brand charac... |
 | `materials` | `safe` | Blender PBR and stylized material creation for metal, wood, concrete, fabric,... |
 | `minimalist-style` | `safe` | Minimalist and abstract-leaning art direction for Blender with reduced forms,... |
+| `mobile-native` | `safe` | Make a web app feel native on a phone — the small CSS and meta-tag fixes that... |
 | `neon-retrofuturism` | `safe` | Neon, vaporwave, synthwave, and retrofuturistic mood/art direction for Blende... |
 | `noir-style` | `safe` | Noir art direction for Blender with high-contrast lighting, wet streets, silh... |
 | `painterly-style` | `safe` | Painterly art direction spanning watercolor and oil-painting looks for Blende... |
 | `penpot` | `safe` | Integrate Penpot (the open-source Figma alternative) with AI agents via the o... |
 | `penpot-mcp` | `safe` | Integrate Penpot (the open-source Figma alternative) with AI agents via the o... |
 | `physics-sim` | `safe` | Rigid body, soft body, and destruction setups in Blender including constraint... |
+| `pick-ui-library` | `safe` | Pick the right library for a given frontend task from a curated, opinionated ... |
 | `pixel-art-style` | `safe` | Pixel-art and texel-constrained art direction for Blender assets destined for... |
 | `procedural-modeling` | `safe` | Procedural asset creation for rocks, buildings, vegetation, roads, terrain, p... |
 | `prop-artist` | `safe` | Everyday and hero prop modeling for furniture, tools, household objects, kitb... |
@@ -1521,10 +1534,12 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `qrx` | `critical` | Make branded, print-ready art QR codes to validate before use with QRX (qrx.c... |
 | `rayden-use` | `safe` | Build and maintain Rayden UI components and screens in Figma via Figma MCP wi... |
 | `realistic-style` | `safe` | Photorealistic AAA art direction for Blender including photogrammetry cleanup... |
+| `remove-animations` | `safe` | Find the animations an interface doesn't need and remove them — motion on key... |
 | `rendering` | `safe` | Blender rendering with Cycles and Eevee including sampling, denoising, camera... |
 | `retopology` | `safe` | Production retopology for animation-ready, low-poly, quad-dominant meshes wit... |
 | `retro-16bit-style` | `safe` | Retro 16-bit art direction for Blender-assisted SNES/Genesis-era color richne... |
 | `retro-8bit-style` | `safe` | Retro 8-bit art direction for Blender-assisted pixel/low-res aesthetics inspi... |
+| `review-animations` | `safe` | Reviews animation and motion code against a high craft bar derived from Emil ... |
 | `rigging` | `safe` | Production rigging in Blender with armatures, IK/FK, constraints, weight pain... |
 | `scene-assembly` | `safe` | Large scene layout in Blender with collections, linking, overrides, streaming... |
 | `sci-fi-punk-worlds` | `safe` | Sci-fi and punk world art direction for Blender including hard sci-fi, space,... |
@@ -1629,7 +1644,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `skill-porter` | `critical` | Preview conservative tool-name translations and copy complete local skill bun... |
 | `tokenwise` | `critical` | Measurement-driven model router for Claude Code. Routes Haiku/Sonnet/Opus per... |
 
-### DEVELOPMENT (230 skills)
+### DEVELOPMENT (231 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -1863,6 +1878,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `vexor-cli` | `critical` | Semantic file discovery via `vexor`. Use whenever locating where something is... |
 | `what-could-break` | `safe` | Find what a change breaks outside its own diff, then prove the one fact that ... |
 | `wp-site-health-auditor` | `critical` | Turns a WordPress Site Health report into a risk-tiered, backup-first fix pla... |
+| `write-swift` | `safe` | How to write modern Swift well — modeling with value types, Swift 6 data-race... |
 
 ### DEVELOPMENT-AND-TESTING (6 skills)
 
@@ -2202,7 +2218,7 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `ui-ux-pro-max` | `critical` | UI/UX design intelligence for web, mobile, and desktop. This skill should be ... |
 | `web-performance-optimization` | `critical` | Optimize website and web application performance including loading speed, Cor... |
 
-### FRONTEND (47 skills)
+### FRONTEND (45 skills)
 
 | Skill ID | Rủi ro | Mô tả tóm tắt |
 | :--- | :---: | :--- |
@@ -2214,7 +2230,6 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `design-it` | `safe` | Routes frontend design tasks to 48 specific UI styles. Triggers for websites,... |
 | `design-taste-frontend` | `safe` | Use when building high-agency frontend interfaces with strict design taste, c... |
 | `design-token-contrast` | `safe` | Checks WCAG 2.2 contrast between the color tokens of a project (light and dar... |
-| `emil-design-eng` | `safe` | Use when designing or reviewing polished product UI with Emil Kowalski-inspir... |
 | `frontend-api-integration-patterns` | `safe` | Production-ready patterns for integrating frontend applications with backend ... |
 | `frontend-data-contracts` | `critical` | A portable, framework-agnostic discipline for type safety at the network edge... |
 | `frontend-lighthouse` | `safe` | Add a portable Lighthouse CI gate for production frontend builds with Core We... |
@@ -2242,7 +2257,6 @@ Tổng hợp **3,056** kỹ năng Agentic tiêu chuẩn hóa, chia theo **118** 
 | `react-patterns` | `safe` | Modern React patterns and principles. Hooks, composition, performance, TypeSc... |
 | `react-spring` | `safe` | Master physics-based spring animations in React, Three.js (@react-spring/thre... |
 | `redesign-existing-projects` | `safe` | Use when upgrading existing websites or apps by auditing generic UI patterns ... |
-| `review-animations` | `safe` | Use when reviewing animation and motion code against a strict craft, performa... |
 | `stitch-design-taste` | `safe` | Use when generating Google Stitch DESIGN.md systems for premium typography, c... |
 | `sveltekit` | `safe` | Build full-stack web applications with SvelteKit — file-based routing, SSR, S... |
 | `tailwind-patterns` | `none` | Tailwind CSS v4 principles. CSS-first configuration, container queries, moder... |

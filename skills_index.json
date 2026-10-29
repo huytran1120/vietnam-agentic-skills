@@ -2479,6 +2479,50 @@
     "source": "self"
   },
   {
+    "id": "animate",
+    "canonical_id": "animate",
+    "name": "animate",
+    "path": "skills/animate",
+    "description": "Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.",
+    "category": "design",
+    "tags": [
+      "design",
+      "frontend",
+      "animation",
+      "motion",
+      "transitions",
+      "web"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
+    "id": "animate-expo",
+    "canonical_id": "animate-expo",
+    "name": "animate-expo",
+    "path": "skills/animate-expo",
+    "description": "Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — should it animate, which thread it runs on, which properties, spring or timing, how the gesture hands off, how it degrades. Writes the implementation with Reanimated, Gesture Handler, Expo Router and expo-haptics. Use when animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device. For web animation use `animate`.",
+    "category": "design",
+    "tags": [
+      "design",
+      "mobile",
+      "react-native",
+      "expo",
+      "animation",
+      "gestures"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
     "id": "animated-github-profile",
     "canonical_id": "animated-github-profile",
     "name": "animated-github-profile",
@@ -2522,6 +2566,50 @@
     "source_repo": "arjun988/blender-skills",
     "author": "Arjun Shukla",
     "license": "MIT"
+  },
+  {
+    "id": "animation-performance",
+    "canonical_id": "animation-performance",
+    "name": "animation-performance",
+    "path": "skills/animation-performance",
+    "description": "Keep web animations inside the frame budget — animate composite-only properties, keep motion off the main thread when the page is busy, and find the cause when an animation drops frames. Covers the layout/paint/composite pipeline, cheaper property swaps, CSS vs WAAPI vs requestAnimationFrame, Framer Motion's hardware-accelerated path, React re-rendering per frame, inherited CSS variable recalculation, blur cost, and when `will-change` actually helps. Use when an animation is janky, choppy, stutters, or drops frames; when choosing which property to animate; when deciding between CSS and JS animation on performance grounds; or when reaching for `will-change` or GPU layers. For choosing easing, duration, or whether to animate at all use animate; for reviewing motion as a whole use review-animations.",
+    "category": "design",
+    "tags": [
+      "design",
+      "frontend",
+      "animation",
+      "performance",
+      "web-vitals",
+      "fps"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
+    "id": "animation-vocabulary",
+    "canonical_id": "animation-vocabulary",
+    "name": "animation-vocabulary",
+    "path": "skills/animation-vocabulary",
+    "description": "Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term (\\\"the bouncy thing when a popover opens\\\" → Pop in; \\\"the iOS rubber-band scroll\\\" → Rubber-banding). Use when the user asks \\\"what's it called when…\\\", or describes a motion effect without knowing its name and wants the right word to prompt an AI or designer with. For naming an effect, not designing or building one.",
+    "category": "design",
+    "tags": [
+      "design",
+      "animation",
+      "vocabulary",
+      "terminology",
+      "motion",
+      "glossary"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
   },
   {
     "id": "anime-style",
@@ -3618,6 +3706,29 @@
     "author": "sanjay3290"
   },
   {
+    "id": "apple-design",
+    "canonical_id": "apple-design",
+    "name": "apple-design",
+    "path": "skills/apple-design",
+    "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+    "category": "design",
+    "tags": [
+      "design",
+      "apple",
+      "gestures",
+      "springs",
+      "fluid-motion",
+      "ui",
+      "typography"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
     "id": "apple-notes-search",
     "canonical_id": "apple-notes-search",
     "name": "apple-notes-search",
@@ -3979,6 +4090,28 @@
     ],
     "risk": "safe",
     "source": "community"
+  },
+  {
+    "id": "ask-sonner",
+    "canonical_id": "ask-sonner",
+    "name": "ask-sonner",
+    "path": "skills/ask-sonner",
+    "description": "Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and loading toasts, updating, dismissing and persisting toasts, styling, theming and icons, positioning and multiple toasters. Use when working with Sonner or troubleshooting it — toasts that don't appear, appear twice, lose their styles, ignore Tailwind classes, sit behind a modal, or don't follow dark mode.",
+    "category": "design",
+    "tags": [
+      "design",
+      "frontend",
+      "react",
+      "toast",
+      "sonner",
+      "ui-components"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
   },
   {
     "id": "assay",
@@ -8010,6 +8143,28 @@
     "license": "MIT",
     "license_source": "https://github.com/twoicewoo/awesome-copilot/blob/886bf799bb05501bfd1afa7aae9cc5a77dedb03e/LICENSE",
     "author": "twoicewoo"
+  },
+  {
+    "id": "break-ui",
+    "canonical_id": "break-ui",
+    "name": "break-ui",
+    "path": "skills/break-ui",
+    "description": "Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fields, huge counts, zero items, long labels, non-Latin text, emoji, extreme numbers — then render it behind a \\\"Demo data / Worst case\\\" toggle and report everything that broke, with the fix for each. Use when the user asks to stress-test, break, or find edge cases in a component or screen, or to \\\"try the worst case\\\". For visual design critique use emil-design-eng; for motion use review-animations.",
+    "category": "design",
+    "tags": [
+      "design",
+      "frontend",
+      "testing",
+      "edge-cases",
+      "ui-stress-test",
+      "qa"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
   },
   {
     "id": "brendangregg-use-tsa",
@@ -16937,21 +17092,46 @@
     "canonical_id": "emil-design-eng",
     "name": "emil-design-eng",
     "path": "skills/emil-design-eng",
-    "description": "Use when designing or reviewing polished product UI with Emil Kowalski-inspired animation, interaction, and component craft guidance.",
-    "category": "frontend",
+    "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+    "category": "design",
     "tags": [
-      "frontend",
       "design",
+      "frontend",
       "ui",
       "animation",
-      "motion"
+      "motion",
+      "craft",
+      "components"
     ],
     "risk": "safe",
     "source": "community",
     "source_repo": "emilkowalski/skills",
     "license": "MIT",
-    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE.txt",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE",
     "author": "Emil Kowalski"
+  },
+  {
+    "id": "emil-prototype",
+    "canonical_id": "emil-prototype",
+    "name": "emil-prototype",
+    "path": "skills/emil-prototype",
+    "description": "Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip through them live and promote the one that feels right. Only runs when explicitly invoked; it does not trigger on its own.",
+    "category": "design",
+    "tags": [
+      "design",
+      "frontend",
+      "ui",
+      "prototype",
+      "motion",
+      "components",
+      "picker"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
   },
   {
     "id": "emotional-arc-designer",
@@ -18554,6 +18734,28 @@
     "license": "MIT",
     "license_source": "https://github.com/HEOJUNFO/ai-film-crew/blob/533f61be2741c10932c6c86e47777cac9ffe3fe4/LICENSE",
     "author": "HEOJUNFO"
+  },
+  {
+    "id": "find-animation-opportunities",
+    "canonical_id": "find-animation-opportunities",
+    "name": "find-animation-opportunities",
+    "path": "skills/find-animation-opportunities",
+    "description": "Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks \\\"what could be animated here?\\\" or wants to \\\"make this feel more alive\\\". For fixing existing animations, use improve-animations or review-animations instead.",
+    "category": "design",
+    "tags": [
+      "design",
+      "animation",
+      "opportunities",
+      "ui-polish",
+      "motion",
+      "audit"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
   },
   {
     "id": "find-bugs",
@@ -25151,6 +25353,28 @@
     "source_path": "skills/engineering/implement-spec"
   },
   {
+    "id": "improve-animations",
+    "canonical_id": "improve-animations",
+    "name": "improve-animations",
+    "path": "skills/improve-animations",
+    "description": "Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other agents (or cheaper models) to execute. Read-only on source code — it plans improvements, it does not apply them. Use when the user asks to \\\"improve the animations\\\", \\\"audit the motion\\\", \\\"make this app feel better\\\", or wants a roadmap of animation fixes rather than a review of a single diff.",
+    "category": "design",
+    "tags": [
+      "design",
+      "animation",
+      "audit",
+      "roadmap",
+      "motion-polish",
+      "execution-plans"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
     "id": "improve-codebase-architecture",
     "canonical_id": "improve-codebase-architecture",
     "name": "improve-codebase-architecture",
@@ -30497,6 +30721,29 @@
     "source": "community"
   },
   {
+    "id": "mobile-native",
+    "canonical_id": "mobile-native",
+    "name": "mobile-native",
+    "path": "skills/mobile-native",
+    "description": "Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate \\\"a website in a browser\\\" from something that feels installed. Covers sticky hover states, tap highlight flashes, the 100vh bug, inputs that zoom the page, laggy taps, pull-to-refresh hijacking scroll, content under the notch, long-press selecting button text, carousels that scroll the wrong way, mismatched status bars, and the rule that you test on real hardware. Use when a web app is being built for or reviewed on mobile, when something \\\"works in Chrome but feels wrong on my phone\\\", when building a PWA, a bottom sheet, a carousel, a full-screen layout, or any touch interaction. For motion itself use animate; for React Native use animate-expo.",
+    "category": "design",
+    "tags": [
+      "design",
+      "mobile",
+      "responsive",
+      "touch",
+      "pwa",
+      "css",
+      "gestures"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
     "id": "mobile-reverse",
     "canonical_id": "mobile-reverse",
     "name": "mobile-reverse",
@@ -34981,6 +35228,28 @@
     "author": "davidondrej"
   },
   {
+    "id": "pick-ui-library",
+    "canonical_id": "pick-ui-library",
+    "name": "pick-ui-library",
+    "path": "skills/pick-ui-library",
+    "description": "Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag and drop, toasts, state, styling, and more. Only runs when explicitly invoked; it does not trigger on its own.",
+    "category": "design",
+    "tags": [
+      "design",
+      "frontend",
+      "libraries",
+      "component-selection",
+      "tools",
+      "ui"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
     "id": "pilot-protocol",
     "canonical_id": "pilot-protocol",
     "name": "pilot-protocol",
@@ -38308,6 +38577,28 @@
     "risk": "safe"
   },
   {
+    "id": "remove-animations",
+    "canonical_id": "remove-animations",
+    "name": "remove-animations",
+    "path": "skills/remove-animations",
+    "description": "Find the animations an interface doesn't need and remove them — motion on keyboard actions, high-frequency surfaces, functional data, and decoration with no purpose — then clean up what they leave behind. Edits code, but only to subtract; it never adds or retunes motion. Use when the user says the app \\\"feels slow\\\", \\\"has too much animation\\\", \\\"feels over-animated\\\", wants to \\\"tone down the motion\\\", or asks what animations to remove. For finding places that should animate, use find-animation-opportunities; for fixing animations that should stay, use improve-animations or review-animations.",
+    "category": "design",
+    "tags": [
+      "design",
+      "animation",
+      "performance",
+      "cleanup",
+      "motion-reduction",
+      "accessibility"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
+  },
+  {
     "id": "render-automation",
     "canonical_id": "render-automation",
     "name": "render-automation",
@@ -38806,20 +39097,22 @@
     "canonical_id": "review-animations",
     "name": "review-animations",
     "path": "skills/review-animations",
-    "description": "Use when reviewing animation and motion code against a strict craft, performance, accessibility, and interaction-quality bar.",
-    "category": "frontend",
+    "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+    "category": "design",
     "tags": [
       "frontend",
+      "design",
       "animation",
       "motion",
       "review",
-      "accessibility"
+      "accessibility",
+      "standards"
     ],
     "risk": "safe",
     "source": "community",
     "source_repo": "emilkowalski/skills",
     "license": "MIT",
-    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE.txt",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE",
     "author": "Emil Kowalski"
   },
   {
@@ -49633,6 +49926,29 @@
     "license": "MIT",
     "license_source": "https://github.com/prateeks367/voicemoat-skills/blob/7623a3effbee426554e8c5df55e77f3479fd0ec0/LICENSE",
     "author": "prateeks367"
+  },
+  {
+    "id": "write-swift",
+    "canonical_id": "write-swift",
+    "name": "write-swift",
+    "path": "skills/write-swift",
+    "description": "How to write modern Swift well — modeling with value types, Swift 6 data-race safety and approachable concurrency (@concurrent, main-actor-by-default, actors, task groups), protocols and generics (some vs any), API design, performance and ARC, Swift Testing, macros, and the modern language features agents don't know about yet. Use when writing, reviewing, or migrating Swift, or when a concurrency error, a hang, a data race, a retain cycle, or a performance problem needs fixing.",
+    "category": "development",
+    "tags": [
+      "development",
+      "swift",
+      "apple",
+      "ios",
+      "concurrency",
+      "swift-testing",
+      "macos"
+    ],
+    "risk": "safe",
+    "source": "community",
+    "source_repo": "emilkowalski/skills",
+    "author": "Emil Kowalski",
+    "license": "MIT",
+    "license_source": "https://github.com/emilkowalski/skills/blob/main/LICENSE"
   },
   {
     "id": "writing-for-agents",

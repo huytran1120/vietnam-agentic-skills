@@ -21,7 +21,7 @@
 <p align="center">
   <a href="https://github.com/huytran1120/vietnam-agentic-skills/actions/workflows/test.yml"><img src="https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status" /></a>
   <a href="https://huytran1120.github.io/vietnam-agentic-skills/"><img src="https://img.shields.io/badge/Live%20Catalog-GitHub%20Pages-00C853?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Catalog" /></a>
-  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-3%2C056%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
+  <a href="CATALOG.md"><img src="https://img.shields.io/badge/Catalog-3%2C070%2B%20Skills-00C853?style=for-the-badge" alt="Skills Count" /></a>
   <a href="vas.py"><img src="https://img.shields.io/badge/Zero--NPX-Pure%20Python%203-FF6D00?style=for-the-badge" alt="Zero NPX" /></a>
   <a href="https://github.com/huytran1120"><img src="https://img.shields.io/badge/Author-huytran1120-6200EA?style=for-the-badge&logo=github" alt="Author" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT" /></a>
@@ -57,7 +57,7 @@ Giao diện web ưu tiên danh mục: tìm theo từ khóa/tác giả/nguồn, l
 
 **Vietnam Agentic Skills (VAS)** là kho lưu trữ kỹ năng agentic mã nguồn mở tiêu chuẩn quốc tế được xây dựng và duy trì bởi **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
-Dự án cung cấp **3,056+ playbooks (`SKILL.md`)** chuyên sâu thuộc 118 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
+Dự án cung cấp **3,070+ playbooks (`SKILL.md`)** chuyên sâu thuộc 118 danh mục công nghệ, tuân thủ nghiêm ngặt **Chuẩn mở Agent Skills Quốc tế ([agentskills.io](https://agentskills.io/))**.
 
 Với VAS, các AI Coding Agent không còn là lập trình viên chung chung, mà biến thành các cộng sự kỹ thuật cấp Senior thực thụ: có checklist bảo mật, quy trình kiểm thử, công thức tối ưu và kịch bản thực thi chính xác.
 
@@ -336,7 +336,7 @@ Trước khi ra mắt sản phẩm (`/ship`), hệ thống hỗ trợ kích ho�
 
 | Tiêu Chí Đánh Giá | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
 | :--- | :--- | :--- | :--- | :--- |
-| **Quy mô Catalog** | **3,056+ Kỹ năng** (Toàn diện nhất thế giới) | 25 Kỹ năng cốt lõi | ~14 Kỹ năng | ~30 Kỹ năng |
+| **Quy mô Catalog** | **3,070+ Kỹ năng** (Toàn diện nhất thế giới) | 25 Kỹ năng cốt lõi | ~14 Kỹ năng | ~30 Kỹ năng |
 | **Công cụ Quản trị** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugin | Git Worktrees / Scripts | Claude Code / `npx skills` |
 | **Phụ thuộc Mạng & NPX**| **100% Offline & Không cần Node/NPX** | Cần Node & npx khi cài | Cần clone & setup | Cần Node & npx khi cài |
 | **Hỗ trợ Đa Agent** | **7+ AI Agents** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code ưu tiên |
@@ -349,7 +349,7 @@ Trước khi ra mắt sản phẩm (`/ship`), hệ thống hỗ trợ kích ho�
 
 ### 11. Danh Mục & Top 20 Siêu Kỹ Năng Nổi Bật
 
-Kho lưu trữ gồm **3,056+ skills** chia theo **118 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
+Kho lưu trữ gồm **3,070+ skills** chia theo **118 danh mục**. Xem chi tiết tại [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Mô Tả Năng Lực | Lệnh Cài Đặt Nhanh |
 | :-: | :--- | :---: | :--- | :--- |
@@ -377,7 +377,7 @@ Kho lưu trữ gồm **3,056+ skills** chia theo **118 danh mục**. Xem chi ti�
 ```text
 📊 PHÂN BỔ CÁC DANH MỤC HÀNG ĐẦU:
 ├── 🛡️  Security              : 267 skills (OWASP, Pentest, Secret Audit, IAM, Hardening)
-├── 💻  Development           : 230 skills (Refactoring, Clean Code, Design Patterns, OOP)
+├── 💻  Development           : 231 skills (Refactoring, Clean Code, Design Patterns, OOP)
 ├── 📈  Business & Strategy   : 179 skills (Market Research, Financial Models, Growth)
 ├── ☁️  Cloud                 : 170 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
 ├── ⚙️  DevOps                : 169 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
@@ -609,6 +609,36 @@ python3 skills/yt-script/hookscore.py --hook "I spent 100 hours testing AI tools
 
 ---
 
+#### ✨ Bộ 16 Kỹ Năng Thiết Kế Kỹ Thuật & Diễn Hoạt Cao Cấp (`emilkowalski/skills`)
+
+Tích hợp trọn bộ **16 kỹ năng Design Engineering, Motion & UI Polish** từ [emilkowalski/skills](https://github.com/emilkowalski/skills) (tác giả **Emil Kowalski** - tác giả Sonner và [animations.dev](https://animations.dev/) - MIT License), mang triết lý thiết kế vi tế, chuyển động vật lý mượt mà và tiêu chuẩn kiểm toán gắt gao vào AI Coding Agent:
+
+* **Xây dựng Chuyển động Chuẩn Craft (`animate`, `animate-expo`)**: Thiết kế animation từ con số 0 với thứ tự quyết định tối ưu (mục đích → công cụ → thuộc tính GPU `transform`/`opacity` → đường cong bezier & thời lượng → ngắt quãng/hủy bỏ). Hỗ trợ cả Web (CSS transitions, Framer Motion/WAAPI) lẫn React Native/Expo (Reanimated, Gesture Handler, Haptics).
+* **Ngân Sách Hiệu Năng & Giữ Khung Hình 60fps (`animation-performance`)**: Giữ chuyển động trong frame budget 16.6ms, ưu tiên pipeline Composite-only, tránh kích hoạt Layout/Paint, phân tích chi phí `will-change`, CSS variable re-eval và blur filters.
+* **Đánh Giá & Tiêu Chuẩn Animation Gắt Gao (`review-animations`)**: Rà soát code chuyển động theo tiêu chuẩn khắt khe (`STANDARDS.md`), mặc định gắn cờ lỗi (flagging), kiểm tra thời lượng sub-300ms, origin chuyển động, đường cong easing và khả năng hỗ trợ `prefers-reduced-motion`.
+* **Kế Hoạch Nâng Cấp & Lộ Trình Tối Ưu (`improve-animations`, `find-animation-opportunities`)**: Khảo sát toàn bộ codebase để lập danh sách kiểm toán có trọng số và sinh kế hoạch thực thi từng bước độc lập (`plans/`) cho các agent thứ cấp thực hiện.
+* **Giảm Thiểu Chuyển Động Vô Bổ (`remove-animations`)**: Nhận diện và gỡ bỏ animation thừa thãi trên các tác vụ phím tắt, bề mặt tần suất cao và dữ liệu chức năng để tăng tốc độ phản hồi cho giao diện.
+* **Từ Điển & Thuật Ngữ Diễn Hoạt (`animation-vocabulary`)**: Tra cứu ngược từ ngữ mô tả trực giác sang thuật ngữ chuyển động chuẩn quốc tế (ví dụ: "rubber-banding", "pop-in", "stagger", "spring overshoot").
+* **Thiết Kế Đậm Chất Apple (`apple-design`)**: Hiện thực hóa triết lý Apple trên web: cử chỉ vuốt chạm fluid, animation lò xo vật lý (springs), hiệu ứng kính mờ (translucent materials), phân cấp thị giác và typography dynamic tracking.
+* **Trải Nghiệm Web Chuẩn Native Trên Điện Thoại (`mobile-native`)**: Khắc phục các lỗi kinh điển khiến web trên di động bị "lạc quẻ" (sticky hover, tap highlight flash, lỗi 100vh trên iOS, zoom khi bấm input, notch iPhone, chống select text ngoài ý muốn).
+* **Thư Viện Toast Sonner Toàn Diện (`ask-sonner`)**: Hướng dẫn chuẩn hóa triển khai và gỡ lỗi thư viện thông báo Sonner (toasts xếp chồng, promise toasts, dark mode, z-index modals).
+* **Kiểm Thử Sức Chịu Đựng Giao Diện (`break-ui`)**: Bơm dữ liệu "thảm họa" (tên siêu dài, email không ngắt dòng, emoji, zero-state, số lượng cực lớn) từ `CATALOG.md` để phát hiện điểm vỡ layout trước khi bàn giao.
+* **Tạo Biến Thể Prototype Live Picker (`emil-prototype`)**: Xây dựng nhiều phiên bản UI khác biệt hoàn toàn đặt sau bộ chuyển đổi tức thì (`PICKER.md`) để người dùng trải nghiệm thực tế và chọn phiên bản ưng ý nhất.
+* **Tuyển Chọn Thư Viện UI Tối Ưu (`pick-ui-library`)**: Danh sách tuyển chọn các thư viện frontend tốt nhất cho từng bài toán (OTP input, virtual scrolling, drag-drop, charts).
+* **Lập Trình Swift & Concurrency Hiện Đại (`write-swift`)**: Cẩm nang Swift 6 data-race safety, `@concurrent`, actors, Swift Testing và value types cho lập trình viên Apple platforms.
+
+```bash
+# Tìm kiếm bộ kỹ năng Emil Kowalski:
+./vas search animation
+./vas search "Emil Kowalski"
+
+# Cài đặt bộ kỹ năng diễn hoạt & thiết kế cho Antigravity / Claude / Cursor:
+./vas install animate animation-performance review-animations emil-design-eng ask-sonner --target antigravity --mode link
+```
+
+
+---
+
 #### 🛡️ Cloudflare Security Audit (`cloudflare-security-audit`)
 
 Tích hợp trực tiếp từ repo mã nguồn mở chính thức của Cloudflare: [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill).
@@ -772,7 +802,7 @@ Dù bạn cài hàng trăm kỹ năng, AI agent chỉ quét phần tóm tắt ng
 
 ### 1. Overview
 
-**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **3,056+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
+**Vietnam Agentic Skills (VAS)** is a vendor-neutral, production-ready catalog of **3,070+ modular agentic skills**, created and maintained by **Huy Tran** ([@huytran1120](https://github.com/huytran1120)).
 
 VAS strictly adheres to the **Open Agent Skills specification ([agentskills.io](https://agentskills.io/))** and is engineered specifically for AI coding agents such as **Google Antigravity, OpenAI Codex / OpenCode, Claude Code, Cursor, Windsurf (Codeium), Cline / Roo Code, and GitHub Copilot CLI**.
 
@@ -1052,7 +1082,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 | Dimension | Vietnam Agentic Skills (VAS) | Addy Osmani (`agent-skills`) | Superpowers (`obra`) | Matt Pocock Skills |
 | :--- | :--- | :--- | :--- | :--- |
-| **Catalog Scale** | **3,056+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
+| **Catalog Scale** | **3,070+ Skills** (World's most extensive) | 25 Core Skills | ~14 Skills | ~30 Skills |
 | **Tooling & Engine** | **Native Python 3 CLI (`./vas`) — Zero-NPX** | `npx skills` / Plugins | Git Worktrees / Shell scripts | Claude Code / `npx skills` |
 | **Dependencies & Offline**| **100% Offline, Zero external dependencies** | Requires Node & remote NPX | Requires clone & git setup | Requires Node & remote NPX |
 | **Agent Support** | **7+ AI Coding Assistants** (Antigravity, Codex, Claude, Cursor, Windsurf, Cline, Copilot) | Claude Code, Codex, Antigravity, Cursor, Copilot | Claude Code, Codex, Cursor | Claude Code primary |
@@ -1065,7 +1095,7 @@ During `/ship` pre-flight or code auditing, 4 specialist personas can be fanned 
 
 ### 11. Featured & Viral Skills Showcase (Top 20)
 
-VAS includes **3,056+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
+VAS includes **3,070+ skills** across **118 specialized categories**. Browse the full directory in [CATALOG.md](CATALOG.md).
 
 | # | Skill ID | Stars | Capability Overview | Quick Install Command |
 | :-: | :--- | :---: | :--- | :--- |
@@ -1093,7 +1123,7 @@ VAS includes **3,056+ skills** across **118 specialized categories**. Browse the
 ```text
 📊 TOP CATEGORY DISTRIBUTION:
 ├── 🛡️  Security              : 267 skills (OWASP, Pentest, Secret Audit, IAM, Hardening)
-├── 💻  Development           : 230 skills (Refactoring, Clean Code, Design Patterns, OOP)
+├── 💻  Development           : 231 skills (Refactoring, Clean Code, Design Patterns, OOP)
 ├── 📈  Business & Strategy   : 179 skills (Market Research, Financial Models, Growth)
 ├── ☁️  Cloud                 : 170 skills (AWS, GCP, Azure, Serverless, Cloud Architecture)
 ├── ⚙️  DevOps                : 169 skills (Docker, K8s, Terraform, CI/CD, Ansible, SRE)
@@ -1371,6 +1401,36 @@ python3 skills/yt-script/hookscore.py --hook "I spent 100 hours testing AI tools
 # Install into Antigravity, Claude, or Codex:
 ./vas install yt-script yt-package yt-retention yt-edit yt-shorts yt-chapters yt-audit --target antigravity --mode link
 ```
+
+---
+
+#### ✨ The 16 Design Engineering & Motion Craft Suite (`emilkowalski/skills`)
+
+VAS integrates the complete **16-skill Design Engineering, Motion & UI Polish suite** from [emilkowalski/skills](https://github.com/emilkowalski/skills) by **Emil Kowalski** (creator of Sonner and [animations.dev](https://animations.dev/) - MIT License), bringing taste, fluid physics, and rigorous motion audit standards to AI Coding Agents:
+
+* **Motion From Scratch (`animate`, `animate-expo`)**: Build animations with the decision hierarchy that determines feel (purpose → tool → GPU `transform`/`opacity` properties → bezier curve & duration → interruption & exit). Full support for Web (CSS transitions, Framer Motion/WAAPI) and React Native/Expo (Reanimated, Gesture Handler, Haptics).
+* **Frame Budgets & 60fps Performance (`animation-performance`)**: Keep animations within the 16.6ms budget: composite-only pipelines, avoiding layout/paint thrashing, profiling `will-change`, CSS variable re-evaluation, and blur filter costs.
+* **High-Craft Motion Review (`review-animations`)**: Brutal motion auditing against non-negotiable rules (`STANDARDS.md`): defaults to flagging, verifies sub-300ms durations, spatial origin, easing curves, and `prefers-reduced-motion` conformance.
+* **Codebase Audit Roadmaps (`improve-animations`, `find-animation-opportunities`)**: Survey entire repositories to generate prioritized finding tables and self-contained step-by-step execution plans (`plans/`) for downstream agents.
+* **Motion Reduction & Cleanup (`remove-animations`)**: Identify and subtract gratuitous animations on hot surfaces, keyboard actions, and functional data to maximize app snappiness.
+* **Motion Terminology Reverse-Lookup (`animation-vocabulary`)**: Translate intuitive visual descriptions into industry-standard animation nomenclature ("rubber-banding", "pop-in", "stagger", "spring overshoot").
+* **Apple Design Philosophy (`apple-design`)**: Translates Apple's interface principles to the web: fluid gestures, physics springs, translucent depth materials, spatial consistency, optical tracking, and restraint.
+* **Mobile Web Native Polish (`mobile-native`)**: Eliminate web quirks on mobile devices: sticky hover, tap highlight flash, 100vh viewport shifts, auto-zoom on inputs, notch insets, and long-press selection traps.
+* **Sonner Toast Architecture (`ask-sonner`)**: Master-level integration and debugging for the Sonner toast engine (stacked toasts, promise toasts, custom styling, modal z-index stacking).
+* **UI Edge-Case Stress Testing (`break-ui`)**: Inject worst-case boundary data (super long names, unbreakable emails, emoji floods, empty states, huge counters) from `CATALOG.md` behind a live toggle to expose layout breaks before shipping.
+* **Variant Prototyping Harness (`emil-prototype`)**: Build multiple divergent UI explorations behind an instant live picker (`PICKER.md`) for real-world side-by-side evaluation.
+* **Curated UI Library Selection (`pick-ui-library`)**: Highly opinionated selection guide for frontend components (OTP inputs, virtual scrolling, drag-drop, charts, command menus).
+* **Modern Swift & Concurrency (`write-swift`)**: Comprehensive Swift 6 guidance covering data-race safety, `@concurrent`, actor boundaries, Swift Testing, and value type semantics.
+
+```bash
+# Search Emil Kowalski skills:
+./vas search animation
+./vas search "Emil Kowalski"
+
+# Install core design engineering skills:
+./vas install animate animation-performance review-animations emil-design-eng ask-sonner --target antigravity --mode link
+```
+
 
 ---
 

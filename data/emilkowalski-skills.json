@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/emilkowalski/skills",
+  "revision": "a81dbca07f2217b7103e510c0f13f8d5b017afc9",
+  "version": "1.0.0",
+  "author": "Emil Kowalski",
+  "license": "MIT",
+  "importedCount": 16,
+  "policy": "Import all 16 design engineering and animation skills from emilkowalski/skills into design and development categories, resolving prototype collision as emil-prototype with preserved Matt Pocock compatibility.",
+  "skills": [
+    {
+      "id": "animate",
+      "category": "design",
+      "description": "Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "animate"
+    },
+    {
+      "id": "animate-expo",
+      "category": "design",
+      "description": "Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — should it animate, which thread it runs on, which properties, spring or timing, how the gesture hands off, how it degrades. Writes the implementation with Reanimated, Gesture Handler, Expo Router and expo-haptics. Use when animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device. For web animation use `animate`.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "animate-expo"
+    },
+    {
+      "id": "animation-performance",
+      "category": "design",
+      "description": "Keep web animations inside the frame budget — animate composite-only properties, keep motion off the main thread when the page is busy, and find the cause when an animation drops frames. Covers the layout/paint/composite pipeline, cheaper property swaps, CSS vs WAAPI vs requestAnimationFrame, Framer Motion's hardware-accelerated path, React re-rendering per frame, inherited CSS variable recalculation, blur cost, and when `will-change` actually helps. Use when an animation is janky, choppy, stutters, or drops frames; when choosing which property to animate; when deciding between CSS and JS animation on performance grounds; or when reaching for `will-change` or GPU layers. For choosing easing, duration, or whether to animate at all use animate; for reviewing motion as a whole use review-animations.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "animation-performance"
+    },
+    {
+      "id": "animation-vocabulary",
+      "category": "design",
+      "description": "Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term (\"the bouncy thing when a popover opens\" → Pop in; \"the iOS rubber-band scroll\" → Rubber-banding). Use when the user asks \"what's it called when…\", or describes a motion effect without knowing its name and wants the right word to prompt an AI or designer with. For naming an effect, not designing or building one.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "animation-vocabulary"
+    },
+    {
+      "id": "apple-design",
+      "category": "design",
+      "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "apple-design"
+    },
+    {
+      "id": "ask-sonner",
+      "category": "design",
+      "description": "Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and loading toasts, updating, dismissing and persisting toasts, styling, theming and icons, positioning and multiple toasters. Use when working with Sonner or troubleshooting it — toasts that don't appear, appear twice, lose their styles, ignore Tailwind classes, sit behind a modal, or don't follow dark mode.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "ask-sonner"
+    },
+    {
+      "id": "break-ui",
+      "category": "design",
+      "description": "Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fields, huge counts, zero items, long labels, non-Latin text, emoji, extreme numbers — then render it behind a \"Demo data / Worst case\" toggle and report everything that broke, with the fix for each. Use when the user asks to stress-test, break, or find edge cases in a component or screen, or to \"try the worst case\". For visual design critique use emil-design-eng; for motion use review-animations.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "break-ui"
+    },
+    {
+      "id": "emil-design-eng",
+      "category": "design",
+      "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "emil-design-eng"
+    },
+    {
+      "id": "find-animation-opportunities",
+      "category": "design",
+      "description": "Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks \"what could be animated here?\" or wants to \"make this feel more alive\". For fixing existing animations, use improve-animations or review-animations instead.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "find-animation-opportunities"
+    },
+    {
+      "id": "improve-animations",
+      "category": "design",
+      "description": "Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other agents (or cheaper models) to execute. Read-only on source code — it plans improvements, it does not apply them. Use when the user asks to \"improve the animations\", \"audit the motion\", \"make this app feel better\", or wants a roadmap of animation fixes rather than a review of a single diff.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "improve-animations"
+    },
+    {
+      "id": "mobile-native",
+      "category": "design",
+      "description": "Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate \"a website in a browser\" from something that feels installed. Covers sticky hover states, tap highlight flashes, the 100vh bug, inputs that zoom the page, laggy taps, pull-to-refresh hijacking scroll, content under the notch, long-press selecting button text, carousels that scroll the wrong way, mismatched status bars, and the rule that you test on real hardware. Use when a web app is being built for or reviewed on mobile, when something \"works in Chrome but feels wrong on my phone\", when building a PWA, a bottom sheet, a carousel, a full-screen layout, or any touch interaction. For motion itself use animate; for React Native use animate-expo.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "mobile-native"
+    },
+    {
+      "id": "pick-ui-library",
+      "category": "design",
+      "description": "Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag and drop, toasts, state, styling, and more. Only runs when explicitly invoked; it does not trigger on its own.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "pick-ui-library"
+    },
+    {
+      "id": "emil-prototype",
+      "category": "design",
+      "description": "Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip through them live and promote the one that feels right. Only runs when explicitly invoked; it does not trigger on its own.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "prototype"
+    },
+    {
+      "id": "remove-animations",
+      "category": "design",
+      "description": "Find the animations an interface doesn't need and remove them — motion on keyboard actions, high-frequency surfaces, functional data, and decoration with no purpose — then clean up what they leave behind. Edits code, but only to subtract; it never adds or retunes motion. Use when the user says the app \"feels slow\", \"has too much animation\", \"feels over-animated\", wants to \"tone down the motion\", or asks what animations to remove. For finding places that should animate, use find-animation-opportunities; for fixing animations that should stay, use improve-animations or review-animations.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "remove-animations"
+    },
+    {
+      "id": "review-animations",
+      "category": "design",
+      "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "review-animations"
+    },
+    {
+      "id": "write-swift",
+      "category": "development",
+      "description": "How to write modern Swift well — modeling with value types, Swift 6 data-race safety and approachable concurrency (@concurrent, main-actor-by-default, actors, task groups), protocols and generics (some vs any), API design, performance and ARC, Swift Testing, macros, and the modern language features agents don't know about yet. Use when writing, reviewing, or migrating Swift, or when a concurrency error, a hang, a data race, a retain cycle, or a performance problem needs fixing.",
+      "author": "Emil Kowalski",
+      "license": "MIT",
+      "source_repo": "emilkowalski/skills",
+      "original_name": "write-swift"
+    }
+  ]
+}
